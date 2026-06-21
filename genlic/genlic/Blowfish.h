@@ -1,6 +1,15 @@
-/* Blowfish Encryption Class - Header File */
+///////////////////////////////////////////////////////////////////////
+/// @file Blowfish.h
+/// @brief Blowfish 加密算法类头文件 (genlic 模块)
+/// @details 定义 Blowfish 分组加密算法的类和接口,
+///          用于软件授权码的加密和验证
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 genlic 模块使用的加密算法头文件
+///////////////////////////////////////////////////////////////////////
 
-#ifndef ___BLOWFISH_H___
+/* Blowfish Encryption Class - Header File */
 #define ___BLOWFISH_H___
 
 #define NUM_SUBKEYS   18

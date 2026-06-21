@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_utils2.cpp
+/// @brief 绘图模块 - 高级工具和实用功能实现
+/// @details 实现图像修复(Inpaint)、文件系统操作、Shell 集成、
+///          配置文件的读取和保存等高级功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件提供更高级的图像处理功能和系统交互能力
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

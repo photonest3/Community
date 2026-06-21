@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_other.cpp
+/// @brief 绘图模块 - 其他功能实现
+/// @details 实现图像处理的其他功能,包括 BMP 格式处理、像素操作、
+///          位图压缩、设备上下文(DC)管理等底层图像操作
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件包含 Windows GDI 位图操作和图像格式处理
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 
 //Ö¸¶¨ÎÄ¼þ´óÐ¡&#xff0c;°üÀ¨Õâ14¸ö×Ö½Ú

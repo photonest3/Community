@@ -1,5 +1,16 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_draw.cpp
+/// @brief PhotoNest 绘图模块 - 绘制功能实现文件
+/// @details 实现绘图工具功能:
+///           - 橡皮擦功能 (paint_eraser)
+///           - 绘制笔触处理
+///           - 点序列转掩码
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 绘图模块的核心功能文件
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "cvui.h"

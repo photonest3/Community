@@ -1,3 +1,14 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file ImageProc.cpp
+/// @brief 图像处理实现文件
+/// @details 实现图片旋转、翻转、裁剪、缩略图生成、EXIF 方向修正等处理功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 使用 FreeImage 库和 libjpeg 进行图像处理
+///////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "resource.h"
 #include "ImageProc.h"

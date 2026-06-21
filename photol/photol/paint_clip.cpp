@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_clip.cpp
+/// @brief 绘图模块 - 剪贴板操作实现
+/// @details 实现图像剪贴板操作,包括 Bitmap 信息填充、
+///          Mat 到 Bitmap 转换、剪贴板读写等功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件处理 Windows GDI 位图格式与 OpenCV Mat 的转换
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

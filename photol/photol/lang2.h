@@ -1,3 +1,17 @@
+///////////////////////////////////////////////////////////////////////
+/// @file lang2.h
+/// @brief PhotoNest 多语言支持头文件
+/// @details 实现多语言翻译功能:
+///           - 语言初始化 (Unitialize)
+///           - 语言处理 (proc_lang)
+///           - 字符串翻译 (trans)
+///           - 基于 XML 的翻译文件 (tinyxml)
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件使用 tinyxml 库解析翻译文件
+///////////////////////////////////////////////////////////////////////
+
 #pragma once
 
 #include <string>

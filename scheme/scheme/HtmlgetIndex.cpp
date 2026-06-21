@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////
+/// @file HtmlgetIndex.cpp
+/// @brief 首页（索引页）请求处理实现文件
+/// @details 此文件实现了 CHtmlgetIndex 类的所有方法，
+///          包括首页 HTML 生成、图片列表查询、分页处理、
+///          搜索请求处理、日历视图等功能。
+///          是图库首页的核心处理逻辑。
+/// @note 使用 RapidJSON 生成 JSON 响应
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>

@@ -1,3 +1,18 @@
+///////////////////////////////////////////////////////////////////////
+/// @file unitil2.cpp
+/// @brief PhotoNest 字符串与路径处理工具实现文件
+/// @details 实现字符串编码转换、替换、分词、路径获取等实用函数:
+///           - 宽字符/UTF-8 互转 (_w2u, _u2w)
+///           - 字符串替换和修剪 (Replace, trim, ltrim, rtrim)
+///           - 字符串分词 (tokenize)
+///           - 十六进制转换和校验和 (hexchange, checksum)
+///           - 模块路径和应用数据路径获取 (get_module_path, get_appdata_path)
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 的自定义工具模块
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "unitil2.h"
 #include <codecvt>

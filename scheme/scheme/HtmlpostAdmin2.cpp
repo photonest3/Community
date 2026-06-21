@@ -1,3 +1,14 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file HtmlpostAdmin2.cpp
+/// @brief 管理界面 POST 请求处理实现文件（辅助文件）
+/// @details 实现管理界面的辅助 POST 操作处理，包括文件删除、字段处理等
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 HtmlpostAdmin.cpp 的补充文件
+///////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 
 #include "unitil.h"

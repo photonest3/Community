@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_ui_tips.cpp
+/// @brief 绘图模块 - 提示信息和光标处理实现
+/// @details 实现工具提示显示、光标样式切换、鼠标位置跟踪、
+///          状态栏信息更新等用户交互反馈功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件增强用户交互体验,提供实时操作反馈
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

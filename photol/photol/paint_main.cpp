@@ -1,5 +1,17 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_main.cpp
+/// @brief PhotoNest 绘图模块主实现文件
+/// @details 实现 CPaint 类的构造函数和核心功能:
+///           - 初始化绘图参数(画笔粗细、橡皮擦大小等)
+///           - 设置修复算法参数(连通性、掩码值等)
+///           - 初始化线程池(10 个线程)
+///           - 管理绘图状态和导航按钮
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 绘图模块的核心实现文件
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

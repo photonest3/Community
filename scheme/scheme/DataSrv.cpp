@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////
+/// @file DataSrv.cpp
+/// @brief 数据服务层实现文件
+/// @details 此文件实现了 CDataSrv 类的所有方法，
+///          包括缓存管理、配置管理、数据查询等功能。
+///          作为数据访问层和服务层之间的桥梁，
+///          提供统一的数据服务接口。
+/// @note 使用单例模式，通过 CriticalSection 保证线程安全
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>
@@ -17,6 +29,13 @@
 #include "MySoft.h"
 #include "writedb.h"
 
+////////////////////////////////////////////////////////////////////
+/// @brief 构造函数
+/// @details 初始化所有成员变量为默认值，
+///          包括相册名称、图库标题、登录用户、
+///          配置参数、缓存状态等。
+/// @note 使用 InitializeCriticalSection 初始化临界区，保证线程安全
+////////////////////////////////////////////////////////////////////
 CDataSrv::CDataSrv(void)
 {
 	_albumName = "";
@@ -51,11 +70,20 @@ CDataSrv::CDataSrv(void)
 	InitializeCriticalSection(&_cs);
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 析构函数
+/// @details 释放临界区资源
+////////////////////////////////////////////////////////////////////
 CDataSrv::~CDataSrv(void)
 {
 	DeleteCriticalSection(&_cs);
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 清空标签缓存
+/// @return S_OK: 成功
+/// @note 清空 _lstTag 列表，强制下次重新加载
+////////////////////////////////////////////////////////////////////
 long CDataSrv::clear_cache_tags()
 {
 	_lstTag.clear();
@@ -63,6 +91,11 @@ long CDataSrv::clear_cache_tags()
 	return S_OK;
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 清空图片 ID 缓存
+/// @return S_OK: 成功
+/// @note 使用临界区保护 _hasCache 变量
+////////////////////////////////////////////////////////////////////
 long CDataSrv::clear_cache_image_ids()
 {
 	EnterCriticalSection(&_cs);
@@ -72,6 +105,11 @@ long CDataSrv::clear_cache_image_ids()
 	return S_OK;
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 刷新收藏列表
+/// @return S_OK: 成功
+/// @note 清空缓存并从数据库重新加载当前用户的收藏列表
+////////////////////////////////////////////////////////////////////
 long CDataSrv::refresh_favorites()
 {
 	_lstFavorite.clear();
@@ -80,6 +118,11 @@ long CDataSrv::refresh_favorites()
 	return S_OK;
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 清空滑块过滤器缓存
+/// @return S_OK: 成功
+/// @note 清空所有滑块相关的值列表（宽度、高度、文件大小等）
+////////////////////////////////////////////////////////////////////
 long CDataSrv::clear_cache_slider()
 {
 	EnterCriticalSection(&_cs);
@@ -95,6 +138,12 @@ long CDataSrv::clear_cache_slider()
 	return S_OK;
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 获取滑块过滤器的值列表
+/// @param[out] sliderValues 输出参数，滑块过滤器的值列表
+/// @return S_OK: 成功; 其他: 错误码
+/// @note 使用缓存机制，如果已加载则直接返回缓存数据
+////////////////////////////////////////////////////////////////////
 long CDataSrv::get_sliderValues(SLIDER_VALUES& sliderValues)
 {
 	EnterCriticalSection(&_cs);
@@ -108,6 +157,13 @@ long CDataSrv::get_sliderValues(SLIDER_VALUES& sliderValues)
 	return S_OK;
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 刷新图库标题和配置
+/// @return S_OK: 成功; 其他: 错误码
+/// @details 从数据库加载图库配置参数，包括标题、显示模式、
+///          时区偏移、最大文件大小、皮肤、背景等。
+/// @note 此函数在初始化和配置更改时调用
+////////////////////////////////////////////////////////////////////
 long CDataSrv::refresh_gallery_title()
 {
 	_gallery_title = "";

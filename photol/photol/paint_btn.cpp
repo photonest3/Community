@@ -1,5 +1,16 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_btn.cpp
+/// @brief PhotoNest 绘图模块 - 按钮和文件选择功能实现文件
+/// @details 实现按钮回调和文件选择功能:
+///           - 背景文件选择 (select_bg_file)
+///           - 工具栏按钮处理
+///           - 文件对话框管理
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 绘图模块的交互功能文件
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "cvui.h"

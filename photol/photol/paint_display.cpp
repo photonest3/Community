@@ -1,5 +1,13 @@
-// ui.cpp : Defines the entry point for the console application.
-//
+///////////////////////////////////////////////////////////////////////
+/// @file paint_display.cpp
+/// @brief 绘图模块 - 显示功能实现
+/// @details 实现图像显示功能,包括缩放显示、窗口适配、坐标转换等
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件处理图像在 GUI 窗口中的显示逻辑
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

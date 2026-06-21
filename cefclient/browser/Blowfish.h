@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////////////////
+/// @file Blowfish.h
+/// @brief Blowfish 加密算法实现头文件
+/// @details 实现 Blowfish 对称加密算法,用于密码加密和数据处理。
+///          包含子密钥和 S-box 初始化、加密/解密等操作。
+/// @author PhotoNest Team (基于 Blowfish 算法实现)
+/// @date 2024
+/// @version 1.0
+/// @note 本文件实现 Blowfish 加密算法,支持 Little-Endian 和 Big-Endian
+///////////////////////////////////////////////////////////////////////
+
 /* Blowfish Encryption Class - Header File */
 
 #ifndef ___BLOWFISH_H___

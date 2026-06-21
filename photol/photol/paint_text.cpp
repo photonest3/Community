@@ -1,5 +1,16 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_text.cpp
+/// @brief PhotoNest 绘图模块 - 文本输入功能实现文件
+/// @details 实现文本输入和对话框功能:
+///           - 加载输入对话框 (load_input_wnd)
+///           - 文本叠加显示
+///           - 输入框事件处理
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 绘图模块的核心交互文件
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

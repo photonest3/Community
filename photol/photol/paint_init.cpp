@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_init.cpp
+/// @brief 绘图模块 - 初始化功能实现
+/// @details 实现绘图应用的初始化逻辑,包括应用类型设置、
+///          许可证验证、语言加载、窗口配置等
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件处理 PhotoNest 应用启动时的初始化流程
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

@@ -1,9 +1,15 @@
-/* Blowfish Encryption Class - Implementation File */
+///////////////////////////////////////////////////////////////////////
+/// @file Blowfish.cpp
+/// @brief Blowfish 加密算法类实现 (genlic 模块)
+/// @details 实现 Blowfish 分组加密算法的加密、解密、
+///          子密钥生成等功能,用于软件授权码的加密和验证
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 genlic 模块使用的加密算法实现文件
+///////////////////////////////////////////////////////////////////////
 
-/* Uncomment the following line when building a     MFC project */
-/* Comment   the following line when building a non-MFC project */
- 
-#include <iostream>
+/* Blowfish Encryption Class - Implementation File */
 #include <string>
 
 #include "Blowfish.h"

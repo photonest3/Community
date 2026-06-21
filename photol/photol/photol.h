@@ -1,3 +1,20 @@
+///////////////////////////////////////////////////////////////////////
+/// @file photol.h
+/// @brief PhotoNest 图像处理 DLL 导出接口头文件
+/// @details 定义图像处理 DLL 的导出 API,包括:
+///           - 图像缩放 (resize_img)
+///           - 图像尺寸获取 (img_size)
+///           - 图像质量评估 BRISQUE (img_brisque)
+///           - 视频捕获 MP4/GIF (capture_mp4, capture_gif)
+///           - MP3 封面提取 (mp3_cover)
+///           - 图像绘制显示 (paint_show)
+///           - 加密密钥设置 (set_key)
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 图像处理模块的核心接口
+///////////////////////////////////////////////////////////////////////
+
 // The following ifdef block is the standard way of creating macros which make exporting 
 // from a DLL simpler. All files within this DLL are compiled with the PHOTOL_EXPORTS
 // symbol defined on the command line. This symbol should not be defined on any project

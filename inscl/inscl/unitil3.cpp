@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////////////////
+/// @file unitil3.cpp
+/// @brief 安装程序工具函数实现(inscl 模块)
+/// @details 实现字符串转换、路径处理、文本处理等工具函数,
+///          是 inscl 模块专用的工具函数实现文件
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件与 photol/ 模块的 unitil3.cpp 功能类似但独立
+///////////////////////////////////////////////////////////////////////
+
 #include <windows.h>
 #include "unitil3.h"
 #include <codecvt>

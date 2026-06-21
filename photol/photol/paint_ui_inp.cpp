@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_ui_inp.cpp
+/// @brief 绘图模块 - 输入界面处理实现
+/// @details 实现保存另存为对话框、输入界面按钮渲染、
+///          用户交互处理等 UI 输入相关功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件处理绘图应用的文件保存和输入界面逻辑
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

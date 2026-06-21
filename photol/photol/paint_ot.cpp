@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_ot.cpp
+/// @brief 绘图模块 - 输入工具初始化实现
+/// @details 实现输入工具(画笔、自由选区、矩形、模糊选择等)
+///          SVG 资源加载、按钮状态初始化和样式配置
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件处理绘图输入工具的 UI 资源准备和初始化
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

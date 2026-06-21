@@ -1,31 +1,49 @@
-﻿#include <windows.h>
-#include "resource.h"
+// ============================================================
+// ins.cpp : PhotoNest 安装程序语言选择 DLL
+// 功能：提供安装后的语言选择对话框，并写入 prof.ini 配置，随后启动主程序
+// ============================================================
+
+#include <windows.h>
+#include "resource.h"   // 资源 ID 定义
 #include <string>
 #include <vector>
-#include <shlobj.h>
-#include "SimpleIni.h"
+#include <shlobj.h>     // Windows 特殊文件夹 API
+#include "SimpleIni.h"  // 第三方 INI 读写库（保留开源性质，仅做使用层注释）
 #include <time.h>
-#include <codecvt>
+#include <codecvt>      // UTF-8 / 宽字符转换
 
 using namespace std;
 
-int _ty = 1;
-wstring _exeFullName = L"";
-map<string, string> _lcid;
-map<string, string> _lang;
+int _ty = 1;                     // 产品类型：0=Cutout, 1=Nest1, 2=Nest2
+wstring _exeFullName = L"";      // 主程序完整路径
+map<string, string> _lcid;       // LCID 映射表（语言代码 -> 标识）
+map<string, string> _lang;       // 语言名称映射表（标识 -> 名称）
 
+// ------------------------------------------------------------
+// 宽字符串转换为 UTF-8 编码的 std::string
+// ------------------------------------------------------------
 string _w2u(wstring w)
 {
 	wstring_convert<codecvt_utf8<wchar_t>> conv;
 	return conv.to_bytes(w);
 }
 
+// ------------------------------------------------------------
+// UTF-8 编码的 std::string 转换为宽字符串
+// ------------------------------------------------------------
 wstring _u2w(string u)
 {
 	wstring_convert<codecvt_utf8<wchar_t>> conv;
 	return conv.from_bytes(u);
 }
 
+// ------------------------------------------------------------
+// 在宽字符串中仅替换第一个匹配的子串
+// szBody : 原始字符串（引用，会被修改）
+// szOld  : 待替换的子串
+// szNew  : 用于替换的新子串
+// 返回值 : 替换后的字符串（与 szBody 内容一致）
+// ------------------------------------------------------------
 wstring ReplaceOne(wstring& szBody, wstring szOld, wstring szNew)
 {
 	if (szOld == szNew)
@@ -44,13 +62,20 @@ wstring ReplaceOne(wstring& szBody, wstring szOld, wstring szNew)
 	return szBody;
 }
 
+// ------------------------------------------------------------
+// 字符串分割函数
+// src        : 原始字符串
+// tok        : 分隔符集合（每个字符都可作为分隔符）
+// btrim      : 是否忽略空token
+// null_subst : 当不忽略空token时的占位字符串
+// 返回值     : 分割后的字符串数组
+// ------------------------------------------------------------
 vector<string> tokenize(const string& src, string tok, bool btrim, string null_subst)
 {
 	vector<string> v;
 	if (src.empty() || tok.empty())
 	{
 		return v;
-		//throw "tokenize: empty string\0";
 	}
 
 	string::size_type pre_index = 0, index = 0, len = 0;
@@ -80,6 +105,12 @@ vector<string> tokenize(const string& src, string tok, bool btrim, string null_s
 	return v;
 }
 
+// ------------------------------------------------------------
+// 从 DLL 资源中读取 HTML/文本内容
+// cr_id   : 资源 ID
+// szhtml  : 输出缓冲区指针（由函数内部申请内存，调用方负责释放）
+// 返回值  : 0 表示成功，-1 表示失败
+// ------------------------------------------------------------
 long Read_htm(unsigned int cr_id, char** szhtml)
 {
 	long ret = -1;
@@ -113,6 +144,11 @@ long Read_htm(unsigned int cr_id, char** szhtml)
 	return ret;
 }
 
+// ------------------------------------------------------------
+// 从资源文件加载语言列表，并填充 LCID 与语言名称映射
+// lcid : 输出 LCID 映射表
+// lang : 输出语言名称映射表
+// ------------------------------------------------------------
 void get_language(map<string, string>& lcid, map<string, string>& lang)
 {
 	string szhtml = "";
@@ -124,14 +160,17 @@ void get_language(map<string, string>& lcid, map<string, string>& lang)
 		LocalFree(szResponse);
 	}
 
+	// 按行分割资源文本
 	vector<string> v1 = tokenize(szhtml, "\n", true, "");
 	size_t len = v1.size();
+	// 从第 3 行开始解析 LCID 映射（每行格式：语言名,LCID）
 	for (size_t i = 2; i < len; i++)
 	{
 		vector<string> v2 = tokenize(v1[i], ",", true, "");
 		lcid.insert(map<string, string>::value_type(v2[1], v2[0]));
 	}
 
+	// 第 1 行为语言 ID 列表，第 2 行为对应的语言名称列表
 	vector<string> lang_id = tokenize(v1[0], ",", true, "");
 	vector<string> lang_name = tokenize(v1[1], ",", true, "");
 
@@ -142,6 +181,11 @@ void get_language(map<string, string>& lcid, map<string, string>& lang)
 	}
 }
 
+// ------------------------------------------------------------
+// 获取应用数据存放路径
+// ty : 产品类型（决定子目录名称）
+// 返回值 : 本地 AppData 下的 PhotoNest 子目录路径
+// ------------------------------------------------------------
 wstring get_appdata_path(int ty)
 {
 	std::wstring dst = L"";
@@ -149,6 +193,7 @@ wstring get_appdata_path(int ty)
 	wchar_t szDocument[MAX_PATH] = { 0 };
 
 	LPITEMIDLIST pidl = NULL;
+	// 获取当前用户的 Local AppData 目录
 	SHGetSpecialFolderLocation(NULL, CSIDL_LOCAL_APPDATA, &pidl);
 	if (pidl && SHGetPathFromIDList(pidl, szDocument))
 	{
@@ -157,6 +202,7 @@ wstring get_appdata_path(int ty)
 		dst += L"\\PhotoNest";
 		CreateDirectory(dst.c_str(), NULL);
 
+		// 根据产品类型追加子目录
 		if (ty == 0)
 		{
 			dst += L"\\Cutout";
@@ -174,6 +220,12 @@ wstring get_appdata_path(int ty)
 	return dst;
 }
 
+// ------------------------------------------------------------
+// 获取当前应使用的语言标识
+// 查找顺序：1) prof.ini 配置文件 2) 注册表（Inno Setup 安装语言）3) 系统默认 UI 语言
+// id : 输出语言标识（如 "en", "zh" 等）
+// 返回值 : 固定返回 0
+// ------------------------------------------------------------
 int get_cur_lang(string& id)
 {
 	id = "";
@@ -187,6 +239,7 @@ int get_cur_lang(string& id)
 	const char* pv1 = ini.GetValue("section", "language");
 	if (pv1 == nullptr)
 	{
+		// 未找到配置文件时，尝试读取注册表中 Inno Setup 记录的语言
 		wstring subKey = L"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\PhotoNest_is1";
 		if (_ty == 0)
 		{
@@ -194,8 +247,6 @@ int get_cur_lang(string& id)
 		}
 		else if (_ty == 2)
 		{
-			//subKey = L"SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\PhotoNest Encryption_is1";
-			//x86  KEY_QUERY_VALUE | KEY_WOW64_64KEY
 			subKey = L"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\PhotoNest Encryption_is1";
 		}
 
@@ -215,6 +266,7 @@ int get_cur_lang(string& id)
 		}
 		else
 		{
+			// 注册表也读取失败时， fallback 到系统默认 UI 语言
 			LCID lcd = GetUserDefaultUILanguage();
 			char buf[100] = { 0 };
 			sprintf_s(buf, 100, "0x%04X", lcd);
@@ -231,6 +283,7 @@ int get_cur_lang(string& id)
 		id = pv1;
 	}
 
+	// 将最终确定的语种写回 prof.ini，供下次使用
 	ini.SetValue("section", "language", id.c_str());
 	ini.SaveFile(iniPath.c_str());
 
@@ -380,13 +433,20 @@ long init(int ty)
 }
 */
 
+// ------------------------------------------------------------
+// 语言选择对话框消息处理回调函数
+// hDlg    : 对话框窗口句柄
+// message : Windows 消息类型
+// wParam / lParam : 消息参数
+// 返回值  : TRUE 表示已处理，FALSE 表示未处理
+// ------------------------------------------------------------
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	UNREFERENCED_PARAMETER(lParam);
 
 	switch (message)
 	{
-	case WM_INITDIALOG:
+	case WM_INITDIALOG: // 对话框初始化：加载图标、填充语言下拉框并选中当前语言
 	{
 		RECT rc;
 		GetWindowRect(GetDlgItem(hDlg, IDC_STATIC_TITLE), &rc);
@@ -396,16 +456,14 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 		ScreenToClient(hDlg, &pt);
 		pt.y -= 32 / 2 - 7;
 
+		// 创建静态图标控件并加载程序图标
 		HWND hStaticEdit3 = CreateWindowEx(0, TEXT("Static"), NULL, WS_VISIBLE | WS_CHILD | SS_ICON, 10, pt.y, 32, 32, hDlg, NULL, 0, 0);
-
 		HINSTANCE hInstance = GetModuleHandle(L"ins.dll");
 		HICON hIcon = (HICON)LoadImage(hInstance, MAKEINTRESOURCE(IDI_ICON1), IMAGE_ICON, 32, 32, 0);
-
 		SendMessage(hStaticEdit3, STM_SETICON, (WPARAM)hIcon, 0);
 
-
+		// 填充语言下拉框
 		HWND hCombo1 = GetDlgItem(hDlg, IDC_COMBO_LANG);
-
 		string id = "";
 		get_cur_lang(id);
 
@@ -417,7 +475,7 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 			SendMessage(hCombo1, CB_ADDSTRING, i, (LPARAM)_u2w(I2->second).c_str());
 			if (I2->first == id)
 			{
-				k = i;
+				k = i; // 记录当前语言所在索引
 			}
 			i++;
 		}
@@ -426,7 +484,7 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 	return (INT_PTR)TRUE;
 
 	case WM_COMMAND:
-		if (LOWORD(wParam) == IDOK)
+		if (LOWORD(wParam) == IDOK) // 用户点击确定：保存语言选择并启动主程序
 		{
 			CSimpleIniA ini;
 			ini.SetUnicode(true);
@@ -445,8 +503,8 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 				{
 					if (idx == i)
 					{
+						// 将选中的语言标识写入 INI
 						ini.SetValue("section", "language", I2->first.c_str());
-
 						wcscat_s(buf, 100, _u2w(I2->first).c_str());
 						break;
 					}
@@ -461,13 +519,13 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 			ini.SaveFile(iniPath.c_str());
 
-
+			// 启动主程序，并传入 /LANG=xxx 参数
 			ShellExecute(NULL, L"open", _exeFullName.c_str(), buf, NULL, SW_SHOWNORMAL);
 			EndDialog(hDlg, LOWORD(wParam));
 
 			return (INT_PTR)TRUE;
 		}
-		else if (LOWORD(wParam) == IDCANCEL)
+		else if (LOWORD(wParam) == IDCANCEL) // 取消：直接关闭对话框
 		{
 			EndDialog(hDlg, LOWORD(wParam));
 			return (INT_PTR)TRUE;
@@ -477,6 +535,13 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 	return (INT_PTR)FALSE;
 }
 
+// ------------------------------------------------------------
+// 显示语言选择对话框（导出函数，供安装程序调用）
+// hWnd   : 父窗口句柄
+// ty     : 产品类型
+// lpText : 主程序完整路径
+// 返回值 : 固定返回 0
+// ------------------------------------------------------------
 int __stdcall ShowLangDialog(HWND hWnd, int ty, wchar_t* lpText)
 {
 	_ty = ty;
@@ -489,6 +554,12 @@ int __stdcall ShowLangDialog(HWND hWnd, int ty, wchar_t* lpText)
 	return 0;
 }
 
+// ------------------------------------------------------------
+// 静默选择语言并直接启动主程序（不显示对话框）
+// ty     : 产品类型
+// lpText : 主程序完整路径
+// 返回值 : 固定返回 0
+// ------------------------------------------------------------
 int __stdcall SelectLangIni(int ty, wchar_t* lpText)
 {
 	_ty = ty;
@@ -500,6 +571,7 @@ int __stdcall SelectLangIni(int ty, wchar_t* lpText)
 	wchar_t buf[100] = { 0 };
 	wcscpy_s(buf, 100, L"/LANG=");
 
+	// 查找当前语言对应名称
 	bool b = false;
 	map<string, string>::iterator I2;
 	for (I2 = _lang.begin(); I2 != _lang.end(); I2++)
@@ -514,9 +586,10 @@ int __stdcall SelectLangIni(int ty, wchar_t* lpText)
 
 	if (!b)
 	{
-		wcscat_s(buf, 100, L"en");
+		wcscat_s(buf, 100, L"en"); // 默认英语
 	}
 
+	// 启动主程序
 	ShellExecute(NULL, L"open", lpText, buf, NULL, SW_SHOWNORMAL);
 
 	return 0;

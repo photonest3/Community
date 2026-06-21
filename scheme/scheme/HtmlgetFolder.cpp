@@ -1,3 +1,14 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file HtmlgetFolder.cpp
+/// @brief 文件夹浏览功能实现文件
+/// @details 实现文件夹遍历、子目录扫描、文件列表获取等文件系统操作功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 使用 Windows Scripting.FileSystemObject 进行文件夹操作
+///////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>

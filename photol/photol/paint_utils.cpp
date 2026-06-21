@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_utils.cpp
+/// @brief 绘图模块 - 工具函数实现
+/// @details 实现绘图工具的通用函数,包括导航按钮状态管理、
+///          配置文件读写、SVG 处理、文件系统操作等
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件依赖 cvui, SimpleIni, lunasvg 等第三方库
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

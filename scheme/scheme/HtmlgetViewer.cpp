@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////
+/// @file HtmlgetViewer.cpp
+/// @brief 查看器页面请求处理实现文件
+/// @details 此文件实现了 CHtmlgetViewer 类的所有方法，
+///          包括查看器页面 HTML 生成、查看历史记录、
+///          文件夹浏览等功能。
+///          是图片查看器的核心处理逻辑。
+/// @note 使用 RapidJSON 生成 JSON 响应
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>

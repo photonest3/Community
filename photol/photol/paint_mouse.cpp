@@ -1,5 +1,17 @@
-// ui.cpp : Defines the entry point for the console application.
-//
+///////////////////////////////////////////////////////////////////////
+/// @file paint_mouse.cpp
+/// @brief PhotoNest 绘图模块 - 鼠标事件处理实现文件
+/// @details 实现鼠标事件处理功能:
+///           - 鼠标按下事件 (mouse_down)
+///           - 鼠标移动事件
+///           - 鼠标释放事件
+///           - 输入框交互处理
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 绘图模块的核心交互文件
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "cvui.h"

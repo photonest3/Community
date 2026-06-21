@@ -2,6 +2,20 @@
 // reserved. Use of this source code is governed by a BSD-style license that
 // can be found in the LICENSE file.
 
+///////////////////////////////////////////////////////////////////////
+/// @file main_context_impl.h
+/// @brief 主上下文实现头文件(PhotoNest 修改版)
+/// @details 基于 CEF 示例修改,实现 MainContext 接口:
+///           - 管理应用配置和命令行参数
+///           - 初始化 CEF 和运行循环
+///           - 管理根窗口和浏览器实例
+/// @author CEF Authors (原始)
+/// @author PhotoNest Team (修改)
+/// @date 2015 (原始)
+/// @date 2024 (修改)
+/// @note 本文件是基于 CEF 示例的修改版本
+///////////////////////////////////////////////////////////////////////
+
 #ifndef CEF_TESTS_CEFCLIENT_BROWSER_MAIN_CONTEXT_IMPL_H_
 #define CEF_TESTS_CEFCLIENT_BROWSER_MAIN_CONTEXT_IMPL_H_
 #pragma once

@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////////////////
+/// @file Blowfish.cpp
+/// @brief Blowfish 加密算法实现文件
+/// @details 实现 Blowfish 对称加密算法的加密、解密、子密钥生成、
+///          密钥设置等操作。
+/// @author PhotoNest Team (基于 Blowfish 算法实现)
+/// @date 2024
+/// @version 1.0
+/// @note 本文件实现 Blowfish 加密算法,支持 MFC 和非 MFC 项目
+///////////////////////////////////////////////////////////////////////
+
 /* Blowfish Encryption Class - Implementation File */
 
 /* Uncomment the following line when building a     MFC project */

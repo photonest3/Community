@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////
+/// @file HtmlgetIndexProc.cpp
+/// @brief 首页处理逻辑实现文件
+/// @details 此文件实现了 CHtmlgetIndexProc 类的所有方法，
+///          包括首页数据处理、图片列表查询、分页逻辑、
+///          搜索处理、日历数据生成等功能。
+///          是首页核心业务逻辑的实现文件。
+/// @note 使用临界区（CriticalSection）保证线程安全
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>

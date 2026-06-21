@@ -1,5 +1,15 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_filter.cpp
+/// @brief PhotoNest 绘图模块 - 滤镜功能实现文件
+/// @details 实现图像滤镜和修复功能:
+///           - 滤镜应用 (filter_ok)
+///           - 图像修复 (myinpaint)
+///           - 图像质量评估
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件依赖 OpenCV 和 myinpaint 模块
+///////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
 #include "paint.h"

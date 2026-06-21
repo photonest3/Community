@@ -1,3 +1,14 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file Htmlexif.cpp
+/// @brief EXIF 元数据提取处理实现文件
+/// @details 实现 JPEG 图片 EXIF 信息的读取、解析、格式化等处理功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 使用 easyexif 库进行 EXIF 数据解析
+///////////////////////////////////////////////////////////////////////
+
 ﻿#include "StdAfx.h"
 #include "../../templ/templ/resource.h"
 #include "Htmlexif.h"

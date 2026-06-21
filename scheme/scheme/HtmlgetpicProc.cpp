@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////
+/// @file HtmlgetpicProc.cpp
+/// @brief 图片详情页处理逻辑实现文件
+/// @details 此文件实现了 CHtmlgetpicProc 类的所有方法，
+///          包括图片详情数据查询、EXIF 信息提取、
+///          图片源文件获取、相关图片推荐等功能。
+///          是图片详情页核心业务逻辑的实现文件。
+/// @note 使用 RapidJSON 生成 JSON 响应
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>

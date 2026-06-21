@@ -1,6 +1,21 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file letter.cpp
+/// @brief 汉字首字母提取实现文件
+/// @details 实现汉字到拼音首字母的转换，用于汉字排序和索引功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 使用汉字 Unicode 编码范围表进行首字母判断
+///////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "letter.h"
 
+/// @brief 获取汉字字符串的首字母（拼音首字母）
+/// @param[in] strName 输入汉字字符串
+/// @return 返回首字母字符串（大写）
+/// @note 基于汉字 Unicode 编码范围对照表
 string GetFirstLetter(wstring strName)
 {
 	static wchar_t* wcsFiestLetterTable = 

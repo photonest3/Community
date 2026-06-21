@@ -1,43 +1,47 @@
-﻿// mfthumb.cpp : Defines the exported functions for the DLL application.
-//
+// ============================================================
+// photol.cpp : PhotoNest 图像处理核心 DLL 导出函数实现
+// 功能：提供图像缩略图生成、BRISQUE 质量评估、视频/GIF/MP3 封面提取、
+//       图像加密存储、人脸识别与训练、以及 paint 绘图模块入口等接口
+// ============================================================
+
 #include "stdafx.h"
 
 #include <io.h>
 #include <shlobj.h>
 #include <thumbcache.h>
 #include <string>
-#include<fstream>
+#include <fstream>
 
-#include "photol.h"
-#include "unitil2.h"
-#include "unitil3.h"
+#include "photol.h"      // DLL 导出函数声明
+#include "unitil2.h"     // 工具函数（宽字符/UTF-8 转换等）
+#include "unitil3.h"     // 附加工具函数
 
+// OpenCV 图像处理库头文件
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc/types_c.h>
 #include <opencv2/imgproc/imgproc_c.h>
 #include <opencv2/objdetect.hpp>
 #include <opencv2/face.hpp>
 
+// 第三方媒体信息库（用于读取视频/音频元数据）
 #include <MediaInfo/MediaInfo.h>
-#include <gif_lib.h>
+#include <gif_lib.h>     // GIF 解码库
 #include <process.h>
-#include "resource.h"
-#include "Blowfish.h"
+#include "resource.h"    // 资源 ID 定义
+#include "Blowfish.h"    // Blowfish 加密算法
 #include "unitil2.h"
 
-#include "paint.h"
+#include "paint.h"       // 绘图模块 CPaint 类定义
 
 using namespace std;
 using namespace cv;
 using namespace cv::face;
 
-//#pragma comment( lib, "ippicvmt.lib" )
-//#pragma comment( lib, "ippiw.lib" )
-//#pragma comment( lib, "IlmImf.lib" )
-
+// ------------------------------------------------------------
+// 链接所需静态库（图像编解码、OpenCV 模块、媒体信息、GIF、SVG）
+// ------------------------------------------------------------
 #pragma comment( lib, "libtiff.lib" )
 #pragma comment( lib, "libpng.lib" )
-//#pragma comment( lib, "libjasper.lib" )
 #pragma comment( lib, "libjpeg-turbo.lib" )
 #pragma comment( lib, "libwebp.lib" )
 #pragma comment( lib, "libopenjp2.lib" )
@@ -48,38 +52,46 @@ using namespace cv::face;
 #pragma comment( lib, "opencv_imgproc480.lib" )
 #pragma comment( lib, "opencv_quality480.lib" )
 #pragma comment( lib, "opencv_ml480.lib" )
-#pragma comment( lib, "opencv_highgui480.lib" ) 
-#pragma comment( lib, "opencv_photo480.lib" ) 
+#pragma comment( lib, "opencv_highgui480.lib" )
+#pragma comment( lib, "opencv_photo480.lib" )
 
 #pragma comment( lib, "opencv_objdetect480.lib" )
 #pragma comment( lib, "opencv_face480.lib" )
 
 #pragma comment( lib, "giflib.lib" )
-#pragma comment( lib, "ZenLib.lib" ) 
-#pragma comment( lib, "MediaInfo-Static.lib" ) 
-#pragma comment( lib, "lunasvg.lib" ) 
+#pragma comment( lib, "ZenLib.lib" )
+#pragma comment( lib, "MediaInfo-Static.lib" )
+#pragma comment( lib, "lunasvg.lib" )
 
-CBlowfish* pBF = NULL;
-CPaint* pPaint = NULL;
-Mat _artMat;
+// ------------------------------------------------------------
+// 全局对象与变量
+// ------------------------------------------------------------
+CBlowfish* pBF = NULL;            // Blowfish 加密实例（用于 .krf 加密文件）
+CPaint* pPaint = NULL;            // 绘图模块主对象
+Mat _artMat;                      // 艺术/水印位图缓存
 
-wstring _alb = L"\\data2";
-wstring _root = L"";
-wstring _cascade_file = L"";
-wstring _eye1_file = L"";
-wstring _eye2_file = L"";
-string _model_file = "";
+wstring _alb = L"\\data2";        // 默认相册子目录名
+wstring _root = L"";              // 应用数据根路径
+wstring _cascade_file = L"";      // 人脸识别级联分类器路径
+wstring _eye1_file = L"";         // 左眼检测模型路径
+wstring _eye2_file = L"";         // 右眼检测模型路径
+string _model_file = "";          // LBPH 人脸模型文件路径
 
-Ptr<LBPHFaceRecognizer> _model = nullptr;
-CascadeClassifier cascade_face;
-CascadeClassifier classifier_eye1;
-CascadeClassifier classifier_eye2;
+Ptr<LBPHFaceRecognizer> _model = nullptr;  // LBPH 人脸识别器
+CascadeClassifier cascade_face;            // 人脸检测分类器
+CascadeClassifier classifier_eye1;         // 左眼检测分类器
+CascadeClassifier classifier_eye2;         // 右眼检测分类器
 
-Ptr<quality::QualityBRISQUE> _brisque = nullptr;
+Ptr<quality::QualityBRISQUE> _brisque = nullptr; // BRISQUE 图像质量评估器
 
-extern HINSTANCE _his;
+extern HINSTANCE _his;            // photol.dll 模块实例句柄（外部定义）
 
 
+// ------------------------------------------------------------
+// 计算图像 BRISQUE 无参考质量评分
+// img : 输入图像（BGR 格式）
+// 返回值 : 0~100 的质量分数（越高表示质量越好）
+// ------------------------------------------------------------
 double BRISQUE(Mat img)
 {
 	if (img.cols <= 16 || img.rows <= 16)
@@ -87,13 +99,14 @@ double BRISQUE(Mat img)
 		return 0;
 	}
 
+	// 延迟初始化 BRISQUE 评估器（加载模型文件）
 	if (_brisque == nullptr)
 	{
 		wstring root = get_module_path0(NULL);
 
-		// path to the trained model
+		// BRISQUE 模型文件路径
 		wstring model_path = root + L"\\model\\brisque_model_live.yml";
-		// path to range file
+		// 范围文件路径
 		wstring range_path = root + L"\\model\\brisque_range_live.yml";
 
 		try {
@@ -106,12 +119,15 @@ double BRISQUE(Mat img)
 	{
 		return 0;
 	}
-	//Scalar result_static = quality::QualityBRISQUE::compute(img, _w2u(model_path), _w2u(range_path));
 	Scalar result_static = _brisque->compute(img);
 
 	return 100 - calMEAN(result_static);
 }
 
+// ------------------------------------------------------------
+// 为图像添加艺术水印（将 IDB_ART 资源叠加到图像中心）
+// bg0 : 输入输出图像（支持 BGRA 转 BGR 后叠加）
+// ------------------------------------------------------------
 void add_arr(Mat& bg0)
 {
 	int channels = bg0.channels();
@@ -123,12 +139,13 @@ void add_arr(Mat& bg0)
 	channels = bg0.channels();
 	if (channels == 3)
 	{
+		// 延迟加载水印位图资源
 		if (_artMat.empty())
 		{
-			//HINSTANCE his = ::GetModuleHandle(L"photol.dll");
 			load_bitmap(_his, _artMat, IDB_ART);
 		}
 
+		// 仅在目标图像大于水印图时进行居中叠加
 		if (bg0.cols > _artMat.cols && bg0.rows > _artMat.rows)
 		{
 			int	width = _artMat.cols;
@@ -141,6 +158,7 @@ void add_arr(Mat& bg0)
 				{
 					Vec3b& v1 = roi.at<Vec3b>(i, j);
 					Vec3b v2 = _artMat.at<Vec3b>(i, j);
+					// 跳过纯蓝色（水印背景色）像素，仅叠加非背景内容
 					if (v2[0] == 0 && v2[1] == 0 && v2[2] == 255)
 					{
 					}
@@ -154,6 +172,14 @@ void add_arr(Mat& bg0)
 	}
 }
 
+// ------------------------------------------------------------
+// 在字节数组中查找子串（类似 memmem）
+// full_data     : 待查找数据缓冲区
+// full_data_len : 数据长度
+// substr        : 子串缓冲区
+// sublen        : 子串长度
+// 返回值        : 找到返回指针，未找到返回 NULL
+// ------------------------------------------------------------
 unsigned char* memstr(unsigned char* full_data, int full_data_len, unsigned char* substr, int sublen)
 {
 	if (full_data == NULL || full_data_len <= 0 || substr == NULL)
@@ -166,8 +192,6 @@ unsigned char* memstr(unsigned char* full_data, int full_data_len, unsigned char
 		return NULL;
 	}
 
-	//int sublen = strlen(substr);
-
 	int i;
 	unsigned char* cur = full_data;
 	int last_possible = full_data_len - sublen + 1;
@@ -175,10 +199,8 @@ unsigned char* memstr(unsigned char* full_data, int full_data_len, unsigned char
 	{
 		if (*cur == *substr)
 		{
-			//assert(full_data_len - i >= sublen);
 			if (memcmp(cur, substr, sublen) == 0)
 			{
-				//found
 				return cur;
 			}
 		}
@@ -188,6 +210,13 @@ unsigned char* memstr(unsigned char* full_data, int full_data_len, unsigned char
 	return NULL;
 }
 
+// ------------------------------------------------------------
+// 将图像数据写入文件（支持可选的 Blowfish 加密存储为 .krf）
+// szDst : 目标文件路径
+// buf   : 图像编码后的字节数据
+// bEnc  : 是否加密（true 时追加 .krf 扩展名并加密内容）
+// 返回值 : 0 成功，-1 失败
+// ------------------------------------------------------------
 int write_file(wstring szDst, vector<uchar>& buf, bool bEnc)
 {
 	if (bEnc)
@@ -210,6 +239,7 @@ int write_file(wstring szDst, vector<uchar>& buf, bool bEnc)
 		DE_HEADER *de_hdr = (DE_HEADER *)buf_hdr;
 		de_hdr->type = 1;
 
+		// 计算需要填充的字节数，使数据长度为 8 的倍数（Blowfish 块大小）
 		div_t div_result = div(lengthActual, 8);
 		if (div_result.rem != 0)
 		{
@@ -247,6 +277,11 @@ int write_file(wstring szDst, vector<uchar>& buf, bool bEnc)
 	return 0;
 }
 
+// ------------------------------------------------------------
+// 将 BGRA 图像转换为 BGR，并预乘 Alpha 通道到白色背景
+// src2 : 输入输出图像（BGRA 转 BGR）
+// 返回值 : 固定返回 0
+// ------------------------------------------------------------
 int bgra2bgr(Mat& src2)
 {
 	int channels = src2.channels();
@@ -273,6 +308,16 @@ int bgra2bgr(Mat& src2)
 	return 0;
 }
 
+// ------------------------------------------------------------
+// 将 OpenCV Mat 编码并保存到文件（支持缩略图生成和加密）
+// ty     : 保存类型（0=原图, 2=缩略图）
+// ext    : 文件扩展名（.jpg/.png/.webp）
+// src    : 输入图像
+// szDst  : 目标路径
+// ismp4  : 是否为视频缩略图（决定是否添加水印）
+// bEnc   : 是否加密保存
+// 返回值 : 0 成功，非零失败
+// ------------------------------------------------------------
 int save_mat(int ty, const char* ext, Mat src, const wchar_t* szDst, bool ismp4, bool bEnc)
 {
 	string ext2 = ext;
@@ -396,6 +441,13 @@ int save_mat(int ty, const char* ext, Mat src, const wchar_t* szDst, bool ismp4,
 	return 0;
 }
 
+// ------------------------------------------------------------
+// 使用 MediaInfo 库读取 MP4 视频基本信息
+// sMp4file : 视频文件路径
+// width / height / duration : 输出视频宽高和时长（秒）
+// mp4rotate : 输出视频旋转角度（90/270 时会交换宽高）
+// 返回值 : 0 成功，-1 失败
+// ------------------------------------------------------------
 int openmp4file(const wchar_t* sMp4file, uint32_t& width, uint32_t& height, uint32_t& duration, long& mp4rotate)
 {
 	wstring W, H;
@@ -411,8 +463,8 @@ int openmp4file(const wchar_t* sMp4file, uint32_t& width, uint32_t& height, uint
 	height = _wtoi(H.c_str());
 	duration = _wtol(d.c_str()) / 1000;
 	mp4rotate = _wtoi(r.c_str());
-	//90.000
 
+	// 若视频带旋转角度，交换宽高以符合实际显示方向
 	if (mp4rotate == 90 || mp4rotate == 270)
 	{
 		long t = width;
@@ -431,9 +483,13 @@ int openmp4file(const wchar_t* sMp4file, uint32_t& width, uint32_t& height, uint
 	return -1;
 }
 
+// ------------------------------------------------------------
+// 判断当前 Windows 版本是否大于等于指定版本
+// wMajorVersion / wMinorVersion / wServicePackMajor : 主/次版本号/SP 版本
+// 返回值 : true 表示当前系统版本满足要求
+// ------------------------------------------------------------
 inline bool IsWindowsVersionOrGreater(WORD wMajorVersion, WORD wMinorVersion, WORD wServicePackMajor)
 {
-
 	typedef LONG(__stdcall* fnRtlGetVersion)(PRTL_OSVERSIONINFOW lpVersionInformation);
 
 	RTL_OSVERSIONINFOEXW verInfo = { 0 };
@@ -460,22 +516,22 @@ inline bool IsWindowsVersionOrGreater(WORD wMajorVersion, WORD wMinorVersion, WO
 	return false;
 }
 
+// ------------------------------------------------------------
+// 判断当前系统是否为 Windows 8 或更高版本
+// ------------------------------------------------------------
 inline bool IsWindows8OrGreater()
 {
 	return IsWindowsVersionOrGreater(HIBYTE(_WIN32_WINNT_WIN8), LOBYTE(_WIN32_WINNT_WIN8), 0);
 }
 
+// ------------------------------------------------------------
+// 对超大尺寸图像进行预缩放（降低后续处理内存消耗）
+// src2 : 输入输出图像（仅当长边超过 5000 时缩放）
+// 策略：寻找 2~7 倍缩放因子，使缩放后长边落在 2000~4000 区间
+// ------------------------------------------------------------
 inline void NewSize(Mat src2)
 {
 	Size si = src2.size();
-	//3840 2160
-	//	7680 4320
-	//	6000 3000
-	//	6000 4000
-	//	4096 2160
-	//	6250 3515
-	//	5000 2800
-	//	------ - 1920 2048 2000
 
 	int val = max(si.width, si.height);
 	if (val > 5000)
@@ -527,6 +583,14 @@ inline void NewSize(Mat src2)
 	}
 }
 
+// ------------------------------------------------------------
+// 将 Windows HBITMAP 转换为 Mat 并保存为缩略图
+// ty        : 保存类型
+// hbmp      : Windows 位图句柄
+// dst       : 目标文件路径
+// mp4rotate : 视频旋转角度（需在 Win8 以下手动旋转）
+// 返回值    : S_OK 成功，S_FALSE 失败
+// ------------------------------------------------------------
 HRESULT proc_bimap(int ty, HBITMAP hbmp, wstring dst, long& mp4rotate)
 {
 	if (hbmp)
@@ -545,6 +609,7 @@ HRESULT proc_bimap(int ty, HBITMAP hbmp, wstring dst, long& mp4rotate)
 		src.create(cvSize(bm.bmWidth, bm.bmHeight), CV_MAKETYPE(CV_8U, nChannels));
 		GetBitmapBits(hbmp, bm.bmHeight * bm.bmWidth * nChannels, src.data);
 
+		// Win8 以下系统需手动处理旋转
 		if (mp4rotate == 90 || mp4rotate == 270)
 		{
 			if (!IsWindows8OrGreater())
@@ -569,6 +634,15 @@ HRESULT proc_bimap(int ty, HBITMAP hbmp, wstring dst, long& mp4rotate)
 	return S_FALSE;
 }
 
+// ------------------------------------------------------------
+// 通过 Shell IThumbnailProvider 获取文件缩略图
+// ty        : 保存类型
+// cx        : 缩略图尺寸
+// szFile    : 源文件路径
+// dst       : 目标保存路径
+// mp4rotate : 视频旋转角度
+// 返回值    : HRESULT
+// ------------------------------------------------------------
 HRESULT GetThumbnailEx(int ty, uint32_t cx, wstring szFile, wstring dst, long& mp4rotate)
 {
 	HRESULT hr;
@@ -598,6 +672,15 @@ HRESULT GetThumbnailEx(int ty, uint32_t cx, wstring szFile, wstring dst, long& m
 	return hr;
 }
 
+// ------------------------------------------------------------
+// 通过 Windows 缩略图缓存获取文件缩略图
+// ty     : 保存类型
+// width / height : 期望缩略图尺寸
+// szFile : 源文件路径
+// dst    : 目标保存路径
+// mp4rotate : 视频旋转角度
+// 返回值 : HRESULT
+// ------------------------------------------------------------
 HRESULT GetCacheThumbnail(int ty, uint32_t width, uint32_t height, const wchar_t* szFile, wstring dst, long& mp4rotate)
 {
 	IShellItem* item = nullptr;
@@ -623,7 +706,6 @@ HRESULT GetCacheThumbnail(int ty, uint32_t width, uint32_t height, const wchar_t
 
 			if (hr == S_OK)
 			{
-				// Retrieve thumbnail HBITMAP
 				HBITMAP hThumbnail = NULL;
 				hr = shared_bitmap->GetSharedBitmap(&hThumbnail);
 				if (hr == S_OK)
@@ -642,6 +724,11 @@ HRESULT GetCacheThumbnail(int ty, uint32_t width, uint32_t height, const wchar_t
 	return hr;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：设置 Blowfish 加密密钥
+// enckey : 加密密码字符串
+// 返回值 : 固定返回 0
+// ------------------------------------------------------------
 PHOTOL_API int set_key(const char* enckey)
 {
 	if (pBF != NULL)
@@ -659,6 +746,15 @@ PHOTOL_API int set_key(const char* enckey)
 	return 0;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：调整图像尺寸并保存（支持加密输出）
+// ext    : 目标格式扩展名（.jpg/.png/.webp）
+// szSrc  : 源图像路径
+// szDst  : 目标保存路径
+// width / height : 输入输出尺寸（传入 0/0 表示保持原图）
+// level  : 加密级别（0 表示加密保存为 .krf）
+// 返回值 : 0 成功，-1 打开失败，2 解码失败
+// ------------------------------------------------------------
 PHOTOL_API int resize_img(const char* ext, const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uint32_t& height, uint32_t& level)
 {
 	wchar_t src[MAX_PATH] = { 0 };
@@ -705,19 +801,19 @@ PHOTOL_API int resize_img(const char* ext, const wchar_t* szSrc, const wchar_t* 
 
 	if (ty == 2 && (width < 16 || height < 16))
 	{
-		//		return 1;
 	}
 	int ret = save_mat(ty, ext, src2, szDst, false, (level == 0));
-	//if (level == 1)
-	//{
-	//	NewSize(src2);
-	//	level = (uint32_t)(BRISQUE(src2) * 100);
-
-	//}
 
 	return ret;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：计算图像 BRISQUE 质量分数
+// szSrc  : 源图像路径（支持 .krf 加密文件）
+// enckey : 加密密钥（空字符串表示不加密）
+// level  : 输出质量分数（0~10000，需除以 100 得到百分制）
+// 返回值 : 0 成功，-1 打开失败，2 解码失败
+// ------------------------------------------------------------
 PHOTOL_API int img_brisque(const wchar_t* szSrc, const char* enckey, uint32_t& level)
 {
 	wchar_t src[MAX_PATH] = { 0 };
@@ -740,6 +836,7 @@ PHOTOL_API int img_brisque(const wchar_t* szSrc, const char* enckey, uint32_t& l
 	}
 	vector<uchar> vec_data;
 
+	// 若指定了加密密钥，先解密文件头并提取有效数据
 	if (strlen(enckey) == 0)
 	{
 		vec_data = vector<uchar>(&buffer[0], &buffer[0] + size);
@@ -756,7 +853,6 @@ PHOTOL_API int img_brisque(const wchar_t* szSrc, const char* enckey, uint32_t& l
 		vec_data = vector<uchar>(&buffer[offset], &buffer[offset] + lengthActual - offset);
 	}
 
-	//vector<uchar> vec_data(&buffer[0], &buffer[0] + size);
 	Mat src2 = imdecode(vec_data, IMREAD_UNCHANGED);
 	int u = src2.depth();
 	if (src2.data != NULL && u != 0)
@@ -776,6 +872,12 @@ PHOTOL_API int img_brisque(const wchar_t* szSrc, const char* enckey, uint32_t& l
 	return 0;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：获取图像尺寸
+// szSrc  : 源图像路径
+// width / height : 输出图像宽高
+// 返回值 : 0 成功，-1 打开失败，2 解码失败
+// ------------------------------------------------------------
 PHOTOL_API int img_size(const wchar_t* szSrc, uint32_t& width, uint32_t& height)
 {
 	wchar_t src[MAX_PATH] = { 0 };
@@ -817,6 +919,13 @@ PHOTOL_API int img_size(const wchar_t* szSrc, uint32_t& width, uint32_t& height)
 	return 0;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：提取 MP4 视频第一帧为缩略图
+// szSrc  : 视频文件路径
+// szDst  : 缩略图保存路径
+// width / height / duration : 输出视频宽高和时长
+// 返回值 : 0 成功，1 提取失败，2 打开失败
+// ------------------------------------------------------------
 PHOTOL_API int capture_mp4(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uint32_t& height, uint32_t& duration)
 {
 	int ty = 2;
@@ -837,10 +946,12 @@ PHOTOL_API int capture_mp4(const wchar_t* szSrc, const wchar_t* szDst, uint32_t&
 		height = 576;
 	}
 
+	// 先尝试通过 IThumbnailProvider 获取缩略图
 	HRESULT hr = GetThumbnailEx(ty, max(width, height), src, szDst, mp4rotate);
 	if (hr != S_OK)
 	{
 		Sleep(100);
+		// 失败后回退到缩略图缓存
 		hr = GetCacheThumbnail(ty, width, height, src, szDst, mp4rotate);
 	}
 	if (hr == 0)
@@ -854,12 +965,10 @@ PHOTOL_API int capture_mp4(const wchar_t* szSrc, const wchar_t* szDst, uint32_t&
 		rt = 1;
 	}
 
-
+	// 若均失败且为缩略图模式，使用默认 MP4 图标
 	if (rt != 0 && ty == 2)
 	{
-		//url0 = sample + L"\\templ\\themes\\default\\images\\mp4.png";
 		Mat mp4;
-		//HINSTANCE his = ::GetModuleHandle(L"photol.dll");
 		load_bitmap(_his, mp4, IDB_MP4);
 		if (!mp4.empty())
 		{
@@ -869,6 +978,13 @@ PHOTOL_API int capture_mp4(const wchar_t* szSrc, const wchar_t* szDst, uint32_t&
 	return rt;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：提取 GIF 第一帧为静态缩略图
+// szSrc  : GIF 文件路径
+// szDst  : 缩略图保存路径
+// width / height : 输出图像尺寸
+// 返回值 : 0 成功，2 打开/解码失败
+// ------------------------------------------------------------
 int capture_gif(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uint32_t& height)
 {
 	int ty = 2;
@@ -908,12 +1024,12 @@ int capture_gif(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uin
 
 	if (error)
 	{
-		//CloseHandle(hFile);
 		return ret;
 	}
 
 	int trans_color = -1;
 
+	// 分配 GIF 屏幕缓冲区
 	GifRowType* ScreenBuffer = (GifRowType*)malloc(GifFile->SHeight * sizeof(GifRowType));
 	if (ScreenBuffer == NULL)
 	{
@@ -961,7 +1077,7 @@ int capture_gif(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uin
 	int	InterlacedOffset[] = { 0, 4, 2, 1 };
 	int	InterlacedJumps[] = { 8, 8, 4, 2 };
 
-
+	// 逐记录解析 GIF 文件，提取第一帧图像
 	GifRecordType RecordType;
 	do
 	{
@@ -992,6 +1108,7 @@ int capture_gif(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uin
 				break;
 			}
 
+			// 处理交错/非交错图像数据
 			if (GifFile->Image.Interlace)
 			{
 				for (int i = 0; i < 4; i++)
@@ -1038,6 +1155,7 @@ int capture_gif(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uin
 				width = GifFile->SWidth;
 				height = GifFile->SHeight;
 
+				// 将 GIF 屏幕缓冲区转换为 OpenCV Mat（BGR）
 				Mat	img = Mat(Size(GifFile->SWidth, GifFile->SHeight), CV_8UC3);
 				GifRowType GifRow;
 				GifColorType* ColorMapEntry;
@@ -1059,7 +1177,7 @@ int capture_gif(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uin
 
 				ret = save_mat(ty, ".png", img, szDst, false, (ty == 0));
 
-				error = true;
+				error = true; // 仅提取第一帧，处理完后退出
 			}
 		}
 		break;
@@ -1124,6 +1242,14 @@ int capture_gif(const wchar_t* szSrc, const wchar_t* szDst, uint32_t& width, uin
 	return ret;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：提取 MP3 音频封面图片
+// szSrc  : MP3 文件路径
+// szDst  : 封面保存路径
+// duration : 输出音频时长（秒）
+// cover  : 输出是否成功提取封面
+// 返回值 : 0 成功，1 无封面，-1 读取失败，2 解码失败
+// ------------------------------------------------------------
 PHOTOL_API int mp3_cover(int ty, const wchar_t* szSrc, const wchar_t* szDst, long& duration, bool& cover)
 {
 	wchar_t src[MAX_PATH] = { 0 };
@@ -1153,6 +1279,7 @@ PHOTOL_API int mp3_cover(int ty, const wchar_t* szSrc, const wchar_t* szDst, lon
 			char* pic1 = NULL;
 			int filesize = 0;
 
+			// 手动解析 MP3 文件中的 APIC 标签提取封面
 			HANDLE hFile = CreateFile(src, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING,
 				FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN, NULL);
 			if (hFile != INVALID_HANDLE_VALUE)
@@ -1181,7 +1308,6 @@ PHOTOL_API int mp3_cover(int ty, const wchar_t* szSrc, const wchar_t* szDst, lon
 							if (filesize + p + 10 - tempbuf < nTemp)
 							{
 								unsigned char sub[3] = { 0xff,0xd8,0 };
-								//unsigned char *pt = sub;
 								unsigned char* p1 = memstr(p + 10, filesize, sub, 2);
 								if (p1 != NULL)
 								{
@@ -1221,11 +1347,10 @@ PHOTOL_API int mp3_cover(int ty, const wchar_t* szSrc, const wchar_t* szDst, lon
 		}
 	}
 
+	// 提取失败时使用默认 MP3 图标
 	if (rt != 0 && ty == 2)
 	{
-		//url0 = sample + L"\\templ\\themes\\default\\images\\mp4.png";
 		Mat mp3;
-		//HINSTANCE his = ::GetModuleHandle(L"photol.dll");
 		load_bitmap(_his, mp3, IDB_MP3);
 		if (!mp3.empty())
 		{
@@ -1233,9 +1358,21 @@ PHOTOL_API int mp3_cover(int ty, const wchar_t* szSrc, const wchar_t* szDst, lon
 		}
 	}
 	return rt;
-
 }
 
+// ------------------------------------------------------------
+// DLL 导出：启动 paint 绘图/编辑窗口
+// type    : 应用类型
+// hwnd    : 父窗口句柄（64位整型）
+// pixelsy : 屏幕 DPI
+// w / h   : 窗口宽高
+// fname   : 初始打开文件路径
+// langue  : 界面语言
+// user    : 当前用户
+// enckey  : 加密密钥
+// ov      : 覆盖/授权标记
+// 返回值  : 固定返回 0
+// ------------------------------------------------------------
 PHOTOL_API int paint_show(int type, uint64_t hwnd, int pixelsy, int w, int h, const wchar_t* fname, const wchar_t* langue, const wchar_t* user, const wchar_t* enckey, int ov)
 {
 	if (pPaint == NULL)
@@ -1249,6 +1386,12 @@ PHOTOL_API int paint_show(int type, uint64_t hwnd, int pixelsy, int w, int h, co
 	return 0;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：生成默认类型图标缩略图（MP3/MP4/JPG）
+// type   : 0=MP3, 1=MP4, 2=JPG
+// szDst  : 保存路径
+// 返回值 : 0 成功，非零失败
+// ------------------------------------------------------------
 PHOTOL_API int capture_ot(int type, const wchar_t* szDst)
 {
 	int ret = 0;
@@ -1262,7 +1405,6 @@ PHOTOL_API int capture_ot(int type, const wchar_t* szDst)
 		id = IDB_JPG;
 	}
 	Mat mp3;
-	//HINSTANCE his = ::GetModuleHandle(L"photol.dll");
 	load_bitmap(_his, mp3, id);
 	if (!mp3.empty())
 	{
@@ -1271,6 +1413,13 @@ PHOTOL_API int capture_ot(int type, const wchar_t* szDst)
 	return ret;
 }
 
+// ------------------------------------------------------------
+// 保存人脸识别训练样本（支持加密存储为 .krf）
+// enckey  : 加密密钥（空表示不加密）
+// ori     : 原始人脸图像
+// szDst2  : 目标保存路径
+// 返回值  : 0 成功，1 失败
+// ------------------------------------------------------------
 int saveface(const char* enckey, Mat ori, wstring szDst2)
 {
 	vector<uchar> buf0;
@@ -1328,6 +1477,14 @@ int saveface(const char* enckey, Mat ori, wstring szDst2)
 	return 1;
 }
 
+// ------------------------------------------------------------
+// 从训练列表文件中加载图像并提取人脸特征，构建训练数据集
+// ty           : 训练类型（0=普通, 1=带人脸检测筛选）
+// enckey       : 加密密钥
+// filelist_txt : 文件列表文本（格式：id|path\r\n）
+// lstTrain     : 输出训练数据列表
+// 返回值       : 0 成功，-1 打开失败，2 空文件
+// ------------------------------------------------------------
 int getMatAndLabels(int ty, const char* enckey, const char* filelist_txt, vector<TRAIN_DTO>& lstTrain)
 {
 	vector<string> ids;
@@ -1416,14 +1573,8 @@ int getMatAndLabels(int ty, const char* enckey, const char* filelist_txt, vector
 						Mat dst2;
 						Rect rect = faces[i];
 						resize(gray(rect), dst2, Size(128, 128), 0, 0, INTER_LINEAR);
-						//cv::Mat mlap;
-						////cv::Laplacian(dst2, mlap, CV_16U);
-						//cv::Sobel(dst2, mlap, CV_16U, 1, 1);
-						//double meanvalue = cv::mean(mlap)[0];
-						//if (meanvalue > 2)
 						{
 							rect.height = rect.height * 2 / 3;
-							//equalizeHist(dst2, dst2);
 
 							classifier_eye1.detectMultiScale(dst2, eyes1, scaleFactor, minNeighbors, CASCADE_DO_CANNY_PRUNING, eyeSize);
 							if (eyes1.empty())
@@ -1490,9 +1641,18 @@ int getMatAndLabels(int ty, const char* enckey, const char* filelist_txt, vector
 	return 0;
 }
 
+// ------------------------------------------------------------
+// DLL 导出：人脸识别预测与训练（LBPH 算法）
+// ty         : 训练类型
+// enckey     : 加密密钥
+// trainlist_txt : 训练文件列表
+// mlabels    : 输出识别结果字符串（格式：image_id|label|name|al|confidence\r\n）
+// 返回值     : 0 成功，1 模型加载失败
+// ------------------------------------------------------------
 PHOTOL_API int predict(int ty, const char* enckey, const char* trainlist_txt, char** mlabels)
 {
 	string ret = "";
+	// 延迟初始化：设置根路径并加载级联分类器
 	if (_root == L"")
 	{
 		if (strlen(enckey) == 0)
@@ -1531,6 +1691,7 @@ PHOTOL_API int predict(int ty, const char* enckey, const char* trainlist_txt, ch
 
 	int start = 0;
 	bool b = false;
+	// 模型不存在时创建新模型并进行首次训练
 	if (_access(_model_file.c_str(), _A_NORMAL) == -1)
 	{
 		_model = LBPHFaceRecognizer::create();
@@ -1557,6 +1718,7 @@ PHOTOL_API int predict(int ty, const char* enckey, const char* trainlist_txt, ch
 	}
 	else
 	{
+		// 模型存在时加载已有模型
 		if (_model == nullptr)
 		{
 			try {
@@ -1580,6 +1742,7 @@ PHOTOL_API int predict(int ty, const char* enckey, const char* trainlist_txt, ch
 		dence = 76;
 	}
 
+	// 对每张训练图像进行预测，高置信度则更新模型
 	for (int i = start; i < lstTrain.size(); i++)
 	{
 		string image_id = lstTrain[i].image_id;

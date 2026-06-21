@@ -1,3 +1,14 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file MyMailer.cpp
+/// @brief 邮件发送功能实现文件
+/// @details 实现 SMTP 邮件发送、附件上传、授权验证等功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 使用 libcurl 库进行邮件发送
+///////////////////////////////////////////////////////////////////////
+
 ﻿#include "StdAfx.h"
 //#include "MyMailer.h"
 #include <iostream>

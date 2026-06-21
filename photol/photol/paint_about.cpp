@@ -1,5 +1,14 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_about.cpp
+/// @brief 绘图模块 - 关于对话框和注册界面实现
+/// @details 实现关于对话框、软件注册界面、许可证验证等功能的
+///          窗口过程处理和用户交互逻辑
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件包含 Windows 对话框处理和注册码验证逻辑
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

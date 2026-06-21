@@ -1,4 +1,19 @@
-﻿#include <windows.h>
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint.h
+/// @brief PhotoNest 图像绘制模块头文件
+/// @details 定义绘制模块的 UI 元素 ID 和常量:
+///           - 工具栏按钮 ID (加载、保存、撤销、重做、缩放等)
+///           - 导航模式 ID (绘制、分割、贴纸、滤镜、修复)
+///           - 绘制工具 ID (画笔、自由选择、魔术棒、橡皮擦、矩形等)
+///           - 图像变换 ID (旋转、翻转、裁剪)
+///           - 包含 OpenCV 和自定义模块头文件
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 图像绘制模块的核心定义文件
+///////////////////////////////////////////////////////////////////////
+
+#include <windows.h>
 #include <opencv2/opencv.hpp>
 #include "lang2.h"
 #include <opencv2/core/core.hpp>

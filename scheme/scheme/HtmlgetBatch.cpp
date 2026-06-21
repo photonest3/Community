@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////
+/// @file HtmlgetBatch.cpp
+/// @brief 批量操作请求处理实现文件
+/// @details 此文件实现了 CHtmlgetBatch 类的所有方法，
+///          包括批量操作页面 HTML 生成、批量删除、
+///          批量移动、批量标签添加等功能。
+///          是批量图片操作的核心处理逻辑。
+/// @note 使用 RapidJSON 生成 JSON 响应
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>

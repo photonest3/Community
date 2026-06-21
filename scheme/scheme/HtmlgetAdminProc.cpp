@@ -1,3 +1,14 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file HtmlgetAdminProc.cpp
+/// @brief 管理界面 HTML 生成处理实现文件
+/// @details 实现管理界面各类操作的 HTML 页面生成、表单处理、数据展示等功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件负责生成管理界面的所有动态 HTML 内容
+///////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "unitil.h"
 #include <vector>

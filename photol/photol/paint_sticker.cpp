@@ -1,5 +1,16 @@
-// ui.cpp : Defines the entry point for the console application.
-//
+///////////////////////////////////////////////////////////////////////
+/// @file paint_sticker.cpp
+/// @brief PhotoNest 绘图模块 - 贴纸功能实现文件
+/// @details 实现贴纸/叠加功能:
+///           - 打开贴纸文件 (open_sticker)
+///           - 贴纸对话框管理
+///           - 图片文件选择
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 绘图模块的贴纸功能文件
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "myinpaint.h"

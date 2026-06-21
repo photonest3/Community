@@ -1,3 +1,13 @@
+///////////////////////////////////////////////////////////////////////
+/// @file locales.cpp
+/// @brief PhotoNest 多语言资源 DLL 实现
+/// @details 实现从资源中读取 XML 格式的语言文件,
+///          支持多语言界面显示
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 locales DLL 的实现文件
+///////////////////////////////////////////////////////////////////////
 
 #include "framework.h"
 #include "locales.h"

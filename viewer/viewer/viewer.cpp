@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////////////////
+/// @file viewer.cpp
+/// @brief PhotoNest 图像查看器主程序
+/// @details 实现图像查看器入口,启动 nest1.exe 并传递 URL 参数,
+///          支持命令行参数指定初始文件或 URL
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 图像查看器的入口程序
+///////////////////////////////////////////////////////////////////////
+
 // viewer.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 

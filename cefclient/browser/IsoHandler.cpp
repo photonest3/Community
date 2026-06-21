@@ -1,4 +1,15 @@
-﻿
+///////////////////////////////////////////////////////////////////////
+/// @file IsoHandler.cpp
+/// @brief ISO 镜像处理与对话框管理实现文件
+/// @details 实现 ISO 镜像创建、对话框显示、全屏切换、文件夹浏览、
+///          语言选择、快捷方式创建等功能。
+///          依赖 libarchive 库进行 ISO 镜像打包。
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 的自定义模块,处理 Windows 对话框和 ISO 相关功能
+///////////////////////////////////////////////////////////////////////
+
 #include <Windows.h>
 #include "timestamp.h"
 #include <iostream>

@@ -1,3 +1,14 @@
+
+///////////////////////////////////////////////////////////////////////
+/// @file Htmlget.cpp
+/// @brief URL 路由和请求分发处理实现文件
+/// @details 实现 URL 到处理器的路由映射、请求分发、响应生成等核心功能
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 自定义协议处理模块的核心路由组件
+///////////////////////////////////////////////////////////////////////
+
 #include "StdAfx.h"
 #include "Htmlget.h"
 #include "../../templ/templ/resource.h"

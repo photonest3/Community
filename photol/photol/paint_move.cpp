@@ -1,5 +1,16 @@
-﻿// ui.cpp : Defines the entry point for the console application.
-//
+﻿///////////////////////////////////////////////////////////////////////
+/// @file paint_move.cpp
+/// @brief PhotoNest 绘图模块 - 移动和裁剪功能实现文件
+/// @details 实现鼠标移动和裁剪框交互功能:
+///           - 裁剪光标获取 (get_crop_cursor)
+///           - 矩形选择区域判断
+///           - 鼠标移动事件处理
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件是 PhotoNest 绘图模块的交互功能文件
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "paint.h"
 #include "unitil2.h"

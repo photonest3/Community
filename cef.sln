@@ -5,27 +5,27 @@ VisualStudioVersion = 16.0.33328.57
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcef_dll_wrapper", "libcef_dll_wrapper\libcef_dll_wrapper.vcxproj", "{980073CC-B552-308A-B742-4A068663474D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "photol", "..\tests\photol\photol\photol.vcxproj", "{37BD2D1E-172C-4615-A5E9-4E64F4A30606}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "photol", ".\photol\photol\photol.vcxproj", "{37BD2D1E-172C-4615-A5E9-4E64F4A30606}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "paint", "..\tests\paint\paint\paint.vcxproj", "{62702669-8825-4A00-B246-588226A9B815}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "paint", ".\paint\paint\paint.vcxproj", "{62702669-8825-4A00-B246-588226A9B815}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scheme", "..\tests\scheme\scheme\scheme.vcxproj", "{2447E884-9098-49D1-B2D3-41BBB9CDDFE0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scheme", ".\scheme\scheme\scheme.vcxproj", "{2447E884-9098-49D1-B2D3-41BBB9CDDFE0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nest2", "tests\cefclient\nest2.vcxproj", "{3AC098BD-6D14-3610-B060-9E3450490902}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nest2", "cefclient\nest2.vcxproj", "{3AC098BD-6D14-3610-B060-9E3450490902}"
 	ProjectSection(ProjectDependencies) = postProject
 		{980073CC-B552-308A-B742-4A068663474D} = {980073CC-B552-308A-B742-4A068663474D}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inscl", "..\tests\inscl\inscl\inscl.vcxproj", "{E8B42272-86E4-45BC-BB71-072EFBA19FAE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inscl", ".\inscl\inscl\inscl.vcxproj", "{E8B42272-86E4-45BC-BB71-072EFBA19FAE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nest1", "tests\cefclient\nest1.vcxproj", "{3AC098BD-6D14-3610-B060-9E3450490900}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nest1", "cefclient\nest1.vcxproj", "{3AC098BD-6D14-3610-B060-9E3450490900}"
 	ProjectSection(ProjectDependencies) = postProject
 		{980073CC-B552-308A-B742-4A068663474D} = {980073CC-B552-308A-B742-4A068663474D}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "templ", "..\tests\templ\templ\templ.vcxproj", "{C2642EB0-8F7E-4F34-9535-8E008B90A7B2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "templ", ".\templ\templ\templ.vcxproj", "{C2642EB0-8F7E-4F34-9535-8E008B90A7B2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "locales", "..\tests\locales\locales\locales.vcxproj", "{C2642EB0-8F7E-4F34-9535-8E008B90A7A2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "locales", ".\locales\locales\locales.vcxproj", "{C2642EB0-8F7E-4F34-9535-8E008B90A7A2}"
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "PhotoNest", "PhotoNest\PhotoNest.wapproj", "{1C9D4B45-D813-4D8B-920B-C266333199F8}"
 EndProject

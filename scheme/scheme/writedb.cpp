@@ -1,20 +1,49 @@
-﻿#include "StdAfx.h"
+////////////////////////////////////////////////////////////////////
+/// @file writedb.cpp
+/// @brief 数据库写入操作封装实现文件
+/// @details 此文件实现了 writedb 类的所有方法，
+///          封装了对 imagedal 和 chatdal 的写入操作，
+///          并使用临界区（CriticalSection）保证线程安全。
+///          所有写入数据库的操作都通过此类进行，
+///          确保多线程环境下的数据一致性。
+/// @note 使用单例模式，通过 CriticalSection 保证线程安全
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
+#include "StdAfx.h"
 
 #include "writedb.h"
 #include "imagedal.h"
 #include "chatdal.h"
 #include "HtmlgetMenubar.h"
 
+////////////////////////////////////////////////////////////////////
+/// @brief 构造函数
+/// @details 初始化临界区对象，用于保证线程安全
+////////////////////////////////////////////////////////////////////
 writedb::writedb(void)
 {
 	InitializeCriticalSection(&_cs);
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 析构函数
+/// @details 释放临界区对象资源
+////////////////////////////////////////////////////////////////////
 writedb::~writedb(void)
 {
 	DeleteCriticalSection(&_cs);
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 添加图片错误记录
+/// @param[in] cat_id 分类 ID
+/// @param[in] dto MD5 数据传递对象
+/// @param[out] id 返回新记录的 ID
+/// @return 0: 成功
+/// @note 使用临界区保护数据库写入操作
+////////////////////////////////////////////////////////////////////
 long writedb::add_imgerr(string cat_id, const MD5_DTO dto, uint32_t& id)
 {
 	EnterCriticalSection(&_cs);
@@ -23,6 +52,15 @@ long writedb::add_imgerr(string cat_id, const MD5_DTO dto, uint32_t& id)
 	return 0;
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 添加图片记录
+/// @param[in] cat_id 分类 ID
+/// @param[in] imageDto 图片数据传递对象
+/// @param[in] time_zone_bias 时区偏移（分钟）
+/// @param[out] id 返回新记录的 ID
+/// @return 0: 成功
+/// @note 使用临界区保护数据库写入操作
+////////////////////////////////////////////////////////////////////
 long writedb::add_image(string cat_id, const IMAGE_DTO imageDto, long time_zone_bias, uint32_t& id)
 {
 	EnterCriticalSection(&_cs);

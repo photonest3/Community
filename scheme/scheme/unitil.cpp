@@ -1,20 +1,48 @@
+////////////////////////////////////////////////////////////////////
+/// @file unitil.cpp
+/// @brief 工具函数实现文件
+/// @details 此文件实现了各种工具函数，
+///          包括字符编码转换、URL 编解码、字符串处理等。
+///          提供跨平台（Windows/Linux）的实用工具函数。
+/// @note 使用 C++11 的 codecvt 进行 UTF-8 和 Unicode 转换
+/// @author PhotoNest Team
+/// @date 2024
+////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "unitil.h"
 #include <codecvt>
 #include <shlobj.h>
 
+////////////////////////////////////////////////////////////////////
+/// @brief 将宽字符串（Unicode）转换为 UTF-8 字符串
+/// @param[in] w 宽字符串（Unicode）
+/// @return UTF-8 编码的字符串
+/// @note 使用 C++11 的 codecvt_utf8 进行转换
+////////////////////////////////////////////////////////////////////
 string _w2u(wstring w)
 {
 	wstring_convert<codecvt_utf8<wchar_t>> conv;
 	return conv.to_bytes(w);
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 将 UTF-8 字符串转换为宽字符串（Unicode）
+/// @param[in] u UTF-8 编码的字符串
+/// @return 宽字符串（Unicode）
+/// @note 使用 C++11 的 codecvt_utf8 进行转换
+////////////////////////////////////////////////////////////////////
 wstring _u2w(string u)
 {
 	wstring_convert<codecvt_utf8<wchar_t>> conv;
 	return conv.from_bytes(u);
 }
 
+////////////////////////////////////////////////////////////////////
+/// @brief 将十六进制字符转换为数字
+/// @param[in] c 十六进制字符（0-9, A-F, a-f）
+/// @return 对应的数字（0-15），如果输入不是十六进制字符则返回 -1
+////////////////////////////////////////////////////////////////////
 int HexDigit(char c)
 {
 	int rVal = -1;

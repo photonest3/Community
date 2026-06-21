@@ -1,3 +1,16 @@
+///////////////////////////////////////////////////////////////////////
+/// @file unitil3.cpp
+/// @brief PhotoNest 图像处理附加工具实现文件
+/// @details 实现图像缩放比例计算、颜色均值计算、位图资源加载等函数:
+///           - 获取缩放比例 (get_scale)
+///           - 计算颜色均值 (calMEAN)
+///           - 加载位图资源 (load_bitmap)
+/// @author PhotoNest Team
+/// @date 2024
+/// @version 1.0
+/// @note 本文件依赖 OpenCV 库
+///////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "unitil2.h"
 #include "unitil3.h"

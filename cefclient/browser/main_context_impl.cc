@@ -2,6 +2,20 @@
 // reserved. Use of this source code is governed by a BSD-style license that
 // can be found in the LICENSE file.
 
+///////////////////////////////////////////////////////////////////////
+/// @file main_context_impl.cc
+/// @brief 主上下文实现文件(PhotoNest 修改版)
+/// @details 基于 CEF 示例修改,适配 PhotoNest 应用:
+///           - 修改默认 URL 为 PhotoNest 的 nest1.pc/nest2.pc
+///           - 集成 PhotoNest 的 scheme 模块
+///           - 添加 IsoHandler 和 timestamp 支持
+/// @author CEF Authors (原始)
+/// @author PhotoNest Team (修改)
+/// @date 2015 (原始)
+/// @date 2024 (修改)
+/// @note 本文件是基于 CEF 示例的修改版本,保留了 CEF 的 BSD 许可证
+///////////////////////////////////////////////////////////////////////
+
 #include "tests/cefclient/browser/main_context_impl.h"
 
 #include <algorithm>
