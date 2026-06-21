@@ -1,0 +1,204 @@
+// Microsoft Visual C++ generated resource script.
+//
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+"#include ""winres.h""\r\n"
+"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+"\r\n"
+"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 3,0,28,0
+PRODUCTVERSION 3,0,28,0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x40004L
+FILETYPE 0x2L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "040904b0"
+BEGIN
+VALUE "CompanyName", "PhotoNest"
+VALUE "FileDescription", "PhotoNest Library"
+VALUE "FileVersion", "3.0.28.0"
+VALUE "InternalName", "templ.dll"
+VALUE "LegalCopyright", "Copyright (c) 2025 PhotoNest. All rights reserved."
+VALUE "OriginalFilename", "templ.dll"
+VALUE "ProductName", "PhotoNest"
+VALUE "ProductVersion", "3.0.28.0"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x409, 1200
+END
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_ADMIN_HTML          HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin.html"
+
+IDR_ADMIN_ADD_HTML      HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_add.html"
+IDR_DELBOX_HTML      HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_del_box.html"
+IDR_DELBOX2_HTML      HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_del_box2.html"
+
+IDR_ADMIN_BATCH_HTML    HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_batch.html"
+
+IDR_ADMIN_GALLERIES_HTML HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_galleries.html"
+
+IDR_ADMIN_FIRST_HTML    HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_first.html"
+
+IDR_ADMIN_CAT_LIST_HTML HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_cat_list.html"
+
+IDR_ADMIN_CAT_ORDER_HTML HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_cat_order.html"
+
+IDR_ADMIN_CAT_PROPERTIES_HTML HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_cat_properties.html"
+
+IDR_ADMIN_CAT_NAME_HTML HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_cat_name.html"
+
+IDR_ADMIN_CONFIG_HTML HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_config.html"
+
+IDR_ADMIN_STATS_HTML    HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_stats.html"
+
+IDR_ADMIN_TAGS_HTML     HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_tags.html"
+
+IDR_ADMIN_UNIT_HTML     HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_unit.html"
+
+IDR_PIC_PROPERTIES      HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_pic_properties.html"
+
+IDR_INDEX_HTML          HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_index.html"
+
+IDR_PICTURE_HTML        HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_picture.html"
+
+IDR_PRV_LOGIN_HTML      HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_prv_login.html"
+
+IDR_PRV_REGISTER_HTML   HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_prv_registr.html"
+IDR_ADMIN_FIRST_OK   HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_first_ok.html"
+IDR_PRV_PROFILE_HTML   HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_prv_profile.html"
+IDR_PRV_PROFILE2_HTML   HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_prv_profile2.html"
+
+IDR_SEARCH_HTML         HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_search.html"
+
+IDR_VIEW_HTML         HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_view.html"
+
+IDR_ART_FILM_HTML       HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_art_film.html"
+
+IDR_ART_ZOOM_HTML       HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_art_zoom.html"
+
+IDR_FILM_BOX_HTML       HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_film_box.html"
+
+IDR_ADMIN_XML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\admin.xml"
+
+IDR_COMM_XML            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\comm.xml"
+
+IDR_INDEX_XML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\index.xml"
+
+IDR_PICTURE_XML         HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\picture.xml"
+
+IDR_OSM_HTML            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_osm.html"
+IDR_NET_HTML            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_net.html"
+
+IDR_ART_LIST_HTML       HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_art_list.html"
+
+IDR_REMOVE_ENC_BOX_HTML    HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_remove_enc_box.html"
+IDR_REMOVE_OPH_BOX_HTML    HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_remove_oph_box.html"
+
+IDR_DOWN_BOX_HTML       HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_down_box.html"
+
+IDR_TAGS_BOX_HTML       HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_tags_box.html"
+IDR_FACE_BOX_HTML       HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_face_box.html"
+
+IDR_INDEX_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_index.js"
+IDR_PICTURE_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_picture.js"
+IDR_GALLERY_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_gallery.js"
+IDR_BATCH_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_batch.js"
+IDR_FIRST_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_first.js"
+IDR_VIEW_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_view.js"
+IDR_ART_FILM_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_art_film.js"
+IDR_ADMIN_ADD_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\jquery.fileupload-ui.u3.min.js"
+IDR_WATERMARK_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\jquery.watermark.js"
+IDR_WATERMARK_IMG_JS            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\jquery.watermark_img.js"
+
+IDR_LANG_TXT            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_lang.txt"
+IDR_LAST_HTML            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_last.html"
+IDR_SKIN_HTML            HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_skins.html"
+IDR_ADMIN_SKIN_CSS           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\admin.skin.css"
+
+IDR_TAG_EDIT_HTML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\tag_edit_form.html"
+IDR_TAG_DUPLICATE_HTML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\tag_duplicate_form.html"
+IDR_TAG_MERGE_HTML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\tag_merge_form.html"
+IDR_TAG_DEL_HTML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\tag_del_form.html"
+IDR_TAG_ORPHAN_HTML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\tag_orphan_form.html"
+IDR_ADMIN_MEMBER_HTML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\_admin_menubar.html"
+IDR_SEARCH_FORM_HTML           HTML                    "..\\..\\..\\PhotoNest\\tests\\cefclient\\Release\\html\\search_form.html"
+
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

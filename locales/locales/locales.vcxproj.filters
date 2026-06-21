@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="locales.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="locales.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="locales.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_lang.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="html">
+      <UniqueIdentifier>{a5961f00-b770-475f-9b45-42e4696d2983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="html\album">
+      <UniqueIdentifier>{55e39418-43eb-49e9-93b3-90e2d3686964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="html\paint">
+      <UniqueIdentifier>{d8f037c0-5b4c-42c3-b5fb-8a345ba6ecbb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_de.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_en.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_es.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_fr.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_it.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_ja.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_ru.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\album\1_zh.xml">
+      <Filter>html\album</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_de.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_en.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_es.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_fr.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_it.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_ja.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_ru.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\paint\0_zh.xml">
+      <Filter>html\paint</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

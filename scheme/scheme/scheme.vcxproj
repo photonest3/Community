@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2447E884-9098-49D1-B2D3-41BBB9CDDFE0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>scheme</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>scheme</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\PhotoNest\tests\cefclient\Release\bin\</OutDir>
+    <IntDir>..\..\..\PhotoNest\tests\scheme.dir\</IntDir>
+    <LibraryPath>..\..\..\PhotoNest\tests\cefclient\Release\bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\..\third\sqlite3mc-1.5.4\sqlite3mc-1.5.4;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;SCHEME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>xcopy $(TargetDir)$(ProjectName).dll E:\voy\102\PhotoNest\PhotoNest\nest1\ /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="base64-decode.h" />
+    <ClInclude Include="basedal.h" />
+    <ClInclude Include="Blowfish.h" />
+    <ClInclude Include="chatdal.h" />
+    <ClInclude Include="DataSrv.h" />
+    <ClInclude Include="exif.h" />
+    <ClInclude Include="HtmlgetViewer.h" />
+    <ClInclude Include="scheme.h" />
+    <ClInclude Include="Htmlexif.h" />
+    <ClInclude Include="Htmlget.h" />
+    <ClInclude Include="HtmlgetAdmin.h" />
+    <ClInclude Include="HtmlgetAdminProc.h" />
+    <ClInclude Include="HtmlgetBatch.h" />
+    <ClInclude Include="HtmlgetCal.h" />
+    <ClInclude Include="HtmlgetFolder.h" />
+    <ClInclude Include="HtmlgetIndex.h" />
+    <ClInclude Include="HtmlgetIndexAction.h" />
+    <ClInclude Include="HtmlgetIndexProc.h" />
+    <ClInclude Include="HtmlgetMenubar.h" />
+    <ClInclude Include="HtmlgetPic.h" />
+    <ClInclude Include="HtmlgetpicProc.h" />
+    <ClInclude Include="Htmlpost.h" />
+    <ClInclude Include="HtmlSearchProc.h" />
+    <ClInclude Include="Htmlupload.h" />
+    <ClInclude Include="imagedal.h" />
+    <ClInclude Include="ImBase.h" />
+    <ClInclude Include="imlog.h" />
+    <ClInclude Include="lang.h" />
+    <ClInclude Include="letter.h" />
+    <ClInclude Include="MySoft.h" />
+    <ClInclude Include="rapidjson\allocators.h" />
+    <ClInclude Include="rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="rapidjson\document.h" />
+    <ClInclude Include="rapidjson\encodedstream.h" />
+    <ClInclude Include="rapidjson\encodings.h" />
+    <ClInclude Include="rapidjson\filereadstream.h" />
+    <ClInclude Include="rapidjson\filewritestream.h" />
+    <ClInclude Include="rapidjson\fwd.h" />
+    <ClInclude Include="rapidjson\istreamwrapper.h" />
+    <ClInclude Include="rapidjson\memorybuffer.h" />
+    <ClInclude Include="rapidjson\memorystream.h" />
+    <ClInclude Include="rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="rapidjson\pointer.h" />
+    <ClInclude Include="rapidjson\prettywriter.h" />
+    <ClInclude Include="rapidjson\rapidjson.h" />
+    <ClInclude Include="rapidjson\reader.h" />
+    <ClInclude Include="rapidjson\schema.h" />
+    <ClInclude Include="rapidjson\stream.h" />
+    <ClInclude Include="rapidjson\stringbuffer.h" />
+    <ClInclude Include="rapidjson\writer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SimpleIni.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stmdef.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tinyxml\tinyxml.h" />
+    <ClInclude Include="unitil.h" />
+    <ClInclude Include="uploadParser.h" />
+    <ClInclude Include="UrlMap.h" />
+    <ClInclude Include="writedb.h" />
+    <ClInclude Include="wsjosn.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base64-decode.cpp" />
+    <ClCompile Include="basedal.cpp" />
+    <ClCompile Include="Blowfish.cpp" />
+    <ClCompile Include="chatdal.cpp" />
+    <ClCompile Include="chatdal2.cpp" />
+    <ClCompile Include="DataSrv.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="exif.cpp" />
+    <ClCompile Include="HtmlAdminAdd.cpp" />
+    <ClCompile Include="HtmlgetViewer.cpp" />
+    <ClCompile Include="scheme.cpp" />
+    <ClCompile Include="Htmlexif.cpp" />
+    <ClCompile Include="Htmlget.cpp" />
+    <ClCompile Include="HtmlgetAdmin.cpp" />
+    <ClCompile Include="HtmlgetAdminProc.cpp" />
+    <ClCompile Include="HtmlgetBatch.cpp" />
+    <ClCompile Include="HtmlgetCal.cpp" />
+    <ClCompile Include="HtmlgetFolder.cpp" />
+    <ClCompile Include="HtmlgetIndex.cpp" />
+    <ClCompile Include="HtmlgetIndexAction.cpp" />
+    <ClCompile Include="HtmlgetIndexProc.cpp" />
+    <ClCompile Include="HtmlgetMenubar.cpp" />
+    <ClCompile Include="HtmlgetPic.cpp" />
+    <ClCompile Include="HtmlgetpicProc.cpp" />
+    <ClCompile Include="Htmlpost.cpp" />
+    <ClCompile Include="HtmlpostAdmin.cpp" />
+    <ClCompile Include="HtmlpostAdmin2.cpp" />
+    <ClCompile Include="HtmlSearchProc.cpp" />
+    <ClCompile Include="Htmlupload.cpp" />
+    <ClCompile Include="imagedal.cpp" />
+    <ClCompile Include="imagedal2.cpp" />
+    <ClCompile Include="ImBase.cpp" />
+    <ClCompile Include="imlog.cpp" />
+    <ClCompile Include="lang.cpp" />
+    <ClCompile Include="letter.cpp" />
+    <ClCompile Include="MySoft.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxml.cpp" />
+    <ClCompile Include="tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="unitil.cpp" />
+    <ClCompile Include="uploadParser.cpp" />
+    <ClCompile Include="UrlMap.cpp" />
+    <ClCompile Include="writedb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="scheme.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

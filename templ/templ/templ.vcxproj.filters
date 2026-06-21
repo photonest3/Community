@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="html">
+      <UniqueIdentifier>{89e87bab-b278-4e13-85b8-f3f35f329910}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="templ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="templ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="templ.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_add.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_batch.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_cat_list.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_cat_name.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_cat_order.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_cat_properties.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_config.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_first.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_first_ok.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_galleries.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_stats.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_tags.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_unit.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_art_film.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_art_film.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_art_list.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_art_zoom.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_batch.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_del_box.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_down_box.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_film_box.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_first.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_gallery.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_index.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_index.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_last.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_net.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_osm.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_pic_properties.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_picture.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_picture.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_prv_login.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_prv_profile.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_prv_registr.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_remove_enc_box.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_search.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_tags_box.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_view.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_view.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\jquery.fileupload-ui.u3.min.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\jquery.watermark.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\jquery.watermark_img.js">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_skins.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_prv_profile2.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\admin.skin.css">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\tag_merge_form.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\tag_edit_form.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\tag_duplicate_form.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\tag_del_form.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_admin_menubar.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_del_box2.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\search_form.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\tag_orphan_form.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_face_box.html">
+      <Filter>html</Filter>
+    </None>
+    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_remove_oph_box.html">
+      <Filter>html</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\html\admin.xml">
+      <Filter>html</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\html\comm.xml">
+      <Filter>html</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\html\index.xml">
+      <Filter>html</Filter>
+    </Xml>
+    <Xml Include="..\..\..\PhotoNest\tests\cefclient\Release\html\picture.xml">
+      <Filter>html</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\PhotoNest\tests\cefclient\Release\html\_lang.txt">
+      <Filter>html</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
