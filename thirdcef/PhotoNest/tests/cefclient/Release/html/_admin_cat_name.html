@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <style type="text/css">
+        .pictures {
+            list-style: none;
+            margin: 0;
+            max-width: 30rem;
+            padding: 0;
+        }
+
+        .lishow {
+            display: block;
+        }
+
+        .lihide {
+            display: none;
+        }
+
+        #info, #err {
+            top: 2px;
+        }
+
+        h1 {
+            font-size: 14px;
+        }
+
+        .ooo {
+            min-height: 30px;
+            top: 10px;
+            float: right;
+            right: 20px;
+            width: 260px;
+            position: fixed;
+        }
+
+
+        #albumLinks {
+            padding-left: 10px;
+        }
+
+        .selectize-input {
+            padding: 4px 8px;
+        }
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui0" style="overflow: hidden;background: #fff; width:500px;">
+    <div id="container0">
+        <div id="content-wrapper0" class="row" style="margin-left:50px; ">
+            <div class="entry-title" style="font-size:1.7em;text-align:left;margin-left: 20px;font-weight:bold;margin-bottom:15px;">
+                <strong>{'Album'|@translate}</strong>: {$titlename}
+            </div>
+            <div class="content" style="user-select: text;">
+                <div class="eiw">
+                    <div class="ooo">
+                        <div id="err" class="errors">
+                        </div>
+                    </div>
+                </div>
+                <div class="titrePage">
+                </div>
+                <div id="catModify">
+                    <div style="width: 80%; margin-left: 20px;">
+                        <p>
+                            {$albumLinks_p} <a href="javascript:;" onclick="jump();return false;" style="margin-left:10px" class="icon-right">
+                                {'jump to album'|@translate}
+                            </a>
+                        </p>
+                        <p>
+                            <strong>{'Folder'|@translate}</strong>
+                            <br />
+                            <a href="javascript:;" onclick="openfol(this); return false;"
+                               root="{$root}">{$synroot}</a>
+                        </p>
+                    </div>
+                    <form id="form1" action="" method="post" style="margin-left: 20px;" onsubmit="return false;">
+                        <p>
+                            <strong>{'Name'|@translate}</strong>
+                            <br />
+                            <input type="text" class="large" name="name" value="{$name}" style="width:600px;" maxlength="50" />
+                        </p>
+                        <p>
+                            <strong>{'Parent album'|@translate}</strong>
+                            <br />
+                            <select data-selectize="categories" name="parent" style="width: 600px;">
+                                <option value="0">------------</option>
+                                {$parent_options}
+                            </select>
+                        </p>
+
+                        <p>
+                            <strong>{'Description'|@translate}</strong>
+                            <br />
+                            <textarea cols="50" rows="2" name="comment" id="comment" style="width:600px;" class="description">{$comment}</textarea>
+                        </p>
+                        <p style="margin-left: -5px;">
+                            <button name="submit" id="submit" type="button" onclick="submitclick();return false;" class="buttonLike">
+                                <i class="icon-floppy"></i>{'Save Settings'|@translate}
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var representative = "{$photo}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _cat_id = "{$cat_id}";
+        var _namecat = "";
+        var _commentcat = "";
+        var _parentcat = "";
+
+        $('[data-selectize=categories]').selectize({});
+
+        function jump() {
+            parent.location = "./index.html?category=" + _cat_id;
+        }
+
+        function openfol(obj) {
+            window.cefQuery({
+                request: 'Prompt.q.folder:' + $(obj).attr("root")
+            });
+        }
+
+        function submitclick() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return false;
+            }
+
+            var namecat = $('[name="name"]').val();
+            var parentcat = $('[name="parent"]').val();
+            var commentcat = $('[name="comment"]').val();
+
+            if (namecat == _namecat && commentcat == _commentcat && parentcat == _parentcat) {
+                parent._change_catid = "";
+                parent.$.colorbox.close();
+                return true;
+            }
+
+            var body = $("#form1").serialize();
+
+            $.post("./admin.html?page=admin.album&properties=1&category=" + _cat_id, body, function (data, state) {
+                if (data == "ok") {
+                    parent._change_catid = _cat_id;
+                    parent._change_name = $('[name="name"]').val();
+                }
+                parent.$.colorbox.close();
+            });
+        }
+
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper').watermark({
+                    texts: ["{'Activation Expired'|@translate}"],
+                    textColor: "#eee"
+                });
+            }
+
+            parent._change_catid = "";
+            _namecat = $('[name="name"]').val();
+            _commentcat = $('[name="comment"]').val();
+            _parentcat = $('[name="parent"]').val();
+
+            $(document).on('click', '.refreshRepresentative', function (e) {
+                if (_readonly != "0") {
+                    $("#err").html(_err_readonly);
+                    $('#err').delay(100).show();
+                    $('#err').delay(2000).fadeOut();
+                    return false;
+                }
+
+                $.ajax({
+                    url: "./ws.php?format=json&method=categories.refreshRepresentative&representative=" + representative,
+                    type: "POST",
+                    data: {
+                        category_id: _cat_id
+                    },
+                    success: function (resp) {
+                        var data = $.parseJSON(resp);
+                        if (data.stat == 'ok') {
+                            representative = data.result.photo;
+                            if (data.result.ext == "mp3" || data.result.ext == "mp4" || data.result.ext == "webm" || data.result.ext == "ogg") {
+                                $(".video-js").find("a").attr('href', data.result.url);
+
+                                $("#videimg").attr('src', data.result.src);
+                                $("#duration").text(data.result.duration);
+
+                                $(".albumThumbnailImage").hide();
+                                $(".video-js").show();
+                            }
+                            else {
+                                $("#box_ori").attr('src', data.result.src);
+                                $("#box_ori").attr('data-original', data.result.ori);
+
+                                $(".albumThumbnailImage").show();
+                                $(".video-js").hide();
+                            }
+                        }
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data><item><id>en</id><transl>en</transl></item>
+<item><id>ltr</id><transl>ltr</transl></item>
+<item><id>Select an album</id><transl></transl></item>
+<item><id>... or</id><transl></transl></item>
+<item><id>create a new album</id><transl></transl></item>
+<item><id>jump to album</id><transl></transl></item>
+<item><id>Parent album</id><transl></transl></item>
+<item><id>Album name</id><transl></transl></item>
+<item><id>Create</id><transl></transl></item>
+<item><id>nothing</id><transl></transl></item>
+<item><id>Dashboard</id><transl></transl></item>
+<item><id>Photos</id><transl></transl></item>
+<item><id>Albums</id><transl></transl></item>
+<item><id>%d associations</id><transl></transl></item>
+<item><id>Tags</id><transl></transl></item>
+<item><id>Pages seen</id><transl></transl></item>
+<item><id>Storage used</id><transl></transl></item>
+<item><id>Add Photos</id><transl></transl></item>
+<item><id>The album name must not be empty.</id><transl></transl></item>
+<item><id>Add another set of photos</id><transl></transl></item>
+<item><id>Select files</id><transl></transl></item>
+<item><id>Learn more</id><transl></transl></item>
+<item><id>Manage this set of %d photos</id><transl></transl></item>
+<item><id>global mode</id><transl></transl></item>
+<item><id>single mode</id><transl></transl></item>
+<item><id>Filter</id><transl></transl></item>
+<item><id>remove this filter</id><transl></transl></item>
+<item><id>Predefined filter</id><transl></transl></item>
+<item><id>Empty caddie</id><transl></transl></item>
+<item><id>Album</id><transl></transl></item>
+<item><id>include child albums</id><transl></transl></item>
+<item><id>Type in a search term</id><transl></transl></item>
+<item><id>All tags</id><transl></transl></item>
+<item><id>Any tag</id><transl></transl></item>
+<item><id>Dimensions</id><transl></transl></item>
+<item><id>Search</id><transl></transl></item>
+<item><id>Photo title</id><transl></transl></item>
+<item><id>Photo description</id><transl></transl></item>
+<item><id>File name</id><transl></transl></item>
+<item><id>Search for an author</id><transl></transl></item>
+<item><id>Add a filter</id><transl></transl></item>
+<item><id>Filesize</id><transl></transl></item>
+<item><id>Creation date</id><transl></transl></item>
+<item><id>Remove all filters</id><transl></transl></item>
+<item><id>Refresh photo set</id><transl></transl></item>
+<item><id>Selection</id><transl></transl></item>
+<item><id>Action</id><transl></transl></item>
+<item><id>No photo selected</id><transl></transl></item>
+<item><id>Choose an action</id><transl></transl></item>
+<item><id>Delete selected photos</id><transl></transl></item>
+<item><id>Associate to album</id><transl></transl></item>
+<item><id>Move to album</id><transl></transl></item>
+<item><id>Dissociate from album</id><transl></transl></item>
+<item><id>Add tags</id><transl></transl></item>
+<item><id>Set author</id><transl></transl></item>
+<item><id>Set title</id><transl></transl></item>
+<item><id>Add to caddie</id><transl></transl></item>
+<item><id>Are you sure?</id><transl></transl></item>
+<item><id>You must confirm deletion</id><transl></transl></item>
+<item><id>Select at least one tag</id><transl></transl></item>
+<item><id>remove author</id><transl></transl></item>
+<item><id>Type the author name here</id><transl></transl></item>
+<item><id>remove title</id><transl></transl></item>
+<item><id>Type the title here</id><transl></transl></item>
+<item><id>Apply action</id><transl></transl></item>
+<item><id>on the %d selected photos</id><transl></transl></item>
+<item><id>%d of %d photos selected</id><transl></transl></item>
+<item><id>All %d photos are selected</id><transl></transl></item>
+<item><id>List</id><transl></transl></item>
+<item><id>Move</id><transl></transl></item>
+<item><id>apply automatic sort order</id><transl></transl></item>
+<item><id>Automatic sort order</id><transl></transl></item>
+<item><id>Sort order</id><transl>Sort order</transl></item>
+<item><id><![CDATA[Album name, A &rarr; Z]]></id><transl></transl></item>
+<item><id><![CDATA[Album name, Z &rarr; A]]></id><transl></transl></item>
+<item><id><![CDATA[Date created, new &rarr; old]]></id><transl></transl></item>
+<item><id>(determined from photos)</id><transl></transl></item>
+<item><id><![CDATA[Date created, old &rarr; new]]></id><transl></transl></item>
+<item><id>Apply to sub-albums</id><transl></transl></item>
+<item><id>Save order</id><transl></transl></item>
+<item><id>Save manual order</id><transl></transl></item>
+<item><id>cancel manual order</id><transl></transl></item>
+<item><id>Move albums</id><transl></transl></item>
+<item><id>Virtual albums to move</id><transl></transl></item>
+<item><id>New parent album</id><transl></transl></item>
+<item><id>Properties</id><transl></transl></item>
+<item><id>Photos sort order</id><transl></transl></item>
+<item><id>Use the default photo sort order</id><transl></transl></item>
+<item><id>Manual order</id><transl></transl></item>
+<item><id>automatic order</id><transl></transl></item>
+<item><id>Click-and-drag to re-order</id><transl></transl></item>
+<item><id>Save Settings</id><transl></transl></item>
+<item><id>Information</id><transl></transl></item>
+<item><id>manage sub-albums</id><transl></transl></item>
+<item><id>delete album</id><transl></transl></item>
+<item><id>Name</id><transl></transl></item>
+<item><id>Description</id><transl></transl></item>
+<item><id>Configuration</id><transl></transl></item>
+<item><id>Basic settings</id><transl></transl></item>
+<item><id>Gallery title</id><transl></transl></item>
+<item><id>Default photos order</id><transl></transl></item>
+<item><id>Add a criteria</id><transl></transl></item>
+<item><id>Miscellaneous</id><transl></transl></item>
+<item><id>other</id><transl></transl></item>
+<item><id>Week starts on</id><transl></transl></item>
+<item><id>Batch Manager</id><transl></transl></item>
+<item><id>History</id><transl></transl></item>
+<item><id>Statistics</id><transl></transl></item>
+<item><id>Tags selection</id><transl></transl></item>
+<item><id>Select at least two tags to merge.</id><transl></transl></item>
+<item><id>Display options</id><transl></transl></item>
+<item><id>photos per page</id><transl></transl></item>
+<item><id>Downloads</id><transl></transl></item>
+<item><id>delete photo</id><transl></transl></item>
+<item><id>Title</id><transl></transl></item>
+<item><id>Author</id><transl></transl></item>
+<item><id>Linked albums</id><transl></transl></item>
+<item><id>Album thumbnail</id><transl></transl></item>
+<item><id>Photo information updated</id><transl></transl></item>
+<item><id>Login</id><transl></transl></item>
+<item><id>Identification</id><transl></transl></item>
+<item><id>Username</id><transl></transl></item>
+<item><id>Password</id><transl></transl></item>
+<item><id>Forgot your password?</id><transl></transl></item>
+<item><id>Reset</id><transl></transl></item>
+<item><id>Please enter a login name.</id><transl></transl></item>
+<item><id>Please enter your password.</id><transl></transl></item>
+<item><id>Please confirm the chosen password.</id><transl></transl></item>
+<item><id>Search for words</id><transl></transl></item>
+<item><id>Search for all terms</id><transl></transl></item>
+<item><id>Search for any term</id><transl></transl></item>
+<item><id>Apply on properties</id><transl></transl></item>
+<item><id>Search tags</id><transl></transl></item>
+<item><id>Search by date</id><transl></transl></item>
+<item><id>Kind of date</id><transl></transl></item>
+<item><id>Search in albums</id><transl></transl></item>
+<item><id>Search in sub-albums</id><transl></transl></item>
+<item><id>stop the slideshow</id><transl></transl></item>
+<item><id>clean up</id><transl></transl></item>
+<item><id>Visit the gallery</id><transl></transl></item>
+<item><id>Caddie</id><transl></transl></item>
+<item><id>Orphans</id><transl></transl></item>
+<item><id>Recent photos</id><transl></transl></item>
+<item><id>Duplicates</id><transl></transl></item>
+<item><id>All</id><transl></transl></item>
+<item><id>Your favorites</id><transl></transl></item>
+<item><id>With no tag</id><transl></transl></item>
+<item><id>With no album</id><transl></transl></item>
+<item><id>Edit</id><transl></transl></item>
+<item><id>Tag</id><transl></transl></item>
+<item><id>No photo selected, %d photos in current set</id><transl></transl></item>
+<item><id>Delete %d orphan photos</id><transl></transl></item>
+<item><id>%d photo deleted</id><transl></transl></item>
+<item><id>%d photos deleted</id><transl></transl></item>
+<item><id>Albums automatically sorted</id><transl></transl></item>
+<item><id>Virtual album added</id><transl></transl></item>
+<item><id>Edit album</id><transl></transl></item>
+<item><id>%d album moved</id><transl></transl></item>
+<item><id>%d albums moved</id><transl></transl></item>
+<item><id>%d photos</id><transl></transl></item>
+<item><id>View in gallery</id><transl></transl></item>
+<item><id>Manage photos</id><transl></transl></item>
+<item><id>Tag "%s" was added</id><transl></transl></item>
+<item><id>Tag "%s" already exists</id><transl></transl></item>
+<item><id>Add a tag</id><transl></transl></item>
+<item><id>Select tags</id><transl></transl></item>
+<item><id>New tag</id><transl></transl></item>
+<item><id>No destination tag selected</id><transl></transl></item>
+<item><id>Edit selected tags</id><transl></transl></item>
+<item><id>Duplicate selected tags</id><transl></transl></item>
+<item><id>Merge selected tags</id><transl></transl></item>
+<item><id>Delete selected tags</id><transl></transl></item>
+<item><id>Display form</id><transl></transl></item>
+<item><id>Edit tags</id><transl></transl></item>
+<item><id>Current name</id><transl></transl></item>
+<item><id>New name</id><transl></transl></item>
+<item><id>Source tag</id><transl></transl></item>
+<item><id>Name of the duplicate</id><transl></transl></item>
+<item><id>Merge tags</id><transl></transl></item>
+<item><id>Select the destination tag</id><transl></transl></item>
+<item><id>Confirm merge</id><transl></transl></item>
+<item><id>(this tag will be deleted)</id><transl></transl></item>
+<item><id>First</id><transl></transl></item>
+<item><id>Previous</id><transl></transl></item>
+<item><id>Next</id><transl></transl></item>
+<item><id>Last</id><transl></transl></item>
+<item><id>The whole set</id><transl></transl></item>
+<item><id>Width</id><transl></transl></item>
+<item><id>between %d and %d pixels</id><transl></transl></item>
+<item><id>Height</id><transl></transl></item>
+<item><id>Ratio</id><transl></transl></item>
+<item><id>between %s and %s</id><transl></transl></item>
+<item><id>Portrait</id><transl></transl></item>
+<item><id>Landscape</id><transl></transl></item>
+<item><id>between %s and %s MB</id><transl></transl></item>
+<item><id>display</id><transl></transl></item>
+<item><id>all</id><transl></transl></item>
+<item><id>Remove tags</id><transl></transl></item>
+<item><id>Original file:</id><transl></transl></item>
+<item><id>Added by %s</id><transl></transl></item>
+<item><id>Visited %d times</id><transl></transl></item>
+<item><id>Numeric identifier : %d</id><transl></transl></item>
+<item><id>Album updated successfully</id><transl></transl></item>
+<item><id>manage album photos</id><transl></transl></item>
+<item><id>Find a new random album thumbnail.</id><transl></transl></item>
+<item><id>Refresh</id><transl></transl></item>
+<item><id>This album contains no photo.</id><transl></transl></item>
+<item><id>This album contains %d photos, added on %s.</id><transl></transl></item>
+<item><id>This album contains %d photos, added between %s and %s.</id><transl></transl></item>
+<item><id>Delete album "%s".</id><transl></transl></item>
+<item><id>delete album and the %d orphan photos</id><transl></transl></item>
+<item><id>delete only album, not photos</id><transl></transl></item>
+<item><id>Confirm deletion</id><transl></transl></item>
+<item><id><![CDATA[File name, A &rarr; Z]]></id><transl></transl></item>
+<item><id><![CDATA[File name, Z &rarr; A]]></id><transl></transl></item>
+<item><id><![CDATA[Photo title, A &rarr; Z]]></id><transl></transl></item>
+<item><id><![CDATA[Photo title, Z &rarr; A]]></id><transl></transl></item>
+<item><id><![CDATA[Visits, high &rarr; low]]></id><transl></transl></item>
+<item><id><![CDATA[Visits, low &rarr; high]]></id><transl></transl></item>
+<item><id><![CDATA[Numeric identifier, 1 &rarr; 9]]></id><transl></transl></item>
+<item><id><![CDATA[Numeric identifier, 9 &rarr; 1]]></id><transl></transl></item>
+<item><id>Manual sort order</id><transl></transl></item>
+<item><id>day0</id><transl>Sunday</transl></item>
+<item><id>day1</id><transl>Monday</transl></item>
+<item><id>delete</id><transl></transl></item>
+<item><id>Delete</id><transl></transl></item>
+<item><id>Allowed file types: %s.</id><transl></transl></item>
+<item><id>No photos in the current set.</id><transl></transl></item>
+<item><id>Select:</id><transl></transl></item>
+<item><id>None</id><transl></transl></item>
+<item><id>Invert</id><transl></transl></item>
+<item><id>Logout</id><transl></transl></item>
+<item><id>First photo added</id><transl></transl></item>
+<item><id>%d photo</id><transl></transl></item>
+<item><id>in %d sub-album</id><transl></transl></item>
+<item><id>in %d sub-albums</id><transl></transl></item>
+<item><id>in this album</id><transl></transl></item>
+<item><id>Thumbnail</id><transl></transl></item>
+<item><id>2small</id><transl>XXS - tiny</transl></item>
+<item><id>xsmall</id><transl>XS - extra small</transl></item>
+<item><id>small</id><transl>S - small</transl></item>
+<item><id>medium</id><transl>M - medium</transl></item>
+<item><id>large</id><transl>L - large</transl></item>
+<item><id>%d week</id><transl></transl></item>
+<item><id>%d weeks</id><transl></transl></item>
+<item><id>%d day</id><transl></transl></item>
+<item><id>%d days</id><transl></transl></item>
+<item><id>%d month</id><transl></transl></item>
+<item><id>%d months</id><transl></transl></item>
+<item><id>%d year</id><transl></transl></item>
+<item><id>%d years</id><transl></transl></item>
+<item><id>%s ago</id><transl></transl></item>
+<item><id>Related tags</id><transl></transl></item>
+<item><id>display your favorites photos</id><transl></transl></item>
+<item><id>display most visited photos</id><transl></transl></item>
+<item><id>Most visited</id><transl></transl></item>
+<item><id>display most recent photos</id><transl></transl></item>
+<item><id>display recently updated albums</id><transl></transl></item>
+<item><id>Recent albums</id><transl></transl></item>
+<item><id>Display a random set of photos.</id><transl></transl></item>
+<item><id>Random photos</id><transl></transl></item>
+<item><id>Show the photos every day, every month.</id><transl></transl></item>
+<item><id>Calendar</id><transl></transl></item>
+<item><id>display available tags</id><transl></transl></item>
+<item><id>Hello</id><transl></transl></item>
+<item><id>Photo sizes</id><transl></transl></item>
+<item><id>delete all photos from your favorites</id><transl></transl></item>
+<item><id>slideshow</id><transl></transl></item>
+<item><id>return to normal view mode</id><transl></transl></item>
+<item><id>display a calendar by imported date</id><transl></transl></item>
+<item><id>Search criteria</id><transl></transl></item>
+<item><id>display this album</id><transl></transl></item>
+<item><id>group by letters</id><transl></transl></item>
+<item><id>letters</id><transl></transl></item>
+<item><id>show tags cloud</id><transl></transl></item>
+<item><id>cloud</id><transl></transl></item>
+<item><id>Default</id><transl></transl></item>
+<item><id>View</id><transl>View</transl></item>
+<item><id>Monthly list</id><transl></transl></item>
+<item><id>Monthly calendar</id><transl></transl></item>
+<item><id>day2</id><transl>Tuesday</transl></item>
+<item><id>day3</id><transl>Wednesday</transl></item>
+<item><id>day4</id><transl>Thursday</transl></item>
+<item><id>day5</id><transl>Friday</transl></item>
+<item><id>day6</id><transl>Saturday</transl></item>
+<item><id>New password</id><transl>New password</transl></item>
+<item><id>Each of the listed criteria must be satisfied.</id><transl></transl></item>
+<item><id>No results for</id><transl></transl></item>
+<item><id>Empty query. No criteria has been entered.</id><transl></transl></item>
+<item><id>add this photo to your favorites</id><transl></transl></item>
+<item><id>Favorites</id><transl></transl></item>
+<item><id>delete this photo from your favorites</id><transl></transl></item>
+<item><id>Show file metadata</id><transl></transl></item>
+<item><id>Download this file</id><transl></transl></item>
+<item><id>Download</id><transl>Download</transl></item>
+<item><id>set as album thumbnail</id><transl></transl></item>
+<item><id>Edit photo</id><transl></transl></item>
+<item><id>month1</id><transl>January</transl></item>
+<item><id>month2</id><transl>February</transl></item>
+<item><id>month3</id><transl>March</transl></item>
+<item><id>month4</id><transl>April</transl></item>
+<item><id>month5</id><transl>May</transl></item>
+<item><id>month6</id><transl>June</transl></item>
+<item><id>month7</id><transl>July</transl></item>
+<item><id>month8</id><transl>August</transl></item>
+<item><id>month9</id><transl>September</transl></item>
+<item><id>month10</id><transl>October</transl></item>
+<item><id>month11</id><transl>November</transl></item>
+<item><id>month12</id><transl>December</transl></item>
+<item><id>Hour</id><transl>Hour</transl></item>
+<item><id>Date</id><transl>Date</transl></item>
+<item><id>Month</id><transl>Month</transl></item>
+<item><id>Year</id><transl>Year</transl></item>
+<item><id>Overall</id><transl></transl></item>
+<item><id>today</id><transl>today</transl></item>
+<item><id>Weekly list</id><transl></transl></item>
+<item><id>Visits</id><transl>Visits</transl></item>
+<item><id>Invalid password!</id><transl></transl></item>
+<item><id>Current password is wrong</id><transl></transl></item>
+<item><id>searched words : %s</id><transl></transl></item>
+<item><id>created between %s (%s) and %s (%s)</id><transl></transl></item>
+<item><id>included</id><transl></transl></item>
+<item><id>created on %s</id><transl></transl></item>
+<item><id>created after %s (%s)</id><transl></transl></item>
+<item><id>created before %s (%s)</id><transl></transl></item>
+<item><id>Search results</id><transl></transl></item>
+<item><id>Profile</id><transl></transl></item>
+<item><id>Day</id><transl></transl></item>
+<item><id>Square</id><transl></transl></item>
+<item><id>width between %s and %s</id><transl></transl></item>
+<item><id><![CDATA[width = %s]]></id><transl></transl></item>
+<item><id><![CDATA[width &gt;= %s]]></id><transl></transl></item>
+<item><id><![CDATA[width &lt;= %s]]></id><transl></transl></item>
+<item><id>height between %s and %s</id><transl></transl></item>
+<item><id><![CDATA[height = %s]]></id><transl></transl></item>
+<item><id><![CDATA[height &gt;= %s]]></id><transl></transl></item>
+<item><id><![CDATA[height &lt;= %s]]></id><transl></transl></item>
+<item><id>ratio between %s and %s</id><transl></transl></item>
+<item><id><![CDATA[ratio = %s]]></id><transl></transl></item>
+<item><id><![CDATA[ratio &gt;= %s]]></id><transl></transl></item>
+<item><id><![CDATA[ratio &lt;= %s]]></id><transl></transl></item>
+<item><id>File</id><transl></transl></item>
+<item><id>files</id><transl></transl></item>
+<item><id>Folder</id><transl></transl></item>
+<item><id>folders</id><transl></transl></item>
+<item><id>Print</id><transl></transl></item>
+<item><id>Print to PDF</id><transl></transl></item>
+<item><id>Full Screen</id><transl>Full Screen&#009;F11</transl></item>
+<item><id>Check For Updates...</id><transl></transl></item>
+<item><id>Zoom</id><transl></transl></item>
+<item><id>Zoom In</id><transl>Zoom In&#009;Ctrl+</transl></item>
+<item><id>Zoom Out</id><transl>Zoom Out&#009;Ctrl-</transl></item>
+<item><id>100%</id><transl>100%&#009;Ctrl+0</transl></item>
+<item><id>1 file</id><transl></transl></item>
+<item><id>%d files</id><transl></transl></item>
+<item><id>Numeric identifier</id><transl></transl></item>
+<item><id>Manage</id><transl></transl></item>
+<item><id>Album alburl now contains %d photos</id><transl></transl></item>
+<item><id>Settings</id><transl></transl></item>
+<item><id>Folder:</id><transl></transl></item>
+<item><id>Add Directory</id><transl></transl></item>
+<item><id>sLongDate</id><transl>d MM, yy</transl></item>
+<item><id>sYearMonth</id><transl>MM, yy</transl></item>
+<item><id>unset</id><transl></transl></item>
+<item><id>File/directory read error</id><transl></transl></item>
+<item><id>Select the folder containing your photos</id><transl></transl></item>
+<item><id>Each directory here is an album.</id><transl></transl></item>
+<item><id>Encrypting photos does not move or copy files to the new location.</id><transl></transl></item>
+
+<item><id>Specials</id><transl></transl></item>
+<item><id>Create first album</id><transl></transl></item>
+<item><id>Create first encrypted album</id><transl></transl></item>
+<item><id>Duplicate file error.</id><transl></transl></item>
+<item><id>Filetype not allowed</id><transl></transl></item>
+<item><id>max filesize</id><transl></transl></item>
+
+<item><id>Add to Gallery</id><transl></transl></item>
+<item><id>Add to Encrypted Gallery</id><transl></transl></item>
+<item><id>Encrypted Photos</id><transl></transl></item>
+<item><id>Encrypted</id><transl></transl></item>
+<item><id>To be encrypted</id><transl></transl></item>
+<item><id>photos added to the album</id><transl></transl></item>
+<item><id>Photo Directory</id><transl></transl></item>
+<item><id>Slideshow</id><transl></transl></item>
+<item><id>first photo added on %s</id><transl></transl></item>
+<item><id>Music</id><transl></transl></item>
+<item><id>Add to your favorites</id><transl></transl></item>
+<item><id>Already exists</id><transl></transl></item>
+<item><id>The operation completed successfully.</id><transl></transl></item>
+<item><id>Confirm Removal</id><transl></transl></item>
+<item><id>Quality</id><transl></transl></item>
+<item><id>My Gallery</id><transl></transl></item>
+<item><id>Creating password</id><transl></transl></item>
+<item><id>Details</id><transl></transl></item>
+
+<item><id>BACK_ON_PAGE</id><transl>Go to back one page</transl></item>
+<item><id>FIND_POSITION</id><transl>Find my position</transl></item>
+<item><id>SEARCH_MY_POSITION</id><transl>Search my position on the map</transl></item>
+<item><id>DISPLAY_ON_MAP</id><transl>displays %s on a map</transl></item>
+<item><id>CLICKED_MAP</id><transl>You clicked the map at </transl></item>
+<item><id>SHOW_COORD</id><transl>Show coordinates</transl></item>
+<item><id>CENTER_MAP</id><transl>Center map here</transl></item>
+<item><id>ZOOM_IN</id><transl>Zoom in</transl></item>
+<item><id>ZOOM_OUT</id><transl>Zoom out</transl></item>
+<item><id>METERS_FROM_POINT</id><transl>You are within %s meters from this point</transl></item>
+<item><id>items</id><transl>items</transl></item>
+<item><id>PIWIGO_GALLERY</id><transl>Go to the gallery</transl></item>
+<item><id>VIEW_OSM</id><transl>View on OpenStreetMap</transl></item>
+<item><id>HOME_NAME</id><transl>Home</transl></item>
+<item><id>HOME_PREV_NAME</id><transl>Previous</transl></item>
+
+<item><id>Location</id><transl></transl></item>
+<item><id>File Size</id><transl></transl></item>
+<item><id>Camera Make</id><transl></transl></item>
+<item><id>Camera Model</id><transl></transl></item>
+<item><id>Camera Date</id><transl></transl></item>
+<item><id>Digitised Date</id><transl></transl></item>
+<item><id>Modified Date</id><transl></transl></item>
+<item><id>File Date</id><transl></transl></item>
+<item><id>Orientation</id><transl></transl></item>
+<item><id>Flash</id><transl></transl></item>
+<item><id>Focal Length</id><transl></transl></item>
+<item><id>Exposure Time</id><transl></transl></item>
+<item><id>F Number</id><transl></transl></item>
+<item><id>ISO</id><transl></transl></item>
+<item><id>White Balance</id><transl></transl></item>
+<item><id>Metering Mode</id><transl></transl></item>
+<item><id>Colour Space</id><transl></transl></item>
+<item><id>JPEG Quality</id><transl></transl></item>
+<item><id>GPS Latitude</id><transl></transl></item>
+<item><id>GPS Longitude</id><transl></transl></item>
+<item><id>GPS Altitude Ref</id><transl></transl></item>
+<item><id>X Resolution</id><transl></transl></item>
+<item><id>Y Resolution</id><transl></transl></item>
+<item><id>Resolution Unit</id><transl></transl></item>
+<item><id>Software</id><transl></transl></item>
+<item><id>YCbCr Positioning</id><transl></transl></item>
+
+<item><id>Export location:</id><transl></transl></item>
+<item><id>Browse...</id><transl></transl></item>
+<item><id>Name of exported folder:</id><transl></transl></item>
+<item><id>Add numbers to file names to preserve order</id><transl></transl></item>
+<item><id>Export</id><transl></transl></item>
+<item><id>Export to Folder</id><transl></transl></item>
+<item><id>Remove from Album</id><transl></transl></item>
+<item><id>Delete from Disk</id><transl></transl></item>
+
+<item><id>Play slideshow</id><transl></transl></item>
+<item><id>Pause slideshow</id><transl></transl></item>
+<item><id>Reduce slideshow speed</id><transl></transl></item>
+<item><id>Increase slideshow speed</id><transl></transl></item>
+<item><id>Open With...</id><transl></transl></item>
+<item><id>Recent files</id><transl></transl></item>
+<item><id>Create Movie</id><transl></transl></item>
+<item><id>Collages</id><transl></transl></item>
+<item><id>My creation</id><transl></transl></item>
+<item><id>Photo movie</id><transl></transl></item>
+<item><id>Photo wall</id><transl></transl></item>
+
+<item><id>Record video</id><transl></transl></item>
+<item><id>Stop</id><transl></transl></item>
+<item><id>Screenshot</id><transl></transl></item>
+<item><id>Go back</id><transl></transl></item>
+<item><id>Recording</id><transl></transl></item>
+<item><id>jump to my creation</id><transl></transl></item>
+<item><id>Play</id><transl></transl></item>
+
+<item><id>To decrypt previous photos, please enter the password you used last time.</id><transl></transl></item>
+<item><id>Current password</id><transl></transl></item>
+<item><id>The password hint will be visible to everyone who uses this computer.</id><transl></transl></item>
+<item><id>Password hint</id><transl></transl></item>
+<item><id>The destination folder is the root folder. Please choose a different folder.</id><transl></transl></item>
+<item><id>The destination folder is a system folder. Please choose a different folder.</id><transl></transl></item>
+<item><id>Unable to decrypt krf file, key mismatch</id><transl></transl></item>
+<item><id>Remove from album, decrypt photos</id><transl></transl></item>
+<item><id>Are are you sure you want to leave this page?</id><transl></transl></item>
+<item><id>Are are you sure you want to exit?</id><transl></transl></item>
+<item><id>Canceled</id><transl></transl></item>
+<item><id>This file is currently in use</id><transl></transl></item>
+<item><id>Build</id><transl></transl></item>
+<item><id>ISO Filename:</id><transl></transl></item>
+<item><id>Dump Image Files (ISO)</id><transl></transl></item>
+<item><id>Press F11 to exit full screen</id><transl></transl></item>
+<item><id>Formating...</id><transl></transl></item>
+<item><id>Exit full screen</id><transl></transl></item>
+<item><id>Drag image here</id><transl></transl></item>
+<item><id>Support drag and drop</id><transl></transl></item>
+<item><id>Add to album</id><transl></transl></item>
+<item><id>Invalid parent album</id><transl></transl></item>
+<item><id>Advanced</id><transl></transl></item>
+<item><id>Type</id><transl></transl></item>
+<item><id>Images</id><transl></transl></item>
+<item><id>Videos</id><transl></transl></item>
+<item><id>Duplicates</id><transl></transl></item>
+<item><id>Remove Duplicates</id><transl></transl></item>
+<item><id>Restore</id><transl></transl></item>
+<item><id>There is only 1 photo.</id><transl></transl></item>
+<item><id>Directory</id><transl></transl></item>
+<item><id>Not found</id><transl></transl></item>
+<item><id>No album selected</id><transl></transl></item>
+<item><id>Set as background</id><transl></transl></item>
+<item><id>Background image</id><transl></transl></item>
+<item><id>Use background image</id><transl></transl></item>
+<item><id>No background image</id><transl></transl></item>
+<item><id>Header background image only</id><transl></transl></item>
+<item><id>Log in</id><transl></transl></item>
+<item><id>Skin</id><transl></transl></item>
+<item><id>Mark image quality</id><transl></transl></item>
+<item><id>Select All</id><transl></transl></item>
+
+<item><id>Delete album</id><transl></transl></item>
+<item><id>Tag "%s" succesfully deleted</id><transl></transl></item>
+<item><id>Yes, rename</id><transl></transl></item>
+<item><id>Duplicate</id><transl></transl></item>
+<item><id>Merge</id><transl></transl></item>
+<item><id>Tag name</id><transl></transl></item>
+<item><id>Rename</id><transl></transl></item>
+<item><id>no photo</id><transl></transl></item>
+<item><id>Selection mode</id><transl></transl></item>
+<item><id>Delete tag</id><transl></transl></item>
+<item><id>Are you sure to continue?</id><transl></transl></item>
+
+<item><id>Choose filters</id><transl></transl></item>
+<item><id>File type</id><transl></transl></item>
+<item><id>OSM</id><transl></transl></item>
+<item><id>Clear</id><transl></transl></item>
+<item><id>OSM Geotagged</id><transl></transl></item>
+<item><id>OSM Not geotagged</id><transl></transl></item>
+<item><id>Admin</id><transl></transl></item>
+<item><id>Search in</id><transl></transl></item>
+<item><id>All videos</id><transl></transl></item>
+<item><id>Yes, copy</id><transl></transl></item>
+<item><id>Review</id><transl></transl></item>
+<item><id>Delete orphan tags</id><transl></transl></item>
+<item><id>You have %s orphan tags</id><transl></transl></item>
+<item><id>Delete them</id><transl></transl></item>
+<item><id>Keep them</id><transl></transl></item>
+<item><id>At least 2 selected tags are needed to merge</id><transl></transl></item>
+<item><id>Visit</id><transl></transl></item>
+<item><id>General</id><transl></transl></item>
+<item><id>Administration Home</id><transl></transl></item>
+
+<item><id>Customize</id><transl></transl></item>
+<item><id>Choose which folders to see in PhotoNest</id><transl></transl></item>
+<item><id>Folders added here will still be in their original locations.</id><transl></transl></item>
+<item><id>Add to PhotoNest</id><transl></transl></item>
+<item><id>delete album, not folders</id><transl></transl></item>
+<item><id>Setting the PhonoNest password</id><transl></transl></item>
+<item><id>Add to PhotoNest and encrypt photos</id><transl></transl></item>
+<item><id>delete album, decrypt photos</id><transl></transl></item>
+<item><id>Choose which folders to be encrypted</id><transl></transl></item>
+<item><id>Create</id><transl></transl></item>
+<item><id>Visit PhotoNest</id><transl></transl></item>
+<item><id>there are some files to add</id><transl></transl></item>
+
+<item><id>Last import</id><transl></transl></item>
+<item><id>Imported %s on %s</id><transl></transl></item>
+<item><id>photos imported during the last %d days</id><transl></transl></item>
+<item><id>display a calendar by creation date</id><transl></transl></item>
+
+<item><id>Imported between %s (%s) and %s (%s)</id><transl></transl></item>
+<item><id>Imported on %s</id><transl></transl></item>
+<item><id>Imported after %s (%s)</id><transl></transl></item>
+<item><id>Imported before %s (%s)</id><transl></transl></item>
+<item><id>Importing photos does not move or copy files to the new location.</id><transl></transl></item>
+
+<item><id>Imported</id><transl></transl></item>
+<item><id>To be imported</id><transl></transl></item>
+<item><id>Imported date</id><transl></transl></item>
+<item><id><![CDATA[Date imported, new &rarr; old]]></id><transl></transl></item>
+<item><id><![CDATA[Date imported, old &rarr; new]]></id><transl></transl></item>
+<item><id>Imported photos</id><transl></transl></item>
+<item><id>Import photos</id><transl></transl></item>
+
+<item><id>Added</id><transl></transl></item>
+<item><id>To be added</id><transl></transl></item>
+
+<item><id>Confirm password</id><transl></transl></item>
+<item><id>photos filetype not allowed</id><transl></transl></item>
+<item><id>photos too small</id><transl></transl></item>
+<item><id>files are deleted.</id><transl></transl></item>
+<item><id>clean up the album</id><transl></transl></item>
+<item><id>delete album</id><transl></transl></item>
+<item><id>Manage your photo collection</id><transl></transl></item>
+<item><id>Add</id><transl></transl></item>
+<item><id>Add folder</id><transl></transl></item>
+<item><id>Allowed file types</id><transl></transl></item>
+<item><id>Minimum width</id><transl></transl></item>
+<item><id>Minimum height</id><transl></transl></item>
+<item><id>pixels</id><transl></transl></item>
+<item><id>Empty favorites</id><transl></transl></item>
+<item><id>Create a password</id><transl></transl></item>
+
+<item><id>Are you sure you want to move this file to the Recycle Bin?</id><transl></transl></item>
+<item><id>Are you sure you want to move these files to the Recycle Bin?</id><transl></transl></item>
+<item><id>Are you sure you want to remove this photo from the current collection?</id><transl></transl></item>
+<item><id>Are you sure you want to delete these items?</id><transl></transl></item>
+<item><id>Are you sure you want to empty caddie?</id><transl></transl></item>
+<item><id>Are you sure you want to empty your favorites?</id><transl></transl></item>
+<item><id>Browse</id><transl></transl></item>
+
+<item><id>Face Classification</id><transl></transl></item>
+<item><id>Same people</id><transl></transl></item>
+<item><id>Classify</id><transl></transl></item>
+<item><id>Select the merged image</id><transl></transl></item>
+<item><id>Selected</id><transl></transl></item>
+<item><id>At least 2 selected</id><transl></transl></item>
+<item><id>Calculating the image quality ...</id><transl></transl></item>
+<item><id>More</id><transl></transl></item>
+<item><id>Date taken</id><transl></transl></item>
+<item><id>PhotoNest encrypted version</id><transl></transl></item>
+<item><id>Add example</id><transl></transl></item>
+</data>
+
+
+
+
+
+
+
+
+
+
+
+
+

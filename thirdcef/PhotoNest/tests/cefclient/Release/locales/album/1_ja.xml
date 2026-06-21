@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data><item><id>en</id><transl>ja</transl></item>
+<item><id>ltr</id><transl>ltr</transl></item>
+<item><id>Select an album</id><transl>アルバムを選択</transl></item>
+<item><id>... or</id><transl>... または </transl></item>
+<item><id>create a new album</id><transl>新しいアルバムを作成する</transl></item>
+<item><id>jump to album</id><transl>アルバムにジャンプする</transl></item>
+<item><id>Parent album</id><transl>親アルバム</transl></item>
+<item><id>Album name</id><transl>アルバム名</transl></item>
+<item><id>Create</id><transl>作成</transl></item>
+<item><id>nothing</id><transl>なし</transl></item>
+<item><id>Dashboard</id><transl>ダッシュボード</transl></item>
+<item><id>Photos</id><transl>写真</transl></item>
+<item><id>Albums</id><transl>アルバム</transl></item>
+<item><id>%d associations</id><transl>関連:%d</transl></item>
+<item><id>Tags</id><transl>タグ</transl></item>
+<item><id>Pages seen</id><transl>ページ閲覧回数</transl></item>
+<item><id>Storage used</id><transl>使用ストレージ</transl></item>
+<item><id>Add Photos</id><transl>写真を追加する</transl></item>
+<item><id>The album name must not be empty.</id><transl>アルバム名は空であってはならない。</transl></item>
+<item><id>Add another set of photos</id><transl>別の写真を追加します</transl></item>
+<item><id>Select files</id><transl>ファイルを選択する</transl></item>
+<item><id>Learn more</id><transl>詳細はこちら</transl></item>
+<item><id>Manage this set of %d photos</id><transl>%d 枚の写真を管理する</transl></item>
+<item><id>global mode</id><transl>グローバルモード</transl></item>
+<item><id>single mode</id><transl>ユニットモード</transl></item>
+<item><id>Filter</id><transl>フィルタ</transl></item>
+<item><id>remove this filter</id><transl>フィルターを削除</transl></item>
+<item><id>Predefined filter</id><transl>定義済みフィルター</transl></item>
+<item><id>Empty caddie</id><transl>空のキャディ</transl></item>
+<item><id>Album</id><transl>アルバム</transl></item>
+<item><id>include child albums</id><transl>子アルバムを含める</transl></item>
+<item><id>Type in a search term</id><transl>検索アイテムを入力してください。</transl></item>
+<item><id>All tags</id><transl>すべてのタグ</transl></item>
+<item><id>Any tag</id><transl>すべてのtag</transl></item>
+<item><id>Dimensions</id><transl>サイズ</transl></item>
+<item><id>Search</id><transl>検索</transl></item>
+<item><id>Photo title</id><transl>写真のタイトル</transl></item>
+<item><id>Photo description</id><transl>写真の説明</transl></item>
+<item><id>File name</id><transl>ファイル名</transl></item>
+<item><id>Search for an author</id><transl>作者で探す</transl></item>
+<item><id>Add a filter</id><transl>フィルター追加</transl></item>
+<item><id>Filesize</id><transl>ファイルサイズ</transl></item>
+<item><id>Creation date</id><transl>作成日</transl></item>
+<item><id>Remove all filters</id><transl>全てのフィルターを削除</transl></item>
+<item><id>Refresh photo set</id><transl>フォトセットをリフレッシュ</transl></item>
+<item><id>Selection</id><transl>選択</transl></item>
+<item><id>Action</id><transl>アクション</transl></item>
+<item><id>No photo selected</id><transl>写真が選択されません</transl></item>
+<item><id>Choose an action</id><transl>アクションを選択して下さい</transl></item>
+<item><id>Delete selected photos</id><transl>選択した写真を削除する</transl></item>
+<item><id>Associate to album</id><transl>アルバムに関連付ける</transl></item>
+<item><id>Move to album</id><transl>アルバムへ移動</transl></item>
+<item><id>Dissociate from album</id><transl>アルバムから関連付けを解除する</transl></item>
+<item><id>Add tags</id><transl>タグを追加する</transl></item>
+<item><id>Set author</id><transl>作者を設定</transl></item>
+<item><id>Set title</id><transl>タイトルを設定</transl></item>
+<item><id>Add to caddie</id><transl>キャディに追加する</transl></item>
+<item><id>Are you sure?</id><transl>本当によろしいですか?</transl></item>
+<item><id>You must confirm deletion</id><transl>あなたは、削除を確認する必要があります。</transl></item>
+<item><id>Select at least one tag</id><transl>最低1つのタグを選択してください</transl></item>
+<item><id>remove author</id><transl>作者を削除</transl></item>
+<item><id>Type the author name here</id><transl>作者名を入力してください。</transl></item>
+<item><id>remove title</id><transl>タイトルを削除</transl></item>
+<item><id>Type the title here</id><transl>タイトルを入力して下さい。</transl></item>
+<item><id>Apply action</id><transl>アクションを実行する</transl></item>
+<item><id>on the %d selected photos</id><transl>%d枚の選択された写真</transl></item>
+<item><id>%d of %d photos selected</id><transl>%d 個目の %d 個の写真選択されていました。</transl></item>
+<item><id>All %d photos are selected</id><transl>全ての %d 個の写真が選択されました</transl></item>
+<item><id>List</id><transl>一覧</transl></item>
+<item><id>Move</id><transl>移動</transl></item>
+<item><id>apply automatic sort order</id><transl>自動並び替え順を適用</transl></item>
+<item><id>Automatic sort order</id><transl>自動並び替え</transl></item>
+<item><id>Sort order</id><transl>並び順</transl></item>
+<item><id><![CDATA[Album name, A &rarr; Z]]></id><transl><![CDATA[アルバム名順(A &rarr;Z)]]></transl></item>
+<item><id><![CDATA[Album name, Z &rarr; A]]></id><transl><![CDATA[アルバム名順(Z &rarr;A)]]></transl></item>
+<item><id><![CDATA[Date created, new &rarr; old]]></id><transl><![CDATA[作成日, 新 &rarr; 旧]]></transl></item>
+<item><id>(determined from photos)</id><transl>(写真から決定する)</transl></item>
+<item><id><![CDATA[Date created, old &rarr; new]]></id><transl><![CDATA[作成日, 旧 &rarr; 新]]></transl></item>
+<item><id>Apply to sub-albums</id><transl>サブアルバムに適用する</transl></item>
+<item><id>Save order</id><transl>表示順を保存する</transl></item>
+<item><id>Save manual order</id><transl>マニュアル順保存します。</transl></item>
+<item><id>cancel manual order</id><transl>マニュアル順を中止します。</transl></item>
+<item><id>Move albums</id><transl>アルバムを移動する</transl></item>
+<item><id>Virtual albums to move</id><transl>移動するバーチャルアルバム</transl></item>
+<item><id>New parent album</id><transl>新しい親アルバム</transl></item>
+<item><id>Properties</id><transl>プロパティ</transl></item>
+<item><id>Photos sort order</id><transl>写真のランクを管理する</transl></item>
+<item><id>Use the default photo sort order</id><transl>デフォルトのイメージ並び順を使用する</transl></item>
+<item><id>Manual order</id><transl>手動の並び順</transl></item>
+<item><id>automatic order</id><transl>自動並び順</transl></item>
+<item><id>Click-and-drag to re-order</id><transl>ドラッグして並び替え</transl></item>
+<item><id>Save Settings</id><transl>設定を保存</transl></item>
+<item><id>Information</id><transl>情報</transl></item>
+<item><id>manage sub-albums</id><transl>サブアルバムを管理する</transl></item>
+<item><id>delete album</id><transl>アルバムを削除する</transl></item>
+<item><id>Name</id><transl>名称</transl></item>
+<item><id>Description</id><transl>説明</transl></item>
+<item><id>Configuration</id><transl>設定</transl></item>
+<item><id>Basic settings</id><transl>基本設定</transl></item>
+<item><id>Gallery title</id><transl>ギャラリータイトル</transl></item>
+<item><id>Default photos order</id><transl>デフォルトの写真の並び順</transl></item>
+<item><id>Add a criteria</id><transl>条件を追加</transl></item>
+<item><id>Miscellaneous</id><transl>その他の情報</transl></item>
+<item><id>other</id><transl>その他</transl></item>
+<item><id>Week starts on</id><transl>週の始まり</transl></item>
+<item><id>Batch Manager</id><transl>バッチ・マネージャー</transl></item>
+<item><id>History</id><transl>履歴</transl></item>
+<item><id>Statistics</id><transl>統計</transl></item>
+<item><id>Tags selection</id><transl>タグ選択</transl></item>
+<item><id>Select at least two tags to merge.</id><transl>統合するタグを2つ以上選択して下さい。</transl></item>
+<item><id>Display options</id><transl>表示オプション</transl></item>
+<item><id>photos per page</id><transl>ページ当りの写真の数</transl></item>
+<item><id>Downloads</id><transl>ダウンロード</transl></item>
+<item><id>delete photo</id><transl>写真を削除する</transl></item>
+<item><id>Title</id><transl>タイトル</transl></item>
+<item><id>Author</id><transl>作成者</transl></item>
+<item><id>Linked albums</id><transl>リンクされたアルバム</transl></item>
+<item><id>Album thumbnail</id><transl>アルバム見本</transl></item>
+<item><id>Photo information updated</id><transl>写真情報が更新されました。</transl></item>
+<item><id>Login</id><transl>ログイン</transl></item>
+<item><id>Identification</id><transl>個人設定</transl></item>
+<item><id>Username</id><transl>ユーザ名</transl></item>
+<item><id>Password</id><transl>パスワード</transl></item>
+<item><id>Forgot your password?</id><transl>パスワードを忘れましたか?</transl></item>
+<item><id>Reset</id><transl>リセット</transl></item>
+<item><id>Please enter a login name.</id><transl>ユーザIDを入力してください。</transl></item>
+<item><id>Please enter your password.</id><transl>パスワードを入力して下さい。</transl></item>
+<item><id>Please confirm the chosen password.</id><transl>パスワードの再確認を確認して下さい。</transl></item>
+<item><id>Search for words</id><transl>言葉で探す</transl></item>
+<item><id>Search for all terms</id><transl>すべてを含む</transl></item>
+<item><id>Search for any term</id><transl>少なくとも一つを含む</transl></item>
+<item><id>Apply on properties</id><transl>プロパティの適用</transl></item>
+<item><id>Search tags</id><transl>検索タグ</transl></item>
+<item><id>Search by date</id><transl>日付で探す</transl></item>
+<item><id>Kind of date</id><transl>日付タイプ</transl></item>
+<item><id>Search in albums</id><transl>アルバムを探す</transl></item>
+<item><id>Search in sub-albums</id><transl>サブアルバムを探す</transl></item>
+<item><id>stop the slideshow</id><transl>スライドショーを停止する</transl></item>
+<item><id>clean up</id><transl>クリーン</transl></item>
+<item><id>Visit the gallery</id><transl>ギャラリーへ</transl></item>
+<item><id>Caddie</id><transl>キャディ</transl></item>
+<item><id>Orphans</id><transl>迷子</transl></item>
+<item><id>Recent photos</id><transl>最近の写真</transl></item>
+<item><id>Duplicates</id><transl>重複</transl></item>
+<item><id>All</id><transl>すべて</transl></item>
+<item><id>Your favorites</id><transl>お気に入り</transl></item>
+<item><id>With no tag</id><transl>タグのないもの。</transl></item>
+<item><id>With no album</id><transl>アルバムに入っていないもの</transl></item>
+<item><id>Edit</id><transl>編集</transl></item>
+<item><id>Tag</id><transl>タグ</transl></item>
+<item><id>No photo selected, %d photos in current set</id><transl>写真が選択されません。現在のセットに%d枚写真があります。</transl></item>
+<item><id>Delete %d orphan photos</id><transl>%dの迷子の写真を削除します</transl></item>
+<item><id>%d photo deleted</id><transl>%d の写真が削除されました</transl></item>
+<item><id>%d photos deleted</id><transl>%d の写真が削除されました</transl></item>
+<item><id>Albums automatically sorted</id><transl>アルバムを自動的に並び替えました</transl></item>
+<item><id>Virtual album added</id><transl>バーチャルアルバムが追加されました。</transl></item>
+<item><id>Edit album</id><transl>アルバムを編集する</transl></item>
+<item><id>%d album moved</id><transl>%d 件のアルバムが移動されました。</transl></item>
+<item><id>%d albums moved</id><transl>%d 件のアルバムが移動されました。</transl></item>
+<item><id>%d photos</id><transl>%d枚の写真</transl></item>
+<item><id>View in gallery</id><transl>ギャラリーで見る</transl></item>
+<item><id>Manage photos</id><transl>写真を管理する</transl></item>
+<item><id>Tag "%s" was added</id><transl>タグ "%s" が追加されました。</transl></item>
+<item><id>Tag "%s" already exists</id><transl>タグ "%s" は、すでに登録されています。</transl></item>
+<item><id>Add a tag</id><transl>タグを追加する</transl></item>
+<item><id>Select tags</id><transl>タグを選択</transl></item>
+<item><id>New tag</id><transl>新しいタグ</transl></item>
+<item><id>No destination tag selected</id><transl>行き先タグが選択されていません</transl></item>
+<item><id>Edit selected tags</id><transl>選択したタグを編集する</transl></item>
+<item><id>Duplicate selected tags</id><transl>選択したタグを複製します</transl></item>
+<item><id>Merge selected tags</id><transl>選択したタグを統合する</transl></item>
+<item><id>Delete selected tags</id><transl>選択したタグを削除する</transl></item>
+<item><id>Display form</id><transl>フォームを表示</transl></item>
+<item><id>Edit tags</id><transl>タグを編集する</transl></item>
+<item><id>Current name</id><transl>現在の名称</transl></item>
+<item><id>New name</id><transl>新しい名称</transl></item>
+<item><id>Source tag</id><transl>ソースタグ</transl></item>
+<item><id>Name of the duplicate</id><transl>重複の名前</transl></item>
+<item><id>Merge tags</id><transl>タグを統合する</transl></item>
+<item><id>Select the destination tag</id><transl>タグの行き先を選択します。</transl></item>
+<item><id>Confirm merge</id><transl>マージを確認して下さい</transl></item>
+<item><id>(this tag will be deleted)</id><transl>(このタグを削除される)</transl></item>
+<item><id>First</id><transl>最初へ</transl></item>
+<item><id>Previous</id><transl>前へ</transl></item>
+<item><id>Next</id><transl>次へ</transl></item>
+<item><id>Last</id><transl>最後へ</transl></item>
+<item><id>The whole set</id><transl>セット全体</transl></item>
+<item><id>Width</id><transl>幅</transl></item>
+<item><id>between %d and %d pixels</id><transl>%d から %d ピクセルの間で</transl></item>
+<item><id>Height</id><transl>高さ</transl></item>
+<item><id>Ratio</id><transl>比率</transl></item>
+<item><id>between %s and %s</id><transl>%s から %sの間で</transl></item>
+<item><id>Portrait</id><transl>ポートレート</transl></item>
+<item><id>Landscape</id><transl>風景</transl></item>
+<item><id>between %s and %s MB</id><transl>%sから%s MBの間で</transl></item>
+<item><id>display</id><transl>表示</transl></item>
+<item><id>all</id><transl>すべて</transl></item>
+<item><id>Remove tags</id><transl>タグを削除する</transl></item>
+<item><id>Original file:</id><transl>オリジナルファイル : </transl></item>
+<item><id>Added by %s</id><transl>%sで追加されました。</transl></item>
+<item><id>Visited %d times</id><transl>%d回見られました。</transl></item>
+<item><id>Numeric identifier : %d</id><transl>割り当てる数値 : 整数 : %d</transl></item>
+<item><id>Album updated successfully</id><transl>アルバム情報が正常に更新されました。</transl></item>
+<item><id>manage album photos</id><transl>アルバム内の写真を管理する</transl></item>
+<item><id>Find a new random album thumbnail.</id><transl>新しいサムネイルをランダムに探す。</transl></item>
+<item><id>Refresh</id><transl>リフレッシュ</transl></item>
+<item><id>This album contains no photo.</id><transl>このアルバムには写真がありません。</transl></item>
+<item><id>This album contains %d photos, added on %s.</id><transl>このアルバムは%d個の写真を含んでいます。%sに追加しました</transl></item>
+<item><id>This album contains %d photos, added between %s and %s.</id><transl>このアルバムは%d個の写真を含んでいます。%sと%sの間に追加しました</transl></item>
+<item><id>Delete album "%s".</id><transl>アルバム "%s" を削除する。</transl></item>
+<item><id>delete album and the %d orphan photos</id><transl>アルバムと %d個の使われていない写真を削除する</transl></item>
+<item><id>delete only album, not photos</id><transl>写真はそのままに、アルバムだけを削除する</transl></item>
+<item><id>Confirm deletion</id><transl>削除を確認</transl></item>
+<item><id><![CDATA[File name, A &rarr; Z]]></id><transl><![CDATA[ファイル名, A &rarr; Z]]></transl></item>
+<item><id><![CDATA[File name, Z &rarr; A]]></id><transl><![CDATA[ファイル名, Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Photo title, A &rarr; Z]]></id><transl><![CDATA[写真題名, A &rarr; Z]]></transl></item>
+<item><id><![CDATA[Photo title, Z &rarr; A]]></id><transl><![CDATA[写真題名, Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Visits, high &rarr; low]]></id><transl><![CDATA[訪問, 高 &rarr; 低]]></transl></item>
+<item><id><![CDATA[Visits, low &rarr; high]]></id><transl><![CDATA[訪問, 低 &rarr; 高]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 1 &rarr; 9]]></id><transl><![CDATA[数字識別子, 1 &rarr; 9]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 9 &rarr; 1]]></id><transl><![CDATA[数字識別子, 9 &rarr; 1]]></transl></item>
+<item><id>Manual sort order</id><transl>マニュアル・ソート順</transl></item>
+<item><id>day0</id><transl>日曜日</transl></item>
+<item><id>day1</id><transl>月曜日</transl></item>
+<item><id>delete</id><transl>削除</transl></item>
+<item><id>Delete</id><transl>削除</transl></item>
+<item><id>Allowed file types: %s.</id><transl>使用可能なファイル：%s。</transl></item>
+<item><id>No photos in the current set.</id><transl>現在のセットには写真がありません。</transl></item>
+<item><id>Select:</id><transl>選択:</transl></item>
+<item><id>None</id><transl>なし</transl></item>
+<item><id>Invert</id><transl>選択を反転</transl></item>
+<item><id>Logout</id><transl>ログアウト</transl></item>
+<item><id>First photo added</id><transl>最初の写真が追加されました</transl></item>
+<item><id>%d photo</id><transl>イメージ: %d</transl></item>
+<item><id>in %d sub-album</id><transl>- %d サブアルバム</transl></item>
+<item><id>in %d sub-albums</id><transl>- %d サブアルバム</transl></item>
+<item><id>in this album</id><transl>- このアルバム</transl></item>
+<item><id>Thumbnail</id><transl>サムネール</transl></item>
+<item><id>2small</id><transl>XXS 小さい</transl></item>
+<item><id>xsmall</id><transl>XS　最も小さい</transl></item>
+<item><id>small</id><transl>小</transl></item>
+<item><id>medium</id><transl>中</transl></item>
+<item><id>large</id><transl>大</transl></item>
+<item><id>%d week</id><transl>%d 週</transl></item>
+<item><id>%d weeks</id><transl>%d 週間</transl></item>
+<item><id>%d day</id><transl>%d 日</transl></item>
+<item><id>%d days</id><transl>%d 日間</transl></item>
+<item><id>%d month</id><transl>%d 月</transl></item>
+<item><id>%d months</id><transl>%d ヶ月間</transl></item>
+<item><id>%d year</id><transl>%d 年</transl></item>
+<item><id>%d years</id><transl>%d 年間</transl></item>
+<item><id>%s ago</id><transl>%s 前</transl></item>
+<item><id>Related tags</id><transl>関連タグ</transl></item>
+<item><id>display your favorites photos</id><transl>私のお気に入りの写真を表示する</transl></item>
+<item><id>display most visited photos</id><transl>最もアクセスされた写真を表示する</transl></item>
+<item><id>Most visited</id><transl>最多アクセス</transl></item>
+<item><id>display most recent photos</id><transl>最近の写真を表示する</transl></item>
+<item><id>display recently updated albums</id><transl>最近更新されたアルバムを表示する</transl></item>
+<item><id>Recent albums</id><transl>最近のアルバム</transl></item>
+<item><id>Display a random set of photos.</id><transl>ランダムな写真を表示する。</transl></item>
+<item><id>Random photos</id><transl>ランダム写真</transl></item>
+<item><id>Show the photos every day, every month.</id><transl>毎日、毎月、写真を見せる。</transl></item>
+<item><id>Calendar</id><transl>カレンダー</transl></item>
+<item><id>display available tags</id><transl>利用可能なタグを表示する</transl></item>
+<item><id>Hello</id><transl>こんにちは</transl></item>
+<item><id>Photo sizes</id><transl>画像のサイズ</transl></item>
+<item><id>delete all photos from your favorites</id><transl>お気に入りから画像を全て削除する。</transl></item>
+<item><id>slideshow</id><transl>スライドショー</transl></item>
+<item><id>return to normal view mode</id><transl>ノーマルビューモードに戻る</transl></item>
+<item><id>Search criteria</id><transl>検索ルール</transl></item>
+<item><id>display this album</id><transl>このアルバムのルートのイメージを表示する</transl></item>
+<item><id>group by letters</id><transl>文字でグループ化する</transl></item>
+<item><id>letters</id><transl>文字</transl></item>
+<item><id>show tags cloud</id><transl>タグクラウドを表示する</transl></item>
+<item><id>cloud</id><transl>クラウド</transl></item>
+<item><id>Default</id><transl>デフォルト</transl></item>
+<item><id>View</id><transl>表示</transl></item>
+<item><id>Monthly list</id><transl>月リスト</transl></item>
+<item><id>Monthly calendar</id><transl>月カレンダー</transl></item>
+<item><id>day2</id><transl>火曜日</transl></item>
+<item><id>day3</id><transl>水曜日</transl></item>
+<item><id>day4</id><transl>木曜日</transl></item>
+<item><id>day5</id><transl>金曜日</transl></item>
+<item><id>day6</id><transl>土曜日</transl></item>
+<item><id>New password</id><transl>新しいパスワード</transl></item>
+<item><id>Each of the listed criteria must be satisfied.</id><transl>それぞれのリスト記載ルールを満たす必要があります。</transl></item>
+<item><id>No results for</id><transl>みつかりませんでした。</transl></item>
+<item><id>Empty query. No criteria has been entered.</id><transl>空のクエリーです。検索キーワードが入力されていません。</transl></item>
+<item><id>add this photo to your favorites</id><transl>このイメージをあなたのお気に入りに追加する</transl></item>
+<item><id>Favorites</id><transl>お気に入り</transl></item>
+<item><id>delete this photo from your favorites</id><transl>あなたのお気に入りから、このイメージを削除する</transl></item>
+<item><id>Show file metadata</id><transl>ファイルメタデータを表示する</transl></item>
+<item><id>Download this file</id><transl>このファイルをダウンロードする</transl></item>
+<item><id>Download</id><transl>ダウンロード</transl></item>
+<item><id>set as album thumbnail</id><transl>アルバム表示写真を設定する</transl></item>
+<item><id>Edit photo</id><transl>写真を編集</transl></item>
+<item><id>month1</id><transl>1月</transl></item>
+<item><id>month2</id><transl>2月</transl></item>
+<item><id>month3</id><transl>3月</transl></item>
+<item><id>month4</id><transl>4月</transl></item>
+<item><id>month5</id><transl>5月</transl></item>
+<item><id>month6</id><transl>6月</transl></item>
+<item><id>month7</id><transl>7月</transl></item>
+<item><id>month8</id><transl>8月</transl></item>
+<item><id>month9</id><transl>9月</transl></item>
+<item><id>month10</id><transl>10月</transl></item>
+<item><id>month11</id><transl>11月</transl></item>
+<item><id>month12</id><transl>12月</transl></item>
+<item><id>Hour</id><transl>時間</transl></item>
+<item><id>Date</id><transl>日付</transl></item>
+<item><id>Month</id><transl>月</transl></item>
+<item><id>Year</id><transl>年</transl></item>
+<item><id>Overall</id><transl>全体</transl></item>
+<item><id>today</id><transl>今日</transl></item>
+<item><id>Weekly list</id><transl>週リスト</transl></item>
+<item><id>Visits</id><transl>来場者数</transl></item>
+<item><id>Invalid password!</id><transl>ユーザ名かパスワードが違います!</transl></item>
+<item><id>Current password is wrong</id><transl>現在のパスワードが正しくありません。</transl></item>
+<item><id>searched words : %s</id><transl>検索キーワード : %s</transl></item>
+<item><id>created between %s (%s) and %s (%s)</id><transl>%s (%s) から %s (%s) の間に作成</transl></item>
+<item><id>included</id><transl>含む</transl></item>
+<item><id>created on %s</id><transl>作成: %s</transl></item>
+<item><id>created after %s (%s)</id><transl>%s (%s) 以降に作成</transl></item>
+<item><id>created before %s (%s)</id><transl>%s (%s) 以前に作成</transl></item>
+<item><id>Search results</id><transl>検索結果</transl></item>
+<item><id>Profile</id><transl>プロファイル</transl></item>
+<item><id>Day</id><transl>日</transl></item>
+<item><id>Square</id><transl>四角</transl></item>
+<item><id>width between %s and %s</id><transl>幅 %sから%sの間で</transl></item>
+<item><id><![CDATA[width = %s]]></id><transl><![CDATA[幅 = %s]]></transl></item>
+<item><id><![CDATA[width &gt;= %s]]></id><transl><![CDATA[幅 &gt;= %s]]></transl></item>
+<item><id><![CDATA[width &lt;= %s]]></id><transl><![CDATA[幅 &lt;= %s]]></transl></item>
+<item><id>height between %s and %s</id><transl>高さ %sから%sの間で</transl></item>
+<item><id><![CDATA[height = %s]]></id><transl><![CDATA[高さ = %s]]></transl></item>
+<item><id><![CDATA[height &gt;= %s]]></id><transl><![CDATA[高さ &gt;= %s]]></transl></item>
+<item><id><![CDATA[height &lt;= %s]]></id><transl><![CDATA[高さ &lt;= %s]]></transl></item>
+<item><id>ratio between %s and %s</id><transl>比率 %sから%sの間で</transl></item>
+<item><id><![CDATA[ratio = %s]]></id><transl><![CDATA[比率 = %s]]></transl></item>
+<item><id><![CDATA[ratio &gt;= %s]]></id><transl><![CDATA[比率 &gt;= %s]]></transl></item>
+<item><id><![CDATA[ratio &lt;= %s]]></id><transl><![CDATA[比率 &lt;= %s]]></transl></item>
+<item><id>File</id><transl>ファイル</transl></item>
+<item><id>files</id><transl>ファイル</transl></item>
+<item><id>Folder</id><transl>フォルダー</transl></item>
+<item><id>folders</id><transl>フォルダー</transl></item>
+<item><id>Print</id><transl>プリント</transl></item>
+<item><id>Print to PDF</id><transl>PDFに印刷</transl></item>
+<item><id>Full Screen</id><transl>全画面表示&#009;F11</transl></item>
+<item><id>Check For Updates...</id><transl>更新をチェック...</transl></item>
+<item><id>Zoom</id><transl>ズーム</transl></item>
+<item><id>Zoom In</id><transl>拡大&#009;Ctrl+</transl></item>
+<item><id>Zoom Out</id><transl>縮小&#009;Ctrl-</transl></item>
+<item><id>100%</id><transl>100%&#009;Ctrl+0</transl></item>
+<item><id>1 file</id><transl>1ファイル</transl></item>
+<item><id>%d files</id><transl>%dファイル</transl></item>
+<item><id>Numeric identifier</id><transl>数字識別子</transl></item>
+<item><id>Manage</id><transl>管理</transl></item>
+<item><id>Album alburl now contains %d photos</id><transl>アルバム alburl には現在　%d 枚の写真があります。</transl></item>
+<item><id>Settings</id><transl>設定</transl></item>
+<item><id>Folder:</id><transl>フォルダー</transl></item>
+<item><id>Add Directory</id><transl>ディレクトリの追加</transl></item>
+<item><id>sLongDate</id><transl>yy年m月d日</transl></item>
+<item><id>sYearMonth</id><transl>yy年m月</transl></item>
+<item><id>unset</id><transl>設定解除</transl></item>
+<item><id>File/directory read error</id><transl>ファイル/ディレクトリー読み込みエラー</transl></item>
+<item><id>Select the folder containing your photos</id><transl>写真の入っているフォルダを選択する</transl></item>
+<item><id>Each directory here is an album.</id><transl>ここでは各ディレクトリがアルバムになっています。</transl></item>
+<item><id>Encrypting photos does not move or copy files to the new location.</id><transl>写真を暗号化しても、新しい場所にファイルを移動したり、コピーしたりはしません。</transl></item>
+
+<item><id>Specials</id><transl>特別</transl></item>
+<item><id>Create first album</id><transl>最初のアルバムを作成する</transl></item>
+<item><id>Create first encrypted album</id><transl>最初の暗号化されたアルバムを作成する</transl></item>
+<item><id>Duplicate file error.</id><transl>重複ファイルエラー。</transl></item>
+<item><id>Filetype not allowed</id><transl>ファイルタイプは許可されていません</transl></item>
+<item><id>max filesize</id><transl>最大ファイルサイズ</transl></item>
+
+<item><id>Add to Gallery</id><transl>ギャラリーに追加</transl></item>
+<item><id>Add to Encrypted Gallery</id><transl>暗号化ギャラリーに追加</transl></item>
+<item><id>Encrypted Photos</id><transl>暗号化された写真</transl></item>
+<item><id>Encrypted</id><transl>暗号化されている</transl></item>
+<item><id>To be encrypted</id><transl>暗号化する</transl></item>
+<item><id>photos added to the album</id><transl>アルバムに追加された写真</transl></item>
+<item><id>Photo Directory</id><transl>フォトディレクトリ</transl></item>
+<item><id>Slideshow</id><transl>スライドショー</transl></item>
+<item><id>first photo added on %s</id><transl>最初の写真追加日時: %s'</transl></item>
+<item><id>Music</id><transl>音楽</transl></item>
+<item><id>Add to your favorites</id><transl>お気に入りに追加する</transl></item>
+<item><id>Already exists</id><transl>すでに存在する</transl></item>
+<item><id>The operation completed successfully.</id><transl>操作は正常に終了しました。</transl></item>
+<item><id>Confirm Removal</id><transl>削除を確認</transl></item>
+<item><id>Quality</id><transl>品質</transl></item>
+<item><id>My Gallery</id><transl>マイギャラリー</transl></item>
+<item><id>Creating password</id><transl>パスワードを作成する</transl></item>
+<item><id>Details</id><transl>詳細</transl></item>
+
+<item><id>BACK_ON_PAGE</id><transl>1ページ前に移動する</transl></item>
+<item><id>FIND_POSITION</id><transl>自分の位置を探す</transl></item>
+<item><id>SEARCH_MY_POSITION</id><transl>地図上で自分の位置を検索する</transl></item>
+<item><id>DISPLAY_ON_MAP</id><transl>地図上に%sを表示する</transl></item>
+<item><id>CLICKED_MAP</id><transl>で地図をクリックしたんですよね </transl></item>
+<item><id>SHOW_COORD</id><transl>座標を表示</transl></item>
+<item><id>CENTER_MAP</id><transl>中央の地図はこちら</transl></item>
+<item><id>ZOOM_IN</id><transl>拡大</transl></item>
+<item><id>ZOOM_OUT</id><transl>縮小</transl></item>
+<item><id>METERS_FROM_POINT</id><transl>あなたはこのポイントから%sメートル以内にいます</transl></item>
+<item><id>items</id><transl>items</transl></item>
+<item><id>PIWIGO_GALLERY</id><transl>ギャラリーへ</transl></item>
+<item><id>VIEW_OSM</id><transl>OpenStreetMapで見る</transl></item>
+<item><id>HOME_NAME</id><transl>ホーム</transl></item>
+<item><id>HOME_PREV_NAME</id><transl>前へ</transl></item>
+
+<item><id>Location</id><transl>場所</transl></item>
+<item><id>File Size</id><transl>ファイル サイズ</transl></item>
+<item><id>Camera Make</id><transl>カメラ メーカー</transl></item>
+<item><id>Camera Model</id><transl>画像入力機器のモデル名</transl></item>
+<item><id>Camera Date</id><transl>原画像データの生成日時</transl></item>
+<item><id>Digitised Date</id><transl>デジタル データの作成日時</transl></item>
+<item><id>Modified Date</id><transl>ファイル変更日時</transl></item>
+<item><id>File Date</id><transl>ファイル日付</transl></item>
+<item><id>Orientation</id><transl>オリエンテーション</transl></item>
+<item><id>Flash</id><transl>フラッシュ</transl></item>
+<item><id>Focal Length</id><transl>レンズ焦点距離</transl></item>
+<item><id>Exposure Time</id><transl>露出時間</transl></item>
+<item><id>F Number</id><transl>F 値</transl></item>
+<item><id>ISO</id><transl>ISO</transl></item>
+<item><id>White Balance</id><transl>ホワイト バランス</transl></item>
+<item><id>Metering Mode</id><transl>測光モード</transl></item>
+<item><id>Colour Space</id><transl>色空間</transl></item>
+<item><id>JPEG Quality</id><transl>JPEG 画質</transl></item>
+<item><id>GPS Latitude</id><transl>GPS 緯度</transl></item>
+<item><id>GPS Longitude</id><transl>GPS 経度</transl></item>
+<item><id>GPS Altitude Ref</id><transl>GPS 高度の基準</transl></item>
+<item><id>X Resolution</id><transl>画像の幅の解像度</transl></item>
+<item><id>Y Resolution</id><transl>画像の高さの解像度</transl></item>
+<item><id>Resolution Unit</id><transl>解像度の単位</transl></item>
+<item><id>Software</id><transl>ソフトウェア</transl></item>
+<item><id>YCbCr Positioning</id><transl>YCbCr ポジショニング</transl></item>
+
+<item><id>Export location:</id><transl>エクスポート場所:</transl></item>
+<item><id>Browse...</id><transl>ブラウズ...</transl></item>
+<item><id>Name of exported folder:</id><transl>エクスポート フォルダの名前:</transl></item>
+<item><id>Add numbers to file names to preserve order</id><transl>ファイル名に番号を追加して順番を保持</transl></item>
+<item><id>Export</id><transl>エクスポート</transl></item>
+<item><id>Export to Folder</id><transl>Iフォルダにエクスポート</transl></item>
+<item><id>Remove from Album</id><transl>アルバムから削除</transl></item>
+<item><id>Delete from Disk</id><transl>ディスクから削除</transl></item>
+
+<item><id>Play slideshow</id><transl>スライドショーを実行する</transl></item>
+<item><id>Pause slideshow</id><transl>スライドショーを一時停止する</transl></item>
+<item><id>Reduce slideshow speed</id><transl>スライドショーのスピードを減らす</transl></item>
+<item><id>Increase slideshow speed</id><transl>スライドショーのスピードを増やす</transl></item>
+<item><id>Open With...</id><transl>開く...</transl></item>
+<item><id>Recent files</id><transl>最近のファイル</transl></item>
+<item><id>Create Movie</id><transl>ムービーを作成</transl></item>
+<item><id>Collages</id><transl>コラージュ</transl></item>
+<item><id>My creation</id><transl>私の創作</transl></item>
+<item><id>Photo movie</id><transl>フォトムービー</transl></item>
+<item><id>Photo wall</id><transl>フォトウォール</transl></item>
+
+<item><id>Record video</id><transl>ビデオを録画する</transl></item>
+<item><id>Stop</id><transl>停止</transl></item>
+<item><id>Screenshot</id><transl>スクリーンショット</transl></item>
+<item><id>Go back</id><transl>戻る</transl></item>	
+<item><id>Recording</id><transl>レコーディング</transl></item>
+<item><id>jump to my creation</id><transl>ぼくのさくひんへジャンプ</transl></item>
+<item><id>Play</id><transl>プレイ</transl></item>
+
+<item><id>To decrypt previous photos, please enter the password you used last time.</id><transl>以前の写真を復号化するには、前回使用したパスワードを入力してください。</transl></item>
+<item><id>Current password</id><transl>現在のパスワード</transl></item>
+<item><id>The password hint will be visible to everyone who uses this computer.</id><transl>パスワードヒントは、このコンピュータを使用するすべての人に表示されます</transl></item>
+<item><id>Password hint</id><transl>パスワードのヒント</transl></item>
+<item><id>The destination folder is the root folder. Please choose a different folder.</id><transl>保存先フォルダはルートフォルダです。別のフォルダを選択してください。</transl></item>
+<item><id>The destination folder is a system folder. Please choose a different folder.</id><transl>保存先フォルダはシステムフォルダです。別のフォルダを選択してください。</transl></item>
+<item><id>Unable to decrypt krf file, key mismatch</id><transl>>krfファイルの復号化不能、鍵の不一致</transl></item>
+<item><id>Remove from album, decrypt photos</id><transl>アルバムから削除し、写真を復号化する</transl></item>
+<item><id>Are are you sure you want to leave this page?</id><transl>本当にこのままでよいのでしょうか？</transl></item>
+<item><id>Are are you sure you want to exit?</id><transl>本当に終了するのですか？</transl></item>
+<item><id>Canceled</id><transl>キャンセルされました</transl></item>
+<item><id>This file is currently in use</id><transl>このファイルは現在使用中です</transl></item>
+<item><id>Build</id><transl>ビルド</transl></item>
+<item><id>ISO Filename:</id><transl>ISOファイル名:</transl></item>
+<item><id>Dump Image Files (ISO)</id><transl>イメージファイル（ISO）をダンプする</transl></item>
+<item><id>Press F11 to exit full screen</id><transl>F11を押して全画面を終了</transl></item>
+<item><id>Formating...</id><transl>フォーマット中...</transl></item>
+<item><id>Exit full screen</id><transl>全画面表示を終了</transl></item>
+<item><id>Drag image here</id><transl>ここに画像をドラッグする</transl></item>
+<item><id>Support drag and drop</id><transl>ドラッグ&amp;ドロップをサポート</transl></item>
+<item><id>Add to album</id><transl>アルバムに追加</transl></item>
+<item><id>Invalid parent album</id><transl>無効な親アルバム</transl></item>
+<item><id>Advanced</id><transl>拡張</transl></item>
+<item><id>Type</id><transl>種類</transl></item>
+<item><id>Images</id><transl>イメージ</transl></item>
+<item><id>Videos</id><transl>ビデオ</transl></item>
+<item><id>Duplicates</id><transl>重複</transl></item>
+<item><id>Remove Duplicates</id><transl>重複の削除</transl></item>
+<item><id>Restore</id><transl>復元</transl></item>
+<item><id>There is only 1 photo.</id><transl>写真が1枚しかありません。</transl></item>
+<item><id>Directory</id><transl>ディレクトリ</transl></item>
+<item><id>Not found</id><transl>見つからない</transl></item>
+<item><id>No album selected</id><transl>アルバム選択なし</transl></item>
+<item><id>Set as background</id><transl>背景に設定</transl></item>
+<item><id>Background image</id><transl>背景画像</transl></item>
+<item><id>Use background image</id><transl>背景画像を使用する</transl></item>
+<item><id>No background image</id><transl>背景画像なし</transl></item>
+<item><id>Header background image only</id><transl>ヘッダー背景画像のみ</transl></item>
+<item><id>Log in</id><transl>ログイン</transl></item>
+<item><id>Skin</id><transl>スキン</transl></item>
+<item><id>Mark image quality</id><transl>マーク画質</transl></item>
+<item><id>Select All</id><transl>すべて選択</transl></item>
+
+<item><id>Delete album</id><transl>アルバム削除</transl></item>
+<item><id>Tag "%s" succesfully deleted</id><transl>タグ "%s" の削除に成功しました</transl></item>
+<item><id>Yes, rename</id><transl>はい、名前を変更してください</transl></item>
+<item><id>Duplicate</id><transl>複製</transl></item>
+<item><id>Merge</id><transl>マージ</transl></item>
+<item><id>Tag name</id><transl>タグ名</transl></item>
+<item><id>Rename</id><transl>名前の変更</transl></item>
+<item><id>no photo</id><transl>写真なし</transl></item>
+<item><id>Selection mode</id><transl>選択モード</transl></item>
+<item><id>Delete tag</id><transl>タグの削除</transl></item>
+<item><id>Are you sure to continue?</id><transl>続けてよろしいですか？</transl></item>
+
+<item><id>Choose filters</id><transl>フィルタを選択</transl></item>
+<item><id>File type</id><transl>ファイルタイプ</transl></item>
+<item><id>OSM</id><transl>OSM</transl></item>
+<item><id>Clear</id><transl>クリア</transl></item>
+<item><id>OSM Geotagged</id><transl>OSM ジオタグ付き</transl></item>
+<item><id>OSM Not geotagged</id><transl>OSM ジオタグなし</transl></item>
+<item><id>Admin</id><transl>管理者</transl></item>
+<item><id>Search in</id><transl>で検索</transl></item>
+<item><id>All videos</id><transl>すべてのビデオ</transl></item>
+<item><id>Yes, copy</id><transl>はい、コピー</transl></item>
+<item><id>Review</id><transl>レビュー</transl></item>
+<item><id>Delete orphan tags</id><transl>タグの削除</transl></item>
+<item><id>You have %s orphan tags</id><transl>あなたは %s の孤児タグを持っています</transl></item>
+<item><id>Delete them</id><transl>削除する</transl></item>
+<item><id>Keep them</id><transl>保持する</transl></item>
+<item><id>At least 2 selected tags are needed to merge</id><transl>マージするには、選択したタグが少なくとも2つ必要です。</transl></item>
+<item><id>Visit</id><transl>訪問</transl></item>
+<item><id>General</id><transl>一般</transl></item>
+<item><id>Administration Home</id><transl>管理ホーム</transl></item>
+
+<item><id>Customize</id><transl>カスタマイズ</transl></item>
+<item><id>Choose which folders to see in PhotoNest</id><transl>PhotoNestで表示するフォルダを選択します。</transl></item>
+<item><id>Folders added here will still be in their original locations.</id><transl>ここで追加したフォルダは元の場所に残ります。</transl></item>
+<item><id>Add to PhotoNest</id><transl>PhotoNestに追加</transl></item>
+<item><id>delete album, not folders</id><transl>フォルダではなくアルバムを削除</transl></item>
+<item><id>Setting the PhonoNest password</id><transl>PhonoNestのパスワード設定</transl></item>
+<item><id>Add to PhotoNest and encrypt photos</id><transl>PhotoNestに追加して写真を暗号化</transl></item>
+<item><id>delete album, decrypt photos</id><transl>アルバムを削除し、写真を復号化</transl></item>
+<item><id>Choose which folders to be encrypted</id><transl>暗号化するフォルダを選択</transl></item>
+<item><id>Create</id><transl>作成</transl></item>
+<item><id>Visit PhotoNest</id><transl>PhotoNestへ</transl></item>
+<item><id>there are some files to add</id><transl>追加するファイルがいくつかある</transl></item>
+
+<item><id>Last import</id><transl>最後のインポート</transl></item>
+<item><id>Imported %s on %s</id><transl>%s を %s にインポート</transl></item>
+<item><id>display a calendar by imported date</id><transl>インポートした日付でカレンダーを表示する</transl></item>
+<item><id>photos imported during the last %d days</id><transl>最近 %d 日間にインポートされた写真</transl></item>
+<item><id>display a calendar by creation date</id><transl>作成日順にカレンダーを表示する</transl></item>
+
+<item><id>Imported between %s (%s) and %s (%s)</id><transl>%s (%s)と%s (%s)の間にインポートされた</transl></item>
+<item><id>Imported on %s</id><transl>%s にインポート</transl></item>
+<item><id>Imported after %s (%s)</id><transl>%s (%s) 以降にインポート</transl></item>
+<item><id>Imported before %s (%s)</id><transl>%s (%s) 前にインポート </transl></item>
+<item><id>Importing photos does not move or copy files to the new location.</id><transl>写真をインポートしても、ファイルは新しい場所に移動またはコピーされません。</transl></item>
+
+<item><id>Imported</id><transl>インポート</transl></item>
+<item><id>To be imported</id><transl>インポートする</transl></item>
+<item><id>Imported date</id><transl>インポートされた日付</transl></item>
+<item><id><![CDATA[Date imported, new &rarr; old]]></id><transl><![CDATA[同期化日、新しい &rarr; 古い]]></transl></item>
+<item><id><![CDATA[Date imported, old &rarr; new]]></id><transl><![CDATA[同期化日、古い &rarr; 新しい]]></transl></item>
+<item><id>Imported photos</id><transl>写真のインポート</transl></item>
+<item><id>Import photos</id><transl>写真をインポートする</transl></item>
+
+<item><id>Added</id><transl>追加</transl></item>
+<item><id>To be added</id><transl>追加する</transl></item>
+
+<item><id>Confirm password</id><transl>パスワードの確認</transl></item>
+<item><id>photos filetype not allowed</id><transl>写真のファイル形式が許可されていません</transl></item>
+<item><id>photos too small</id><transl>写真が小さすぎる</transl></item>
+<item><id>files are deleted.</id><transl>ファイルは削除されます。</transl></item>
+<item><id>clean up the album</id><transl>アルバムをクリーンアップ</transl></item>
+<item><id>delete album</id><transl>アルバム削除</transl></item>
+<item><id>Manage your photo collection</id><transl>写真コレクションの管理</transl></item>
+<item><id>Add</id><transl>追加</transl></item>
+<item><id>Add folder</id><transl>フォルダを追加</transl></item>
+<item><id>Allowed file types</id><transl>許可されたファイルの種類</transl></item>
+<item><id>Minimum width</id><transl>最小幅</transl></item>
+<item><id>Minimum height</id><transl>最小高さ</transl></item>
+<item><id>pixels</id><transl>ピクセル</transl></item>
+<item><id>Empty favorites</id><transl>空のお気に入り</transl></item>
+<item><id>Create a password</id><transl>パスワードの作成</transl></item>
+
+<item><id>Are you sure you want to move this file to the Recycle Bin?</id><transl>本当にこのファイルをごみ箱に移動しますか？</transl></item>
+<item><id>Are you sure you want to move these files to the Recycle Bin?</id><transl>これらのファイルをごみ箱に移動してもよろしいですか？</transl></item>
+<item><id>Are you sure you want to remove this photo from the current collection?</id><transl>この写真を現在のコレクションから削除してもよろしいですか？</transl></item>
+<item><id>Are you sure you want to delete these items?</id><transl>本当にこのアイテムを削除しますか？</transl></item>
+<item><id>Are you sure you want to empty caddie?</id><transl>本当にキャディを空にしますか？</transl></item>
+<item><id>Are you sure you want to empty your favorites?</id><transl>本当にお気に入りを空にしますか？</transl></item>
+<item><id>Browse</id><transl>ブラウズ</transl></item>
+
+<item><id>Face Classification</id><transl>顔の分類</transl></item>
+<item><id>Same people</id><transl>同一人物</transl></item>
+<item><id>Classify</id><transl>分類</transl></item>
+<item><id>Select the merged image</id><transl>マージされた画像を選択する</transl></item>
+<item><id>Selected</id><transl>選択された</transl></item>
+<item><id>At least 2 selected</id><transl>2つ以上選択</transl></item>
+<item><id>Calculating the image quality ...</id><transl>画質の計算 ...</transl></item>
+<item><id>More</id><transl>その他</transl></item>
+<item><id>Date taken</id><transl>撮影日</transl></item>
+<item><id>PhotoNest encrypted version</id><transl>PhotoNest暗号化バージョン</transl></item>
+<item><id>Add example</id><transl>例を追加する</transl></item>
+</data>

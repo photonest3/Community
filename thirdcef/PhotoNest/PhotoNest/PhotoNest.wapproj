@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0'">
+    <VisualStudioVersion>15.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup>
+    <WapProjPath Condition="'$(WapProjPath)'==''">$(MSBuildExtensionsPath)\Microsoft\DesktopBridge\</WapProjPath>
+  </PropertyGroup>
+  <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.props" />
+  <PropertyGroup>
+    <ProjectGuid>734f70b2-1e92-4918-8c34-e4b29fc85855</ProjectGuid>
+    <TargetPlatformVersion>10.0.22000.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <EntryPointProjectUniqueName>..\tests\cefclient\nest1.vcxproj</EntryPointProjectUniqueName>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <PackageCertificateKeyFile>PhotoNest_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AppxBundle>Never</AppxBundle>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="background\default.jpg" />
+    <Content Include="db\photo.db" />
+    <Content Include="extension\sky\QR0001.jpg" />
+    <Content Include="extension\sky\QR0002.jpg" />
+    <Content Include="extension\sky\QR0003.jpg" />
+    <Content Include="extension\sky\QR0004.jpg" />
+    <Content Include="extension\sticker\QR1510.jpg" />
+    <Content Include="extension\sticker\QR1512.jpg" />
+    <Content Include="extension\sticker\QR1514.jpg" />
+    <Content Include="extension\sticker\QR1516.jpg" />
+    <Content Include="extension\sticker\QR1518.jpg" />
+    <Content Include="extension\sticker\QR1519.jpg" />
+    <Content Include="extension\sticker\QR1521.png" />
+    <Content Include="extension\sticker\QR1522.jpg" />
+    <Content Include="extension\sticker\QR1523.jpg" />
+    <Content Include="extension\sticker\QR1527.jpg" />
+    <Content Include="extension\sticker\QR1528.jpg" />
+    <Content Include="extension\sticker\QR1533.jpg" />
+    <Content Include="extension\sticker\QR1536.jpg" />
+    <Content Include="extension\sticker\QR1537.jpg" />
+    <Content Include="extension\sticker\QR1538.jpg" />
+    <Content Include="extension\sticker\QR1540.jpg" />
+    <Content Include="extension\sticker\QR1545.jpg" />
+    <Content Include="extension\sticker\QR1547.jpg" />
+    <Content Include="extension\sticker\QR1548.jpg" />
+    <Content Include="extension\sticker\QR1549.jpg" />
+    <Content Include="extension\sticker\QR1550.jpg" />
+    <Content Include="extension\sticker\QR1551.jpg" />
+    <Content Include="Images\SplashScreen.scale-200.png" />
+    <Content Include="Images\LockScreenLogo.scale-200.png" />
+    <Content Include="Images\Square150x150Logo.scale-200.png" />
+    <Content Include="Images\Square44x44Logo.scale-200.png" />
+    <Content Include="Images\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Images\StoreLogo.png" />
+    <Content Include="Images\Wide310x150Logo.scale-200.png" />
+    <Content Include="nest1\chrome_100_percent.pak" />
+    <Content Include="nest1\chrome_200_percent.pak" />
+    <Content Include="nest1\chrome_elf.dll" />
+    <Content Include="nest1\d3dcompiler_47.dll" />
+    <Content Include="nest1\help\credits.html" />
+    <Content Include="nest1\help\cutout.html" />
+    <Content Include="nest1\icudtl.dat" />
+    <Content Include="nest1\libcef.dll" />
+    <Content Include="nest1\libEGL.dll" />
+    <Content Include="nest1\libGLESv2.dll" />
+    <Content Include="nest1\locales.dll" />
+    <Content Include="nest1\locales\en-US.pak" />
+    <Content Include="nest1\model\brisque_model_live.yml" />
+    <Content Include="nest1\model\brisque_range_live.yml" />
+    <Content Include="nest1\model\haarcascade_frontalface_alt2.yml" />
+    <Content Include="nest1\model\haarcascade_lefteye_2splits.yml" />
+    <Content Include="nest1\model\haarcascade_righteye_2splits.yml" />
+    <Content Include="nest1\paint.exe" />
+    <Content Include="nest1\photol.dll" />
+    <Content Include="nest1\resources.pak" />
+    <Content Include="nest1\scheme.dll" />
+    <Content Include="nest1\snapshot_blob.bin" />
+    <Content Include="nest1\templ.dll" />
+    <Content Include="nest1\v8_context_snapshot.bin" />
+    <Content Include="nest1\vk_swiftshader.dll" />
+    <Content Include="nest1\vk_swiftshader_icd.json" />
+    <Content Include="nest1\vulkan-1.dll" />
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="PhotoNest_TemporaryKey.pfx" />
+    <Content Include="sample\lena\QR1701.jpg" />
+    <Content Include="sample\lena\QR1705.jpg" />
+    <Content Include="sample\QR1001.jpg" />
+    <Content Include="sample\QR1002.jpg" />
+    <Content Include="sample\QR1003.jpg" />
+    <Content Include="sample\QR1004.jpg" />
+    <Content Include="sample\QR1005.jpg" />
+    <Content Include="sample\sea\QR1301.jpg" />
+    <Content Include="sample\sea\QR1302.jpg" />
+    <Content Include="sample\sea\QR1303.jpg" />
+    <Content Include="sample\sea\QR1304.jpg" />
+    <Content Include="sample\sea\QR1305.jpg" />
+    <Content Include="sample\sea\QR1309.jpg" />
+    <Content Include="sample\sea\QR1313.jpg" />
+    <Content Include="sample\sea\QR1314.jpg" />
+    <Content Include="templ\admin\themes\default\fontello1\config.json" />
+    <Content Include="templ\admin\themes\default\fontello1\css\animation.css" />
+    <Content Include="templ\admin\themes\default\fontello1\css\fontello-codes.css" />
+    <Content Include="templ\admin\themes\default\fontello1\css\fontello-embedded.css" />
+    <Content Include="templ\admin\themes\default\fontello1\css\fontello-ie7-codes.css" />
+    <Content Include="templ\admin\themes\default\fontello1\css\fontello-ie7.css" />
+    <Content Include="templ\admin\themes\default\fontello1\css\fontello.css" />
+    <Content Include="templ\admin\themes\default\fontello1\demo.html" />
+    <Content Include="templ\admin\themes\default\fontello1\font\fontello.eot" />
+    <Content Include="templ\admin\themes\default\fontello1\font\fontello.svg" />
+    <Content Include="templ\admin\themes\default\fontello1\font\fontello.ttf" />
+    <Content Include="templ\admin\themes\default\fontello1\font\fontello.woff" />
+    <Content Include="templ\admin\themes\default\fontello1\font\fontello.woff2" />
+    <Content Include="templ\admin\themes\default\fontello\config.json" />
+    <Content Include="templ\admin\themes\default\fontello\css\animation.css" />
+    <Content Include="templ\admin\themes\default\fontello\css\fontello-codes.css" />
+    <Content Include="templ\admin\themes\default\fontello\css\fontello-embedded.css" />
+    <Content Include="templ\admin\themes\default\fontello\css\fontello-ie7-codes.css" />
+    <Content Include="templ\admin\themes\default\fontello\css\fontello-ie7.css" />
+    <Content Include="templ\admin\themes\default\fontello\css\fontello.css" />
+    <Content Include="templ\admin\themes\default\fontello\demo.html" />
+    <Content Include="templ\admin\themes\default\fontello\font\fontello.eot" />
+    <Content Include="templ\admin\themes\default\fontello\font\fontello.svg" />
+    <Content Include="templ\admin\themes\default\fontello\font\fontello.ttf" />
+    <Content Include="templ\admin\themes\default\fontello\font\fontello.woff" />
+    <Content Include="templ\admin\themes\default\fontello\font\fontello.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\bower.json" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\BoldItalic\OpenSans-BoldItalic.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\BoldItalic\OpenSans-BoldItalic.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Bold\OpenSans-Bold.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Bold\OpenSans-Bold.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\DESCRIPTION.en_us.html" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Italic\OpenSans-Italic.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Italic\OpenSans-Italic.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\LightItalic\OpenSans-LightItalic.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\LightItalic\OpenSans-LightItalic.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Light\OpenSans-Light.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Light\OpenSans-Light.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\METADATA.pb" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Regular\OpenSans-Regular.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Regular\OpenSans-Regular.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Semibold\OpenSans-Semibold.woff" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\fonts\Semibold\OpenSans-Semibold.woff2" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\index.html" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\open-sans.css" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\open-sans.expanded.css" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\open-sans.less" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\open-sans.prefixed.css" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\open-sans.scss" />
+    <Content Include="templ\admin\themes\default\fonts\open-sans\README.md" />
+    <Content Include="templ\admin\themes\default\font\fontawesome-webfont.eot" />
+    <Content Include="templ\admin\themes\default\font\fontawesome-webfont.svg" />
+    <Content Include="templ\admin\themes\default\font\fontawesome-webfont.ttf" />
+    <Content Include="templ\admin\themes\default\font\fontawesome-webfont.woff2" />
+    <Content Include="templ\admin\themes\default\images\bg.jpg" />
+    <Content Include="templ\admin\themes\default\images\cancel.svg" />
+    <Content Include="templ\admin\themes\default\images\cancelhover.svg" />
+    <Content Include="templ\admin\themes\default\images\cat_move.png" />
+    <Content Include="templ\admin\themes\default\images\restore.png" />
+    <Content Include="templ\admin\themes\default\images\restore1.png" />
+    <Content Include="templ\admin\themes\default\images\warning.png" />
+    <Content Include="templ\admin\themes\default\js\datepicker.js" />
+    <Content Include="templ\admin\themes\default\js\tags.js" />
+    <Content Include="templ\admin\themes\default\js\u3.common.min.js" />
+    <Content Include="templ\admin\themes\default\u3.add.css" />
+    <Content Include="templ\admin\themes\default\u3.batch.css" />
+    <Content Include="templ\admin\themes\default\u3.folder.css" />
+    <Content Include="templ\admin\themes\default\u3.tags.css" />
+    <Content Include="templ\admin\themes\default\u3.theme.css" />
+    <Content Include="templ\osm\fontello\css\animation.css" />
+    <Content Include="templ\osm\fontello\css\osm-codes.css" />
+    <Content Include="templ\osm\fontello\css\osm.css" />
+    <Content Include="templ\osm\fontello\font\osm.eot" />
+    <Content Include="templ\osm\fontello\font\osm.svg" />
+    <Content Include="templ\osm\fontello\font\osm.ttf" />
+    <Content Include="templ\osm\fontello\font\osm.woff" />
+    <Content Include="templ\osm\leaflet\images\bg-scrollbar-thumb-y.png" />
+    <Content Include="templ\osm\leaflet\images\bg-scrollbar-track-y.png" />
+    <Content Include="templ\osm\leaflet\images\bg-scrollbar-trackend-y.png" />
+    <Content Include="templ\osm\leaflet\images\check.png" />
+    <Content Include="templ\osm\leaflet\images\edit-in-osm.png" />
+    <Content Include="templ\osm\leaflet\images\elevation.png" />
+    <Content Include="templ\osm\leaflet\images\layers-2x.png" />
+    <Content Include="templ\osm\leaflet\images\layers.png" />
+    <Content Include="templ\osm\leaflet\images\leaf-green.png" />
+    <Content Include="templ\osm\leaflet\images\leaf-orange.png" />
+    <Content Include="templ\osm\leaflet\images\leaf-red.png" />
+    <Content Include="templ\osm\leaflet\images\leaf-shadow.png" />
+    <Content Include="templ\osm\leaflet\images\loader.gif" />
+    <Content Include="templ\osm\leaflet\images\mapicons-blue.png" />
+    <Content Include="templ\osm\leaflet\images\mapicons-green.png" />
+    <Content Include="templ\osm\leaflet\images\mapicons-shadow.png" />
+    <Content Include="templ\osm\leaflet\images\marker-blue.png" />
+    <Content Include="templ\osm\leaflet\images\marker-green.png" />
+    <Content Include="templ\osm\leaflet\images\marker-icon%402x.png" />
+    <Content Include="templ\osm\leaflet\images\marker-icon-2x.png" />
+    <Content Include="templ\osm\leaflet\images\marker-icon.png" />
+    <Content Include="templ\osm\leaflet\images\marker-red.png" />
+    <Content Include="templ\osm\leaflet\images\marker-shadow.png" />
+    <Content Include="templ\osm\leaflet\images\pin-icon-end.png" />
+    <Content Include="templ\osm\leaflet\images\pin-icon-start.png" />
+    <Content Include="templ\osm\leaflet\images\pin-shadow.png" />
+    <Content Include="templ\osm\leaflet\images\search-icon-mobile.png" />
+    <Content Include="templ\osm\leaflet\images\search-icon.png" />
+    <Content Include="templ\osm\leaflet\images\toggle.png" />
+    <Content Include="templ\osm\leaflet\images\transparent-pixel.png" />
+    <Content Include="templ\osm\leaflet\jcarousel.responsive.css" />
+    <Content Include="templ\osm\leaflet\jquery.jcarousel.min.js" />
+    <Content Include="templ\osm\leaflet\leaflet-omnivore.min.js" />
+    <Content Include="templ\osm\leaflet\leaflet.contextmenu.css" />
+    <Content Include="templ\osm\leaflet\leaflet.contextmenu.js" />
+    <Content Include="templ\osm\leaflet\leaflet.css" />
+    <Content Include="templ\osm\leaflet\leaflet.js" />
+    <Content Include="templ\osm\leaflet\leaflet.markercluster.js" />
+    <Content Include="templ\osm\leaflet\MarkerCluster.css" />
+    <Content Include="templ\osm\leaflet\MarkerCluster.Default.css" />
+    <Content Include="templ\themes\default\iconset.css" />
+    <Content Include="templ\themes\default\images\ajax-loader-small.gif" />
+    <Content Include="templ\themes\default\images\ajax_loader.gif" />
+    <Content Include="templ\themes\default\images\art.png" />
+    <Content Include="templ\themes\default\images\bg.jpg" />
+    <Content Include="templ\themes\default\images\gif.png" />
+    <Content Include="templ\themes\default\images\load50.gif" />
+    <Content Include="templ\themes\default\images\loader.gif" />
+    <Content Include="templ\themes\default\images\loading.gif" />
+    <Content Include="templ\themes\default\images\mp3.jpg" />
+    <Content Include="templ\themes\default\images\mp3.png" />
+    <Content Include="templ\themes\default\images\mp4.jpg" />
+    <Content Include="templ\themes\default\images\mp4.png" />
+    <Content Include="templ\themes\default\images\none.png" />
+    <Content Include="templ\themes\default\images\paint.png" />
+    <Content Include="templ\themes\default\images\start.png" />
+    <Content Include="templ\themes\default\images\u3.down.png" />
+    <Content Include="templ\themes\default\images\u3.edit.png" />
+    <Content Include="templ\themes\default\js\jquery.min.js" />
+    <Content Include="templ\themes\default\js\plugins\colorbox\css\style2\colorbox.css" />
+    <Content Include="templ\themes\default\js\plugins\colorbox\css\style2\images\controls.png" />
+    <Content Include="templ\themes\default\js\plugins\colorbox\css\style2\images\loading.gif" />
+    <Content Include="templ\themes\default\js\plugins\colorbox\jquery.colorbox.js" />
+    <Content Include="templ\themes\default\js\plugins\colorbox\LICENSE.md" />
+    <Content Include="templ\themes\default\js\plugins\film\build.min.js" />
+    <Content Include="templ\themes\default\js\plugins\film\css\tabs.css" />
+    <Content Include="templ\themes\default\js\plugins\film\css\tabstyles.css" />
+    <Content Include="templ\themes\default\js\plugins\film\LICENSE.md" />
+    <Content Include="templ\themes\default\js\plugins\film\progressjs.css" />
+    <Content Include="templ\themes\default\js\plugins\film\progressjs.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\css\jquery.fileupload-noscript.css" />
+    <Content Include="templ\themes\default\js\plugins\fupload\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="templ\themes\default\js\plugins\fupload\css\jquery.fileupload-ui.css" />
+    <Content Include="templ\themes\default\js\plugins\fupload\css\jquery.fileupload.css" />
+    <Content Include="templ\themes\default\js\plugins\fupload\img\loading.gif" />
+    <Content Include="templ\themes\default\js\plugins\fupload\img\progressbar.gif" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\jquery.fileupload-audio.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\jquery.fileupload-image.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\jquery.fileupload-process.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\jquery.fileupload-validate.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\jquery.fileupload-video.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\jquery.fileupload.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\jquery.iframe-transport.js" />
+    <Content Include="templ\themes\default\js\plugins\fupload\js\tmpl.min.js" />
+    <Content Include="templ\themes\default\js\plugins\jqcloud\jqcloud.css" />
+    <Content Include="templ\themes\default\js\plugins\jqcloud\jqcloud.js" />
+    <Content Include="templ\themes\default\js\plugins\masnory\js\jquery.flex-images.js" />
+    <Content Include="templ\themes\default\js\plugins\masnory\js\jquery.infinitescroll.js" />
+    <Content Include="templ\themes\default\js\plugins\pagination\jquery.simplePagination.js" />
+    <Content Include="templ\themes\default\js\plugins\pagination\simplePagination.css" />
+    <Content Include="templ\themes\default\js\plugins\selectize\LICENSE" />
+    <Content Include="templ\themes\default\js\plugins\selectize\selectize.clear.css" />
+    <Content Include="templ\themes\default\js\plugins\selectize\selectize.dark.css" />
+    <Content Include="templ\themes\default\js\plugins\selectize\selectize.min.js" />
+    <Content Include="templ\themes\default\js\plugins\timel\images\biggerdot.png" />
+    <Content Include="templ\themes\default\js\plugins\timel\images\dot.gif" />
+    <Content Include="templ\themes\default\js\plugins\timel\jquery.timelinr.js" />
+    <Content Include="templ\themes\default\js\plugins\timel\timel.css" />
+    <Content Include="templ\themes\default\js\plugins\tipTip\jquery.tipTip.js" />
+    <Content Include="templ\themes\default\js\plugins\tipTip\tipTip.css" />
+    <Content Include="templ\themes\default\js\plugins\viewer\css\viewer.css" />
+    <Content Include="templ\themes\default\js\plugins\viewer\js\viewer.u3.min.js" />
+    <Content Include="templ\themes\default\js\plugins\viewer\LICENSE" />
+    <Content Include="templ\themes\default\js\superfish.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="templ\themes\default\js\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.button.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.effect.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.timepicker-addon.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="templ\themes\default\js\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="templ\themes\default\js\ui\theme\images\animated-overlay.gif" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="templ\themes\default\js\ui\theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.accordion.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.all.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.autocomplete.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.base.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.button.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.core.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.datepicker.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.dialog.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.menu.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.progressbar.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.resizable.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.selectable.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.slider.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.spinner.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.tabs.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.theme.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.timepicker-addon.css" />
+    <Content Include="templ\themes\default\js\ui\theme\jquery.ui.tooltip.css" />
+    <Content Include="templ\themes\default\skins\avocado-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\avocado.css" />
+    <Content Include="templ\themes\default\skins\blueberry-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\blueberry.css" />
+    <Content Include="templ\themes\default\skins\cafe_latte-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\cafe_latte.css" />
+    <Content Include="templ\themes\default\skins\dark-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\dark.css" />
+    <Content Include="templ\themes\default\skins\fontello\config.json" />
+    <Content Include="templ\themes\default\skins\fontello\demo.html" />
+    <Content Include="templ\themes\default\skins\fontello\font\modus.eot" />
+    <Content Include="templ\themes\default\skins\fontello\font\modus.svg" />
+    <Content Include="templ\themes\default\skins\fontello\font\modus.ttf" />
+    <Content Include="templ\themes\default\skins\fontello\font\modus.woff" />
+    <Content Include="templ\themes\default\skins\fontello\font\modus.woff2" />
+    <Content Include="templ\themes\default\skins\glacier-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\glacier.css" />
+    <Content Include="templ\themes\default\skins\neon_orange-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\neon_orange.css" />
+    <Content Include="templ\themes\default\skins\neon_pink-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\neon_pink.css" />
+    <Content Include="templ\themes\default\skins\newspaper-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\newspaper.css" />
+    <Content Include="templ\themes\default\skins\quartz-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\quartz.css" />
+    <Content Include="templ\themes\default\skins\splash-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\splash.css" />
+    <Content Include="templ\themes\default\skins\strawberry_jam-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\strawberry_jam.css" />
+    <Content Include="templ\themes\default\skins\swimming_pool-screenshot.jpg" />
+    <Content Include="templ\themes\default\skins\swimming_pool.css" />
+    <Content Include="templ\themes\default\superfish.css" />
+    <Content Include="templ\themes\default\u3.art.css" />
+    <Content Include="templ\themes\default\u3.black.css" />
+    <Content Include="templ\themes\default\u3.index.css" />
+    <Content Include="templ\themes\default\u3.pic.css" />
+    <Content Include="templ\themes\default\u3.video.css" />
+  </ItemGroup>
+  <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.19041.8" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tests\cefclient\nest1.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="templ\admin\themes\default\fontello1\LICENSE.txt" />
+    <None Include="templ\admin\themes\default\fontello1\README.txt" />
+    <None Include="templ\admin\themes\default\fontello\LICENSE.txt" />
+    <None Include="templ\admin\themes\default\fontello\README.txt" />
+    <None Include="templ\admin\themes\default\fonts\open-sans\fonts\LICENSE.txt" />
+    <None Include="templ\themes\default\js\plugins\fupload\LICENSE.txt" />
+    <None Include="templ\themes\default\js\plugins\tipTip\README.txt" />
+    <None Include="templ\themes\default\skins\fontello\LICENSE.txt" />
+    <None Include="templ\themes\default\skins\fontello\README.txt" />
+  </ItemGroup>
+</Project>

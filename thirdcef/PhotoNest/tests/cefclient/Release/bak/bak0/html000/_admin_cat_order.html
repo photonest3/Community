@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <style type="text/css">
+        .category2 {
+            min-width: 300px;
+            width: 500px;
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .entry-title {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .entry-title {
+            margin-top: 20px;
+        }
+
+        .alb {
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+            font-weight: normal;
+            color: #333;
+            float: left;
+            margin-left: 5px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        .showInfo {
+            margin: 0;
+            text-align: left;
+            font-weight: normal;
+            color: #333;
+            float: left;
+            margin-left: -5px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        .entry-title0 {
+        }
+
+        .selectize-input {
+            padding: 4px 8px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui" style="min-width: 1000px;">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container">
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <div style="background-color: #f3f3f3;height: 60px; margin-left:5px;">
+                        <span class="alb">
+                            <a class="showInfo" href="./admin.html?page=admin.cat_list"><span style="letter-spacing: 0">{'Albums'|@translate}</span></a>
+                        </span>
+                        <span class="entry-title">
+                            {$titlename}
+                        </span>
+                    </div>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="normal_tab">
+                                <a href="./admin.html?page=admin.album&properties=1&category={$cat_id}">
+                                    <span><span class="icon-pencil"></span>{'Properties'|@translate} </span>
+                                </a>
+                            </li>
+                            <li class="selected_tab">
+                                <a href="./admin.html?page=admin.album&sort_order=1&category={$cat_id}">
+                                    <span><span class="icon-shuffle"></span>{'Photos sort order'|@translate} </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos"></div>
+                            </div>
+                        </div>
+                        <div class="titrePage">
+                        </div>
+                        <form id="form1" action="" method="post">
+                            <fieldset>
+                                <legend>{'Sort order'|@translate}</legend>
+                                <div class="entry-title0" style="display:block;">
+                                    <select class="category2" data-selectize="categories" onchange="seleccat(this);">
+                                        {$catoptions}
+                                    </select>
+                                </div>
+                                <div style="display:block;float: left; width: 100%;">
+                                    <p class="field">
+                                        <label class="font-checkbox">
+                                            <span class="icon-dot-circled"></span>
+                                            <input type="radio" name="image_order_choice" id="image_order_default" value="default"
+                                                   g='image_order_default' />
+                                            {'Use the default photo sort order'|@translate} &nbsp; {$sortOrder}
+                                        </label>
+                                    </p>
+                                    <p class="field">
+                                        <label class="font-checkbox">
+                                            <span class="icon-dot-circled"></span>
+                                            <input type="radio" name="image_order_choice" id="image_order_rank" value="rank"
+                                                   g='image_order_rank' />
+                                            {'Manual order'|@translate}
+                                        </label>
+                                    </p>
+                                    <p class="field">
+                                        <label class="font-checkbox">
+                                            <span class="icon-dot-circled"></span>
+                                            <input type="radio" name="image_order_choice" id="image_order_user_define" value="user_define"
+                                                   g='image_order_user_define' />
+                                            {'automatic order'|@translate}
+                                        </label>
+                                    </p>
+                                </div>
+                                <div id="image_order_user_define_options" style="display: none; padding:20px;">
+
+                                    <p class="field">
+                                        {$image_order0}
+                                    </p>
+                                    <!--  <p class="field">
+                                          {$image_order1}
+                                      </p>
+                                      <p class="field">
+                                          {$image_order2}
+                                      </p>-->
+                                </div>
+                            </fieldset>
+                            <p style="text-align: left;margin-left:22px;">
+                                <button name="submit" id="submit" type="button" onclick="submitclick();return false;" class="buttonLike">
+                                    <i class="icon-floppy"></i>{'Save Settings'|@translate}
+                                </button>
+                            </p>
+                            <div id="image_order_rank_options" style="display: none;">
+                                <p>
+                                    {'Click-and-drag to re-order'|@translate}
+                                </p>
+                                {$thumbnails}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pages">
+        <a id="next" href="./admin.html?page=admin.rank&cat_id={$cat_id}&idx=0"></a>
+    </div>
+    <div id="loading">
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/tipTip/jquery.tipTip.minified.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.sortable.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/masnory/js/jquery.infinitescroll.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _maxPage0 = parseInt('{$maxPage}');
+        var _cat_id = "{$cat_id}";
+
+        $('[data-selectize=categories]').selectize({});
+
+
+        function seleccat(obj) {
+            var v = $(obj).val();
+            var href = "./admin.html?page=admin.album&sort_order=1";
+            if (v != "" && v != "0") {
+                href += "&category=" + v;
+                location.href = href;
+            }
+        }
+
+        function checkOrderOptions() {
+            if ($("input[name=image_order_choice]:checked").val() == "user_define") {
+                $("#image_order_user_define_options").show();
+            }
+            else {
+                $("#image_order_user_define_options").hide();
+            }
+            if ($("input[name=image_order_choice]:checked").val() == "rank") {
+                $("#image_order_rank_options").show();
+                msnry();
+            }
+            else {
+                $("#image_order_rank_options").hide();
+            }
+        }
+
+        function mysort() {
+            $('ul.thumbnails').sortable({
+                revert: true, opacity: 0.7,
+                handle: $('.rank-of-image').add('.rank-of-image img'),
+                update: function () {
+                    $(this).find('li').each(function (i) {
+                        $(this).find("input[name^=rank_of_image]").each(function () {
+                            $(this).attr('value', (i + 1) * 10)
+                        });
+                    });
+
+                    $('#image_order_rank').prop('checked', true);
+                    checkOrderOptions();
+                }
+            });
+        }
+
+        function msnry() {
+            if (_maxPage0 > 0) {
+                $('#image_order_rank_options').infinitescroll({
+                    loading: {
+                        msgText: "Loading...",
+                        img: "./templ/themes/default/images/ajax_loader.gif",
+                        finishedMsg: 'End of content',
+                        selector: '#loading'
+                    },
+                    state: {
+                        currPage: 0
+                    },
+                    dataType: 'html',
+                    maxPage: _maxPage0,
+                    prefill: true,
+                    navSelector: "#pages",
+                    nextSelector: "#next",
+                    itemSelector: '.rank-of-image',
+                    appendCallback: true,
+                    path: function (index) {
+                        return './admin.html?page=admin.rank&cat_id=' + _cat_id + '&idx=' + index;
+                    },
+                    extraScrollPx: 500
+                },
+                    function (items, data, url) {
+                        $(".ui-sortable").append(items);
+                        $('ul.thumbnails').sortable("destroy");
+                        mysort();
+
+                    }
+                );
+            }
+        }
+        function submitclick() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return false;
+            }
+
+            var body = $("#form1").serialize();
+
+            $.post("./admin.html?page=admin.album&sort_order=1&category={$cat_id}", body, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    $('#info').html(info.htm);
+                    $('#info').delay(100).show();
+                    $('#info').delay(2000).fadeOut();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            $(".selectize-control").show();
+            jQuery('.font-checkbox').fontCheckbox();
+
+
+            mysort();
+
+            $("input[name=image_order_choice]").click(function () {
+                checkOrderOptions();
+            });
+            checkOrderOptions();
+        });
+        $('.thumbnail').tipTip({
+            'delay': 0,
+            'fadeIn': 200,
+            'fadeOut': 200
+        });
+    </script>
+</body>
+</html>

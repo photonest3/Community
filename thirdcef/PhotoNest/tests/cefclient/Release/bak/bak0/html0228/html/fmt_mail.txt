@@ -1,0 +1,13 @@
+Dear %TONAME%,
+
+-------------------------------------------------------------------------- 
+Reset your password by the one-time password:
+
+    Username:  %userid%
+    One-Time Password:  %token%
+
+-------------------------------------------------------------------------- 
+
+%FROMNAME%
+%FROMADDR%
+

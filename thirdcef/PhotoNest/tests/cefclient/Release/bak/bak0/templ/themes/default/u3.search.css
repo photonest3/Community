@@ -1,0 +1,56 @@
+﻿*:focus, *:active, input:active, a:active, input:focus, a:focus {
+    outline: none;
+}
+
+.ui-slider {
+    background-color: #aaa;
+    width: 300px;
+    margin-top: 10px;
+}
+
+    .ui-slider .ui-slider-range {
+        background-color: #aaa;
+        border-radius: 2px;
+    }
+
+    .ui-slider .ui-slider-handle {
+        background-color: #eee;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+    }
+
+.slider-info {
+    /*  color: #777777;*/
+}
+
+
+.errors {
+    color: #f22;
+    background-color: transparent;
+}
+
+div[data-slider='heights'], div[data-slider='ratios'] {
+    margin-top: 10px;
+}
+
+.slider-choice {
+    cursor: pointer;
+}
+
+i2::before {
+    transform: rotate(180deg);
+}
+
+/*
+a {
+    color: white;
+}
+
+    a:hover {
+        color: white;
+    }
+*/
+fieldset {
+    margin: 0 0 0 10px;
+    padding: 0.5em 0;
+}

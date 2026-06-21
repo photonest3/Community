@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\voy\\102\\PhotoNest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37BD2D1E-172C-4615-A5E9-4E64F4A30606}|..\\tests\\photol\\photol\\photol.vcxproj|E:\\voy\\102\\tests\\photol\\photol\\paint_pt.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37BD2D1E-172C-4615-A5E9-4E64F4A30606}|..\\tests\\photol\\photol\\photol.vcxproj|E:\\voy\\102\\tests\\photol\\photol\\cvui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37BD2D1E-172C-4615-A5E9-4E64F4A30606}|..\\tests\\photol\\photol\\photol.vcxproj|E:\\voy\\102\\tests\\photol\\photol\\paint_main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37BD2D1E-172C-4615-A5E9-4E64F4A30606}|..\\tests\\photol\\photol\\photol.vcxproj|E:\\voy\\102\\tests\\photol\\photol\\paint_ui.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2447E884-9098-49D1-B2D3-41BBB9CDDFE0}|..\\tests\\scheme\\scheme\\scheme.vcxproj|E:\\voy\\102\\tests\\scheme\\scheme\\HtmlgetAdminProc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "paint_pt.cpp",
+              "DocumentMoniker": "E:\\voy\\102\\tests\\photol\\photol\\paint_pt.cpp",
+              "RelativeDocumentMoniker": "..\\tests\\photol\\photol\\paint_pt.cpp",
+              "ToolTip": "E:\\voy\\102\\tests\\photol\\photol\\paint_pt.cpp",
+              "RelativeToolTip": "..\\tests\\photol\\photol\\paint_pt.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-21T02:02:52.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cvui.h",
+              "DocumentMoniker": "E:\\voy\\102\\tests\\photol\\photol\\cvui.h",
+              "RelativeDocumentMoniker": "..\\tests\\photol\\photol\\cvui.h",
+              "ToolTip": "E:\\voy\\102\\tests\\photol\\photol\\cvui.h",
+              "RelativeToolTip": "..\\tests\\photol\\photol\\cvui.h",
+              "ViewState": "AgIAAK0GAAAAAAAAAAAAADgBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-21T01:58:09.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "paint_main.cpp",
+              "DocumentMoniker": "E:\\voy\\102\\tests\\photol\\photol\\paint_main.cpp",
+              "RelativeDocumentMoniker": "..\\tests\\photol\\photol\\paint_main.cpp",
+              "ToolTip": "E:\\voy\\102\\tests\\photol\\photol\\paint_main.cpp",
+              "RelativeToolTip": "..\\tests\\photol\\photol\\paint_main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-21T01:51:43.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "paint_ui.cpp",
+              "DocumentMoniker": "E:\\voy\\102\\tests\\photol\\photol\\paint_ui.cpp",
+              "RelativeDocumentMoniker": "..\\tests\\photol\\photol\\paint_ui.cpp",
+              "ToolTip": "E:\\voy\\102\\tests\\photol\\photol\\paint_ui.cpp",
+              "RelativeToolTip": "..\\tests\\photol\\photol\\paint_ui.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-21T01:51:24.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HtmlgetAdminProc.cpp",
+              "DocumentMoniker": "E:\\voy\\102\\tests\\scheme\\scheme\\HtmlgetAdminProc.cpp",
+              "RelativeDocumentMoniker": "..\\tests\\scheme\\scheme\\HtmlgetAdminProc.cpp",
+              "ToolTip": "E:\\voy\\102\\tests\\scheme\\scheme\\HtmlgetAdminProc.cpp",
+              "RelativeToolTip": "..\\tests\\scheme\\scheme\\HtmlgetAdminProc.cpp",
+              "ViewState": "AgIAAFMDAAAAAAAAAAAswFwDAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-21T01:48:36.331Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

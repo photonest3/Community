@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.admin_add.css" />
+    <style type="text/css">
+        html, body {
+            -webkit-user-select: none;
+            background-color: #fff;
+        }
+
+        .selectFiles, .progress-extended, .fileupload-progress {
+            margin-left: 20px;
+            display: inline-block;
+        }
+
+        .fol {
+            float: right;
+            margin-top: -50px;
+            margin-right: 50px;
+        }
+
+        .preview {
+            white-space: nowrap;
+        }
+
+        .name {
+            overflow: hidden;
+        }
+
+        #striped td, #striped th {
+            width: auto;
+            white-space: nowrap;
+            min-width: 80px;
+            max-width: 320px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #striped th {
+            position: sticky;
+            top: 0;
+            background: #bbb;
+            text-align: left;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+
+        #uploadedPhotos {
+            word-break: break-word;
+        }
+
+        #content0 {
+            padding-bottom: 20px;
+        }
+
+        #content {
+            float: left;
+            width: 100%;
+            max-width: 1140px;
+        }
+
+        .row {
+            width: 1140px;
+            min-width: 768px;
+            margin: 0 auto;
+        }
+
+        .jquery-ui #container {
+            background: #fff;
+        }
+
+        #content-wrapper {
+            box-shadow: unset;
+            padding: 20px 0;
+            border-top: unset;
+            border-radius: unset;
+        }
+
+        .addAlbumEmptyTitle {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #struct-box {
+            height: 100px;
+            overflow: hidden;
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        #content h1 {
+            margin-left: 15px;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+        }
+
+        .blurred-bg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .box {
+            width: 679px;
+            left: calc( 50% - 340px );
+            top: calc(50% - 250px );
+            position: absolute;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .box3 {
+            border-radius: 5px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .addAlbumEmptyInfos {
+            color: #333;
+        }
+
+        p#uploadWarnings {
+            color: #333;
+        }
+
+        .buttonLike {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+            color: #fff;
+            padding: 4px 7px;
+            margin-left: 0;
+        }
+
+        #stripeddiv {
+            height: 352px;
+        }
+
+        .jquery-ui #content-wrapper::-webkit-scrollbar-thumb {
+            background: #bbb;
+        }
+
+        .wel {
+            display: none;
+        }
+
+        #striped {
+            table-layout: fixed;
+        }
+
+        #folder {
+            vertical-align: top;
+            display: block;
+            height: 350px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .hide_tr {
+            visibility: collapse;
+        }
+
+        i2::before {
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+
+        .addAlbumEmptyCenter0 {
+            min-height: 420px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 420px;
+            width: 80%;
+            margin-left: max(-570px,-40%);
+            margin-top: -210px;
+            max-width: 1140px;
+        }
+
+        #err0 {
+            font-size: 120%;
+            width: 500px;
+            text-align: center;
+            padding-top: 15px;
+            display: none;
+        }
+
+        .err2 {
+            position: absolute;
+            float: right;
+            right: 0;
+        }
+
+
+        .jquery-ui #content-wrapper {
+            min-height: 90%;
+            height: calc(100% - 80px);
+            overflow-y: unset;
+        }
+
+        #aru {
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        #info, #err, #info1 {
+            margin: 0;
+            top: 20px;
+            float: right;
+            z-index: 1000;
+        }
+
+        .icon-left-open:before {
+            vertical-align: middle;
+            margin-top: -3px;
+        }
+
+        .ooo {
+            top: 30px;
+        }
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui" style="background-color: #fff; overflow-y: auto;">
+    <center>
+        <div id="err0" class="errors">
+            File/directory read error
+        </div>
+    </center>
+    <div id="container">
+        <div class="box blurred-bg tinted addAlbumEmptyCenter0 " o='albumempty'>
+            <div style="float: right; margin-right: 25px;">
+                <select id="prof_language" style="background-color: #fff;" onchange="profile(this);">
+                    {$all_option}
+                </select>
+            </div>
+            <div class="addAlbumEmpty" style="padding-top: 50px;">
+                <div class="addAlbumEmptyTitle" id="wel_title">
+                </div>
+                <div id="info1" class="infos" style="display: none; min-height: unset; margin-left: 20px;">
+                    <i class="eiw-icon icon-ok"></i>
+                    <label id="lbl1">
+                    </label>
+                </div>
+                <div class="addAlbumEmptyInfos wel" style="padding-top: 100px;">
+                    <span id="fd" style="font-size: 120%; display: none;">2.</span>
+                    <a id="myfd" class="icon-exchange" title="{'Synchronize photos'|@translate}"
+                       style="font-size: 120%; color: #005E89;" href="javascript:;" onclick="selfol('1');return false;">
+                        {'Select the folder containing your photos'|@translate}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrapper" class="tinted row" o='content-wrapper'>
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1 id="titleh1" class="icon-exchange">
+                        <span>{'Photo Directory'|@translate} </span>
+                    </h1>
+                    <div class="content" style="margin-top: 20px;">
+                        <div class="eiw">
+                            <div id="err" class="errors">
+                            </div>
+                            <div class="ooo">
+                                <div id="info" class="infos">
+                                    <label id="aru">
+                                        {'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;
+                                    </label>
+                                    <a id="aru2" href="javascript:;" onclick="admin_ok();return false;">{'Yes'|@translate}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="photosAddContent">
+                            <div id="info2" class="infos" style="display: none; min-height: unset; margin-left: 20px;">
+                                <i class="eiw-icon2 icon-ok"></i>
+                            </div>
+                            <div class="errors" style="display: none; min-height: unset; margin-left: 20px;">
+                                <i class="eiw-icon icon-cancel"></i>
+                            </div>
+                            <div class="selectFiles" style="">
+                                <div class="container">
+                                    <div id="stripeddiv">
+                                        <table id="striped" class="table table-striped" cellpadding="0" cellspacing="0">
+                                            <tbody id="folder" class="files" style="vertical-align: top;">
+                                                <tr class="template-upload fade in" style="border: 1px solid #000; background-color: #bbb;
+                                                    width: 100%;">
+                                                    <th style="width: 390px; overflow: hidden; max-width: 390px;">
+                                                        <span class="preview" style="margin-left: 10px;">{'Directory'|@translate}</span>
+                                                    </th>
+                                                    <th style="width: 80px;">
+
+                                                    </th>
+                                                    <th class="thead0" style="width: 200px; overflow: hidden; max-width: 200px;">
+                                                        <span class="preview">{'Album'|@translate}</span>
+                                                    </th>
+                                                    <th style="width: 120px;">
+                                                        <span class="size" id="td_upload">{'Synchronized'|@translate}</span>
+                                                    </th>
+                                                    <th style="width: 120px;">
+                                                        <span class="size" id="td_tobe">{'To be synchronized'|@translate}</span>
+                                                    </th>
+                                                    <th style="width: 120px;">
+                                                    </th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row fileupload-buttonbar" style="display: block; width: 100%; ">
+                                        <div class="col-lg-7-000">
+
+                                            <button id="startUpload" style="margin-left: 25px;" disabled="disabled" class="buttonLike start" title="{'Synchronize photos'|@translate}">
+                                                {'Add to Gallery'|@translate}
+                                            </button>
+                                            <button id="createAccount" class="buttonLike icon-key" style="margin-left: 0;">
+                                                {'Creating password'|@translate}
+                                            </button>
+                                            <a id="btnadd" style="margin-left: 20px;font-size: 130%;" class="icon-plus-circled" href="javascript:;" title="{'Add Directory'|@translate}"
+                                               onclick="selfol('');return false;"></a>
+
+                                            <div id="uploadingActions" style="display: none">
+                                                <button id="cancelUpload" class="buttonLike icon-cancel-circled cancel0">
+                                                    {'Cancel'|@translate}
+                                                </button>
+                                            </div>
+
+                                            <div style="margin: 30px;" class="progress-extended fileupload-process">
+                                                &nbsp;
+                                            </div>
+                                            <br />
+                                            <span style="margin: 25px;">{$uploadWarnings} </span>
+                                        </div>
+                                        <div class="col-lg-5 fileupload-progress fade">
+                                            <div id="progressbarall" class="progress progress-striped active" aria-valuemin="0"
+                                                 aria-valuemax="100" style="display: none; margin-top:10px;">
+                                                <div class="progress-bar progress-bar-success" style="width: 0%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <fieldset style="display: none">
+                                <legend>{'Synchronized photos'|@translate}</legend>
+                                <div id="uploadedPhotos">
+                                </div>
+                            </fieldset>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript" src="./_first.js"></script>
+    <script type="text/javascript">
+
+        var _album = "{$album}";
+        var _acc = "{$acc}";
+        var _error = "{$error}";
+        var _appdir = "{$appdir}";
+        var _ok = "{'The operation completed successfully.'|@translate}";
+
+        var _wel_title1 = "{'Create first album'|@translate}";
+        var _wel_title2 = "{'Create first album'|@translate}";
+        var _myfd = "{'Select the folder containing your photos'|@translate}";
+
+        var _penTitle = "{'To be synchronized'|@translate}: nb1 {'files'|@translate}";
+        var _penTitle2 = "{'To be encrypted'|@translate}: nb1 {'files'|@translate}";
+        var _toenc = "{'To be encrypted'|@translate}";
+        var _encrypt = "{'Add to Encrypted Gallery'|@translate}";
+        var _encrypted = "{'Encrypted'|@translate}";
+        var _label1 = "{'The destination folder is the root folder. Please choose a different folder.'|@translate}";
+        var _label2 = "{'The destination folder is a system folder. Please choose a different folder.'|@translate}";
+        var _label3 = "{'Already exists'|@translate}";
+        var _acctitle = "{'Profile'|@translate}";
+        var _aru1 = "{'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;";
+        var _aru2 = "{'Are are you sure you want to exit?'|@translate}&nbsp; &nbsp;";
+        var _synroot = [synrootdir];
+        var _windir = [$windir];
+        var _currdir = [$currdir];
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+
+        var _len = 0;
+        var _all_cancel = 0;
+        var _cbox_change = 0;
+        var _coi_change = 0;
+        var uploadedPhotos = [];
+        var uploadedCats = [];
+        var _root_id = "";
+        var _idx = 0;
+        var _sending = 0;
+        var _sent = 0;
+        var _all_ok = 1;
+        var _count = 0;
+        var _pending = 0;
+        var _pre_idx = 0;
+        var _pre_sending = 0;
+        var _pre_len = 0;
+        var _processing = 0;
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#stripeddiv').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            jQuery('.font-checkbox').fontCheckbox();
+
+        })
+
+    </script>
+</body>
+</html>

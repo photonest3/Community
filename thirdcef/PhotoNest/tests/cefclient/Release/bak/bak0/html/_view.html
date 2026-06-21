@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/viewer/css/viewer.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello1/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        fieldset {
+            border: 0;
+            margin: 0;
+            margin-top: 5px;
+            padding: .35em .625em .75em;
+        }
+
+        .uploader__box {
+            text-align: center;
+            margin-top: 0;
+            min-height: 300px;
+        }
+
+        #fileinput0 {
+            display: none;
+        }
+
+        .my-center2 {
+            position: absolute;
+            width: 350px;
+            text-align: center;
+            left: 50%;
+            bottom: 50%;
+            top: 50%;
+            margin-top: -135px;
+            height: 270px;
+            margin-left: -150px;
+            z-index: 9999;
+            vertical-align: middle;
+        }
+
+        .my-center3 {
+            position: fixed;
+            width: 350px;
+            bottom: 35px;
+            z-index: 9999999;
+            left: calc(50% + 180px);
+        }
+
+        .ul2 {
+            background-color: #eaeae9;
+            padding: 5px;
+        }
+
+        .ui-widget-content {
+            padding-left: 20px;
+            text-align: left;
+            min-width: 150px;
+            word-break: keep-all;
+        }
+
+        .f0 {
+            overflow: hidden;
+            height: 18px;
+            max-width: 250px;
+        }
+
+        .f02 {
+            margin-top: 8px;
+            margin-left: 20px;
+        }
+
+        .nav {
+            text-align: left;
+            width: 100%;
+        }
+
+        .article-nav a:hover:before {
+            display: inherit;
+        }
+
+        .article-nav a:hover span {
+            width: 0;
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #theCategoryPage::-webkit-scrollbar {
+            width: 0 !important;
+        }
+
+        .td2 {
+            min-width: 10px;
+            max-height: 18px;
+        }
+
+        .td3 {
+            vertical-align: top;
+            padding-right: 10px;
+            max-height: 18px;
+        }
+
+        table {
+            margin: 0;
+        }
+
+        .viewer-container li img {
+           /* max-width: 30px;
+            background-color: rgba(0, 0, 0, .5);*/
+        }
+
+
+        .viewer-navbar {
+          /*  background-color: unset;*/
+        }
+
+        .viewer-list {
+          /*   background-color: rgba(0, 0, 0, 0.5);
+            height: unset;
+            max-height: 30px;*/
+        }
+
+            .viewer-list > li {
+               /* height: unset;
+                opacity: 1;*/
+            }
+
+        .viewer-close {
+            display: none;
+        }
+.viewer-container li img {
+    height: auto;
+    width: auto;
+    margin-left: -10px;
+}
+        .imgbg {
+         /*   background-image: unset;*/
+        }
+    </style>
+</head>
+<body id="theCategoryPage" onclick="onpage();">
+
+    <div class="viewer-clock">
+        <span class="viewer-clock-btn">
+            <a href="javascript:;" onclick="speed(1);return false;" title="{'Reduce slideshow speed'|@translate}" class="icon-fast-bw"></a>
+            <span id="speedv" style="margin: 0 20px;">3s</span>
+            <a href="javascript:;" onclick="speed(-1);return false;" title="{'Increase slideshow speed'|@translate}" class="icon-fast-fw"></a>
+        </span>
+    </div>
+
+
+    <div class="uploader__box" style="height: 100%; width: 100%;">
+        <table id="sel" class="my-center2" style="display: none;">
+            <tr>
+                <td>
+                    <ul id="selectable">
+                        <li class="ui-widget-content">
+                            <div id="sid2">
+                                <a href="javascript:;" id="sfile" onclick="selfile(); return false;" title="{'Open...'|@translate} (jpg, png, gif, webp, bmp, mp3, ogg, mp4, webm) ">
+                                    {'Open...'|@translate}
+                                </a>
+                            </div>
+                        </li>
+                        <li class="ui-widget-content" id="clean" style="margin-top: 5px;">
+                            <ul>
+                                {$log_viewer_his}
+                            </ul>
+                        </li>
+                        <li class="ui-widget-content" style="margin-top: 5px;">
+                            <div>
+                                <a id="alb" style="display: none;" href="javascript:;" onclick="addto();return false;"
+                                   title="{'My Gallery'|@translate}">{'Add to album'|@translate}</a>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {$calendar_nav}
+    <div id="galley" style="display: none; text-align: center;">
+        {$items}
+    </div>
+    <a id="down" href="javascript:;" style="display: none;">{'Export'|@translate}</a>
+    <a id="del_box" class="del_box" href="javascript:;" style="display: none;">delete</a>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/viewer/js/viewer.u3.min.js"></script>
+    <script type="text/javascript">
+        var _vr;
+        var _idx;
+        var _oy = 0;
+        var _num = 0;
+        var _in = 0;
+        var _idx0 = parseInt("{$idx0}");
+        var _zflag = 0;
+        var _htm2 = "{'Open...'|@translate}";
+        var _htm3 = "{'Open...'|@translate}";
+        var _tit2 = "{'Open...'|@translate} (jpg, png, gif, webp, bmp, mp3, ogg, mp4, webm) ";
+        var _tit3 = "{'Support drag and drop'|@translate} (jpg, png, gif, webp, bmp, mp3, ogg, mp4, webm) ";
+        var _htm4 = "{'Drag files here'|@translate} ...";
+        var _hisempty = parseInt("{$hisempty}");
+        var _oncebar = 0;
+        var _tit10 = "{'My Gallery'|@translate}";
+        var _tit20 = "{'Delete'|@translate}";
+        var _readonly = "{$readonly}";
+        var _sec = 3;
+
+        function stopv() {
+            if ($("#myimg").length > 0) {
+                _vr.stop();
+            }
+            else {
+                document.webkitExitFullscreen();
+            }
+        }
+
+    </script>
+    <script type="text/javascript" src="./_view.js" charset="utf-8"></script>
+</body>
+</html>

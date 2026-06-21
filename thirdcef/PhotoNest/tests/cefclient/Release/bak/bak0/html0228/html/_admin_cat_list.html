@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <style type="text/css">
+        .category2 {
+            min-width: 300px;
+            margin-left: 15px;
+            width: 500px;
+            text-align: left;
+            display: inline-block;
+            float: left;
+        }
+
+        .entry-title {
+            float: left;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        .alb {
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+            font-weight: normal;
+            color: #333;
+            float: left;
+            margin-left: 5px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        .showInfo {
+            margin: 0;
+            text-align: left;
+            font-weight: normal;
+            color: #333;
+            float: left;
+            margin-left: -5px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        .entry-title0 {
+            margin-left: 10px;
+        }
+
+        .selectize-input {
+            padding: 4px 8px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="topbar-float jquery-ui" style="min-width: 1000px;">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container">
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <div style="background-color: #f3f3f3;height: 60px; margin-left:5px;">
+                        <span class="alb">
+                            <a class="showInfo" href="./admin.html?page=admin.cat_list"><span style="letter-spacing: 0">{'Albums'|@translate}</span></a>
+                        </span>
+
+
+                        <span class="entry-title">
+                            {$titlename}
+                        </span>
+                    </div>
+
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="selected_tab">
+                                <a href="./admin.html?page=admin.cat_list">
+                                    <span>
+                                        <span class="icon-th">
+                                        </span>{'List'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="normal_tab">
+                                <a href="./admin.html?page=admin.cat_move">
+                                    <span>
+                                        <span class="icon-move">
+                                        </span>{'Move'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content" style="-webkit-user-select: none;text-align: left;">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos"></div>
+                            </div>
+                        </div>
+
+                        <span class="entry-title0">
+                            <select class="category2" data-selectize="categories" onchange="seleccat(this);">
+                                <option value="0">------------</option>
+                                {$catoptions}
+                            </select>
+                        </span>
+
+                        <div class="showCreateAlbum" id="notManualOrder" style="margin-top:20px; margin-bottom:20px;  width:100%;">
+                            <span class="userSeparator">&middot;</span> <a href="#" id="autoOrderOpen" class="icon-sort-number-up">
+                                {'apply automatic sort order'|@translate}
+                            </a>
+                        </div>
+
+
+                        <form id="formAutoOrder" action="" method="post" style="display: none;">
+                            <fieldset class="with-border">
+                                <legend>{'Automatic sort order'|@translate}</legend>
+                                <p>
+                                    <strong>{'Sort order'|@translate}</strong>
+                                    <br />
+                                    <label class="font-checkbox">
+                                        <span class="icon-dot-circled"></span>
+                                        <input type="radio" value="name ASC" name="order_by" />
+                                        {'Album name, A &rarr; Z'|@translate}
+                                    </label>
+                                    <br />
+                                    <label class="font-checkbox">
+                                        <span class="icon-dot-circled"></span>
+                                        <input type="radio" value="name DESC" name="order_by" />
+                                        {'Album name, Z &rarr; A'|@translate}
+                                    </label>
+                                    <br />
+                                    <label class="font-checkbox">
+                                        <span class="icon-dot-circled"></span>
+                                        <input type="radio" value="date_creation DESC" name="order_by" />
+                                        {'Date created, new &rarr; old'|@translate} {'(determined from photos)'|@translate}
+                                    </label>
+                                    <br />
+                                    <label class="font-checkbox">
+                                        <span class="icon-dot-circled"></span>
+                                        <input type="radio" value="date_creation ASC" name="order_by" />
+                                        {'Date created, old &rarr; new'|@translate} {'(determined from photos)'|@translate}
+                                    </label>
+                                    <br />
+                                    <label class="font-checkbox">
+                                        <span class="icon-dot-circled"></span>
+                                        <input type="radio" value="date_available DESC" name="order_by" />
+                                        {'Date synchronized, new &rarr; old'|@translate}
+                                    </label>
+                                    <br />
+                                    <label class="font-checkbox">
+                                        <span class="icon-dot-circled"></span>
+                                        <input type="radio" value="date_available ASC" name="order_by" />
+                                        {'Date synchronized, old &rarr; new'|@translate}
+                                    </label>
+                                </p>
+                                <p>
+                                    <label class="font-checkbox">
+                                        <span class="icon-check"></span>
+                                        <input type="checkbox" name="recursive" />
+                                        <strong>{'Apply to sub-albums'|@translate}</strong>
+                                    </label>
+                                </p>
+                                <p class="actionButtons">
+                                    <button name="submitAutoOrder" id="submitAutoOrder" type="button" class="buttonLike">
+                                        <i class="icon-floppy"></i>{'Save order'|@translate}
+                                    </button>
+                                    <a href="#" id="autoOrderClose" class="icon-cancel-circled">{'Cancel'|@translate}</a>
+                                </p>
+                            </fieldset>
+                        </form>
+                        <form id="categoryOrdering" action="" method="post">
+                            <p id="manualOrder" style="display: none; margin-left:15px;">
+                                <input class="submit" name="submitManualOrder" id="submitManualOrder" type="button" value="{'Save manual order'|@translate}" />
+                                {'... or'|@translate}  <a href="#" id="cancelManualOrder">{'cancel manual order'|@translate}</a>
+                            </p>
+                            <ul class="categoryUl">
+                                {$categoryUl}
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.sortable.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _parent_id = "{$parentid}";
+        var _order_by = "{$order_by}";
+        var _recursive = "{$recursive}";
+
+        $('[data-selectize=categories]').selectize({});
+
+        function seleccat(obj) {
+            var v = $(obj).val();
+            if (v == "") {
+                return;
+            }
+
+            $.post("./admin.html?page=admin.cat_list&parent_id=" + v + "&act=admin.categoryui", "a=1", function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    $('.categoryUl').html(info.ui);
+                    $('.entry-title').html(info.title);
+                    _parent_id = v;
+                    _order_by = info.order_by;
+                    _recursive = info.recursive;
+
+                    $("input[name=recursive]").prop("checked", false);
+                    $("input[name=recursive]").prev().removeClass();
+                    $("input[name=recursive]").prev().addClass('icon-check-empty');
+
+                    if (_recursive == "on") {
+                        $("input[name=recursive]").prop("checked", true);
+                        $("input[name=recursive]").prev().removeClass();
+                        $("input[name=recursive]").prev().addClass('icon-check');
+                    }
+
+                    $("input[type=radio]").prop("checked", false);
+                    $("input[type=radio]").prev().removeClass();
+                    $("input[type=radio]").prev().addClass('icon-circle-empty');
+
+                    if (_order_by == "") {
+                        $("input[type=radio][value='name ASC']").prop("checked", true);
+                        $("input[type=radio][value='name ASC']").prev().removeClass();
+                        $("input[type=radio][value='name ASC']").prev().addClass('icon-dot-circled');
+                    } else {
+                        $("input[type=radio][value='" + _order_by + "']").prop("checked", true);
+                        $("input[type=radio][value='" + _order_by + "']").prev().removeClass();
+                        $("input[type=radio][value='" + _order_by + "']").prev().addClass('icon-dot-circled');
+                    }
+                }
+            });
+        }
+
+        //  $("a.showInfo").click(function () {
+        //$(".entry-title0").toggle();
+        //$(".entry-title").toggle();
+        //});
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            if (_recursive == "on") {
+                $("input[name=recursive]").prop("checked", true);
+            }
+
+            if (_order_by == "") {
+                $("input[type=radio][value='name ASC']").prop("checked", true);
+            } else {
+                $("input[name=order_by][value='" + _order_by + "']").prop("checked", true);
+            }
+
+            jQuery('.font-checkbox').fontCheckbox();
+
+            $(".drag_button").show();
+            $(".categoryLi").css("cursor", "move");
+            $(".categoryUl").sortable({
+                axis: "y",
+                opacity: 0.8,
+                update: function () {
+                    $("#manualOrder").show();
+                    $("#notManualOrder").hide();
+                    $("#formAutoOrder").hide();
+                }
+            });
+
+            $("#submitManualOrder").click(function () {
+
+                if (_readonly != "0") {
+                    $("#err").html(_err_readonly);
+                    $('#err').delay(100).show();
+                    $('#err').delay(2000).fadeOut();
+                    return false;
+                }
+
+                ar = $('.categoryUl').sortable('toArray');
+                for (i = 0; i < ar.length; i++) {
+                    cat = ar[i].split('cat_');
+                    document.getElementsByName('catOrd_' + cat[1])[0].value = i;
+                }
+                var body = $("#categoryOrdering").serialize();
+
+                $.post("./admin.html?page=admin.cat_list&parent_id=" + _parent_id + "&act=admin.manualorder", body, function (data, state) {
+                    var info = $.parseJSON(data);
+                    if (info.stat == "ok") {
+                        $('#info').html(info.htm);
+                        $('#info').delay(100).show();
+                        $('#info').delay(2000).fadeOut();
+                    }
+                });
+            });
+
+            $("input[name=order_type]").click(function () {
+                $("#automatic_order_params").hide();
+                if ($("input[name=order_type]:checked").val() == "automatic") {
+                    $("#automatic_order_params").show();
+                }
+            });
+
+            $("#addAlbumOpen").click(function () {
+                $("#formCreateAlbum").toggle();
+                $("input[name=virtual_name]").focus();
+                $("#formAutoOrder").hide();
+            });
+
+            $("#addAlbumClose").click(function () {
+                $("#formCreateAlbum").hide();
+            });
+
+            $("#autoOrderOpen").click(function () {
+                $("#formAutoOrder").toggle();
+            });
+
+            $("#autoOrderClose").click(function () {
+                $("#formAutoOrder").hide();
+            });
+
+            $("#cancelManualOrder").click(function () {
+                $(".categoryUl").sortable("cancel");
+                $("#manualOrder").hide();
+                $("#notManualOrder").show();
+            });
+
+            $('#submitAutoOrder').click(function (e) {
+                if (_readonly != "0") {
+                    $("#err").html(_err_readonly);
+                    $('#err').delay(100).show();
+                    $('#err').delay(2000).fadeOut();
+                    return false;
+                }
+                var body = $("#formAutoOrder").serialize();
+
+                $.post("./admin.html?page=admin.cat_list&parent_id=" + _parent_id + "&act=admin.autoorder", body, function (data, state) {
+                    var info = $.parseJSON(data);
+                    if (info.stat == "ok") {
+                        $('#info').html(info.htm);
+                        $('#info').delay(100).show();
+                        $('#info').delay(2000).fadeOut();
+
+                        $('.categoryUl').html(info.ui);
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

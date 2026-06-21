@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello1/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/photopile.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/tabstyles.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.art.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        body {
+            font-size: 14px;
+            font-family: "Open Sans", "Lucida Grande",Verdana,Arial, "Bitstream Vera Sans",sans-serif;
+        }
+
+        div.photopile-wrapper {
+            max-width: 100%;
+        }
+    </style>
+
+
+</head>
+<body id="theColorPage" class="thepic">
+    <div id="result" style="display: none;margin-top:30px;position:fixed;">
+        <div id="resbar">
+            <a href="javascript:;" onclick="downjpg();return false;"
+               style="margin-top:30px;"
+               title="{'Export'|@translate}">
+                <span class="icon-download"></span>
+            </a><a id="back" href="javascript:;" onclick="result_hide();return false;" style="margin-left:10px; margin-top:30px;"
+                   title="{'Go back'|@translate}">
+                <span class=" icon-cancel"></span>
+            </a>
+        </div>
+        <div style="text-align: center;">
+            <img id="resimg" src="./templ/themes/default/images/none.png" style="display:none;" />
+        </div>
+    </div>
+    <div id="mycontent">
+        <section id="tabs" style="max-width:1140px;margin:0 auto;">
+            <div class="tabs tabs-style-iconfall" style="width:500px;padding-top:20px;">
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;" onclick="to_film();return false;">{'My creation'|@translate}</a></li>
+                        <li class="tab-current"><a href="javascript:;" onclick="to_wall();return false;">{'Collages'|@translate}</a></li>
+                        <li><a href="javascript:;" onclick="to_zoom();return false;">{'Slideshow'|@translate}</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a id="toolbar" href="javascript:;" onclick="savejpg();return false;" style="display:none; float:left; margin-left:10px;"
+               title="{'Screenshot'|@translate}"><span class="icon-camera-alt"></span></a>
+        </section>
+        <div id="wrapper" class="photopile-wrapper">
+            <ul class="photopile">
+                {$items}
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.draggable.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/wall/photopile.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/wall/html2canvas.min.js"></script>
+    <script type="text/javascript">
+        var _ids = "{$ids}";
+        var _title1 = "$title1";
+        var _canvas;
+        var _artid = "$artid";
+
+        function to_wall() {
+            location.reload();
+        }
+        function to_film() {
+            location.replace("./index.html?act=index.film&ids=" + _ids + "&artid=" + _artid);
+        }
+        function to_zoom() {
+            location.replace("./index.html?act=index.zoom&ids=" + _ids + "&artid=" + _artid);
+        }
+
+        function result_hide() {
+            $('#result').hide();
+            $('#mycontent').show();
+            $('#tabs').show();
+            $('#toolbar').show();
+            parent.$("#cboxClose").show();
+        }
+
+        function downjpg() {
+            _canvas.toBlob(function (blob) {
+                var al = document.createElement("a");
+                al.href = URL.createObjectURL(blob);
+                document.body.appendChild(al);
+                al.download = (_title1 == "") ? "ii.jpg" : _title1 + ".jpg";
+                al.style.display = 'none';
+                al.click();
+                document.body.removeChild(al);
+            });
+        }
+
+        function savejpg() {
+            $('#tabs').hide();
+            //  $('#tabs').attr("visibility","hidden");
+            $('#toolbar').hide();
+            $('#wrapper').css('backgroundColor', '#fff');
+            $('#result').hide();
+
+            new html2canvas(document.getElementById('theColorPage'), { 'backgroundColor': '#fff' }
+            ).then(canvas => {
+                _canvas = canvas;
+                var oImg = document.getElementById('resimg');
+                var context = canvas.getContext("2d");
+                oImg.src = canvas.toDataURL();
+                var w = _canvas.width / window.devicePixelRatio + "px";
+                var h = _canvas.height / window.devicePixelRatio + "px";
+
+                $('#resimg').css("width", w);
+                $('#resimg').css("height", h);
+                $('#wrapper').css('backgroundColor', 'unset');
+                $('#mycontent').hide();
+                $('#tabs').show();
+                $('#toolbar').show();
+                $('#resimg').show();
+                $('#result').show();
+                parent.$("#cboxClose").hide();
+            });
+        }
+        $(document).ready(function () {
+            PhotoPile().scatter();
+            setTimeout(function () {
+                $('#toolbar').show();
+            }, 10);
+        });
+
+    </script>
+</body>
+</html>

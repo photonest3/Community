@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <style type="text/css">
+        .content h3 {
+            letter-spacing: 0;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container">
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1>
+                        <span>{'History'|@translate}</span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="selected_tab">
+                                <a href="javascript:;">
+                                    <span>
+                                        {'Statistics'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content" style="user-select: text;">
+                        <div class="eiw">
+                        </div>
+                        <h3>
+                            {$title}
+                        </h3>
+                        <table class="table2" id="dailyStats">
+                            <tr class="throw">
+                                <th>
+                                    {$head0}
+                                </th>
+                                <th>
+                                    {'Pages seen'|@translate}
+                                </th>
+                                <th>
+                                </th>
+                            </tr>
+                            {$tr_stats}
+                        </table>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper').watermark({
+                    texts: ["{'Activation Expired'|@translate}"],
+                    textColor: "#eee"
+                });
+            }
+        });
+    </script>
+</body>
+</html>

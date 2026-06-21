@@ -1,0 +1,3 @@
+﻿  '..\..\bin\Release\bsdcpio_test.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(241,5): error MSB8066: Custom build for 'E:\voy\102\third\libarchive-master\build_vs2019_x64\CMakeFiles\e6a8be5d4779f32b64ab953302fb34ae\run_bsdcpio_test.rule;E:\voy\102\third\libarchive-master\cpio\test\CMakeLists.txt' exited with code 9009.

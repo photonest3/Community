@@ -1,0 +1,243 @@
+﻿/*------------------film-------*/
+
+html, body {
+    -webkit-user-select: none;
+}
+
+a {
+    color: #9f9f9f;
+    text-decoration: none;
+    line-height: inherit;
+}
+
+    a:hover, a:focus {
+        color: #fff;
+    }
+
+.article-nav a:hover:before {
+    display: inherit;
+}
+
+.article-nav a:hover span {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.box {
+    margin: 0 auto;
+    display: none;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 331px );
+}
+
+.progress {
+    margin: 0 auto;
+}
+
+#thePicturePage::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.sb-site-container {
+    pointer-events: auto;
+}
+
+.actionButtons {
+    margin-top: -40px;
+    margin-right: 70px;
+}
+
+body.topbar-float.clear .nav {
+    border: none !important;
+}
+
+#theColorPage::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+body[class*=topbar].topbar-float .menu {
+    left: 0;
+    z-index: 2;
+}
+
+body[class*=topbar] .menu > li {
+    float: left;
+    left: 0;
+}
+
+#toolbar {
+    top: 50px;
+    left: 10px;
+}
+
+.stm-state-disabled0 {
+    opacity: 0.5;
+}
+
+.infos {
+    color: #0a0;
+    background-color: #c2f5c2;
+    border-left: 4px solid #0a0;
+}
+
+.errors {
+    color: #f22;
+}
+
+    .infos li, .errors li, .warnings li, .messages li {
+        list-style-type: none;
+    }
+
+.infos, .errors {
+    margin: 0;
+    position: fixed;
+    top: 20px;
+    padding: 5px;
+    padding-right: 20px;
+    float: right;
+    right: 200px;
+    z-index: 100;
+    display: none;
+}
+
+    .infos ul {
+        padding-left: 6px;
+    }
+
+
+.viewer-footer {
+    height: 60px;
+}
+
+.vdobox {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: calc(100vh - 50%);
+}
+/*---------------wall----*/
+
+a {
+    color: #9f9f9f;
+    text-decoration: none;
+    line-height: inherit;
+}
+
+    a:hover, a:focus {
+        color: #fff;
+    }
+
+#thePicturePage::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+body[class*=topbar] .menu > li {
+    float: left;
+    left: 0;
+}
+
+#toolbar {
+    top: 50px;
+    left: 10px;
+}
+
+.imgbg {
+    background-image: unset;
+}
+
+div.photopile-wrapper {
+    margin: 175px auto;
+    max-width: 1140px;
+    text-align: center;
+}
+
+#resbar {
+    background-color: #000;
+    opacity: 1;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+/*-------------zoom------*/
+a {
+    color: #9f9f9f;
+    text-decoration: none;
+    line-height: inherit;
+}
+
+    a:hover, a:focus {
+        color: #fff;
+    }
+
+.article-nav a:hover:before {
+    display: inherit;
+}
+
+.article-nav a:hover span {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.topbar-float.clear .nav {
+    border-bottom: none;
+}
+
+body[class*=topbar] .sb-site-container > div {
+    box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+}
+
+.vjs-has-started {
+    display: inline-block;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.viewer-list {
+    height: 40px;
+}
+
+.actionButtons {
+    margin-top: -38px;
+    margin-right: 80px;
+}
+
+#thePicturePage::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+#err {
+    background-color: #000000;
+    color: #f22;
+    margin: 0;
+    position: fixed;
+    top: 20px;
+    padding: 5px;
+    padding-right: 20px;
+    float: right;
+    right: 200px;
+    z-index: 100;
+    display: none;
+}
+
+.viewer-navbar {
+    background-color: unset;
+}
+
+.viewer-list {
+   /* background-color: rgba(0, 0, 0, 0.5);*/
+    height: unset;
+    max-height: 30px;
+}
+    .viewer-list > li {
+        height: unset;opacity:.75;
+    }
+
+
+.viewer-container li img {
+    max-width: 30px;
+}

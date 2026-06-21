@@ -1,0 +1,12 @@
+
+.jquery-ui {
+    background-color: #e7ffe7;
+}
+
+#cboxC {
+    color: #bebebe;
+}
+
+    #cboxC:hover {
+        color: #fff;
+    }

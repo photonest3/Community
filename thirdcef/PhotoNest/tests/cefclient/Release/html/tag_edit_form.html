@@ -1,0 +1,24 @@
+<form id="tag_edit_form" action="" method="post" onsubmit="edit_submit(); return false;">
+    <div class="RenameTagPopInContainer">
+        <input type="hidden" name="edit_list" value="{$values}" />
+        <div class="AddIconTitle">
+            <span>{'Rename'|@translate} "{$name}"</span>
+        </div>
+        <div class="RenameTagInputContainer" style="text-align: left;">
+            <label class="tag-property-label TagRenameLabelUsername">
+                <span>{'Tag name'|@translate}</span>
+                <br />
+                <input type="text" class="tag-property-input" name="tag_name-{$id}" value="{$name}"
+                       size="50" maxlength="25" />
+            </label>
+        </div>
+        <div class="TagErrors icon-cancel">
+        </div>
+        <div class="TagSubmitOptions">
+            <div class="TagSubmit" onclick="edit_submit();return false;">{'Yes, rename'|@translate}</div>
+            <div class="TagCancel">
+                <span onclick="btn_cancel();return false;">{'Cancel'|@translate}</span>
+            </div>
+        </div>
+    </div>
+</form>

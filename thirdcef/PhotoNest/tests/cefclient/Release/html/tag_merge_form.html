@@ -1,0 +1,35 @@
+<form id="tag_merge_form" action="" method="post" onsubmit="return false;">
+    <div class="RenameTagPopInContainer" >
+        <input type="hidden" name="merge_list" value="{$values}" />
+        <div class="AddIconTitle">
+            <span>{'Merge tags'|@translate}</span>
+        </div>
+        <span id="stip">{'Select the destination tag'|@translate}</span>
+        <div class="RenameTagInputContainer" style="text-align: center;overflow: auto; height:150px;margin-bottom:30px;">
+            <div class="jconfirm-content2">
+                <div id="mergeTags">
+                    {$tag_merge_form_label}
+                </div>
+            </div>
+        </div>
+        <div class="TagSubmitOptions" style="margin-bottom: 15px;">
+            <div class="TagSubmit" onclick="merge_submit();return false;">{'Confirm merge'|@translate}</div>
+
+            <div class="TagCancel">
+                <span onclick="btn_cancel();return false;">{'Cancel'|@translate}</span>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    jQuery('#mergeTags').fontCheckbox();
+    function displayDeletionWarnings() {
+        $(".warningDeletion").show();
+        $("input[name=destination_tag]:checked").parent("label").children(".warningDeletion").hide();
+    }
+
+    displayDeletionWarnings();
+    $("#mergeTags").on("click", "label", function () {
+        displayDeletionWarnings();
+    });
+</script>

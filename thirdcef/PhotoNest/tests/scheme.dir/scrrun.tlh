@@ -1,0 +1,575 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.29.30158.0 (20987599).
+//
+// E:\voy\102\PhotoNest\tests\scheme.dir\scrrun.tlh
+//
+// C++ source equivalent of Win32 type library scrrun.dll
+// compiler-generated file created 02/19/25 at 17:42:50 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace Scripting {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("420b2830-e718-11cf-893d-00a0c9054228"))
+/* LIBID */ __Scripting;
+enum CompareMethod;
+enum IOMode;
+enum Tristate;
+enum __MIDL___MIDL_itf_scrrun_0000_0000_0001;
+struct __declspec(uuid("42c642c1-97e1-11cf-978f-00a02463e06f"))
+/* dual interface */ IDictionary;
+struct /* coclass */ Dictionary;
+struct __declspec(uuid("0ab5a3d0-e5b6-11d0-abf5-00a0c90fffc0"))
+/* dual interface */ IFileSystem;
+struct __declspec(uuid("c7c3f5a1-88a3-11d0-abcb-00a0c90fffc0"))
+/* dual interface */ IDriveCollection;
+struct __declspec(uuid("c7c3f5a0-88a3-11d0-abcb-00a0c90fffc0"))
+/* dual interface */ IDrive;
+enum __MIDL___MIDL_itf_scrrun_0001_0001_0001;
+struct __declspec(uuid("c7c3f5a2-88a3-11d0-abcb-00a0c90fffc0"))
+/* dual interface */ IFolder;
+struct __declspec(uuid("c7c3f5a3-88a3-11d0-abcb-00a0c90fffc0"))
+/* dual interface */ IFolderCollection;
+struct __declspec(uuid("c7c3f5a5-88a3-11d0-abcb-00a0c90fffc0"))
+/* dual interface */ IFileCollection;
+struct __declspec(uuid("c7c3f5a4-88a3-11d0-abcb-00a0c90fffc0"))
+/* dual interface */ IFile;
+struct __declspec(uuid("53bad8c1-e718-11cf-893d-00a0c9054228"))
+/* dual interface */ ITextStream;
+enum __MIDL___MIDL_itf_scrrun_0001_0001_0002;
+struct __declspec(uuid("2a0b9d10-4b87-11d3-a97a-00104b365c9f"))
+/* dual interface */ IFileSystem3;
+enum __MIDL___MIDL_itf_scrrun_0001_0001_0003;
+struct /* coclass */ FileSystemObject;
+struct /* coclass */ Drive;
+struct /* coclass */ Drives;
+struct /* coclass */ Folder;
+struct /* coclass */ Folders;
+struct /* coclass */ File;
+struct /* coclass */ Files;
+struct /* coclass */ TextStream;
+struct __declspec(uuid("aadc65f6-cff1-11d1-b747-00c04fc2b085"))
+/* dual interface */ IScriptEncoder;
+struct /* coclass */ Encoder;
+typedef enum __MIDL___MIDL_itf_scrrun_0000_0000_0001 FileAttribute;
+typedef enum __MIDL___MIDL_itf_scrrun_0001_0001_0001 DriveTypeConst;
+typedef enum __MIDL___MIDL_itf_scrrun_0001_0001_0002 SpecialFolderConst;
+typedef enum __MIDL___MIDL_itf_scrrun_0001_0001_0003 StandardStreamTypes;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IDictionary, __uuidof(IDictionary));
+_COM_SMARTPTR_TYPEDEF(ITextStream, __uuidof(ITextStream));
+_COM_SMARTPTR_TYPEDEF(IScriptEncoder, __uuidof(IScriptEncoder));
+_COM_SMARTPTR_TYPEDEF(IFileSystem, __uuidof(IFileSystem));
+_COM_SMARTPTR_TYPEDEF(IFileSystem3, __uuidof(IFileSystem3));
+_COM_SMARTPTR_TYPEDEF(IDriveCollection, __uuidof(IDriveCollection));
+_COM_SMARTPTR_TYPEDEF(IDrive, __uuidof(IDrive));
+_COM_SMARTPTR_TYPEDEF(IFolder, __uuidof(IFolder));
+_COM_SMARTPTR_TYPEDEF(IFolderCollection, __uuidof(IFolderCollection));
+_COM_SMARTPTR_TYPEDEF(IFile, __uuidof(IFile));
+_COM_SMARTPTR_TYPEDEF(IFileCollection, __uuidof(IFileCollection));
+
+//
+// Type library items
+//
+
+enum CompareMethod
+{
+    BinaryCompare = 0,
+    TextCompare = 1,
+    DatabaseCompare = 2
+};
+
+enum IOMode
+{
+    ForReading = 1,
+    ForWriting = 2,
+    ForAppending = 8
+};
+
+enum Tristate
+{
+    TristateTrue = -1,
+    TristateFalse = 0,
+    TristateUseDefault = -2,
+    TristateMixed = -2
+};
+
+enum __MIDL___MIDL_itf_scrrun_0000_0000_0001
+{
+    Normal = 0,
+    ReadOnly = 1,
+    Hidden = 2,
+    System = 4,
+    Volume = 8,
+    Directory = 16,
+    Archive = 32,
+    Alias = 1024,
+    Compressed = 2048
+};
+
+struct __declspec(uuid("42c642c1-97e1-11cf-978f-00a02463e06f"))
+IDictionary : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall putref_Item (
+        /*[in]*/ VARIANT * Key,
+        /*[in]*/ VARIANT * pRetItem ) = 0;
+      virtual HRESULT __stdcall put_Item (
+        /*[in]*/ VARIANT * Key,
+        /*[in]*/ VARIANT * pRetItem ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT * Key,
+        /*[out,retval]*/ VARIANT * pRetItem ) = 0;
+      virtual HRESULT __stdcall Add (
+        /*[in]*/ VARIANT * Key,
+        /*[in]*/ VARIANT * Item ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pCount ) = 0;
+      virtual HRESULT __stdcall Exists (
+        /*[in]*/ VARIANT * Key,
+        /*[out,retval]*/ VARIANT_BOOL * pExists ) = 0;
+      virtual HRESULT __stdcall Items (
+        /*[out,retval]*/ VARIANT * pItemsArray ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ VARIANT * Key,
+        /*[in]*/ VARIANT * _arg2 ) = 0;
+      virtual HRESULT __stdcall Keys (
+        /*[out,retval]*/ VARIANT * pKeysArray ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ VARIANT * Key ) = 0;
+      virtual HRESULT __stdcall RemoveAll ( ) = 0;
+      virtual HRESULT __stdcall put_CompareMode (
+        /*[in]*/ enum CompareMethod pcomp ) = 0;
+      virtual HRESULT __stdcall get_CompareMode (
+        /*[out,retval]*/ enum CompareMethod * pcomp ) = 0;
+      virtual HRESULT __stdcall _NewEnum (
+        /*[out,retval]*/ IUnknown * * ppunk ) = 0;
+      virtual HRESULT __stdcall get_HashVal (
+        /*[in]*/ VARIANT * Key,
+        /*[out,retval]*/ VARIANT * HashVal ) = 0;
+};
+
+struct __declspec(uuid("ee09b103-97e0-11cf-978f-00a02463e06f"))
+Dictionary;
+    // [ default ] interface IDictionary
+
+enum __MIDL___MIDL_itf_scrrun_0001_0001_0001
+{
+    UnknownType = 0,
+    Removable = 1,
+    Fixed = 2,
+    Remote = 3,
+    CDRom = 4,
+    RamDisk = 5
+};
+
+struct __declspec(uuid("53bad8c1-e718-11cf-893d-00a0c9054228"))
+ITextStream : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Line (
+        /*[out,retval]*/ long * Line ) = 0;
+      virtual HRESULT __stdcall get_Column (
+        /*[out,retval]*/ long * Column ) = 0;
+      virtual HRESULT __stdcall get_AtEndOfStream (
+        /*[out,retval]*/ VARIANT_BOOL * EOS ) = 0;
+      virtual HRESULT __stdcall get_AtEndOfLine (
+        /*[out,retval]*/ VARIANT_BOOL * EOL ) = 0;
+      virtual HRESULT __stdcall Read (
+        /*[in]*/ long Characters,
+        /*[out,retval]*/ BSTR * Text ) = 0;
+      virtual HRESULT __stdcall ReadLine (
+        /*[out,retval]*/ BSTR * Text ) = 0;
+      virtual HRESULT __stdcall ReadAll (
+        /*[out,retval]*/ BSTR * Text ) = 0;
+      virtual HRESULT __stdcall Write (
+        /*[in]*/ BSTR Text ) = 0;
+      virtual HRESULT __stdcall WriteLine (
+        /*[in]*/ BSTR Text ) = 0;
+      virtual HRESULT __stdcall WriteBlankLines (
+        /*[in]*/ long Lines ) = 0;
+      virtual HRESULT __stdcall Skip (
+        /*[in]*/ long Characters ) = 0;
+      virtual HRESULT __stdcall SkipLine ( ) = 0;
+      virtual HRESULT __stdcall Close ( ) = 0;
+};
+
+enum __MIDL___MIDL_itf_scrrun_0001_0001_0002
+{
+    WindowsFolder = 0,
+    SystemFolder = 1,
+    TemporaryFolder = 2
+};
+
+enum __MIDL___MIDL_itf_scrrun_0001_0001_0003
+{
+    StdIn = 0,
+    StdOut = 1,
+    StdErr = 2
+};
+
+struct __declspec(uuid("0d43fe01-f093-11cf-8940-00a0c9054228"))
+FileSystemObject;
+    // [ default ] interface IFileSystem3
+
+struct __declspec(uuid("c7c3f5b1-88a3-11d0-abcb-00a0c90fffc0"))
+Drive;
+    // [ default ] interface IDrive
+
+struct __declspec(uuid("c7c3f5b2-88a3-11d0-abcb-00a0c90fffc0"))
+Drives;
+    // [ default ] interface IDriveCollection
+
+struct __declspec(uuid("c7c3f5b3-88a3-11d0-abcb-00a0c90fffc0"))
+Folder;
+    // [ default ] interface IFolder
+
+struct __declspec(uuid("c7c3f5b4-88a3-11d0-abcb-00a0c90fffc0"))
+Folders;
+    // [ default ] interface IFolderCollection
+
+struct __declspec(uuid("c7c3f5b5-88a3-11d0-abcb-00a0c90fffc0"))
+File;
+    // [ default ] interface IFile
+
+struct __declspec(uuid("c7c3f5b6-88a3-11d0-abcb-00a0c90fffc0"))
+Files;
+    // [ default ] interface IFileCollection
+
+struct __declspec(uuid("0bb02ec0-ef49-11cf-8940-00a0c9054228"))
+TextStream;
+    // [ default ] interface ITextStream
+
+struct __declspec(uuid("aadc65f6-cff1-11d1-b747-00c04fc2b085"))
+IScriptEncoder : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall EncodeScriptFile (
+        /*[in]*/ BSTR szExt,
+        /*[in]*/ BSTR bstrStreamIn,
+        /*[in]*/ long cFlags,
+        /*[in]*/ BSTR bstrDefaultLang,
+        /*[out,retval]*/ BSTR * pbstrStreamOut ) = 0;
+};
+
+struct __declspec(uuid("32da2b15-cfed-11d1-b747-00c04fc2b085"))
+Encoder;
+    // [ default ] interface IScriptEncoder
+
+struct __declspec(uuid("0ab5a3d0-e5b6-11d0-abf5-00a0c90fffc0"))
+IFileSystem : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Drives (
+        /*[out,retval]*/ struct IDriveCollection * * ppdrives ) = 0;
+      virtual HRESULT __stdcall BuildPath (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall GetDriveName (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall GetParentFolderName (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall GetFileName (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall GetBaseName (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall GetExtensionName (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall GetAbsolutePathName (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall GetTempName (
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall DriveExists (
+        /*[in]*/ BSTR DriveSpec,
+        /*[out,retval]*/ VARIANT_BOOL * pfExists ) = 0;
+      virtual HRESULT __stdcall FileExists (
+        /*[in]*/ BSTR FileSpec,
+        /*[out,retval]*/ VARIANT_BOOL * pfExists ) = 0;
+      virtual HRESULT __stdcall FolderExists (
+        /*[in]*/ BSTR FolderSpec,
+        /*[out,retval]*/ VARIANT_BOOL * pfExists ) = 0;
+      virtual HRESULT __stdcall GetDrive (
+        /*[in]*/ BSTR DriveSpec,
+        /*[out,retval]*/ struct IDrive * * ppdrive ) = 0;
+      virtual HRESULT __stdcall GetFile (
+        /*[in]*/ BSTR FilePath,
+        /*[out,retval]*/ struct IFile * * ppfile ) = 0;
+      virtual HRESULT __stdcall GetFolder (
+        /*[in]*/ BSTR FolderPath,
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall GetSpecialFolder (
+        /*[in]*/ SpecialFolderConst SpecialFolder,
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall ExclDeleteFile (
+        /*[in]*/ BSTR FileSpec,
+        /*[in]*/ VARIANT_BOOL Force ) = 0;
+      virtual HRESULT __stdcall DeleteFolder (
+        /*[in]*/ BSTR FolderSpec,
+        /*[in]*/ VARIANT_BOOL Force ) = 0;
+      virtual HRESULT __stdcall ExclMoveFile (
+        /*[in]*/ BSTR Source,
+        /*[in]*/ BSTR Destination ) = 0;
+      virtual HRESULT __stdcall MoveFolder (
+        /*[in]*/ BSTR Source,
+        /*[in]*/ BSTR Destination ) = 0;
+      virtual HRESULT __stdcall ExclCopyFile (
+        /*[in]*/ BSTR Source,
+        /*[in]*/ BSTR Destination,
+        /*[in]*/ VARIANT_BOOL OverWriteFiles ) = 0;
+      virtual HRESULT __stdcall CopyFolder (
+        /*[in]*/ BSTR Source,
+        /*[in]*/ BSTR Destination,
+        /*[in]*/ VARIANT_BOOL OverWriteFiles ) = 0;
+      virtual HRESULT __stdcall CreateFolder (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall CreateTextFile (
+        /*[in]*/ BSTR FileName,
+        /*[in]*/ VARIANT_BOOL Overwrite,
+        /*[in]*/ VARIANT_BOOL Unicode,
+        /*[out,retval]*/ struct ITextStream * * ppts ) = 0;
+      virtual HRESULT __stdcall OpenTextFile (
+        /*[in]*/ BSTR FileName,
+        /*[in]*/ enum IOMode IOMode,
+        /*[in]*/ VARIANT_BOOL Create,
+        /*[in]*/ enum Tristate Format,
+        /*[out,retval]*/ struct ITextStream * * ppts ) = 0;
+};
+
+struct __declspec(uuid("2a0b9d10-4b87-11d3-a97a-00104b365c9f"))
+IFileSystem3 : IFileSystem
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall GetStandardStream (
+        /*[in]*/ StandardStreamTypes StandardStreamType,
+        /*[in]*/ VARIANT_BOOL Unicode,
+        /*[out,retval]*/ struct ITextStream * * ppts ) = 0;
+      virtual HRESULT __stdcall GetFileVersion (
+        /*[in]*/ BSTR FileName,
+        /*[out,retval]*/ BSTR * FileVersion ) = 0;
+};
+
+struct __declspec(uuid("c7c3f5a1-88a3-11d0-abcb-00a0c90fffc0"))
+IDriveCollection : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT Key,
+        /*[out,retval]*/ struct IDrive * * ppdrive ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppenum ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * plCount ) = 0;
+};
+
+struct __declspec(uuid("c7c3f5a0-88a3-11d0-abcb-00a0c90fffc0"))
+IDrive : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Path (
+        /*[out,retval]*/ BSTR * pbstrPath ) = 0;
+      virtual HRESULT __stdcall get_DriveLetter (
+        /*[out,retval]*/ BSTR * pbstrLetter ) = 0;
+      virtual HRESULT __stdcall get_ShareName (
+        /*[out,retval]*/ BSTR * pbstrShareName ) = 0;
+      virtual HRESULT __stdcall get_DriveType (
+        /*[out,retval]*/ DriveTypeConst * pdt ) = 0;
+      virtual HRESULT __stdcall get_RootFolder (
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall get_AvailableSpace (
+        /*[out,retval]*/ VARIANT * pvarAvail ) = 0;
+      virtual HRESULT __stdcall get_FreeSpace (
+        /*[out,retval]*/ VARIANT * pvarFree ) = 0;
+      virtual HRESULT __stdcall get_TotalSize (
+        /*[out,retval]*/ VARIANT * pvarTotal ) = 0;
+      virtual HRESULT __stdcall get_VolumeName (
+        /*[out,retval]*/ BSTR * pbstrName ) = 0;
+      virtual HRESULT __stdcall put_VolumeName (
+        /*[in]*/ BSTR pbstrName ) = 0;
+      virtual HRESULT __stdcall get_FileSystem (
+        /*[out,retval]*/ BSTR * pbstrFileSystem ) = 0;
+      virtual HRESULT __stdcall get_SerialNumber (
+        /*[out,retval]*/ long * pulSerialNumber ) = 0;
+      virtual HRESULT __stdcall get_IsReady (
+        /*[out,retval]*/ VARIANT_BOOL * pfReady ) = 0;
+};
+
+struct __declspec(uuid("c7c3f5a2-88a3-11d0-abcb-00a0c90fffc0"))
+IFolder : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Path (
+        /*[out,retval]*/ BSTR * pbstrPath ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pbstrName ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR pbstrName ) = 0;
+      virtual HRESULT __stdcall get_ShortPath (
+        /*[out,retval]*/ BSTR * pbstrPath ) = 0;
+      virtual HRESULT __stdcall get_ShortName (
+        /*[out,retval]*/ BSTR * pbstrName ) = 0;
+      virtual HRESULT __stdcall get_Drive (
+        /*[out,retval]*/ struct IDrive * * ppdrive ) = 0;
+      virtual HRESULT __stdcall get_ParentFolder (
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall get_Attributes (
+        /*[out,retval]*/ FileAttribute * pfa ) = 0;
+      virtual HRESULT __stdcall put_Attributes (
+        /*[in]*/ FileAttribute pfa ) = 0;
+      virtual HRESULT __stdcall get_DateCreated (
+        /*[out,retval]*/ DATE * pdate ) = 0;
+      virtual HRESULT __stdcall get_DateLastModified (
+        /*[out,retval]*/ DATE * pdate ) = 0;
+      virtual HRESULT __stdcall get_DateLastAccessed (
+        /*[out,retval]*/ DATE * pdate ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ BSTR * pbstrType ) = 0;
+      virtual HRESULT __stdcall Delete (
+        /*[in]*/ VARIANT_BOOL Force ) = 0;
+      virtual HRESULT __stdcall Copy (
+        /*[in]*/ BSTR Destination,
+        /*[in]*/ VARIANT_BOOL OverWriteFiles ) = 0;
+      virtual HRESULT __stdcall Move (
+        /*[in]*/ BSTR Destination ) = 0;
+      virtual HRESULT __stdcall get_IsRootFolder (
+        /*[out,retval]*/ VARIANT_BOOL * pfRootFolder ) = 0;
+      virtual HRESULT __stdcall get_Size (
+        /*[out,retval]*/ VARIANT * pvarSize ) = 0;
+      virtual HRESULT __stdcall get_SubFolders (
+        /*[out,retval]*/ struct IFolderCollection * * ppfolders ) = 0;
+      virtual HRESULT __stdcall get_Files (
+        /*[out,retval]*/ struct IFileCollection * * ppfiles ) = 0;
+      virtual HRESULT __stdcall CreateTextFile (
+        /*[in]*/ BSTR FileName,
+        /*[in]*/ VARIANT_BOOL Overwrite,
+        /*[in]*/ VARIANT_BOOL Unicode,
+        /*[out,retval]*/ struct ITextStream * * ppts ) = 0;
+};
+
+struct __declspec(uuid("c7c3f5a3-88a3-11d0-abcb-00a0c90fffc0"))
+IFolderCollection : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Add (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT Key,
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppenum ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * plCount ) = 0;
+};
+
+struct __declspec(uuid("c7c3f5a4-88a3-11d0-abcb-00a0c90fffc0"))
+IFile : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Path (
+        /*[out,retval]*/ BSTR * pbstrPath ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pbstrName ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR pbstrName ) = 0;
+      virtual HRESULT __stdcall get_ShortPath (
+        /*[out,retval]*/ BSTR * pbstrPath ) = 0;
+      virtual HRESULT __stdcall get_ShortName (
+        /*[out,retval]*/ BSTR * pbstrName ) = 0;
+      virtual HRESULT __stdcall get_Drive (
+        /*[out,retval]*/ struct IDrive * * ppdrive ) = 0;
+      virtual HRESULT __stdcall get_ParentFolder (
+        /*[out,retval]*/ struct IFolder * * ppfolder ) = 0;
+      virtual HRESULT __stdcall get_Attributes (
+        /*[out,retval]*/ FileAttribute * pfa ) = 0;
+      virtual HRESULT __stdcall put_Attributes (
+        /*[in]*/ FileAttribute pfa ) = 0;
+      virtual HRESULT __stdcall get_DateCreated (
+        /*[out,retval]*/ DATE * pdate ) = 0;
+      virtual HRESULT __stdcall get_DateLastModified (
+        /*[out,retval]*/ DATE * pdate ) = 0;
+      virtual HRESULT __stdcall get_DateLastAccessed (
+        /*[out,retval]*/ DATE * pdate ) = 0;
+      virtual HRESULT __stdcall get_Size (
+        /*[out,retval]*/ VARIANT * pvarSize ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ BSTR * pbstrType ) = 0;
+      virtual HRESULT __stdcall Delete (
+        /*[in]*/ VARIANT_BOOL Force ) = 0;
+      virtual HRESULT __stdcall Copy (
+        /*[in]*/ BSTR Destination,
+        /*[in]*/ VARIANT_BOOL OverWriteFiles ) = 0;
+      virtual HRESULT __stdcall Move (
+        /*[in]*/ BSTR Destination ) = 0;
+      virtual HRESULT __stdcall OpenAsTextStream (
+        /*[in]*/ enum IOMode IOMode,
+        /*[in]*/ enum Tristate Format,
+        /*[out,retval]*/ struct ITextStream * * ppts ) = 0;
+};
+
+struct __declspec(uuid("c7c3f5a5-88a3-11d0-abcb-00a0c90fffc0"))
+IFileCollection : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT Key,
+        /*[out,retval]*/ struct IFile * * ppfile ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppenum ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * plCount ) = 0;
+};
+
+} // namespace Scripting
+
+#pragma pack(pop)

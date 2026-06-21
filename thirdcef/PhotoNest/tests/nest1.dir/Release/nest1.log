@@ -1,0 +1,4 @@
+﻿  cefclient_win.cc
+E:\voy\102\tests\cefclient\cefclient_win.cc(254,47): warning C4302: 'type cast': truncation from 'HANDLE' to 'ATOM'
+  nest1.vcxproj -> E:\voy\102\PhotoNest\tests\cefclient\Release\bin\nest1.exe
+  Adding manifest...															

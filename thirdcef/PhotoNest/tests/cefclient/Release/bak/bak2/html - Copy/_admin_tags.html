@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/tipTip/tipTip.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.tags.css" />
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <style type="text/css">
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+</head>
+<body class="jquery-ui">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container" o='style'>
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content" style="-webkit-user-select: text;">
+                    <h1>
+                        <span>{'Tags'|@translate}</span><span class="badge-number">{$nb}</span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="selected_tab">
+                                <a href="javascript:;">
+                                    <span>
+                                        <span class="icon-menu"></span>{'List'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selection-mode-group-manager">
+                            <label class="switch">
+                                <input type="checkbox" id="toggleSelectionMode">
+                                <span class="slider round"></span>
+                            </label>
+                            <p>{'Selection mode'|@translate}</p>
+                        </div>
+                        <div class="tag-header">
+                            <div id="search-tag">
+                                <div class="search-info"></div>
+                                <span class="icon-search search-icon"> </span>
+                                <span class="icon-cancel search-cancel" style="display: none;"></span>
+                                <input class="search-input" type="text" placeholder="{'Search'|@translate}">
+                            </div>
+                            <form id="add-tag" class="not-in-selection-mode" onsubmit="addTagForm_submit(); return false;">
+                                <span class="icon-cancel-circled"></span>
+                                <label class="add-tag-label icon-plus-circled  head-button-2 ">
+                                    <p>{'Add a tag'|@translate}</p>
+                                    <div class="add-tag-container">
+                                        <input type="text" id="add-tag-input" name="add_tag" placeholder="{'New tag'|@translate}">
+                                        <input type="button" hidden="" onclick="addTagForm_submit();return false;">
+                                        <span class="icon-plus icon-validate"></span>
+                                    </div>
+                                </label>
+                            </form>
+                            <div class="selection-controller in-selection-mode">
+                                <p>{'Select'|@translate}</p>
+                                <a id="selectAll">{'All'|@translate}</a>
+                                <a id="selectNone">{'None'|@translate}</a>
+                                <a id="selectInvert">{'Invert'|@translate}</a>
+                            </div>
+
+                            {$tag_orphan}
+                            <div class="info-message tag-info  icon-ok not-in-selection-mode"></div>
+                            <div class="info-error tag-info icon-cancel not-in-selection-mode" style="display:none;"></div>
+                        </div>
+
+                        <form id="selTagForm" action="" method="post" onsubmit="return false;">
+                            <ul class=" tag-container tagSelection">
+                                {$tags}
+                            </ul>
+                        </form>
+                        <fieldset id="action" style="display: none;">
+                            <legend>{'Action'|@translate} </legend>
+                            <div id="forbidAction">
+                                {'No destination tag selected'|@translate}
+                            </div>
+                            <div id="permitAction" style="display: none">
+                                <button id="aMerge" class="icon-object-group" title="{'At least 2 selected tags are needed to merge'|@translate}"
+                                        onclick="displayAct(4);return false;">
+                                    {'Merge'|@translate}
+                                </button>
+                                <button id="DeleteSelectionMode" class="icon-trash-1" onclick="displayAct(3);return false;">
+                                    {'Delete'|@translate}
+                                </button>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area" o='style'>
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/tipTip/jquery.tipTip.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _sel = "{$sel}";
+        var _nohead = "{$nohead}";
+        var _seltags = "{$seltags}";
+
+        function displayAct(ty, tagid) {
+            $('#tiptip_holder').hide();
+
+            var url = "./admin.html?page=admin.tags";
+            if (ty == 0) {
+                url += "&selectAction=orphan&tags=" + tagid;
+            }
+            else if (ty == 1) {
+                url += "&selectAction=edit&tags=" + tagid;
+            }
+            else if (ty == 2) {
+                url += "&selectAction=duplicate&tags=" + tagid;
+            }
+            else if (ty == 6) {
+                //delete
+                url += "&selectAction=delete&sel=0&tags=" + tagid;
+            }
+            else if (ty == 3) {
+                //delete
+                var body = $("#selTagForm").serialize();
+                url += "&selectAction=delete&sel=1&" + body;
+            }
+            else if (ty == 4) {
+                var body = $("#selTagForm").serialize();
+                url += "&selectAction=merge&" + body;
+            }
+            else if (ty == 100) {
+                location.href = "./index.html?tags=" + tagid;
+                return;
+            }
+            else {
+                return;
+            }
+            var btn = true;
+            var opt = .7;
+            if (ty == 0 || ty == 3 || ty == 6) {
+                opt = .6;
+                btn = false;
+            }
+
+            $.get(url + "&nohead=" + _nohead, function (data, state) {
+                $.colorbox({
+                    transition: "none", width: 650, height: 400, fixed: true, overlayClose: false, escKey: false, opacity: opt, closeButton: btn,
+                    html: data,
+                    onComplete: function () {
+                        if (ty == 0 || ty == 3 || ty == 6) {
+                            $('#cboxOverlay').css({ 'background': 'slategray' });
+                            $('#cboxWrapper').css({ 'border-top': 'solid 7px #e74c3c' });
+                        }
+                    },
+                    onClosed: function () {
+                        document.getElementById('cboxOverlay').style.removeProperty('background');
+                        document.getElementById('cboxWrapper').style.removeProperty('border-top');
+                    }
+                });
+            });
+        }
+
+        function f_submit(url, body, sel) {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return false;
+            }
+
+            $.post(url + "&nohead=" + _nohead, body, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.htm != "") {
+                    storage.tag = info.htm;
+                }
+                location.href = "./admin.html?page=admin.tags&refresh=1&sel=" + sel + "&tags=" + info.tags;
+            });
+        }
+
+        function filter(tm) {
+            setTimeout(function () {
+                var v = $.trim($(".search-input").val());
+                if (!v) {
+                    $(".tagSelection>li").show();
+                    $('.search-cancel').hide();
+                }
+                else {
+                    $('.search-cancel').show();
+                    var regex = new RegExp(v.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"), "i");
+                    $(".tagSelection>li").each(function () {
+                        var $li = $(this),
+                            text = $.trim($("label", $li).text());
+                        $li.toggle(regex.test(text));
+                    });
+
+                    storage.schtag = v;
+                }
+
+                var nb = 0;
+                $(".tagSelection>li").each(function () {
+                    if (jQuery(this).is(':hidden')) { } else {
+                        if (jQuery(this).find('input[type=checkbox]').is(':checked')) {
+                            nb++;
+                        }
+                    }
+                });
+
+                if (nb == 0) {
+                    $("#permitAction").hide();
+                    $("#forbidAction").show();
+                }
+                else {
+                    $("#permitAction").show();
+                    $("#forbidAction").hide();
+                }
+
+            }, tm)
+        }
+
+
+        function edit_submit() {
+            var body = $("#tag_edit_form").serialize();
+            f_submit("./admin.html?page=admin.tags&mode=edit", body, "0");
+        }
+
+        function merge_submit() {
+            var body = $("#tag_merge_form").serialize();
+            f_submit("./admin.html?page=admin.tags&mode=merge", body, "1");
+        }
+
+        function duplicate_submit() {
+            var body = $("#tag_duplicate_form").serialize();
+            f_submit("./admin.html?page=admin.tags&mode=duplicate", body, "0");
+        }
+        function addTagForm_submit() {
+            var body = $("#add-tag").serialize();
+            f_submit("./admin.html?page=admin.tags&mode=add", body, "0");
+        }
+
+        function delTagForm_submit() {
+            var body = $("#delTagForm").serialize();
+            var sel = $("input[name='sel']").val();
+            f_submit("./admin.html?page=admin.tags&mode=delete", body, sel);
+            storage.schtag = "";
+        }
+
+        function orphanTagForm_submit() {
+            var body = $("#orphanTagForm").serialize();
+            f_submit("./admin.html?page=admin.tags&mode=orphan", body, "0");
+            storage.schtag = "";
+        }
+
+        function btn_cancel() {
+            $.colorbox.close();
+        }
+
+        function refreshation() {
+            var nbSelected = $('input[name="tags"]').filter(':checked').length;
+            if (nbSelected == 0) {
+                $("#permitAction").hide();
+                $("#forbidAction").show();
+            }
+            else {
+                $("#permitAction").show();
+                $("#forbidAction").hide();
+                if (nbSelected == 1) {
+                    $("#aMerge").attr('disabled', true);
+                }
+                else {
+                    $("#aMerge").attr('disabled', false);
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            jQuery('.font-checkbox').fontCheckbox();
+
+            if (storage.schtag && storage.schtag != "undefined" && storage.schtag != "") {
+                var v = $.trim(storage.schtag);
+                $(".search-input").val(v);
+            }
+
+            if (storage.tag && storage.tag != "") {
+                $('.info-message').html(storage.tag);
+                $('.info-message').css('display', 'flex');
+                storage.tag = "";
+            }
+
+            $(".tagSelection").on("click", "label", function () {
+                if ($("#toggleSelectionMode").is(":checked")) {
+                    var parent = $(this).parent('li');
+                    var checkbox = $(this).children("input[type=checkbox]");
+                    if ($(checkbox).is(':checked')) {
+                        parent.addClass("tagSelected");
+                    }
+                    else {
+                        parent.removeClass('tagSelected');
+                    }
+                }
+                else {
+                    return false;
+                }
+            });
+
+
+            if (_sel == "1") {
+                $('.info-warning').hide();
+                $("#toggleSelectionMode").attr("checked", true);
+                $('label.font-checkbox span').show();
+                $('ul.tagSelection a.showInfo').hide();
+                $('fieldset#action').show();
+
+                $(".in-selection-mode").addClass('show');
+                $(".not-in-selection-mode").addClass('hide');
+                $(".tag-container").addClass("selection");
+                $(".tag-box").removeClass('edit-name');
+            }
+
+            if ($(".tagSelection>li").length == 0) {
+                _seltags = ""
+            }
+
+            if (_seltags != "") {
+                $("#permitAction").show();
+                $("#forbidAction").hide();
+            }
+
+            $("[id^=action_]").hide();
+            $('.showInfo').tipTip({
+                'delay': 0,
+                'fadeIn': 200,
+                'fadeOut': 200,
+                'maxWidth': '300px',
+                'attribute': "mtitle",
+                'keepAlive': true,
+                'activation': 'click'
+            });
+
+            $("#toggleSelectionMode").click(function () {
+                if ($("#toggleSelectionMode").is(":checked")) {
+                    $('label.font-checkbox span').show();
+                    $('ul.tagSelection a.showInfo').hide();
+                    $('fieldset#action').show();
+
+                    $(".in-selection-mode").addClass('show');
+                    $(".not-in-selection-mode").addClass('hide');
+                    $(".tag-container").addClass("selection");
+                    $(".tag-box").removeClass('edit-name');
+                }
+                else {
+                    $('label.font-checkbox span').hide();
+                    $('ul.tagSelection a.showInfo').show();
+                    $('fieldset#action').hide();
+
+                    $(".in-selection-mode").removeClass('show');
+                    $(".not-in-selection-mode").removeClass('hide');
+                    $(".tag-container").removeClass("selection");
+                    $(".tag-box").attr("data-selected", '0');
+                    $('.tag-select-message').slideUp();
+                }
+                $('.info-message').html('');
+                $('.info-message').hide();
+                $('.info-warning').hide();
+            });
+
+            $('input[name="tags"]').click(function () {
+                refreshation();
+            });
+
+            filter(0);
+            var nbSelected = $('input[name="tags"]').length;
+            if (nbSelected == 0) {
+                $("#action").hide();
+            }
+
+
+            //Add a tag
+            $('.add-tag-container').on('click', function () {
+                $('#add-tag').addClass('input-mode');
+                $('#add-tag-input').focus();
+                $('.tag-info').hide();
+            });
+
+            $('#add-tag .icon-cancel-circled').on('click', function () {
+                $('#add-tag').removeClass('input-mode');
+                $('.tag-info').hide();
+            });
+            $('#add-tag .icon-validate').on('click', function () {
+                if ($('#add-tag').hasClass('input-mode')) {
+                    $('#add-tag').submit();
+                }
+            });
+
+            $("#search-tag .search-input").on("input", function () {
+                var $this = $(this),
+                    timer = $this.data("timer");
+
+                if (timer) {
+                    clearTimeout(timer);
+                }
+
+                $this.data("timer", filter(300));
+
+                //if (e.keyCode == 13) {
+                //    e.preventDefault();
+                //}
+
+            });
+
+            $('.search-cancel').on('click', function () {
+                $('.search-input').val('');
+                storage.schtag = '';
+                filter(0);
+            });
+
+            $('#selectAll').on('click', function () {
+                $(".tagSelection>li").each(function () {
+                    if (jQuery(this).is(':hidden')) { } else {
+                        var obj = jQuery(this).find('input[type=checkbox]');
+                        obj.prop('checked', true);
+                        obj.prev().removeClass('icon-check-empty').addClass('icon-check');
+                    }
+                });
+
+                refreshation();
+            });
+
+            $('#selectNone').on('click', function () {
+                $(".tagSelection>li").each(function () {
+                    if (jQuery(this).is(':hidden')) { } else {
+                        var obj = jQuery(this).find('input[type=checkbox]');
+                        obj.prop('checked', false);
+                        obj.prev().removeClass('icon-check').addClass('icon-check-empty');
+                    }
+                });
+
+                refreshation();
+            });
+
+
+            $('#selectInvert').on('click', function () {
+                $(".tagSelection>li").each(function () {
+                    if (jQuery(this).is(':hidden')) { } else {
+                        var obj = jQuery(this).find('input[type=checkbox]');
+                        if (obj.is(':checked')) {
+                            obj.prop('checked', false);
+                            obj.prev().removeClass('icon-check').addClass('icon-check-empty');
+                        }
+                        else {
+                            obj.prop('checked', true);
+                            obj.prev().removeClass('icon-check-empty').addClass('icon-check');
+                        }
+                    }
+                });
+
+                refreshation();
+            });
+        });
+
+    </script>
+
+</body>
+</html>

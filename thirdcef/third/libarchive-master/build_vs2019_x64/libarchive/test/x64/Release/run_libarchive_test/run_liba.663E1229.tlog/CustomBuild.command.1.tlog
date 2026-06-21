@@ -1,0 +1,20 @@
+^E:\VOY\102\THIRD\LIBARCHIVE-MASTER\BUILD_VS2019_X64\CMAKEFILES\109C2BCE48779F662C32A02A4CA84A50\RUN_LIBARCHIVE_TEST.RULE
+setlocal
+..\..\bin\Release\libarchive_test.exe -r E:/voy/102/third/libarchive-master/libarchive/test -vv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\VOY\102\THIRD\LIBARCHIVE-MASTER\LIBARCHIVE\TEST\CMAKELISTS.TXT
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -SE:/voy/102/third/libarchive-master -BE:/voy/102/third/libarchive-master/build_vs2019_x64 --check-stamp-file E:/voy/102/third/libarchive-master/build_vs2019_x64/libarchive/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

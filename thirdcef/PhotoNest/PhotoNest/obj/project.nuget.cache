@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fp06xPlhH/5rM8KoB2qHVsf+2BDN+/FNEihyv0RzbtkQ2ZP1N3K9U21lHXbRvYQYF7+oG7LqD5tsJWGSY6WTug==",
+  "success": true,
+  "projectFilePath": "E:\\voy\\102\\PhotoNest\\PhotoNest\\PhotoNest.wapproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.19041.8\\microsoft.windows.sdk.buildtools.10.0.19041.8.nupkg.sha512"
+  ],
+  "logs": []
+}

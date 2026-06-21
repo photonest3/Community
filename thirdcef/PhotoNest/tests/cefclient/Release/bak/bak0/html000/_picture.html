@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/viewer/css/viewer.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/timel/timel.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+   <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.pic.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello1/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var _cbox_change = 0;
+        var _idx = 0;
+        var _category = "{$category}";
+        var _picid = "";
+        var _slide = "{$slideshow}";
+        var _total = parseInt('{$total}');
+        var _init = parseInt('{$init}');
+        var _vr;
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _delay = 0;
+        var _nbPage = parseInt('{$nbPage}');
+        var _updated = 0;
+        var _vrsize = parseInt('{$vrsize}');
+        var _in = 0;
+        var _control;
+        var _metadata = "{$metadata}";
+        var _osm = "{$osm}";
+        var _tit20 = "{'Delete'|@translate}";
+        var _currpicid = "";
+        var _ot = 0;
+        var _sl = 0;
+        var _lang = "{'Create'|@translate}";
+        var _reload_selectize = 0;
+        var _reset_tags = 0;
+        var PERPAGE_TOTAL = parseInt('{$PERPAGE_TOTAL}');
+        var _exportTitle = "{'Export'|@translate}";
+        var _ov = "{$ov}";
+        var _skin = "{$skin}";
+        var _sec = 3;
+        _vrsize = 0;
+        var storage = window.localStorage;
+		
+	var _tit_caddie ="{'Add to caddie'|@translate}";
+	var _tit_caddie_del ="{'delete from caddie'|@translate}";
+		
+		
+    </script>
+</head>
+<body id="theColorPage" class="topbar-float clear thepic">
+
+    <div class="viewer-clock">
+        <span class="viewer-clock-btn">
+            <a href="javascript:;" onclick="speed(1);return false;" title="{'Reduce slideshow speed'|@translate}" class="icon-fast-bw"></a>
+            <span id="speedv" style="margin: 0 20px;">3s</span>
+            <a href="javascript:;" onclick="speed(-1);return false;" title="{'Increase slideshow speed'|@translate}" class="icon-fast-fw"></a>
+        </span>
+    </div>
+
+    <div class="sb-site-container thepic">
+        <div style="background: transparent;">
+            <header class="header" style="display: block; opacity: 1;">
+                <div id="nav-wrapper" class="nav-wrapper" style="transform: translateY(0px);">
+                    <nav class="nav">
+                        <div class="titrePage0" id="imageHeaderBar">
+                            <div class="imageNumber">
+                                <span id="photos" style="margin-right:5px;"></span><span id="albumCreationLoading" style="display:none;">
+                                    <img src="./templ/themes/default/images/load50.gif" />
+                                </span>
+                            </div>
+                            <div class="browsePath0" style="display:none;">
+                                <div id="tit0" style="display: none;">{$title}</div>
+                                <span id="filename"></span>
+                            </div>
+                        </div>
+                        <div class="actionButtons">
+                            {$actionButtons}
+                        </div>
+                        <div class="ooo">
+                            <div id="err" class="errors"></div>
+                        </div>
+                        {$error_lic}
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+    {$calendar_nav}
+    <div id="theImage0" style="display: none;">
+        {$picture_content}
+    </div>
+    <div id="tabcontent">
+        <span class="tabcontenttag">{'Tags'|@translate}</span>
+        <div id="tabtags" style="display: block; margin-top: 5px;">
+            <select data-selectize="tags" data-value="" placeholder="{'Type in a search term'|@translate}"
+                    data-create="true" name="add_tags" multiple style="width: 200px;"></select>
+        </div>
+        <div id="zzz" style="margin-top: 15px;">
+            <div class="table-striped c1">
+                <table id="striped" cellpadding="2" cellspacing="2" style="width: 100%; margin-top: 0;">
+                    <tbody style="vertical-align: top; -webkit-user-select: text;"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a id="down" href="javascript:;" style="display: none;">{'Export'|@translate}</a>
+    <!--  <a id="del_box" class="del_box" href="javascript:;" style="display: none;"></a>-->
+
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/viewer/js/viewer.u3.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark_img.js"></script>
+    <script type="text/javascript" src="./_picture.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        function vv() {
+            $('#myimg').watermark({
+                text: "{'Activation Expired'|@translate}",
+                textWidth: 800,
+                opacity: 0.5,
+                gravity: 'c',
+                textSize: 64
+            });
+        }
+
+        function stopv() {
+            if ($("#myimg").length > 0) {
+                _vr.stop();
+            }
+            else {
+                document.webkitExitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>

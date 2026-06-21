@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+ <item><id>Open...</id><transl></transl></item>
+ <item><id>Brush</id><transl></transl></item>
+ <item><id>Lasso</id><transl></transl></item>
+ <item><id>Rectangle</id><transl></transl></item>
+ <item><id>Magic Wand</id><transl></transl></item>
+ <item><id>Eraser</id><transl></transl></item>
+ <item><id>Move</id><transl></transl></item>
+ <item><id>Save</id><transl></transl></item>
+ <item><id>Undo</id><transl></transl></item>
+ <item><id>Redo</id><transl></transl></item>
+ <item><id>Center</id><transl></transl></item>
+ <item><id>Crop</id><transl></transl></item>
+ <item><id>Remove unnecessary Objects</id><transl></transl></item>
+ <item><id>Adjust</id><transl></transl></item>
+ <item><id>Brightness</id><transl></transl></item>
+ <item><id>Contrast</id><transl></transl></item>
+ <item><id>Backlight</id><transl></transl></item>
+ <item><id>White balance</id><transl></transl></item>
+ <item><id>AutoLevel</id><transl></transl></item>
+ <item><id>Original image</id><transl></transl></item>
+ <item><id>About...</id><transl></transl></item>
+ <item><id>Registration...</id><transl></transl></item>
+ <item><id>Rotate by 180°</id><transl></transl></item>
+ <item><id>Rotate left</id><transl></transl></item>
+ <item><id>Rotate right</id><transl></transl></item>
+ <item><id>Flip</id><transl></transl></item>
+ <item><id>Mirror</id><transl></transl></item>
+ <item><id>Close</id><transl></transl></item>
+ <item><id>Discard Changes</id><transl></transl></item>
+ <item><id>Cancel</id><transl></transl></item>
+ <item><id>Arrow</id><transl></transl></item>
+ <item><id>Ellipse</id><transl></transl></item>
+ <item><id>Line</id><transl></transl></item>
+ <item><id>Save As...</id><transl></transl></item>
+ <item><id>Selection</id><transl></transl></item>
+ <item><id>Opaque</id><transl></transl></item>
+ <item><id>OK</id><transl></transl></item>
+ <item><id>Background</id><transl></transl></item>
+ <item><id>Copy</id><transl></transl></item>
+ <item><id>Paste</id><transl></transl></item>
+ <item><id>Cut</id><transl></transl></item>
+ <item><id>Tolerance</id><transl></transl></item>
+ <item><id>Font</id><transl></transl></item>
+ <item><id>Optimize</id><transl></transl></item>
+ <item><id>Text</id><transl></transl></item>
+ <item><id>Drag files here</id><transl></transl></item>
+ <item><id>Pencil</id><transl></transl></item>
+ <item><id>Color Fill</id><transl></transl></item>
+ <item><id>Color Picker</id><transl></transl></item>
+ <item><id>Thickness</id><transl></transl></item>
+ <item><id>Apply</id><transl></transl></item>
+ <item><id>Retain</id><transl></transl></item>
+ <item><id>Remove</id><transl></transl></item>
+ <item><id>File is too big</id><transl></transl></item>
+ <item><id>Background Matting</id><transl></transl></item>
+ <item><id>Image Stitching</id><transl></transl></item>
+ <item><id>Rotate</id><transl></transl></item>
+ <item><id>Change Background</id><transl></transl></item>
+ <item><id>Paste As New</id><transl></transl></item>
+ <item><id>Transparent</id><transl></transl></item>
+ <item><id>Saved successfully</id><transl></transl></item>
+ <item><id>Normal clone</id><transl></transl></item>
+ <item><id>Mixed clone</id><transl></transl></item>
+ <item><id>Monochrome transfer</id><transl></transl></item>
+ <item><id>Home</id><transl></transl></item>
+ <item><id>Drawing Tool</id><transl></transl></item>
+ <item><id>Color</id><transl></transl></item>
+ <item><id>The outside of the rectangle is the background</id><transl></transl></item>
+ <item><id>Remove smeared objects</id><transl></transl></item>
+ <item><id>Sharpen</id><transl></transl></item>
+ <item><id>Enhancement</id><transl></transl></item>
+ <item><id>Changes have not been saved</id><transl></transl></item>
+ <item><id>Not yet completed</id><transl></transl></item>
+ <item><id>Save Failure</id><transl></transl></item>
+ <item><id>Canvas area exceeds the maximum limit (2/3)</id><transl></transl></item>
+ <item><id>Select sticker</id><transl></transl></item>
+ <item><id>Select a rectangular area around the object you want to segment</id><transl></transl></item>
+ <item><id>Expiration Date:</id><transl></transl></item>
+ <item><id>30 days trial period</id><transl></transl></item>
+ <item><id>Activate using a license key</id><transl></transl></item>
+ <item><id>Buy Now</id><transl></transl></item>
+ <item><id>Activate</id><transl></transl></item>
+ <item><id>Copyright (c) 2023 PhotoZK. All rights reserved.</id><transl></transl></item>
+ <item><id>This product is licensed to:</id><transl></transl></item>
+ <item><id>Warning: This program is protected by copyright law and international treaties.</id><transl></transl></item>
+ <item><id>Third software</id><transl></transl></item>
+ <item><id>Perpetual License</id><transl></transl></item>
+ <item><id>Registration</id><transl></transl></item>
+ <item><id>Activation completed!</id><transl></transl></item>
+ <item><id>Please check your license key, and then try again.</id><transl></transl></item>
+ <item><id>An error occurred</id><transl></transl></item>
+ <item><id>About</id><transl></transl></item>
+ <item><id>Language</id><transl></transl></item>
+ <item><id>Activation Expired</id><transl></transl></item>
+ <item><id>Nostalgic</id><transl></transl></item>
+ <item><id>Feather</id><transl></transl></item>
+ <item><id>Comic strip</id><transl></transl></item>
+ <item><id>Sketch</id><transl></transl></item>
+ <item><id>Decolor</id><transl></transl></item>
+ <item><id>Mosaic</id><transl></transl></item>
+ <item><id>Read-only attribute</id><transl></transl></item>
+ <item><id>An error occurred</id><transl></transl></item>
+ <item><id>Choose a color</id><transl></transl></item>
+ <item><id>Change Sky Background</id><transl></transl></item>
+ <item><id>No sky detected</id><transl></transl></item>
+ <item><id>Activated.</id><transl></transl></item>
+<item><id>Too big</id><transl></transl></item>
+<item><id>Too small</id><transl></transl></item>
+<item><id>Complete image fusion</id><transl></transl></item>
+<item><id>Finish the cutting</id><transl></transl></item>
+ <item><id>Yes</id><transl></transl></item>
+<item><id>Don't Save</id><transl></transl></item>
+<item><id>Do you want to save changes to aa.jpg?</id><transl></transl></item>
+<item><id>Change...</id><transl></transl></item>
+<item><id>Loading</id><transl></transl></item>
+<item><id>Loading...</id><transl></transl></item>
+<item><id>1-year license</id><transl>1-year license</transl></item>
+<item><id>3-year license</id><transl>3-year license</transl></item>
+<item><id>This license is expired.</id><transl></transl></item>
+<item><id>This license is in use.</id><transl></transl></item>
+<item><id>30-day trial period, expiration date:</id><transl></transl></item>
+</data>
+
+

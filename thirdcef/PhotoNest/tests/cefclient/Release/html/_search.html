@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.slider.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.index.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css"
+          id="skin" />
+    <style type="text/css">
+        .switchBox {
+            display: block;
+        }
+
+        #cfilter {
+            display: none;
+        }
+
+        #searchform1 {
+            height: 450px;
+            overflow-y: auto;
+            overflow-x: unset;
+            width: 610px;
+            margin-top: 20px;
+        }
+
+        #filterbtn {
+            float: right;
+            margin-right: 50px;
+            margin-top: -56px;
+            right: 0;
+        }
+
+        .categoryActions li {
+            margin-left: 0;
+        }
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body id="theColorPage" class="thedark">
+    <div id="searchBox" class="switchBox"> {$search_form}</div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.slider.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript">
+        var _filters = "{$filters}";
+
+        var storage = window.localStorage;
+        var control1, control2, control3;
+        var _opt;
+
+        function on_return() {
+            var w = $("input[name=search_allwords]").val();
+            if (w == "") {
+                return;
+            } if (window.event.keyCode == 13) {
+                submitclick();
+            }
+        }
+
+        function submitclick() {
+            ccSave();
+            var body = $("#catSearch1").serialize();
+            $.post("./index.html?search=q&filter=" + _opt._filters, body, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    parent.location.href = "./index.html?search=q";
+                }
+            });
+        }
+
+        function myclear() {
+            _opt._mode = "AND";
+            _opt._searchin = "search_in_name,search_in_comment,search_in_file";
+            _opt._subcats = "";
+            _opt._filetype = "";
+            _opt._osmtype = "";
+            _opt._dimension_type = "widths";
+            _opt._datetype = "date_creation";
+            _opt._tag_mode = "AND";
+
+            set_checkbox();
+            storage.searchopt = JSON.stringify(_opt);
+
+            $("input[name=search_allwords]").val("");
+            $('.slider-choice').click();
+
+            if (control1) {
+                control1.clear();
+            }
+            if (control2) {
+                control2.clear();
+            }
+            if (control3) {
+                control3.clear();
+            }
+        }
+
+        function advfilter() {
+            $(".filter-manager-controller-container").toggle();
+            if ($(".filter-manager-controller-container").is(":hidden")) {
+                val = "0";
+                $("#arrd1").html('<i2 class="icon-down-open"></i2>');
+            }
+            else {
+                $("#arrd1").html('<i class="icon-down-open"></i>');
+            }
+        }
+
+        function filter_controller() {
+            $('#field_words').hide();
+            $('#field_album').hide();
+            $('#field_type').hide();
+            $('#field_date').hide();
+            $('#field_osm').hide();
+            $('#field_dimension').hide();
+            $('#field_author').hide();
+            $('#field_tag').hide();
+
+            if (_opt._filters.indexOf('filter_search_use') >= 0) {
+                $("input[name='filter_search_use']").prop('checked', true);
+                $('#field_words').show();
+            }
+            if (_opt._filters.indexOf('filter_category_use') >= 0) {
+                $("input[name='filter_category_use']").prop('checked', true);
+                $('#field_album').show();
+            }
+            if (_opt._filters.indexOf('filter_filetypes_use') >= 0) {
+                $("input[name='filter_filetypes_use']").prop('checked', true);
+                $('#field_type').show();
+            }
+            if (_opt._filters.indexOf('filter_date_use') >= 0) {
+                $("input[name='filter_date_use']").prop('checked', true);
+                $('#field_date').show();
+            }
+            if (_opt._filters.indexOf('filter_dimension_use') >= 0) {
+                $("input[name='filter_dimension_use']").prop('checked', true);
+                $('#field_dimension').show();
+            }
+            if (_opt._filters.indexOf('filter_authors_use') >= 0) {
+                $("input[name='filter_authors_use']").prop('checked', true);
+                $('#field_author').show();
+            }
+            if (_opt._filters.indexOf('filter_tags_use') >= 0) {
+                $("input[name='filter_tags_use']").prop('checked', true);
+                $('#field_tag').show();
+            }
+            if (_opt._filters.indexOf('filter_osm_use') >= 0) {
+                $("input[name='filter_osm_use']").prop('checked', true);
+                $('#field_osm').show();
+            }
+        }
+
+        function set_checkbox() {
+            $(".dateslider").hide();
+            $(".dimensionslider").hide();
+
+            $('.searchin').prop('checked', false);
+            $('.filetype').prop('checked', false);
+            $('.osmtype').prop('checked', false);
+
+            $("input[name=mode][value=" + _opt._mode + "]").prop('checked', true);
+
+            if (_opt._searchin.indexOf('search_in_name') >= 0) {
+                $("input[name='search_in_name']").prop('checked', true);
+            }
+            if (_opt._searchin.indexOf('search_in_comment') >= 0) {
+                $("input[name='search_in_comment']").prop('checked', true);
+            }
+            if (_opt._searchin.indexOf('search_in_file') >= 0) {
+                $("input[name='search_in_file']").prop('checked', true);
+            }
+            if (_opt._searchin.indexOf('search_in_tags') >= 0) {
+                $("input[name='search_in_tags']").prop('checked', true);
+            }
+
+            $("input[name='subcats']").prop('checked', (_opt._subcats == "on") ? true : false);
+
+            if (_opt._filetype.indexOf('search_images') >= 0) {
+                $("input[name='search_images']").prop('checked', true);
+            }
+            if (_opt._filetype.indexOf('search_videos') >= 0) {
+                $("input[name='search_videos']").prop('checked', true);
+            }
+
+            if (_opt._osmtype.indexOf('osm0') >= 0) {
+                $("input[name='osm0']").prop('checked', true);
+            }
+            if (_opt._osmtype.indexOf('osm1') >= 0) {
+                $("input[name='osm1']").prop('checked', true);
+            }
+
+            $("input[name=date_type][value=" + _opt._datetype + "]").prop('checked', true);
+            $("input[name=tag_mode][value=" + _opt._tag_mode + "]").prop('checked', true);
+            $("input[name=dimension_type][value=" + _opt._dimension_type + "]").prop('checked', true);
+
+            $("div[data-slider=" + _opt._dimension_type + "]").show();
+            $("div[data-slider=" + _opt._datetype + "]").show();
+        }
+
+        function ccSave() {
+            var obj = $('input[name=mode]').filter(':checked')[0];
+            _opt._mode = $(obj).val();
+
+            obj = $('input[name=tag_mode]').filter(':checked')[0];
+            _opt._tag_mode = $(obj).val();
+
+            var searchin = "";
+            var objs = $('.searchin').filter(':checked');
+            for (var i = 0; i < objs.length; i++) {
+                var o = $(objs[i]);
+                searchin += o.attr('name') + ',';
+            }
+
+            _opt._searchin = searchin;
+            _opt._subcats = $("input[name=subcats]").prop('checked') ? "on" : "";
+
+            var filetype = "";
+            var objs = $('.filetype').filter(':checked');
+            for (var i = 0; i < objs.length; i++) {
+                var o = $(objs[i]);
+                filetype += o.attr('name') + ',';
+            }
+            _opt._filetype = filetype;
+
+            var osmtype = "";
+            var objs = $('.osmtype').filter(':checked');
+            for (var i = 0; i < objs.length; i++) {
+                var o = $(objs[i]);
+                osmtype += o.attr('name') + ',';
+            }
+            _opt._osmtype = osmtype;
+            storage.searchopt = JSON.stringify(_opt);
+        }
+
+        $(document).ready(function () {
+            if (_filters == "") {
+                _filters = "filter_search_use,filter_category_use,filter_filetypes_use";
+            }
+
+            _opt = {
+                "_filters": _filters,
+                "_dimension_type": "widths",
+                "_mode": "AND",
+                "_searchin": "search_in_name,search_in_comment,search_in_file",
+                "_subcats": "",
+                "_filetype": "",
+                "_osmtype": "",
+                "_datetype": "date_creation",
+                "_tag_mode": "AND"
+            }
+
+            if (!storage.searchopt) {
+                storage.searchopt = JSON.stringify(_opt);
+            }
+            else {
+                _opt = JSON.parse(storage.searchopt);
+            }
+            $.getJSON("./index.html?act=index.slider", function (data) {
+                if (data.stat == "ok") {
+                    $("#s_date").html(data.result.slider_postdate + data.result.slider_createdate);
+                    $("#s_dimension").html(data.result.slider_dimension);
+
+                    var sliders = data.result.slider_josn;
+                    $('[data-slider=date_creation]').dblSlider(sliders.createdates);
+                    $('[data-slider=date_available]').dblSlider(sliders.postdates);
+
+                    $('[data-slider=widths]').dblSlider(sliders.widths);
+                    $('[data-slider=heights]').dblSlider(sliders.heights);
+                    $('[data-slider=ratios]').dblSlider(sliders.ratios);
+                    $('[data-slider=filesizes]').dblSlider(sliders.filesizes);
+
+                }
+                filter_controller();
+                set_checkbox();
+
+                setTimeout(function () {
+                    $("input[name=search_allwords]").focus();
+                }, 50);
+            });
+
+
+            var $area1 = $('#authors').selectize({
+                plugins: ['remove_button']
+            });
+            if ($area1) {
+                control1 = $area1[0].selectize;
+            }
+
+            var $area2 = $('#tags').selectize({
+                plugins: ['remove_button']
+            });
+            if ($area2) {
+                control2 = $area2[0].selectize;
+            }
+
+            var $area3 = $('#categories').selectize({
+                plugins: ['remove_button']
+            });
+            if ($area3) {
+                control3 = $area3[0].selectize;
+            }
+
+            $(".filter-manager-controller-container").hide();
+            if ($(".filter-manager-controller-container").is(":hidden")) {
+                $("#arrd1").html('<i2 class="icon-down-open"></i2>');
+            }
+
+            $("input[name=dimension_type]").change(function () {
+                $(".dimensionslider").hide();
+                var v = $(this).prop("value");
+                $("div[data-slider=" + v + "]").show();
+                _opt._dimension_type = v;
+            });
+
+            $("input[name=date_type]").change(function () {
+                $(".dateslider").hide();
+                var v = $(this).prop("value");
+                $("div[data-slider=" + v + "]").show();
+                _opt._datetype = v;
+            });
+
+            $('.filter-manager-controller').change(function () {
+                var filters = "";
+                var objs = $('.filter-manager-controller').filter(':checked');
+                for (var i = 0; i < objs.length; i++) {
+                    var o = $(objs[i]);
+                    filters += o.attr('name') + ',';
+                }
+                _opt._filters = filters;
+
+                filter_controller();
+            });
+
+            $("#search_submit").on("click", function () {
+                submitclick();
+            });
+
+            $(document).on("mouseup", function (e) {
+                var con = $(e.target);
+                if (!con.is('.filter-manager-controller-container *') && !con.is('#choosef *')) {
+                    $(".filter-manager-controller-container").hide();
+                }
+            });
+        })
+
+        function mycancel() {
+            $("#searchBox1").hide();
+        }
+
+    </script>
+</body>
+</html>

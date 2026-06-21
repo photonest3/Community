@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.add.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        .face {
+            width: 70px;
+            height: auto;
+        }
+
+        #progressbarall {
+            margin-top: 5px;
+        }
+
+        .mydiv {
+            height: 500px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .font-checkbox input[type=checkbox], .font-checkbox input[type=radio] {
+            display: none;
+        }
+
+
+        UL.thumbnails {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            float: left;
+            left: 0;
+            width: 100%;
+        }
+
+            UL.thumbnails LI {
+                display: inline;
+            }
+
+            UL.thumbnails SPAN.wrap1 {
+                margin: 5px;
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+                padding: 2px;
+            }
+
+            UL.thumbnails SPAN.wrap2 {
+                margin: 0;
+                display: table-cell;
+                vertical-align: middle;
+                border-radius: 4px;
+            }
+
+            UL.thumbnails LABEL {
+                position: relative;
+                display: block;
+                border-bottom: none;
+                text-align: center;
+                width: 100%;
+            }
+
+            UL.thumbnails IMG {
+                vertical-align: middle;
+            }
+
+            UL.thumbnails LABEL.sel {
+                display: none;
+            }
+
+        .selection-mode-group-manager {
+            display: none;
+            float: left;
+        }
+
+        .selmode {
+            display: none;
+        }
+
+        #divary {
+            top: 0;
+            left: 0;
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+            position: absolute;
+            display: none;
+        }
+
+        .mydel {
+            position: absolute;
+            padding: 30px 50px;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        i2::before {
+            transform: rotate(180deg);
+        }
+
+        #group, #btnmore {
+            display: none;
+        }
+
+        .btn {
+            margin-left: 10px;
+            opacity: .7;
+            font-size: 12px;
+        }
+
+        #err {
+            position: absolute;
+            top: 5px;
+            float: right;
+            right: 25px;
+        }
+    </style>
+</head>
+<body id="theColorPage" style="overflow:hidden;" class="thedark">
+    <div id="catSearch1" style="text-align: left; padding:0 20px;">
+        <div id="div1">
+            <div class="mydiv face-sel">
+                <ul id="single" class="thumbnails"></ul>
+                <span id="btnmore" style="display:none;margin-top: 5px;">
+                    <a href="javascript:;" onclick="groupclick();return false;">
+                        <span>{'More'|@translate}</span><span id="arrd1"><i class="icon-down-open"></i></span>
+                    </a>
+                </span>
+                <ul id="group" class="thumbnails"></ul>
+            </div>
+            <div style="text-align: center;">
+
+                <div style="display:none;margin-top:20px;" class="progress-extended">
+                    &nbsp;
+                </div>
+                <div class="fileupload-progress ">
+                    <div id="progressbarall" class="progress progress-striped active" aria-valuemin="0"
+                         aria-valuemax="100" style="display: none;">
+                        <div class="progress-bar progress-bar-success" style="width: 0%;">
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:30px;">
+                    <div class="selection-mode-group-manager">
+                        <label class="font-checkbox">
+                            <span class="icon-check-empty"></span><input type="checkbox"
+                                                                         id="toggleSelectionMode"><span class="slider round"></span> <span style="font-size: 12px;">{'Selection mode'|@translate}</span>
+                        </label>
+                        <a id="btnSame" class="filter-cancel selmode btn" href="javascript:;"
+                           title="{'At least 2 selected'|@translate}" onclick="btnSameClick();return false;">
+                            {'Same people'|@translate}
+                        </a>
+                        <a id="btnShow" class="filter-cancel selmode btn" href="javascript:;"
+                           onclick="btnShowClick();return false;">
+                            {'Search'|@translate}
+                        </a>
+
+                        <a id="btnDel" class="filter-cancel selmode btn" href="javascript:;"
+                           onclick="btnDelClick();return false;">
+                            {'Delete'|@translate}
+                        </a>
+                    </div>
+                    <a style="pointer-events: none; opacity:.7;font-size: 12px;" id="btnClassify" class="filter-cancel" href="javascript:;"
+                       onclick="btnClassifyClick();return false;">
+                        {'Classify'|@translate}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="div2" style="display:none;">
+            <form id="tag_merge_form" action="" method="post" onsubmit="return false;">
+                <input type="hidden" name="merge_list" value="" />
+                <div class="mydiv face-sel">
+                    <ul id="mergeTags" class="thumbnails"></ul>
+                </div>
+                <div style="text-align: center;">
+                    <p style="margin-top:30px;">
+                        <a class="filter-validate" style="font-size: 12px;" href="javascript:;" onclick="merge_submit();return false;">
+                            {'Confirm merge'|@translate}
+                        </a>
+                        <a style="margin-left:20px;font-size: 12px;" class="filter-cancel" href="javascript:;"
+                           onclick="btn_cancel();return false;">{'Cancel'|@translate}</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div id="divary">
+        </div>
+        <div class="switch mydel">
+            <span>{'Are you sure?'|@translate}</span>
+            <p style="margin-top:30px;">
+                <a class="filter-validate" style="font-size: 12px;" href="javascript:;" onclick="del();return false;">{'Delete'|@translate}</a>
+                <a style="margin-left:20px;font-size: 12px;" class="filter-cancel" href="javascript:;" onclick="cancel();return false;">{'Cancel'|@translate}</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="err" class="errors"></div>
+
+
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+         var _err_readonly = "{$error_readonly}";
+       var _ids = "{$ids}";
+        var _faceTitle = "{'Face Classification'|@translate}";
+        var _hasface = false;
+        var _nbpending = 0;
+
+        function mysel(nb) {
+            if (nb > 1) {
+                $('#btnSame').css({ 'opacity': '1' });
+                $('#btnSame').removeClass("filter-cancel").addClass("filter-validate");
+            } else {
+                $('#btnSame').css({ 'opacity': '.7' });
+                $('#btnSame').removeClass("filter-validate").addClass("filter-cancel");
+            }
+
+            if (nb > 0) {
+                $('#btnDel').css({ 'pointer-events': 'auto', 'opacity': '1' });
+                $('#btnShow').css({ 'pointer-events': 'auto', 'opacity': '1' });
+            } else {
+                $('#btnDel').css({ 'pointer-events': 'none', 'opacity': '.7' });
+                $('#btnShow').css({ 'pointer-events': 'none', 'opacity': '.7' });
+            }
+        }
+
+        jQuery.fn.fontCheckbox = function () {
+            this.find('input[type=checkbox]').each(function () {
+                if (!jQuery(this).is(':checked')) {
+                    jQuery(this).prev().removeClass('icon-check').addClass('icon-check-empty');
+                }
+            });
+            this.find('input[type=checkbox]').on('change', function () {
+                jQuery(this).prev().removeClass();
+                if (!jQuery(this).is(':checked')) {
+                    jQuery(this).prev().addClass('icon-check-empty');
+                } else {
+                    jQuery(this).prev().addClass('icon-check');
+                }
+
+                var nb = $("[name='selection']:checked").length;
+                mysel(nb);
+            });
+
+            this.find('input[type=radio]').each(function () {
+                if (!jQuery(this).is(':checked')) {
+                    jQuery(this).prev().removeClass('icon-dot-circled').addClass('icon-circle-empty');
+                }
+            });
+            this.find('input[type=radio]').on('change', function () {
+                jQuery('.font-checkbox input[type=radio][name="' + jQuery(this).attr('name') + '"]').each(function () {
+                    jQuery(this).prev().removeClass();
+                    if (!jQuery(this).is(':checked')) {
+                        jQuery(this).prev().addClass('icon-circle-empty');
+                    } else {
+                        jQuery(this).prev().addClass('icon-dot-circled');
+                    }
+                })
+            });
+        };
+
+        function progress(ty) {
+            $.post("./ws.php?method=ws.progressface&ty=" + ty, "0", function (data, state) {
+                var info = $.parseJSON(data);
+                var len = parseInt(info.len);
+                var step = parseInt(info.step);
+
+                if (step < len) {
+                    if ("" != info.single) {
+                        $("#single").append(info.single);
+                        _hasface = true;
+                    }
+                }
+
+                if (step >= len) {
+                    $('#progressbarall').hide();
+                    $('.progress-extended').hide();
+
+                    if ("" != info.single) {
+                        $("#single").html(info.single);
+                        _hasface = true;
+                    }
+                    if ("" != info.group) {
+                        $("#btnmore").show();
+                        $("#group").html(info.group);
+                        _hasface = true;
+                    }
+
+                    if (_hasface) {
+                        $(".selection-mode-group-manager").show();
+                        if ($('#toggleSelectionMode').is(':checked')) {
+                            $('.sel').show();
+                        } else {
+                            $('.sel').hide();
+                        }
+                    }
+
+                    if (ty == "1") {
+                        $('#btnClassify').css({ 'pointer-events': 'none', 'opacity': '.7' });
+                        $('#btnClassify').removeClass("filter-validate").addClass("filter-cancel");
+                        $("#btnClassify").hide();
+                        _nbpending = 0;
+                    }
+                    $('#single').fontCheckbox();
+                    $('#group').fontCheckbox();
+                    progressall(0, 0);
+                } else {
+                    $("#progressbarall").show();
+                    $(".progress-extended").show();
+                    $("#btnClassify").hide();
+                    $(".selection-mode-group-manager").hide();
+
+                    progressall(step, len);
+                    setTimeout("progress('1')", 3000);
+                }
+
+                if (ty == "3") {
+                    _nbpending = info.nb;
+                    if (info.nb > 0) {
+						if($("#progressbarall").is(":hidden")) {
+							$('#btnClassify').css({ 'pointer-events': 'auto', 'opacity': '1' });
+							$('#btnClassify').removeClass("filter-cancel").addClass("filter-validate");
+							$("#btnClassify").show();
+						}
+                    } else {
+                        $('#btnClassify').css({ 'pointer-events': 'none', 'opacity': '.7' });
+                        $('#btnClassify').removeClass("filter-validate").addClass("filter-cancel");
+						if(_hasface){
+							$("#btnClassify").hide();
+						}
+                    }
+
+                    var nb = $("[name='selection']").length;
+                    if (nb == 0) {
+                        $(".selection-mode-group-manager").hide();
+                    }
+                    else {
+                        nb = $("[name='selection']:checked").length;
+                        mysel(nb);
+                    }
+                }
+            });
+        }
+
+        function progressall(step, len) {
+            if (len == 0) {
+                $('.progress-extended').html('');
+                $('.progress-bar').css('width', '0%');
+            }
+            else {
+                $('.progress-extended').html(step + ' / ' + len);
+                var progress = Math.floor(step * 100 / len);
+                $('.fileupload-progress')
+                    .find('.progress')
+                    .children()
+                    .first()
+                    .css('width', progress + '%');
+            }
+        }
+
+        function search_face(merge_id) {
+            $(".wrap1").removeClass("face-sel");
+            $("#" + merge_id).parent().parent().parent(".wrap1").addClass("face-sel");
+            parent.gourl("./index.html?act=index.face&face=" + merge_id);
+        }
+
+        function btnClassifyClick() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+
+            $("#btnClassify").hide();
+            $(".selection-mode-group-manager").hide();
+
+            $.post("./ws.php?method=ws.predict", "0", function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    $("#progressbarall").show();
+                    $(".progress-extended").show();
+                    $("#group").html("");
+                    setTimeout("progress('1')", 0);
+                }
+            });
+        }
+
+        function displayDeletionWarnings() {
+            //$(".warningDeletion").hide();
+            //$("input[name=destination_tag]:checked").parent("label").children(".warningDeletion").show();
+        }
+
+        function btnSameClick() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+
+            var nb = $("[name='selection']:checked").length;
+            if (nb < 2) {
+                return;
+            }
+
+            $("#div1").hide();
+            $("#div2").show();
+            parent.$("#cboxTitle").html("{'Select the merged image'|@translate}");
+
+            var ids = $("[name='selection']:checked").map(function () {
+                return $(this).val()
+            }).get();
+            $("[name='merge_list']").val(ids);
+
+            $.post("./ws.php?method=ws.showmerge&ids=" + ids, "0", function (data, state) {
+                var info = $.parseJSON(data);
+                $("#mergeTags").html(info.face);
+                $('#div2').fontCheckbox();
+
+                displayDeletionWarnings();
+
+            });
+        }
+
+        function btnDelClick() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+
+            var nb = $("[name='selection']:checked").length;
+            if (nb < 1) {
+                return;
+            }
+
+            $("#divary").show();
+            $(".mydel").show();
+        }
+
+        function btnShowClick() {
+            var nb = $("[name='selection']:checked").length;
+            if (nb < 1) {
+                return;
+            }
+            var ids = $("[name='selection']:checked").map(function () {
+                return $(this).val()
+            }).get();
+
+            parent.gourl("./index.html?act=index.face&face=" + ids);
+        }
+
+        function afterdel() {
+            _hasface = false;
+            $("#single").html("");
+            $("#group").html("");
+
+            $("#divary").hide();
+            $(".mydel").hide();
+            setTimeout("progress('3')", 0);
+        }
+
+        function merge_submit() {
+            $("#div1").show();
+            $("#div2").hide();
+            parent.$("#cboxTitle").html(_faceTitle);
+
+            var body = $("#tag_merge_form").serialize();
+
+            $.post("./ws.php?method=ws.merge", body, function (data, state) {
+                var info = $.parseJSON(data);
+                afterdel();
+            });
+        }
+
+        function btn_cancel() {
+            $("#div1").show();
+            $("#div2").hide();
+            parent.$("#cboxTitle").html(_faceTitle);
+        }
+
+        function del() {
+            var ids = $("[name='selection']:checked").map(function () {
+                return $(this).val()
+            }).get();
+
+            $.post("./ws.php?method=ws.removeface&ids=" + ids, "0", function (data, state) {
+                afterdel();
+            });
+        }
+
+        function cancel() {
+            $("#divary").hide();
+            $(".mydel").hide();
+        }
+
+        function groupclick() {
+            $("#group").toggle();
+            if ($("#group").is(":hidden")) {
+                $("#arrd1").html('<i2 class="icon-down-open"></i2>');
+            } else {
+                $("#arrd1").html('<i class="icon-down-open"></i>');
+            }
+        }
+
+        $(document).ready(function () {
+            setTimeout("progress('3')", 0);
+            $("#mergeTags").on("click", "label", function () {
+                displayDeletionWarnings();
+            });
+
+            $('#toggleSelectionMode').on('change', function () {
+                jQuery(this).prev().removeClass();
+                if ($('#toggleSelectionMode').is(':checked')) {
+                    jQuery(this).prev().addClass('icon-check');
+
+                    $('.sel').show();
+                    $('.selmode').show();
+                    $("#btnClassify").hide();
+
+                    var nb = $("[name='selection']:checked").length;
+                    mysel(nb);
+                } else {
+                    jQuery(this).prev().addClass('icon-check-empty');
+
+                    $('.sel').hide();
+                    $('.selmode').hide();
+
+                    if (_nbpending > 0) {
+                        $("#btnClassify").show();
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Page failed to load</title>
+    <style type="text/css">
+        html, body {
+            background: #fff;
+            width: 70%;
+        }
+
+        #osm0 {
+            position: absolute;
+            width: 100%;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            max-width: 71.25rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="osm">
+        <img id="loading" src="./templ/themes/default/images/loading.gif" />
+
+        <div id="err" style="display: none;">
+            <h3>Page failed to load.</h3>
+            URL: <a href="javascript:;" onclick="zz();return false;">http://a.tile.openstreetmap.org</a>
+            <br />Error: ERR_NAME_NOT_RESOLVED (-105)<br />ERR_NAME_NOT_RESOLVED
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        function zz() {
+            $.ajax({
+                url: "http://a.tile.openstreetmap.org/0/0/0.png",
+                type: "GET",
+                timeout: 2000,
+                success: function (resp) {
+                    var url0 = window.location.href;
+                    var pos = url0.indexOf("&net=");
+                    if (pos > 0) {
+                        url0 = url0.substring(0, pos);
+                    }
+
+                    window.location.href = url0;
+                },
+                error: function () {
+                    $("#loading").hide();
+                    $("#err").show();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            zz();
+        });
+    </script>
+</body>
+</html>

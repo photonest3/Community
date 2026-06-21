@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+ <item><id>Open...</id><transl>Открыть...</transl></item>
+ <item><id>Brush</id><transl>Кисть</transl></item>
+ <item><id>Lasso</id><transl>Лассо</transl></item>
+ <item><id>Rectangle</id><transl>Прямоугольник</transl></item>
+ <item><id>Magic Wand</id><transl>Волшебная палочка</transl></item>
+ <item><id>Eraser</id><transl>Ластик</transl></item>
+ <item><id>Move</id><transl>Движение</transl></item>
+ <item><id>Save</id><transl>Сохранить</transl></item>
+ <item><id>Undo</id><transl>Отменить</transl></item>
+ <item><id>Redo</id><transl>Повторить</transl></item>
+ <item><id>Center</id><transl>По центру</transl></item>
+ <item><id>Crop</id><transl>Обрезка</transl></item>
+ <item><id>Remove unnecessary Objects</id><transl>Удалите ненужные объекты</transl></item>
+ <item><id>Adjust</id><transl>Коррективы</transl></item>
+ <item><id>Brightness</id><transl>яркость</transl></item>
+ <item><id>Contrast</id><transl>Контрастность</transl></item>
+ <item><id>Backlight</id><transl>Засветка</transl></item>
+ <item><id>White balance</id><transl>Баланс белого</transl></item>
+ <item><id>AutoLevel</id><transl>Автоуровень</transl></item>
+ <item><id>Original image</id><transl>Оригинальное изображение</transl></item>
+ <item><id>About...</id><transl>О программе...</transl></item>
+ <item><id>Registration...</id><transl>Регистрация...</transl></item>
+ <item><id>Rotate by 180°</id><transl>Поворот на 180°</transl></item>
+ <item><id>Rotate left</id><transl>Поворот влево</transl></item>
+ <item><id>Rotate right</id><transl>Поворот вправо</transl></item>
+ <item><id>Flip</id><transl>Отразить по горизонтали</transl></item>
+ <item><id>Mirror</id><transl>Отразить по вертикали</transl></item>
+ <item><id>Close</id><transl>Закрыть</transl></item>
+ <item><id>Discard Changes</id><transl>Отказ от изменений</transl></item>
+ <item><id>Cancel</id><transl>Отмена</transl></item>
+ <item><id>Arrow</id><transl>Стрелка</transl></item>
+ <item><id>Ellipse</id><transl>Эллипс</transl></item>
+ <item><id>Line</id><transl>Линия</transl></item>
+ <item><id>Save As...</id><transl>Сохранить как...</transl></item>
+ <item><id>Selection</id><transl>Выделить</transl></item>
+ <item><id>Opaque</id><transl>Непрозрачный</transl></item>
+ <item><id>OK</id><transl>OK</transl></item>
+ <item><id>Background</id><transl>Фон</transl></item>
+ <item><id>Copy</id><transl>Копировать</transl></item>
+ <item><id>Paste</id><transl>Вставить</transl></item>
+ <item><id>Cut</id><transl>Вырезать</transl></item>
+ <item><id>Tolerance</id><transl>Толерантность</transl></item>
+ <item><id>Font</id><transl>Шрифт</transl></item>
+ <item><id>Optimize</id><transl>Оптимизация</transl></item>
+ <item><id>Text</id><transl>Текст</transl></item>
+ <item><id>Drag files here</id><transl>Перетащите файлы сюда</transl></item>
+ <item><id>Pencil</id><transl>Карандаш</transl></item>
+ <item><id>Color Fill</id><transl>Цветная заливка</transl></item>
+ <item><id>Color Picker</id><transl>Выбор цвета</transl></item>
+ <item><id>Thickness</id><transl>Толщина</transl></item>
+ <item><id>Apply</id><transl>Применить</transl></item>
+ <item><id>Retain</id><transl>удерживать</transl></item>
+ <item><id>Remove</id><transl>Удалить</transl></item>
+<item><id>File is too big</id><transl>Файл слишком большой</transl></item>
+ <item><id>Background Matting</id><transl>Матирование фона</transl></item>
+ <item><id>Image Stitching</id><transl>Сшивка изображений</transl></item>
+ <item><id>Rotate</id><transl>Повернуть</transl></item>
+ <item><id>Change Background</id><transl>Изменить фон</transl></item>
+ <item><id>Paste As New</id><transl>Вставить как новый</transl></item>
+ <item><id>Transparent</id><transl>Прозрачный</transl></item>
+ <item><id>Saved successfully</id><transl>Сохранено успешно</transl></item>
+ <item><id>Normal clone</id><transl>Нормальный клон</transl></item>
+ <item><id>Mixed clone</id><transl>Смешанный клон</transl></item>
+ <item><id>Monochrome transfer</id><transl>Монохромный перенос</transl></item>
+ <item><id>Home</id><transl>Домой</transl></item>
+ <item><id>Drawing Tool</id><transl>Кисти</transl></item>
+ <item><id>Color</id><transl>Цвет</transl></item>
+ <item><id>The outside of the rectangle is the background</id><transl>Внешняя сторона прямоугольника является фоном</transl></item>
+ <item><id>Remove smeared objects</id><transl>Удаление размазанных объектов</transl></item>
+ <item><id>Sharpen</id><transl>Заостренный</transl></item>
+ <item><id>Enhancement</id><transl>Усиление</transl></item>
+ <item><id>Changes have not been saved</id><transl>Изменения не были сохранены</transl></item>
+ <item><id>Not yet completed</id><transl>Еще не завершено</transl></item>
+ <item><id>Save Failure</id><transl>Неудачное сохранение</transl></item>
+ <item><id>Canvas area exceeds the maximum limit (2/3)</id><transl>Площадь холста превышает максимальный предел (2/3)</transl></item>
+ <item><id>Select sticker</id><transl>Выберите наклейку</transl></item>
+ <item><id>Select a rectangular area around the object you want to segment</id><transl>выделите прямоугольную область вокруг объекта, который вы хотите сегментировать</transl></item>
+ <item><id>Expiration Date:</id><transl>Дата истечения срока действия: </transl></item>
+ <item><id>30 days trial period</id><transl>30 дней пробного периода</transl></item>
+ <item><id>Activate using a license key</id><transl>Активируйте с помощью лицензионного ключа</transl></item>
+ <item><id>Buy Now</id><transl>Купить сейчас</transl></item>
+ <item><id>Activate</id><transl>Активировать</transl></item>
+ <item><id>Copyright (c) 2023 PhotoZK. All rights reserved.</id><transl>Copyright (c) 2023 PhotoZK. Все права защищены.</transl></item>
+ <item><id>This product is licensed to:</id><transl>Этот продукт лицензирован на:</transl></item>
+ <item><id>Warning: This program is protected by copyright law and international treaties.</id><transl>Предупреждение: Эта программа защищена законом об авторском праве и международными соглашениями.</transl></item>
+ <item><id>Third software</id><transl>Третье программное обеспечение</transl></item>
+ <item><id>Perpetual License</id><transl>Бессрочная лицензия</transl></item>
+ <item><id>Registration</id><transl>Регистрация</transl></item>
+ <item><id>Activation completed!</id><transl>Активация завершена!</transl></item>
+ <item><id>Please check your license key, and then try again.</id><transl>Пожалуйста, проверьте ваш лицензионный ключ, а затем попробуйте еще раз.</transl></item>
+ <item><id>An error occurred</id><transl>Ошибка</transl></item>
+ <item><id>About</id><transl>О программе</transl></item>
+ <item><id>Language</id><transl>Язык</transl></item>
+<item><id>Activation Expired</id><transl>Активация истекла</transl></item>
+ <item><id>Nostalgic</id><transl>Ностальгический</transl></item>
+ <item><id>Feather</id><transl>Перья</transl></item>
+ <item><id>Comic strip</id><transl>Комикс</transl></item>
+ <item><id>Sketch</id><transl>Набросок</transl></item>
+ <item><id>Decolor</id><transl>Деколор</transl></item>
+ <item><id>Mosaic</id><transl>Мозаика</transl></item>
+ <item><id>Read-only attribute</id><transl>Атрибут только для чтения</transl></item>
+ <item><id>An error occurred</id><transl>Произошла ошибка</transl></item>
+ <item><id>Choose a color</id><transl>Выберите цвет</transl></item>
+ <item><id>Change Sky Background</id><transl>Изменить фон неба</transl></item>
+ <item><id>No sky detected</id><transl>Небо не обнаружено</transl></item>
+ <item><id>Activated.</id><transl>Активирован.</transl></item>
+<item><id>Too big</id><transl>Слишком большой</transl></item>
+<item><id>Too small</id><transl>Слишком маленький</transl></item>
+<item><id>Complete image fusion</id><transl>Завершить слияние изображений</transl></item>
+<item><id>Finish the cutting</id><transl>Завершить резку</transl></item>
+ <item><id>Yes</id><transl>Да</transl></item>
+<item><id>Don't Save</id><transl>Не сохранять</transl></item>
+<item><id>Do you want to save changes to aa.jpg?</id><transl>Хотите ли вы сохранить изменения в aa.jpg?</transl></item>
+<item><id>Change...</id><transl></transl></item>
+<item><id>Loading</id><transl>Загрузка</transl></item>
+<item><id>Loading...</id><transl>Загрузка...</transl></item>
+<item><id>1-year license</id><transl>Лицензия на 1 год</transl></item>
+<item><id>3-year license</id><transl>3-летняя лицензия</transl></item>
+<item><id>This license is expired.</id><transl>Срок действия этой лицензии истек. </transl></item>
+<item><id>This license is in use.</id><transl>Эта лицензия используется. </transl></item>
+<item><id>30-day trial period, expiration date:</id><transl>30-дневный пробный период, дата истечения:</transl></item>
+</data>

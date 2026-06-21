@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data><item><id>en</id><transl>es</transl></item>
+<item><id>ltr</id><transl>ltr</transl></item>
+<item><id>Select an album</id><transl>Seleccionar un álbum</transl></item>
+<item><id>... or</id><transl>... o </transl></item>
+<item><id>create a new album</id><transl>Añadir un nuevo álbum</transl></item>
+<item><id>jump to album</id><transl>Ir al álbum</transl></item>
+<item><id>Parent album</id><transl>Álbum padre</transl></item>
+<item><id>Album name</id><transl>Nombre del álbum</transl></item>
+<item><id>Create</id><transl>Crear</transl></item>
+<item><id>nothing</id><transl>nada</transl></item>
+<item><id>Dashboard</id><transl>Panel de control</transl></item>
+<item><id>Photos</id><transl>Fotos</transl></item>
+<item><id>Albums</id><transl>Álbumes</transl></item>
+<item><id>%d associations</id><transl>%d asociaciones</transl></item>
+<item><id>Tags</id><transl>Etiquetas</transl></item>
+<item><id>Pages seen</id><transl>Páginas visitadas</transl></item>
+<item><id>Storage used</id><transl>Almacenamiento usado</transl></item>
+<item><id>Add Photos</id><transl>Añadir fotos</transl></item>
+<item><id>The album name must not be empty.</id><transl>El nombre del álbum no puede estar en blanco.</transl></item>
+<item><id>Add another set of photos</id><transl>Añadir otro conjunto de fotos</transl></item>
+<item><id>Select files</id><transl>Seleccionar archivos</transl></item>
+<item><id>Learn more</id><transl>Más información</transl></item>
+<item><id>Manage this set of %d photos</id><transl>Administrar este lote de %d fotos</transl></item>
+<item><id>global mode</id><transl>modo global</transl></item>
+<item><id>single mode</id><transl>modo unitario</transl></item>
+<item><id>Filter</id><transl>Filtrar</transl></item>
+<item><id>remove this filter</id><transl>eliminar este filtro</transl></item>
+<item><id>Predefined filter</id><transl>Filtro predefinido</transl></item>
+<item><id>Empty caddie</id><transl>Cesta vacia</transl></item>
+<item><id>Album</id><transl>Álbum</transl></item>
+<item><id>include child albums</id><transl>Incluir los sub-álbumes</transl></item>
+<item><id>Type in a search term</id><transl>Introduce un término de búsqueda</transl></item>
+<item><id>All tags</id><transl>Todas las etiquetas</transl></item>
+<item><id>Any tag</id><transl>Cualquier etiqueta</transl></item>
+<item><id>Dimensions</id><transl>Dimensiones</transl></item>
+<item><id>Search</id><transl>Buscar</transl></item>
+<item><id>Photo title</id><transl>Título de la foto</transl></item>
+<item><id>Photo description</id><transl>Descripción de la foto</transl></item>
+<item><id>File name</id><transl>Nombre de archivo</transl></item>
+<item><id>Search for an author</id><transl>Buscar por autor</transl></item>
+<item><id>Add a filter</id><transl>Añadir filtro</transl></item>
+<item><id>Filesize</id><transl>Tamaño</transl></item>
+<item><id>Creation date</id><transl>Fecha de creación</transl></item>
+<item><id>Remove all filters</id><transl>Eliminar todos los filtros</transl></item>
+<item><id>Refresh photo set</id><transl>Actualizar el lote de fotos</transl></item>
+<item><id>Selection</id><transl>Selección</transl></item>
+<item><id>Action</id><transl>Acción</transl></item>
+<item><id>No photo selected</id><transl>Ninguna foto seleccionada</transl></item>
+<item><id>Choose an action</id><transl>Seleccionar una acción</transl></item>
+<item><id>Delete selected photos</id><transl>Eliminar las fotos seleccionadas</transl></item>
+<item><id>Associate to album</id><transl>Asociar al álbum</transl></item>
+<item><id>Move to album</id><transl>Mover al álbum</transl></item>
+<item><id>Dissociate from album</id><transl>Separar del álbum</transl></item>
+<item><id>Add tags</id><transl>Añadir etiquetas</transl></item>
+<item><id>Set author</id><transl>Establecer autor</transl></item>
+<item><id>Set title</id><transl>Establecer el titulo</transl></item>
+<item><id>Add to caddie</id><transl>Añadir al carrito</transl></item>
+<item><id>Are you sure?</id><transl>Confirme que desea realizar esta acción</transl></item>
+<item><id>You must confirm deletion</id><transl>Debe confirmar la eliminación</transl></item>
+<item><id>Select at least one tag</id><transl>Selecciona al menos una etiqueta</transl></item>
+<item><id>remove author</id><transl>eliminar el autor</transl></item>
+<item><id>Type the author name here</id><transl>Escriba el nombre del autor</transl></item>
+<item><id>remove title</id><transl>eliminar el título</transl></item>
+<item><id>Type the title here</id><transl>Introduzca el título aquí</transl></item>
+<item><id>Apply action</id><transl>Aplicar acción</transl></item>
+<item><id>on the %d selected photos</id><transl>en las %d fotos seleccionadas</transl></item>
+<item><id>%d of %d photos selected</id><transl>Fotos seleccionadas: %d de %d</transl></item>
+<item><id>All %d photos are selected</id><transl>Todas las %d fotos del lote han sido seleccionadas</transl></item>
+<item><id>List</id><transl>Lista</transl></item>
+<item><id>Move</id><transl>Mover</transl></item>
+<item><id>apply automatic sort order</id><transl>Ordenar automáticamente</transl></item>
+<item><id>Automatic sort order</id><transl>Orden automático</transl></item>
+<item><id>Sort order</id><transl>Ordenar</transl></item>
+<item><id><![CDATA[Album name, A &rarr; Z]]></id><transl><![CDATA[Nombre del album, A &rarr; Z]]></transl></item>
+<item><id><![CDATA[Album name, Z &rarr; A]]></id><transl><![CDATA[Nombre del album, Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Date created, new &rarr; old]]></id><transl><![CDATA[Fecha de creación, nuevo &rarr; antiguo]]></transl></item>
+<item><id>(determined from photos)</id><transl>(determinado a partir de las fotos)</transl></item>
+<item><id><![CDATA[Date created, old &rarr; new]]></id><transl><![CDATA[Fecha de creación, antiguo &rarr; nuevo]]></transl></item>
+<item><id>Apply to sub-albums</id><transl>Aplicar a los sub-álbumes</transl></item>
+<item><id>Save order</id><transl>Guardar orden</transl></item>
+<item><id>Save manual order</id><transl>Guardar orden manual</transl></item>
+<item><id>cancel manual order</id><transl>Cancelar orden manual</transl></item>
+<item><id>Move albums</id><transl>Mover álbumes</transl></item>
+<item><id>Virtual albums to move</id><transl>Álbumes virtuales para mover</transl></item>
+<item><id>New parent album</id><transl>Nuevo álbum padre</transl></item>
+<item><id>Properties</id><transl>Propiedades</transl></item>
+<item><id>Photos sort order</id><transl>Administrar el orden de aparición</transl></item>
+<item><id>Use the default photo sort order</id><transl>Utilizar el orden de selección de las fotos por defecto</transl></item>
+<item><id>Manual order</id><transl>Orden personalizado</transl></item>
+<item><id>automatic order</id><transl>Orden automático</transl></item>
+<item><id>Click-and-drag to re-order</id><transl>Hacer clic y arrastrar para reorganizar</transl></item>
+<item><id>Save Settings</id><transl>Guardar ajustes</transl></item>
+<item><id>Information</id><transl>Información</transl></item>
+<item><id>manage sub-albums</id><transl>Administrar los sub-álbumes</transl></item>
+<item><id>delete album</id><transl>Eliminar álbum</transl></item>
+<item><id>Name</id><transl>Nombre</transl></item>
+<item><id>Description</id><transl>Descripción</transl></item>
+<item><id>Configuration</id><transl>Configuración</transl></item>
+<item><id>Basic settings</id><transl>Configuración básica</transl></item>
+<item><id>Gallery title</id><transl>Título de la galería</transl></item>
+<item><id>Default photos order</id><transl>Orden de las fotos por defecto</transl></item>
+<item><id>Add a criteria</id><transl>Añadir criterio</transl></item>
+<item><id>Miscellaneous</id><transl>Más información</transl></item>
+<item><id>other</id><transl>Otro</transl></item>
+<item><id>Week starts on</id><transl>La semana empieza en</transl></item>
+<item><id>Batch Manager</id><transl>Gestión de lotes</transl></item>
+<item><id>History</id><transl>Historial</transl></item>
+<item><id>Statistics</id><transl>Estadísticas</transl></item>
+<item><id>Tags selection</id><transl>Selección de etiquetas</transl></item>
+<item><id>Select at least two tags to merge.</id><transl>Seleccionar al menos dos etiquetas para la fusión.</transl></item>
+<item><id>Display options</id><transl>Opciones de visualización</transl></item>
+<item><id>photos per page</id><transl>Fotos por página</transl></item>
+<item><id>Downloads</id><transl>Descargas</transl></item>
+<item><id>delete photo</id><transl>Eliminar la foto</transl></item>
+<item><id>Title</id><transl>título</transl></item>
+<item><id>Author</id><transl>Autor</transl></item>
+<item><id>Linked albums</id><transl>Álbumes asociados</transl></item>
+<item><id>Album thumbnail</id><transl>Representación de álbumes</transl></item>
+<item><id>Photo information updated</id><transl>Información actualizada de la foto</transl></item>
+<item><id>Login</id><transl>Iniciar sesión</transl></item>
+<item><id>Identification</id><transl>Autenticación</transl></item>
+<item><id>Username</id><transl>Nombre de usuario</transl></item>
+<item><id>Password</id><transl>Contraseña</transl></item>
+<item><id>Forgot your password?</id><transl>¿Ha olvidado su contraseña?</transl></item>
+<item><id>Reset</id><transl>Restablecer</transl></item>
+<item><id>Please enter a login name.</id><transl>Introduzca su nombre de usuario.</transl></item>
+<item><id>Please enter your password.</id><transl>Introduzca su contraseña.</transl></item>
+<item><id>Please confirm the chosen password.</id><transl>Confirme la contraseña elegida.</transl></item>
+<item><id>Search for words</id><transl>Buscar por palabras</transl></item>
+<item><id>Search for all terms</id><transl>Buscar por todos los términos</transl></item>
+<item><id>Search for any term</id><transl>Buscar por cualquier término</transl></item>
+<item><id>Apply on properties</id><transl>Aplicar propiedades</transl></item>
+<item><id>Search tags</id><transl>Buscar etiquetas</transl></item>
+<item><id>Search by date</id><transl>Buscar por fecha</transl></item>
+<item><id>Kind of date</id><transl>Tipo de fecha</transl></item>
+<item><id>Search in albums</id><transl>Buscar en los álbumes</transl></item>
+<item><id>Search in sub-albums</id><transl>Buscar en los sub-álbumes</transl></item>
+<item><id>stop the slideshow</id><transl>Detener presentación</transl></item>
+<item><id>clean up</id><transl>limpiar</transl></item>
+<item><id>Visit the gallery</id><transl>Volver a la galería</transl></item>
+<item><id>Caddie</id><transl>Carrito</transl></item>
+<item><id>Orphans</id><transl>Huérfanas</transl></item>
+<item><id>Recent photos</id><transl>Fotos recientes</transl></item>
+<item><id>Duplicates</id><transl>Duplicados</transl></item>
+<item><id>All</id><transl>Todo</transl></item>
+<item><id>Your favorites</id><transl>Favoritos</transl></item>
+<item><id>With no tag</id><transl>Sin etiquetas</transl></item>
+<item><id>With no album</id><transl>Sin álbumes</transl></item>
+<item><id>Edit</id><transl>Editar</transl></item>
+<item><id>Tag</id><transl>Etiqueta</transl></item>
+<item><id>No photo selected, %d photos in current set</id><transl>Ninguna foto seleccionada entre las %d fotos del lote</transl></item>
+<item><id>Delete %d orphan photos</id><transl>Borrar %d fotos huérfanas</transl></item>
+<item><id>%d photo deleted</id><transl>%d foto eliminada</transl></item>
+<item><id>%d photos deleted</id><transl>%d fotos eliminadas</transl></item>
+<item><id>Albums automatically sorted</id><transl>Álbums clasificados correctamente</transl></item>
+<item><id>Virtual album added</id><transl>Álbum virtual añadido</transl></item>
+<item><id>Edit album</id><transl>Editar álbum</transl></item>
+<item><id>%d album moved</id><transl>%d álbum movido</transl></item>
+<item><id>%d albums moved</id><transl>%d álbumes movidos</transl></item>
+<item><id>%d photos</id><transl>%d fotos</transl></item>
+<item><id>View in gallery</id><transl>Ver en galería</transl></item>
+<item><id>Manage photos</id><transl>Administrar fotos</transl></item>
+<item><id>Tag "%s" was added</id><transl>La etiqueta "%s" ha sido añadida</transl></item>
+<item><id>Tag "%s" already exists</id><transl>La etiqueta "%s" ya existe</transl></item>
+<item><id>Add a tag</id><transl>Añadir etiqueta</transl></item>
+<item><id>Select tags</id><transl>Seleccionar etiquetas</transl></item>
+<item><id>New tag</id><transl>Nueva etiqueta</transl></item>
+<item><id>No destination tag selected</id><transl>No ha seleccionado ninguna etiqueta de destino</transl></item>
+<item><id>Edit selected tags</id><transl>Editar</transl></item>
+<item><id>Duplicate selected tags</id><transl>Borrar etiquetas duplicadas</transl></item>
+<item><id>Merge selected tags</id><transl>Fusionar</transl></item>
+<item><id>Delete selected tags</id><transl>Eliminar</transl></item>
+<item><id>Display form</id><transl>Mostrar desde</transl></item>
+<item><id>Edit tags</id><transl>Editar etiquetas</transl></item>
+<item><id>Current name</id><transl>Nombre actual</transl></item>
+<item><id>New name</id><transl>Nuevo nombre</transl></item>
+<item><id>Source tag</id><transl>Origen de las etiquetas</transl></item>
+<item><id>Name of the duplicate</id><transl>Nombre de los duplicados</transl></item>
+<item><id>Merge tags</id><transl>Fusionar etiquetas</transl></item>
+<item><id>Select the destination tag</id><transl>Selecciona la etiqueta de destino</transl></item>
+<item><id>Confirm merge</id><transl>Confirman la fusión</transl></item>
+<item><id>(this tag will be deleted)</id><transl>(esta etiqueta se eliminará)</transl></item>
+<item><id>First</id><transl>Primera</transl></item>
+<item><id>Previous</id><transl>Anterior</transl></item>
+<item><id>Next</id><transl>Siguiente</transl></item>
+<item><id>Last</id><transl>Última</transl></item>
+<item><id>The whole set</id><transl>La totalidad del lote</transl></item>
+<item><id>Width</id><transl>Anchura</transl></item>
+<item><id>between %d and %d pixels</id><transl>entre %d y %d pixels</transl></item>
+<item><id>Height</id><transl>Altura</transl></item>
+<item><id>Ratio</id><transl>Proporción</transl></item>
+<item><id>between %s and %s</id><transl>entre %s y %s</transl></item>
+<item><id>Portrait</id><transl>Retrato</transl></item>
+<item><id>Landscape</id><transl>Paisaje</transl></item>
+<item><id>between %s and %s MB</id><transl>entre %s y %s MB</transl></item>
+<item><id>display</id><transl>Visualizar</transl></item>
+<item><id>all</id><transl>Todas</transl></item>
+<item><id>Remove tags</id><transl>suprimir las etiquetas</transl></item>
+<item><id>Original file:</id><transl>Archivo original: </transl></item>
+<item><id>Added by %s</id><transl>Añadida por %s</transl></item>
+<item><id>Visited %d times</id><transl>Visitada %d veces</transl></item>
+<item><id>Numeric identifier : %d</id><transl>Identificador numérico: %d</transl></item>
+<item><id>Album updated successfully</id><transl>Álbum actualizado con éxito.</transl></item>
+<item><id>manage album photos</id><transl>administrar las fotos del álbum</transl></item>
+<item><id>Find a new random album thumbnail.</id><transl>Encontrar a un nuevo representante al azar.</transl></item>
+<item><id>Refresh</id><transl>Actualizar</transl></item>
+<item><id>This album contains no photo.</id><transl>Este álbum no contiene ninguna foto</transl></item>
+<item><id>This album contains %d photos, added on %s.</id><transl>Este álbum contiene %d fotos, añadidas el %s</transl></item>
+<item><id>This album contains %d photos, added between %s and %s.</id><transl>Este álbum contiene %d fotos, añadidas entre %s y %s</transl></item>
+<item><id>Delete album "%s".</id><transl>Borrar álbum "%s".</transl></item>
+<item><id>delete album and the %d orphan photos</id><transl>borrar álbum y las %d fotos huérfanas</transl></item>
+<item><id>delete only album, not photos</id><transl>borrar solamente el álbum, no las fotos</transl></item>
+<item><id>Confirm deletion</id><transl>Confirmar borrado</transl></item>
+<item><id><![CDATA[File name, A &rarr; Z]]></id><transl><![CDATA[Nombre de archivo, A &rarr; Z]]></transl></item>
+<item><id><![CDATA[File name, Z &rarr; A]]></id><transl><![CDATA[Nombre de archivo, Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Photo title, A &rarr; Z]]></id><transl><![CDATA[Título de la foto, A &rarr; Z]]></transl></item>
+<item><id><![CDATA[Photo title, Z &rarr; A]]></id><transl><![CDATA[Título de la foto, Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Visits, high &rarr; low]]></id><transl><![CDATA[Visitas, más &rarr; menos]]></transl></item>
+<item><id><![CDATA[Visits, low &rarr; high]]></id><transl><![CDATA[Visitas, menos  &rarr; más]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 1 &rarr; 9]]></id><transl><![CDATA[Número de identificación, 1 &rarr; 9]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 9 &rarr; 1]]></id><transl><![CDATA[Número de identificación, 9 &rarr; 1]]></transl></item>
+<item><id>Manual sort order</id><transl>Orden manual</transl></item>
+<item><id>day0</id><transl>Domingo</transl></item>
+<item><id>day1</id><transl>Lunes</transl></item>
+<item><id>delete</id><transl>eliminar</transl></item>
+<item><id>Delete</id><transl>Eliminar</transl></item>
+<item><id>Allowed file types: %s.</id><transl>Extensiones permitidas: %s.</transl></item>
+<item><id>No photos in the current set.</id><transl>No hay fotos en este lote.</transl></item>
+<item><id>Select:</id><transl>Seleccionar:</transl></item>
+<item><id>None</id><transl>Ninguna</transl></item>
+<item><id>Invert</id><transl>Invertir selección</transl></item>
+<item><id>Logout</id><transl>Desconectar</transl></item>
+<item><id>First photo added</id><transl>Primera foto añadida</transl></item>
+<item><id>%d photo</id><transl>%d foto</transl></item>
+<item><id>in %d sub-album</id><transl>en %d sub-álbum</transl></item>
+<item><id>in %d sub-albums</id><transl>en %d sub-álbumes</transl></item>
+<item><id>in this album</id><transl>en este àlbum</transl></item>
+<item><id>Thumbnail</id><transl>Miniatura</transl></item>
+<item><id>2small</id><transl>XXS - diminuto</transl></item>
+<item><id>xsmall</id><transl>XS - extrapequeño</transl></item>
+<item><id>small</id><transl>S - pequeño</transl></item>
+<item><id>medium</id><transl>M - mediano</transl></item>
+<item><id>large</id><transl>L - grande</transl></item>
+<item><id>%d week</id><transl>%d semana</transl></item>
+<item><id>%d weeks</id><transl>%d semanas</transl></item>
+<item><id>%d day</id><transl>%d día</transl></item>
+<item><id>%d days</id><transl>%d días</transl></item>
+<item><id>%d month</id><transl>%d mes</transl></item>
+<item><id>%d months</id><transl>%d meses</transl></item>
+<item><id>%d year</id><transl>%d año</transl></item>
+<item><id>%d years</id><transl>%d años</transl></item>
+<item><id>%s ago</id><transl>hace %s</transl></item>
+<item><id>Related tags</id><transl>Etiquetas relacionadas</transl></item>
+<item><id>display your favorites photos</id><transl>Visualizar sus fotos favoritas</transl></item>
+<item><id>display most visited photos</id><transl>Visualizar las fotos más visitadas</transl></item>
+<item><id>Most visited</id><transl>Más visitadas</transl></item>
+<item><id>display most recent photos</id><transl>Visualizar las fotos más recientes</transl></item>
+<item><id>display recently updated albums</id><transl>Visualizar los álbumes actualizados recientemente</transl></item>
+<item><id>Recent albums</id><transl>Álbumes recientes</transl></item>
+<item><id>Display a random set of photos.</id><transl>Mostrar un conjunto aleatorio de fotos.</transl></item>
+<item><id>Random photos</id><transl>Fotos aleatorias</transl></item>
+<item><id>Show the photos every day, every month.</id><transl>Mostrar las fotos cada día, cada mes.</transl></item>
+<item><id>Calendar</id><transl>Calendario</transl></item>
+<item><id>display available tags</id><transl>Mostrar etiquetas disponibles</transl></item>
+<item><id>Hello</id><transl>Hola</transl></item>
+<item><id>Photo sizes</id><transl>Medidas de la foto</transl></item>
+<item><id>delete all photos from your favorites</id><transl>Eliminar todas las fotos de sus favoritas</transl></item>
+<item><id>slideshow</id><transl>Presentación</transl></item>
+<item><id>return to normal view mode</id><transl>Vista por álbumes</transl></item>
+<item><id>Search criteria</id><transl>Criterios de búsqueda</transl></item>
+<item><id>display this album</id><transl>Visualizar el contenido de este álbum</transl></item>
+<item><id>group by letters</id><transl>Agrupar por letras</transl></item>
+<item><id>letters</id><transl>letras</transl></item>
+<item><id>show tags cloud</id><transl>Mostrar nube de etiquetas</transl></item>
+<item><id>cloud</id><transl>nube</transl></item>
+<item><id>Default</id><transl>Por defecto</transl></item>
+<item><id>View</id><transl>Visualizar</transl></item>
+<item><id>Monthly list</id><transl>Lista mensual</transl></item>
+<item><id>Monthly calendar</id><transl>Calendario mensual</transl></item>
+<item><id>day2</id><transl>Martes</transl></item>
+<item><id>day3</id><transl>Miércoles</transl></item>
+<item><id>day4</id><transl>Jueves</transl></item>
+<item><id>day5</id><transl>Viernes</transl></item>
+<item><id>day6</id><transl>Sábado</transl></item>
+<item><id>New password</id><transl>Nueva contraseña</transl></item>
+<item><id>Each of the listed criteria must be satisfied.</id><transl>Debe cumplimentar cada regla listada</transl></item>
+<item><id>No results for</id><transl>No hay resultados para</transl></item>
+<item><id>Empty query. No criteria has been entered.</id><transl>No ha introducido ningún criterio de búsqueda.</transl></item>
+<item><id>add this photo to your favorites</id><transl>Añadir a favoritos</transl></item>
+<item><id>Favorites</id><transl>Favoritas</transl></item>
+<item><id>delete this photo from your favorites</id><transl>Eliminar esta foto de sus favoritas</transl></item>
+<item><id>Show file metadata</id><transl>Mostrar/Ocultar información adicional de la cámara fotográfica (metadatos Exif)</transl></item>
+<item><id>Download this file</id><transl>Descargar este archivo</transl></item>
+<item><id>Download</id><transl>Descargar</transl></item>
+<item><id>set as album thumbnail</id><transl>Establecer esta foto como icono de este álbum</transl></item>
+<item><id>Edit photo</id><transl>Editar foto</transl></item>
+<item><id>month1</id><transl>Enero</transl></item>
+<item><id>month2</id><transl>Febrero</transl></item>
+<item><id>month3</id><transl>Marzo</transl></item>
+<item><id>month4</id><transl>Abril</transl></item>
+<item><id>month5</id><transl>Mayo</transl></item>
+<item><id>month6</id><transl>Junio</transl></item>
+<item><id>month7</id><transl>Julio</transl></item>
+<item><id>month8</id><transl>Agosto</transl></item>
+<item><id>month9</id><transl>Septiembre</transl></item>
+<item><id>month10</id><transl>Octubre</transl></item>
+<item><id>month11</id><transl>Noviembre</transl></item>
+<item><id>month12</id><transl>Diciembre</transl></item>
+<item><id>Hour</id><transl>Hora</transl></item>
+<item><id>Date</id><transl>Fecha</transl></item>
+<item><id>Month</id><transl>Mes</transl></item>
+<item><id>Year</id><transl>Año</transl></item>
+<item><id>Overall</id><transl>Información general</transl></item>
+<item><id>today</id><transl>Hoy</transl></item>
+<item><id>Weekly list</id><transl>Lista semanal</transl></item>
+<item><id>Visits</id><transl>Visitas</transl></item>
+<item><id>Invalid password!</id><transl>¡Nombre de usuario o contraseña incorrectos!</transl></item>
+<item><id>Current password is wrong</id><transl>La contraseña actual es incorrecta</transl></item>
+<item><id>searched words : %s</id><transl>Palabras encontradas: %s</transl></item>
+<item><id>created between %s (%s) and %s (%s)</id><transl>creadas entre el %s (%s) y el %s (%s)</transl></item>
+<item><id>included</id><transl>incluidos</transl></item>
+<item><id>created on %s</id><transl>creado el %s</transl></item>
+<item><id>created after %s (%s)</id><transl>Creadas después del %s (%s)</transl></item>
+<item><id>created before %s (%s)</id><transl>creadas antes del %s (%s)</transl></item>
+<item><id>Search results</id><transl>Resultados de la búsqueda</transl></item>
+<item><id>Profile</id><transl>Perfil</transl></item>
+<item><id>Day</id><transl>Día</transl></item>
+<item><id>Square</id><transl>Cuadrado</transl></item>
+<item><id>width between %s and %s</id><transl>anchura entre %s y %s</transl></item>
+<item><id><![CDATA[width = %s]]></id><transl><![CDATA[anchura = %s]]></transl></item>
+<item><id><![CDATA[width &gt;= %s]]></id><transl><![CDATA[anchura &gt;= %s]]></transl></item>
+<item><id><![CDATA[width &lt;= %s]]></id><transl><![CDATA[anchura &lt;= %s]]></transl></item>
+<item><id>height between %s and %s</id><transl>altura entre %s y %s</transl></item>
+<item><id><![CDATA[height = %s]]></id><transl><![CDATA[altura = %s]]></transl></item>
+<item><id><![CDATA[height &gt;= %s]]></id><transl><![CDATA[altura &gt;= %s]]></transl></item>
+<item><id><![CDATA[height &lt;= %s]]></id><transl><![CDATA[altura &lt;= %s]]></transl></item>
+<item><id>ratio between %s and %s</id><transl>proporción entre %s y %s</transl></item>
+<item><id><![CDATA[ratio = %s]]></id><transl><![CDATA[proporción = %s]]></transl></item>
+<item><id><![CDATA[ratio &gt;= %s]]></id><transl><![CDATA[proporción &gt;= %s]]></transl></item>
+<item><id><![CDATA[ratio &lt;= %s]]></id><transl><![CDATA[proporción &lt;= %s]]></transl></item>
+<item><id>File</id><transl>Archivo</transl></item>
+<item><id>files</id><transl>archivos</transl></item>
+<item><id>Folder</id><transl>Carpeta</transl></item>
+<item><id>folders</id><transl>carpetas</transl></item>
+<item><id>Print</id><transl>Imprimir</transl></item>
+<item><id>Print to PDF</id><transl>Imprimir en PDF</transl></item>
+<item><id>Full Screen</id><transl>Pantalla completa&#009;F11</transl></item>
+<item><id>Check For Updates...</id><transl>Comprobar actualizaciones...</transl></item>
+<item><id>Zoom</id><transl>Zoom</transl></item>
+<item><id>Zoom In</id><transl>Aumentar zoom&#009;Ctrl+</transl></item>
+<item><id>Zoom Out</id><transl>Reducir zoom&#009;Ctrl-</transl></item>
+<item><id>100%</id><transl>100%&#009;Ctrl+0</transl></item>
+<item><id>1 file</id><transl>1 archivo</transl></item>
+<item><id>%d files</id><transl>%d archivos</transl></item>
+<item><id>Numeric identifier</id><transl>Número de identificación</transl></item>
+<item><id>Manage</id><transl>Administrar</transl></item>
+<item><id>Album alburl now contains %d photos</id><transl>El álbum alburl ahora contiene %d fotos</transl></item>
+<item><id>Settings</id><transl>Configuración</transl></item>
+<item><id>Folder:</id><transl>Carpeta:</transl></item>
+<item><id>Add Directory</id><transl>Añadir directorio</transl></item>
+<item><id>sLongDate</id><transl>d de MM de yy</transl></item>
+<item><id>sYearMonth</id><transl>MM yy</transl></item>
+<item><id>unset</id><transl>Vaciar</transl></item>
+<item><id>File/directory read error</id><transl>Error de lectura de archivo/directorio</transl></item>
+<item><id>Select the folder containing your photos</id><transl>Selecciona la carpeta que contiene tus fotos</transl></item>
+<item><id>Each directory here is an album.</id><transl>Cada directorio es un álbum.</transl></item>
+<item><id>Encrypting photos does not move or copy files to the new location.</id><transl>Encriptar fotos no mueve ni copia archivos a la nueva ubicación.</transl></item>
+
+<item><id>Specials</id><transl>Especiales</transl></item>
+<item><id>Create first album</id><transl>Crear primer álbum</transl></item>
+<item><id>Create first encrypted album</id><transl>Crear primer álbum encriptado</transl></item>
+<item><id>Duplicate file error.</id><transl>Error de archivo duplicado.</transl></item>
+<item><id>Filetype not allowed</id><transl>Tipo de archivo no permitido</transl></item>
+<item><id>max filesize</id><transl>Tamaño máximo de archivo</transl></item>
+
+<item><id>Add to Gallery</id><transl>Añadir a la galería</transl></item>
+<item><id>Add to Encrypted Gallery</id><transl>Añadir a galería encriptada</transl></item>
+<item><id>Encrypted Photos</id><transl>Cifrar fotos</transl></item>
+<item><id>Encrypted</id><transl>Encriptado</transl></item>
+<item><id>To be encrypted</id><transl>Para encriptar</transl></item>
+<item><id>photos added to the album</id><transl>fotos añadidas al álbum</transl></item>
+<item><id>Photo Directory</id><transl>Directorio de fotos</transl></item>
+<item><id>Slideshow</id><transl>Presentación</transl></item>
+<item><id>first photo added on %s</id><transl>primera foto añadida el %s</transl></item>
+<item><id>Music</id><transl>Música</transl></item>
+<item><id>Add to your favorites</id><transl>Añadir a favoritos</transl></item>
+<item><id>Already exists</id><transl>Ya existe</transl></item>
+<item><id>The operation completed successfully.</id><transl>La operación se ha completado con éxito</transl></item>
+<item><id>Confirm Removal</id><transl>Confirmar eliminación</transl></item>
+<item><id>Quality</id><transl>Calidad</transl></item>
+<item><id>My Gallery</id><transl>Mi galería</transl></item>
+<item><id>Creating password</id><transl>Crear contraseña</transl></item>
+<item><id>Details</id><transl>Detalles</transl></item>
+
+<item><id>BACK_ON_PAGE</id><transl>Vuelve atrás una pagina</transl></item>
+<item><id>FIND_POSITION</id><transl>Encontrar mi posición</transl></item>
+<item><id>SEARCH_MY_POSITION</id><transl>Buscar mi posición en el mapa </transl></item>
+<item><id>DISPLAY_ON_MAP</id><transl>Muestra %s en el mapa</transl></item>
+<item><id>CLICKED_MAP</id><transl>Hizo clic en el mapa en</transl></item>
+<item><id>SHOW_COORD</id><transl>Mostrar coordenadas</transl></item>
+<item><id>CENTER_MAP</id><transl>Centrar el mapa aquí</transl></item>
+<item><id>ZOOM_IN</id><transl>Aumentar zoom</transl></item>
+<item><id>ZOOM_OUT</id><transl>Reducir zoom</transl></item>
+<item><id>METERS_FROM_POINT</id><transl>Estás a %s metros de este punto</transl></item>
+<item><id>items</id><transl>elementos</transl></item>
+<item><id>PIWIGO_GALLERY</id><transl>Ir a la galería</transl></item>
+<item><id>VIEW_OSM</id><transl>Ver en OpenStreetMap</transl></item>
+<item><id>HOME_NAME</id><transl>Inicio</transl></item>
+<item><id>HOME_PREV_NAME</id><transl>Anterior</transl></item>
+
+<item><id>Location</id><transl>Ubicación</transl></item>
+<item><id>File Size</id><transl>Tamaño de archivo</transl></item>
+<item><id>Camera Make</id><transl>Marca de la cámara</transl></item>
+<item><id>Camera Model</id><transl>Modelo de la cámara</transl></item>
+<item><id>Camera Date</id><transl>Fecha de la cámara</transl></item>
+<item><id>Digitised Date</id><transl>Fecha de digitalización</transl></item>
+<item><id>Modified Date</id><transl>Fecha de modificación</transl></item>
+<item><id>File Date</id><transl>Fecha del archivo</transl></item>
+<item><id>Orientation</id><transl>Orientación</transl></item>
+<item><id>Flash</id><transl>Flash</transl></item>
+<item><id>Focal Length</id><transl>Longitud focal</transl></item>
+<item><id>Exposure Time</id><transl>Tiempo de exposición</transl></item>
+<item><id>F Number</id><transl>Número F</transl></item>
+<item><id>ISO</id><transl>ISO</transl></item>
+<item><id>White Balance</id><transl>Balance de blancos</transl></item>
+<item><id>Metering Mode</id><transl>Modelo de medición</transl></item>
+<item><id>Colour Space</id><transl>Espacio de color</transl></item>
+<item><id>JPEG Quality</id><transl>Calidad JPEG</transl></item>
+<item><id>GPS Latitude</id><transl>Latitud GPS</transl></item>
+<item><id>GPS Longitude</id><transl>Longitud GPS</transl></item>
+<item><id>GPS Altitude Ref</id><transl>Referencia de altitud GPS</transl></item>
+<item><id>X Resolution</id><transl>Resolución de X</transl></item>
+<item><id>Y Resolution</id><transl>Resolución de Y</transl></item>
+<item><id>Resolution Unit</id><transl>Unidad de resolución</transl></item>
+<item><id>Software</id><transl>Software</transl></item>
+<item><id>YCbCr Positioning</id><transl>Posicionamiento de YCbCr</transl></item>
+
+<item><id>Export location:</id><transl>Ubicación de la exportación</transl></item>
+<item><id>Browse...</id><transl>Examinar...</transl></item>
+<item><id>Name of exported folder:</id><transl>Nombre de la carpeta exportada:</transl></item>
+<item><id>Add numbers to file names to preserve order</id><transl>Añadir números a los nombres de archivo para conservar el orden</transl></item>
+<item><id>Export</id><transl>Exportar</transl></item>
+<item><id>Export to Folder</id><transl>Exportar a carpeta</transl></item>
+<item><id>Remove from Album</id><transl>Eliminar del álbum</transl></item>
+<item><id>Delete from Disk</id><transl>Suprimir del disco</transl></item>
+
+<item><id>Play slideshow</id><transl>Reproducir</transl></item>
+<item><id>Pause slideshow</id><transl>Pausa</transl></item>
+<item><id>Reduce slideshow speed</id><transl>Disminuir velocidad</transl></item>
+<item><id>Increase slideshow speed</id><transl>Aumentar la velocidad del pase de diapositivas</transl></item>
+<item><id>Open With...</id><transl>Abrir con...</transl></item>
+<item><id>Recent files</id><transl>Archivos recientes</transl></item>
+<item><id>Create Movie</id><transl>Crear vídeo</transl></item>
+<item><id>Collages</id><transl>Collages</transl></item>
+<item><id>My creation</id><transl>Mi creación</transl></item>
+<item><id>Photo movie</id><transl>Película de fotos</transl></item>
+<item><id>Photo wall</id><transl>Muro de fotos</transl></item>
+
+<item><id>Record video</id><transl>Grabar vídeo</transl></item>
+<item><id>Stop</id><transl>Parar</transl></item>
+<item><id>Screenshot</id><transl>Captura de pantalla</transl></item>
+<item><id>Go back</id><transl>Volver</transl></item>
+<item><id>Recording</id><transl>Grabación</transl></item>
+<item><id>jump to my creation</id><transl>Saltar a mi creación</transl></item>
+<item><id>Play</id><transl>Jugar</transl></item>
+
+<item><id>To decrypt previous photos, please enter the password you used last time.</id><transl>Para descifrar fotos anteriores, introduce la contraseña que utilizaste la última vez.</transl></item>
+<item><id>Current password</id><transl>Contraseña actual</transl></item>
+<item><id>The password hint will be visible to everyone who uses this computer.</id><transl>La sugerencia de contraseña será visible para todos los que utilicen este ordenador.</transl></item>
+<item><id>Password hint</id><transl>Sugerencia de contraseña</transl></item>
+<item><id>The destination folder is the root folder. Please choose a different folder.</id><transl>La carpeta de destino es la carpeta raíz. Por favor, elija una carpeta diferente.</transl></item>
+<item><id>The destination folder is a system folder. Please choose a different folder.</id><transl>La carpeta de destino es una carpeta del sistema. elija otra carpeta.</transl></item>
+<item><id>Unable to decrypt krf file, key mismatch</id><transl>No se puede descifrar el archivo krf, la clave no coincide</transl></item>
+<item><id>Remove from album, decrypt photos</id><transl>Eliminar del álbum, desencriptar fotos</transl></item>
+<item><id>Are are you sure you want to leave this page?</id><transl>¿Estás seguro de que quieres salir de esta página?</transl></item>
+<item><id>Are are you sure you want to exit?</id><transl>¿Está seguro de querer salir?</transl></item>
+<item><id>Canceled</id><transl>Cancelado</transl></item>
+<item><id>This file is currently in use</id><transl>Este archivo está actualmente en uso</transl></item>
+<item><id>Build</id><transl>Construir</transl></item>
+<item><id>ISO Filename:</id><transl>Nombre de archivo ISO:</transl></item>
+<item><id>Dump Image Files (ISO)</id><transl>Volcar archivos de imagen (ISO)</transl></item>
+<item><id>Press F11 to exit full screen</id><transl>Pulsa F11 para salir de la pantalla completa</transl></item>
+<item><id>Formating...</id><transl>Formación...</transl></item>
+<item><id>Exit full screen</id><transl>Salir a pantalla completa</transl></item>
+<item><id>Drag image here</id><transl>Arrastre la imagen aquí</transl></item>
+<item><id>Support drag and drop</id><transl>Admite arrastrar y soltar</transl></item>
+<item><id>Add to album</id><transl>Añadir al álbum</transl></item>
+<item><id>Invalid parent album</id><transl>Álbum padre no válido</transl></item>
+<item><id>Advanced</id><transl>Avanzado</transl></item>
+<item><id>Type</id><transl>Tipo</transl></item>
+<item><id>Images</id><transl>Imágenes</transl></item>
+<item><id>Videos</id><transl>Vídeos</transl></item>
+<item><id>Duplicates</id><transl>Duplicados</transl></item>
+<item><id>Remove Duplicates</id><transl>Eliminar duplicados</transl></item>
+<item><id>Restore</id><transl>Restaurar</transl></item>
+<item><id>There is only 1 photo.</id><transl>Sólo hay 1 foto.</transl></item>
+<item><id>Directory</id><transl>Directorio</transl></item>
+<item><id>Not found</id><transl>No se ha encontrado</transl></item>
+<item><id>No album selected</id><transl>Ningún álbum seleccionado</transl></item>
+<item><id>Set as background</id><transl>Configurar como fondo</transl></item>
+<item><id>Background image</id><transl>Imagen de fondo</transl></item>
+<item><id>Use background image</id><transl>Utilizar imagen de fondo</transl></item>
+<item><id>No background image</id><transl>Sin imagen de fondo</transl></item>
+<item><id>Header background image only</id><transl>Sólo imagen de fondo de la cabecera</transl></item>
+<item><id>Log in</id><transl>Iniciar sesión</transl></item>
+<item><id>Skin</id><transl>Piel</transl></item>
+<item><id>Mark image quality</id><transl>Marca calidad de imagen</transl></item>
+<item><id>Select All</id><transl>Seleccionar todo</transl></item>
+
+<item><id>Delete album</id><transl>Borrar álbum</transl></item>
+<item><id>Tag "%s" succesfully deleted</id><transl>Etiqueta "%s" eliminada con éxito</transl></item>
+<item><id>Yes, rename</id><transl>Sí, renombrar</transl></item>
+<item><id>Duplicate</id><transl>Duplicar</transl></item>
+<item><id>Merge</id><transl>Fusionar</transl></item>
+<item><id>Tag name</id><transl>Nombre de etiqueta</transl></item>
+<item><id>Rename</id><transl>Renombrar</transl></item>
+<item><id>no photo</id><transl>sin foto</transl></item>
+<item><id>Selection mode</id><transl>Modo de selección</transl></item>
+<item><id>Delete tag</id><transl>Borrar etiqueta</transl></item>
+<item><id>Are you sure to continue?</id><transl>¿Estás seguro de continuar?</transl></item>
+
+<item><id>Choose filters</id><transl>Elegir filtros</transl></item>
+<item><id>File type</id><transl>Tipo de archivo</transl></item>
+<item><id>OSM</id><transl>OSM</transl></item>
+<item><id>Clear</id><transl>Borrar</transl></item>
+<item><id>OSM Geotagged</id><transl>OSM Geoetiquetado</transl></item>
+<item><id>OSM Not geotagged</id><transl>OSM No geoetiquetado</transl></item>
+<item><id>Admin</id><transl>Admin</transl></item>
+<item><id>Search in</id><transl>Buscar en</transl></item>
+<item><id>All videos</id><transl>Todos los vídeos</transl></item>
+<item><id>Yes, copy</id><transl>Sí, copiar</transl></item>
+<item><id>Review</id><transl>Revisar</transl></item>
+<item><id>Delete orphan tags</id><transl>Eliminar etiquetas huérfanas</transl></item>
+<item><id>You have %s orphan tags</id><transl>Tienes %s etiquetas huérfanas</transl></item>
+<item><id>Delete them</id><transl>Borrarlas</transl></item>
+<item><id>Keep them</id><transl>Conservarlas</transl></item>
+<item><id>At least 2 selected tags are needed to merge</id><transl>Se necesitan al menos 2 etiquetas seleccionadas para fusionarse</transl></item>
+<item><id>Visit</id><transl>Visite</transl></item>
+<item><id>General</id><transl>General</transl></item>
+<item><id>Administration Home</id><transl>Inicio Administración</transl></item>
+
+<item><id>Customize</id><transl>Personalizar</transl></item>
+<item><id>Choose which folders to see in PhotoNest</id><transl>Elige qué carpetas ver en PhotoNest</transl></item>
+<item><id>Folders added here will still be in their original locations.</id><transl>Las carpetas añadidas aquí seguirán estando en sus ubicaciones originales.</transl></item>
+<item><id>Add to PhotoNest</id><transl>Añadir a PhotoNest</transl></item>
+<item><id>delete album, not folders</id><transl>Eliminar álbum, no carpetas</transl></item>
+<item><id>Setting the PhonoNest password</id><transl>Configurar la contraseña de PhotoNest</transl></item>
+<item><id>Add to PhotoNest and encrypt photos</id><transl>Añadir a PhotoNest y encriptar fotos</transl></item>
+<item><id>delete album, decrypt photos</id><transl>borrar álbum, desencriptar fotos</transl></item>
+<item><id>Choose which folders to be encrypted</id><transl>Elegir las carpetas a encriptar</transl></item>
+<item><id>Create</id><transl>Crear</transl></item>
+<item><id>Visit PhotoNest</id><transl>Visita PhotoNest</transl></item>
+<item><id>there are some files to add</id><transl>hay que añadir algunos archivos</transl></item>
+
+<item><id>Last import</id><transl>Última importación</transl></item>
+<item><id>Imported %s on %s</id><transl>Importado %s el %s</transl></item>
+<item><id>display a calendar by imported date</id><transl>mostrar un calendario por fecha de importación</transl></item>
+<item><id>photos imported during the last %d days</id><transl>fotos importadas durante los últimos %d días</transl></item>
+<item><id>display a calendar by creation date</id><transl>mostrar un calendario por fecha de creación</transl></item>
+
+<item><id>Imported between %s (%s) and %s (%s)</id><transl>Importadas entre %s (%s) y %s (%s)</transl></item>
+<item><id>Imported on %s</id><transl>Importadas el %s</transl></item>
+<item><id>Imported after %s (%s)</id><transl>Importadas después de %s (%s)</transl></item>
+<item><id>Imported before %s (%s)</id><transl>Importado antes de %s (%s)</transl></item>
+<item><id>Importing photos does not move or copy files to the new location.</id><transl>La importación de fotos no mueve ni copia los archivos a la nueva ubicación.</transl></item>
+
+<item><id>Imported</id><transl>Importado</transl></item>
+<item><id>To be imported</id><transl>A importar</transl></item>
+<item><id>Imported date</id><transl>Fecha importada</transl></item>
+<item><id><![CDATA[Date imported, new &rarr; old]]></id><transl><![CDATA[Fecha importada, nuevo &rarr; antiguo]]></transl></item>
+<item><id><![CDATA[Date imported, old &rarr; new]]></id><transl><![CDATA[Fecha importada, antiguo &rarr; nuevo]]></transl></item>
+<item><id>Imported photos</id><transl>Fotos importadas</transl></item>
+<item><id>Import photos</id><transl>Importar fotos</transl></item>
+
+<item><id>Added</id><transl>Añadido</transl></item>
+<item><id>To be added</id><transl>A añadir</transl></item>
+
+<item><id>Confirm password</id><transl>Confirmar contraseña</transl></item>
+<item><id>photos filetype not allowed</id><transl>fotos tipo de archivo no permitido</transl></item>
+<item><id>photos too small</id><transl>fotos demasiado pequeñas</transl></item>
+<item><id>files are deleted.</id><transl>los archivos se borran.</transl></item>
+<item><id>clean up the album</id><transl>limpiar el álbum</transl></item>
+<item><id>delete album</id><transl>borrar álbum</transl></item>
+<item><id>Manage your photo collection</id><transl>Gestiona tu colección de fotos</transl></item>
+<item><id>Add</id><transl>Añadir</transl></item>
+<item><id>Add folder</id><transl>Añadir carpeta</transl></item>
+<item><id>Allowed file types</id><transl>Tipos de archivo permitidos</transl></item>
+<item><id>Minimum width</id><transl>Anchura mínima</transl></item>
+<item><id>Minimum height</id><transl>Altura mínima</transl></item>
+<item><id>pixels</id><transl>píxeles</transl></item>
+<item><id>Empty favorites</id><transl>Vaciar favoritos</transl></item>
+<item><id>Create a password</id><transl>Crear una contraseña</transl></item>
+
+<item><id>Are you sure you want to move this file to the Recycle Bin?</id><transl>¿Está seguro de que desea mover este archivo a la Papelera de reciclaje?</transl></item>
+<item><id>Are you sure you want to move these files to the Recycle Bin?</id><transl>¿Estás seguro de que quieres mover estos archivos a la Papelera de reciclaje?</transl></item>
+<item><id>Are you sure you want to remove this photo from the current collection?</id><transl>¿Estás seguro de que quieres eliminar esta foto de la colección actual?</transl></item>
+<item><id>Are you sure you want to delete these items?</id><transl>¿Estás seguro de que quieres eliminar estos elementos?</transl></item>
+<item><id>Are you sure you want to empty caddie?</id><transl>¿Estás seguro de que quieres vaciar Caddie?</transl></item>
+<item><id>Are you sure you want to empty your favorites?</id><transl>¿Estás seguro de que quieres vaciar tus favoritos?</transl></item>
+<item><id>Browse</id><transl>Examinar</transl></item>
+
+<item><id>Face Classification</id><transl>Clasificación facial</transl></item>
+<item><id>Same people</id><transl>Personas iguales</transl></item>
+<item><id>Classify</id><transl>Clasificar</transl></item>
+<item><id>Select the merged image</id><transl>Seleccionar la imagen fusionada</transl></item>
+<item><id>Selected</id><transl>Seleccionados</transl></item>
+<item><id>At least 2 selected</id><transl>Al menos 2 seleccionadas</transl></item>
+<item><id>Calculating the image quality ...</id><transl>Calcular la calidad de la imagen</transl></item>
+<item><id>More</id><transl>Más</transl></item>
+<item><id>Date taken</id><transl>Fecha de toma</transl></item>
+<item><id>PhotoNest encrypted version</id><transl>Versión encriptada de PhotoNest</transl></item>
+<item><id>Add example</id><transl>Añadir ejemplo</transl></item>
+</data>

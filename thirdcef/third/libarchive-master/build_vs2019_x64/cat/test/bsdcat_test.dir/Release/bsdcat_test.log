@@ -1,0 +1,8 @@
+﻿  test_main.c
+E:\voy\102\third\libarchive-master\test_utils\test_main.c(230,23): error C2220: the following warning is treated as an error
+E:\voy\102\third\libarchive-master\test_utils\test_main.c(230,23): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\libarchive-master\test_utils\test_main.c(231,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\libarchive-master\test_utils\test_main.c(605,6): warning C4996: 'chmod': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _chmod. See online help for details.
+E:\voy\102\third\libarchive-master\test_utils\test_main.c(3909,40): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\libarchive-master\test_utils\test_main.c(4057,59): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\libarchive-master\test_utils\test_main.c(4082,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data

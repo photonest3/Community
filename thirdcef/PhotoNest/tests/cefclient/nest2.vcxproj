@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3AC098BD-6D14-3610-B060-9E3450490902}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>nest2</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\nest2.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nest2</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>E:\voy\102\third\libarchive-master\libarchive;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\voy\102\third\libarchive-master\build_vs2019_x64\libarchive;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\voy\102;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4244;4324;4481;4512;4701;4702;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;_WIN32;UNICODE;_UNICODE;WINVER=0x0601;_WIN32_WINNT=0x601;NOMINMAX;WIN32_LEAN_AND_MEAN;_HAS_EXCEPTIONS=0;CEF_USE_ATL;_NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;_WIN32;UNICODE;_UNICODE;WINVER=0x0601;_WIN32_WINNT=0x601;NOMINMAX;WIN32_LEAN_AND_MEAN;_HAS_EXCEPTIONS=0;CEF_USE_ATL;_NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\voy\102;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\voy\102;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>Adding manifest...															</Message>
+      <Command>setlocal
+mt.exe -nologo -manifest "E:/voy/102/tests/cefclient/resources/win/cefclient.exe.manifest" "E:/voy/102/tests/cefclient/resources/win/compatibility.manifest" -outputresource:"E:/voy/102/PhotoNest/tests/cefclient/Release/bin/nest2.exe";#1
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/chrome_elf.dll E:/voy/102/PhotoNest/tests/cefclient/Release/bin/chrome_elf.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/libcef.dll E:/voy/102/PhotoNest/tests/cefclient/Release/bin/libcef.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/libEGL.dll E:/voy/102/PhotoNest/tests/cefclient/Release/bin/libEGL.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/libGLESv2.dll E:/voy/102/PhotoNest/tests/cefclient/Release/bin/libGLESv2.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/snapshot_blob.bin E:/voy/102/PhotoNest/tests/cefclient/Release/bin/snapshot_blob.bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/v8_context_snapshot.bin E:/voy/102/PhotoNest/tests/cefclient/Release/bin/v8_context_snapshot.bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/vk_swiftshader.dll E:/voy/102/PhotoNest/tests/cefclient/Release/bin/vk_swiftshader.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/vk_swiftshader_icd.json E:/voy/102/PhotoNest/tests/cefclient/Release/bin/vk_swiftshader_icd.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/vulkan-1.dll E:/voy/102/PhotoNest/tests/cefclient/Release/bin/vulkan-1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Release/d3dcompiler_47.dll E:/voy/102/PhotoNest/tests/cefclient/Release/bin/d3dcompiler_47.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Resources/chrome_100_percent.pak E:/voy/102/PhotoNest/tests/cefclient/Release/bin/chrome_100_percent.pak
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Resources/chrome_200_percent.pak E:/voy/102/PhotoNest/tests/cefclient/Release/bin/chrome_200_percent.pak
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Resources/resources.pak E:/voy/102/PhotoNest/tests/cefclient/Release/bin/resources.pak
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/voy/102/Resources/icudtl.dat E:/voy/102/PhotoNest/tests/cefclient/Release/bin/icudtl.dat
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd </Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>E:\voy\102\Release\libcef.lib;E:\voy\102\PhotoNest\tests\cefclient\Release\bin\libcef_dll_wrapper.lib;comctl32.lib;gdi32.lib;rpcrt4.lib;shlwapi.lib;ws2_32.lib;d3d11.lib;glu32.lib;imm32.lib;opengl32.lib;oleacc.lib;kernel32.lib;user32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/voy/102/PhotoNest/tests/cefclient/Release/bin/cefclient.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>E:/voy/102/PhotoNest/tests/cefclient/Release/bin/cefclient.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <IncrementalLinkDatabaseFile>$(IntDir)$(TargetName)00.ilk</IncrementalLinkDatabaseFile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\voy\102\tests\cefclient\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/voy/102/tests/cefclient/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -SE:/voy/102 -BE:/voy/102/PhotoNest --check-stamp-file E:/voy/102/PhotoNest/tests/cefclient/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\voy\102\PhotoNest\tests\cefclient\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\Blowfish.cpp" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\IsoHandler.cpp" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\MimeType.cpp" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\timestamp.cpp" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\binding_test.cc" />
+    <ClInclude Include="..\..\..\tests\cefclient\browser\Singleton.h" />
+    <ClInclude Include="..\..\..\tests\cefclient\resources\win\resource.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\Blowfish.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\IsoHandler.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\lunasvg.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\MimeType.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\SimpleIni.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\timestamp.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\Versionhelper.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\binding_test.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\browser_window.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\browser_window.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\bytes_write_handler.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\bytes_write_handler.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\client_app_delegates_browser.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\client_browser.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\client_browser.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\client_handler.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\client_handler.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\client_handler_osr.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\client_handler_osr.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\client_handler_std.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\client_handler_std.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\client_types.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\dialog_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\dialog_test.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\image_cache.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\image_cache.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\main_context.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\main_context.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\main_context_impl.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\main_context_impl.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\media_router_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\media_router_test.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_dragdrop_events.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_renderer.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_renderer.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_renderer_settings.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\preferences_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\preferences_test.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\resource.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\response_filter_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\response_filter_test.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\root_window.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\root_window.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\root_window_create.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\root_window_manager.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\root_window_manager.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\root_window_views.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\root_window_views.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\scheme_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\scheme_test.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\server_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\server_test.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\temp_window.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\test_runner.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\test_runner.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\urlrequest_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\urlrequest_test.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\views_menu_bar.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\views_menu_bar.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\views_overlay_controls.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\views_overlay_controls.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\views_style.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\views_style.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\views_window.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\views_window.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\window_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\window_test.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\window_test_runner.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\window_test_runner.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\window_test_runner_views.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\window_test_runner_views.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\client_app_browser.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\client_app_browser.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\extension_util.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\extension_util.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\file_util.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\file_util.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\geometry_util.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\geometry_util.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\main_message_loop.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\main_message_loop.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\main_message_loop_external_pump.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\main_message_loop_external_pump.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\main_message_loop_std.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\main_message_loop_std.h" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\resource_util.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\common\client_app_delegates_common.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\common\scheme_test_common.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\common\scheme_test_common.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\common\client_app.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\common\client_app.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\common\client_app_other.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\common\client_app_other.h" />
+    <ClCompile Include="E:\voy\102\tests\shared\common\client_switches.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\common\client_switches.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\renderer\client_app_delegates_renderer.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\renderer\client_renderer.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\renderer\client_renderer.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\renderer\performance_test.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\renderer\performance_test.h" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\renderer\performance_test_setup.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\renderer\performance_test_tests.cc" />
+    <ClCompile Include="E:\voy\102\tests\shared\renderer\client_app_renderer.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\renderer\client_app_renderer.h" />
+    <None Include="..\..\..\tests\cefclient\resources\win\arrow-sm-left-gray.svg" />
+    <None Include="..\..\..\tests\cefclient\resources\win\arrow-sm-left.svg" />
+    <None Include="..\..\..\tests\cefclient\resources\win\arrow-sm-right-gray.svg" />
+    <None Include="..\..\..\tests\cefclient\resources\win\arrow-sm-right.svg" />
+    <None Include="..\..\..\tests\cefclient\resources\win\dots-vertical.svg" />
+    <None Include="..\..\..\tests\cefclient\resources\win\refresh-outline-gray.svg" />
+    <None Include="..\..\..\tests\cefclient\resources\win\refresh-outline.svg" />
+    <None Include="..\..\..\tests\cefclient\resources\win\view-refresh-symbolic.svg" />
+    <Image Include="..\..\..\tests\cefclient\resources\win\pvt.ico" />
+    <None Include="E:\voy\102\tests\cefclient\resources\extensions\set_page_color\README.md">
+    </None>
+    <Image Include="E:\voy\102\tests\cefclient\resources\extensions\set_page_color\icon.png">
+    </Image>
+    <None Include="E:\voy\102\tests\cefclient\resources\extensions\set_page_color\manifest.json">
+    </None>
+    <None Include="E:\voy\102\tests\cefclient\resources\extensions\set_page_color\popup.html">
+    </None>
+    <None Include="E:\voy\102\tests\cefclient\resources\extensions\set_page_color\popup.js">
+    </None>
+    <ClCompile Include="E:\voy\102\tests\cefclient\cefclient_win.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\browser_window_osr_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\browser_window_osr_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\browser_window_std_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\browser_window_std_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\main_context_impl_win.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\main_message_loop_multithreaded_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\main_message_loop_multithreaded_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_accessibility_helper.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_accessibility_helper.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_accessibility_node.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_accessibility_node.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_accessibility_node_win.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_d3d11_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_d3d11_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_dragdrop_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_dragdrop_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_ime_handler_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_ime_handler_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_render_handler_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_render_handler_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_render_handler_win_d3d11.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_render_handler_win_d3d11.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_render_handler_win_gl.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_render_handler_win_gl.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\osr_window_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\osr_window_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\resource_util_win_idmap.cc" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\root_window_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\root_window_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\temp_window_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\temp_window_win.h" />
+    <ClCompile Include="E:\voy\102\tests\cefclient\browser\window_test_runner_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\cefclient\browser\window_test_runner_win.h" />
+    <ResourceCompile Include="E:\voy\102\tests\cefclient\resources\win\nest2.rc" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\main_message_loop_external_pump_win.cc" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\resource_util_win.cc" />
+    <ClCompile Include="E:\voy\102\tests\shared\browser\util_win.cc" />
+    <ClInclude Include="E:\voy\102\tests\shared\browser\util_win.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

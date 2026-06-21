@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <style type="text/css">
+        .showInfo {
+            text-indent: 5px;
+        }
+
+        form fieldset p {
+            margin-left: 0;
+        }
+
+        .jquery-ui #content-wrapper {
+            height: calc(100% - 80px);
+        }
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container" o='style'>
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content" style="-webkit-user-select: text;">
+                    <h1>
+                        <span>{'Tags'|@translate}</span>
+                    </h1>
+                    <br />
+                    <div class="content">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos">
+                                </div>
+                            </div>
+                        </div>
+                        {$tag_form}
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area" o='style'>
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/tipTip/jquery.tipTip.minified.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _sel = "{$sel}";
+        var _tag_sel = "{'Tags selection'|@translate}";
+        var _tags = "{'Tags'|@translate}";
+        var _two = "{'Select at least two tags to merge.'|@translate}";
+        var _nohead = "{$nohead}";
+        var _seltags = "{$seltags}";
+
+        function displayDeletionWarnings() {
+            $(".warningDeletion").show();
+            $("input[name=destination_tag]:checked").parent("label").children(".warningDeletion").hide();
+        }
+
+        function f_submit(url, body, sel) {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return false;
+            }
+
+            $.post(url + "&nohead=" + _nohead, body, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.htm != "") {
+                    storage.tag = info.htm;
+                }
+                location.href = "./admin.html?page=admin.tags&sel=" + sel + "&tags=" + info.tags;
+            });
+        }
+
+        function filter(tm) {
+            setTimeout(function () {
+                var v = $.trim($("#searchInput").val());
+
+                if (!v) {
+                    $(".tagSelection>li").show();
+                    $("#filterIcon").css("visibility", "hidden");
+                }
+                else {
+                    $("#filterIcon").css("visibility", "visible");
+                    var regex = new RegExp(v.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"), "i");
+                    $(".tagSelection>li").each(function () {
+                        var $li = $(this),
+                            text = $.trim($("label", $li).text());
+                        $li.toggle(regex.test(text));
+                    });
+
+                    storage.schtag = v;
+                }
+
+                var nb = 0;
+                $(".tagSelection>li").each(function () {
+                    if (jQuery(this).is(':hidden')) { } else {
+                        if (jQuery(this).find('input[type=checkbox]').is(':checked')) {
+                            nb++;
+                        }
+                    }
+                });
+
+                if (nb == 0) {
+                    $("#permitAction").hide();
+                    $("#forbidAction").show();
+                }
+                else {
+                    $("#permitAction").show();
+                    $("#forbidAction").hide();
+                }
+
+            }, tm)
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            jQuery('.font-checkbox').fontCheckbox();
+
+
+            if (storage.schtag && storage.schtag != "undefined" && storage.schtag != "") {
+                var v = $.trim(storage.schtag);
+                $("#searchInput").val(v);
+            }
+
+            if (storage.tag && storage.tag != "") {
+                $('#info').html(storage.tag);
+                $('#info').delay(100).show();
+                $('#info').delay(2000).fadeOut();
+                storage.tag = "";
+            }
+
+            displayDeletionWarnings();
+
+            $(".tagSelection").on("click", "label", function () {
+                var parent = $(this).parent('li');
+                var checkbox = $(this).children("input[type=checkbox]");
+
+                if ($(checkbox).is(':checked')) {
+                    parent.addClass("tagSelected");
+                }
+                else {
+                    parent.removeClass('tagSelected');
+                }
+            });
+
+            $("#btn_cancel").on("click", function () {
+                location.href = "./admin.html?page=admin.tags&sel=1&nohead=" + _nohead + "&tags=" + _seltags;
+            });
+
+            if (_sel == "1") {
+                $("#selectionMode").removeClass("icon-check-empty").addClass("icon-check");
+                $('label.font-checkbox span').show();
+                $('ul.tagSelection a.showInfo').hide();
+                $('fieldset#action').show();
+                $('fieldset#selectTags legend').html(_tag_sel);
+            }
+
+            if ($(".tagSelection>li").length == 0) {
+                _seltags = ""
+            }
+
+            if (_seltags != "") {
+                $("#permitAction").show();
+                $("#forbidAction").hide();
+            }
+
+            $("[id^=action_]").hide();
+            $('.showInfo').tipTip({
+                'delay': 0,
+                'fadeIn': 200,
+                'fadeOut': 200,
+                'maxWidth': '300px',
+                'keepAlive': true,
+                'activation': 'click'
+            });
+
+
+
+            $("#edit_submit").on("click", function () {
+                var body = $("#tag_edit_form").serialize();
+                f_submit("./admin.html?page=admin.tags&mode=edit", body, "1");
+            });
+
+            $("#merge_submit").on("click", function () {
+                var body = $("#tag_merge_form").serialize();
+                f_submit("./admin.html?page=admin.tags&mode=merge", body, "1");
+            });
+
+            $("#duplicate_submit").on("click", function () {
+                var body = $("#tag_duplicate_form").serialize();
+                f_submit("./admin.html?page=admin.tags&mode=duplicate", body, "1");
+            });
+
+            $("#addTagForm_submit").on("click", function () {
+                var body = $("#addTagForm").serialize();
+                f_submit("./admin.html?page=admin.tags", body, "0");
+            });
+
+            $("#displayForm").on("click", function () {
+
+                if ($("select[name=selectAction]").val() == "merge") {
+                    if ($("ul.tagSelection input[type=checkbox]:checked").length < 2) {
+                        $("#err").html(_two);
+                        $('#err').delay(100).show();
+                        $('#err').delay(2000).fadeOut();
+
+                        return;
+                    }
+                }
+
+                var body = $("#selTagForm").serialize();
+                location.href = "./admin.html?page=admin.tags&" + body + "&nohead=" + _nohead;
+            });
+
+            $("#applyAction").on("click", function () {
+                if (_readonly != "0") {
+                    $("#err").html(_err_readonly);
+                    $('#err').delay(100).show();
+                    $('#err').delay(2000).fadeOut();
+                    return false;
+                }
+
+                if ($("select[name=selectAction]").val() == "delete") {
+                    if (!$("input[name=confirm_deletion]").is(":checked")) {
+                        $("#action_delete .errors").show();
+                        return false;
+                    }
+                }
+
+                var body = $("#selTagForm").serialize();
+                $.post("./admin.html?page=admin.tags&nohead=" + _nohead, body, function (data, state) {
+                    var info = $.parseJSON(data);
+                    if (info.stat == "ok") {
+                        location.reload();
+                    }
+                });
+
+            });
+
+
+            $("#addTag").click(function () {
+                $("#addTagForm").toggle();
+                $("input[name=add_tag]").focus();
+                return false;
+            });
+
+            $("#addTagClose").click(function () {
+                $("#addTagForm").hide();
+                return false;
+            });
+
+            $("#selectionMode").click(function () {
+                if ($(this).hasClass("icon-check-empty")) {
+                    $("#selectionMode").removeClass("icon-check-empty").addClass("icon-check");
+                    $('label.font-checkbox span').show();
+                    $('ul.tagSelection a.showInfo').hide();
+                    $('fieldset#action').show();
+                    $('fieldset#selectTags legend').html(_tag_sel);
+                }
+                else {
+                    $("#selectionMode").removeClass("icon-check").addClass("icon-check-empty");
+                    $('label.font-checkbox span').hide();
+                    $('ul.tagSelection a.showInfo').show();
+                    $('fieldset#action').hide();
+                    $('fieldset#selectTags legend').html(_tags);
+                }
+                return false;
+            });
+
+            $("#mergeTags label").click(function () {
+                displayDeletionWarnings();
+            });
+
+            $("#searchInput").on("keydown", function (e) {
+                var $this = $(this),
+                    timer = $this.data("timer");
+
+                if (timer) {
+                    clearTimeout(timer);
+                }
+
+                $this.data("timer", filter(300));
+
+                if (e.keyCode == 13) {
+                    e.preventDefault();
+                }
+            });
+
+            $('input[name="tags"]').click(function () {
+                var nbSelected = 0;
+                nbSelected = $('input[name="tags"]').filter(':checked').length;
+
+                if (nbSelected == 0) {
+                    $("#permitAction").hide();
+                    $("#forbidAction").show();
+                }
+                else {
+                    $("#permitAction").show();
+                    $("#forbidAction").hide();
+                }
+            });
+
+            $("select[name=selectAction]").change(function () {
+                $("[id^=action_]").hide();
+                $("#action_" + $(this).prop("value")).show();
+                $("#displayFormBlock").hide();
+                $("#applyActionBlock").hide();
+
+                if ($(this).val() != -1) {
+                    if ($(this).val() == 'delete') {
+                        $("#applyActionBlock").show();
+                        $("#applyAction").attr("name", $(this).val());
+                    }
+                    else {
+                        $("#displayForm").attr("name", $(this).val());
+                        $("#displayFormBlock").show();
+                    }
+                }
+            });
+
+
+            $("input[name=confirm_deletion]").change(function () {
+                $("#action_delete .errors").hide();
+            });
+
+            filter(0);
+
+        });
+
+    </script>
+</body>
+</html>

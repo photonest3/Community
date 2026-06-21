@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Film Box</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        p {
+            margin-bottom: 10px;
+        }
+
+        .pleft {
+            text-align: left;
+            margin-left: 50px;
+            line-height: 15px;
+        }
+
+        .pleft2 {
+            text-align: left;
+            margin-left: 50px;
+            line-height: 15px;
+        }
+
+        #content-wrapper {
+            box-shadow: unset;
+        }
+
+        .jquery-ui #content-wrapper {
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body id="theColorPage" class="jquery-ui thedark" style="min-width: 350px;">
+    <div id="content-wrapper">
+        <div id="catModify">
+            <p class="pleft" style="margin-top: 10px;">
+                <span>
+                    {'Title'|@translate}
+                </span>
+            </p>
+            <p class="pleft2">
+                <input name="title1" id="title1" type="text" maxlength="50" style="width:320px;" />
+            </p>
+            <p class="pleft" style="margin-top:20px;">
+                <span>
+                    {'Creation date'|@translate}
+                </span>
+            </p>
+            <p class="pleft2">
+                <input name="title2" id="title2" type="text" maxlength="50" style="width:320px;" />
+            </p>
+        </div>
+        <center>
+            <p class="popin-actions" style="margin-top:40px;">
+
+                <a id="submit0" class="filter-validate" onclick="submitclick();return false;">
+                    {'Save'|@translate}
+                </a>
+            </p>
+        </center>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var _artid = "{$artid}";
+        var _title1 = "{$title1}";
+        var _title2 = "{$title2}";
+
+        $(document).ready(function () {
+            $('#title1').val(_title1);
+            $('#title2').val(_title2);
+        });
+
+        function submitclick() {
+            parent.update_art(_artid, $('[name="title1"]').val(), $('[name="title2"]').val(), "0");
+        }
+    </script>
+</body>
+</html>

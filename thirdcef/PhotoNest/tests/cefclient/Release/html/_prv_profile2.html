@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" id="black" href="./templ/themes/default/u3.black.css" />
+    <style type="text/css">
+        #catSearch1 .selectize-input {
+            padding: 4px 8px;
+        }
+
+        .errors {
+            color: crimson;
+            background: transparent;
+        }
+
+        #theHeader {
+            margin-top: 40px;
+        }
+
+        .properties LI {
+            margin: 9px 0;
+        }
+
+        .properties SPAN.property2 {
+            font-weight: bold;
+            float: left;
+            margin: 0;
+            padding: 0 10px 0 0;
+            width: 50%;
+        }
+
+        label {
+            user-select: text;
+        }
+
+        .prof_pass {
+            color: #9f9f9f;
+        }
+
+        .properties SPAN.property {
+            width: 45%;
+        }
+
+        .selectize-control {
+            display: inline-block;
+        }
+
+        .selectize-dropdown-content {
+            height: 100px;
+        }
+
+        .properties SPAN.property.prof_pass {
+            user-select: text;
+            width: calc(45% + 180px);
+            text-align: right;
+            padding-right: 0;
+            margin-top: -10px;
+            font-weight: normal;
+            font-size: 11px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+</head>
+<body id="theColorPage" class="thedark" style="overflow:hidden;">
+    <div style="padding-bottom: 20px;height:100%;">
+        <div style="height:100%;">
+            <main class="main">
+                <div class="module row">
+                    <div id="content0" class="content0 contentWithMenu">
+                        <div class="titrePage" style="height:30px;padding: 5px;">
+                            <div id="errors" class="errors" style="margin-top: 0px;padding-top:0;"></div>
+                        </div>
+                        <form method="post" name="profile" action="" id="catSearch1" class="properties" onsubmit="submitclick();return false;">
+                            <ul id="uerinfo">
+                                <li style="display:none;">
+                                    <span class="property"><label>{'Username'|@translate}</label></span>
+                                    <span class="property2"><label>{$uername}</label></span>
+                                </li>
+                                <li>
+                                    <span class="property">
+                                        <label for="password">{'Current password'|@translate}</label>
+                                    </span>
+                                    <input type="password" name="password" id="password" value="" maxlength="25" />
+                                </li>
+                                <li>
+                                    <span class="property">
+                                        <label for="use_new_pwd">{'New password'|@translate}</label>
+                                    </span>
+                                    <input type="password" name="use_new_pwd" id="use_new_pwd" value="" maxlength="25" />
+                                </li>
+                                <li>
+                                    <span class="property">
+                                        <label for="passwordConf">{'Confirm password'|@translate}</label>
+                                    </span>
+                                    <input type="password" name="passwordConf" id="passwordConf" value="" maxlength="25" />
+                                </li>
+                                <li>
+                                    <span class="property">
+                                        <label for="hint">{'Password hint'|@translate}</label>
+                                    </span>
+                                    <input type="text" name="hint" id="hint" value="{$hint}" maxlength="50" />
+                                </li>
+                                <li style="padding-top:20px;display:none;">
+                                    <span class="property">
+                                        <label style="color:#EAEAE9;">{'Random Key'|@translate}{' (file encryption)'|@translate}</label>
+                                    </span>
+                                    <span class="property2" style="user-select:text;"><label>{$enckey}</label></span>
+                                </li>
+                                <li>
+                                    <span class="property prof_pass">
+                                        {'The password hint will be visible to everyone who uses this computer.'|@translate}
+                                    </span>
+
+                                </li>
+                                <li style="padding-top:10px;">
+                                    <span class="property">
+                                        <label for="prof_language">{'Language'|@translate}</label>
+                                    </span>
+                                    <select id="prof_language" name="language" style="width:178px;">
+                                        {$all_option}
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span class="property"><label></label></span>
+                                    <span class="property2">
+                                        <label>
+                                            <a id="submit" class="filter-validate" onclick="submitclick();return false;">
+                                                {'OK'|@translate}
+                                            </a>
+                                        </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _err1 = "<li>{'Please enter your password.'|@translate}</li>";
+        var _err2 = "<li>{'Please confirm the chosen password.'|@translate}</li>";
+        var _err5 = "<li>{'Current password is wrong'|@translate}</li>";
+        var _lang1 = "";
+
+        $(document).ready(function () {
+            _lang1 = $('[name="language"]').val();
+
+            setTimeout(function () {
+                $("#password").focus();
+            }, 50);
+            $('#prof_language').selectize();
+        });
+
+        function submitclick() {
+            $('#errors').html("");
+            var password = $('#password').val();
+            var pass = $('#use_new_pwd').val();
+            var pass_conf = $('#passwordConf').val();
+            var hint = $('#hint').val();
+
+            if (_readonly != "0") {
+                if ($.trim(pass) != "" || $.trim(pass_conf) != "" || $.trim(hint) != "" || $.trim(password) != "") {
+                    $('#errors').css('display', '');
+                    $('#errors').html("<ul>" + _err_readonly + "</ul>");
+                    return;
+                }
+            }
+
+            if ($.trim(pass) != "" || $.trim(pass_conf) != "") {
+                if ($.trim(pass) == $.trim(pass_conf)) {
+                    if ($.trim(password) == "") {
+                        $('#errors').css('display', '');
+                        $('#errors').html("<ul>" + _err5 + "</ul>");
+
+                        $("#password").focus();
+                        return;
+                    }
+                }
+                else {
+                    $('#errors').css('display', '');
+                    if ($.trim(pass) == "") {
+                        $('#errors').html("<ul>" + _err1 + "</ul>");
+                        $("#use_new_pwd").focus();
+                    }
+                    else {
+                        $('#errors').html("<ul>" + _err2 + "</ul>");
+                        $("#passwordConf").focus();
+                    }
+                    return;
+                }
+            }
+
+            if ($.trim(password) != "") {
+                if ($.trim(pass) == "" || $.trim(pass_conf) == "" || $.trim(pass) != $.trim(pass_conf)) {
+                    $('#errors').css('display', '');
+                    $('#errors').html("<ul>" + _err2 + "</ul>");
+
+                    if ($.trim(pass_conf) == "") {
+                        $("#passwordConf").focus();
+                    }
+
+                    if ($.trim(pass) == "") {
+                        $("#use_new_pwd").focus();
+                    }
+                    return;
+                }
+            }
+
+            var body = "";
+            body += "&password=" + encodeURIComponent($('[name="password"]').val());
+            body += "&use_new_pwd=" + encodeURIComponent($('[name="use_new_pwd"]').val());
+            body += "&passwordConf=" + encodeURIComponent($('[name="passwordConf"]').val());
+            body += "&language=" + encodeURIComponent($('[name="language"]').val());
+            body += "&hint=" + encodeURIComponent($('[name="hint"]').val());
+
+            $.post("./ws.php?method=ws.profile2_ok", body, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    if (_lang1 != $('[name="language"]').val()) {
+                        parent.location.reload();
+                    }
+                    parent.$.colorbox.close();
+                }
+                else {
+                    $('#errors').css('display', '');
+                    $('#errors').html("<ul>" + _err5 + "</ul>");
+                    $("#password").focus();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

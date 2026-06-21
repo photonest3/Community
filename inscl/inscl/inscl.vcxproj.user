@@ -4,5 +4,6 @@
     <LocalDebuggerCommandArguments>1 decryption</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommand>C:\PhotoNest\Nest2\bin\inscl.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArgumentsHistory>1 decryption|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
 </Project>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/pagination/simplePagination.css" />
+    <style type="text/css">
+        #cboxLoadedContent {
+            background: #000;
+            padding: 1px;
+            text-align: center;
+        }
+
+        #galley {
+            display: block;
+        }
+
+        .display100 {
+            display: none;
+        }
+
+        .dis00 {
+            background-color: #666;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            color: #fff;
+            text-align: center;
+            min-width: 14px;
+            padding: 0 7px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container" o='style'>
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1>
+                        <span>{'Batch Manager'|@translate}</span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="normal_tab">
+                                <a href="./admin.html?page=admin.batch&mode=global">
+                                    <span>
+                                        <span class="icon-th"></span>{'global mode'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="selected_tab">
+                                <a href="./admin.html?page=admin.batch&mode=unit">
+                                    <span>
+                                        <span class="icon-th-list"></span>{'single mode'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                            </div>
+                        </div>
+                        <form id="form1" action="" method="post" onsubmit="return false;">
+                            <fieldset>
+                                <legend>{'Display options'|@translate}</legend>
+                                <p>
+                                    {$display20} {'photos per page'|@translate}
+                                </p>
+                            </fieldset>
+                            {$formData}
+                            <fieldset o='style20'>
+                                <p>
+                                    {$display20} {'photos per page'|@translate}
+                                </p>
+                            </fieldset>
+                            <div>
+                                <input type="hidden" name="element_ids" value="{$element_ids}" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area" o='style'>
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/i18n/jquery.ui.datepicker-en-GB.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.datepicker.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/pagination/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var _cbox_change = 0;
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _fmt = "$sLongDate";
+        var _firstDay = parseInt('$firstDay');
+        var _addtitle = "{'Create'|@translate}";
+        var _vr_mask = 0;
+
+        function gourl(url) {
+            location = url;
+        }
+
+        function reset(obj) {
+            var prev = $(obj).prev();
+            prev.val($(obj).attr('data-show'));
+
+            var o = $("#" + prev.attr('data-id'));
+            o.val($(obj).attr('data-value'));
+        }
+
+        //window.onresize = function () {
+        //    $.colorbox.resize({ innerWidth: window.innerWidth * 0.95, innerHeight: window.innerHeight * 0.95, maxWidth: 1140 });
+        //}
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            jQuery('.font-checkbox').fontCheckbox();
+
+            if (_readonly != "0") {
+                $('[data-selectize=tags]').removeAttr('data-create');
+            }
+
+            var tagsCache = new TagsCache();
+            tagsCache.selectize($('[data-selectize=tags]'), {
+                lang: {
+                    'Add': _addtitle
+                },
+                ty2: 1
+            });
+
+            $(".datep").datepicker({
+                dateFormat: _fmt,
+                defaultDate: $(this).val(),
+                autoSize: true,
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-60:c+100",
+                firstDay: _firstDay,
+                prevText: '',
+                nextText: '',
+                yearSuffix: '',
+                showButtonPanel: true,
+                onChangeMonthYear: function (year, month, inst) {
+                    var myDate = new Date();
+                    t = new Date(year, month, inst.currentDay, myDate.getHours(), myDate.getMinutes(), myDate.getSeconds()).getTime() / 1000;
+                    var o = $("#" + $(this).attr('data-id'));
+                    o.val(t);
+
+                    var temp = _fmt;
+                    temp = temp.replace("yy", year).replace("m", month).replace("d", inst.currentDay);
+                    $(this).val(temp);
+                    o = $("#a" + $(this).attr('data-id'));
+                    o.show();
+                },
+                onSelect: function (text, inst) {
+                    var myDate = new Date();
+                    t = new Date(inst.currentYear, inst.currentMonth, inst.currentDay, myDate.getHours(), myDate.getMinutes(), myDate.getSeconds()).getTime() / 1000;
+                    var o = $("#" + $(this).attr('data-id'));
+                    o.val(t);
+                    o = $("#a" + $(this).attr('data-id'));
+                    o.show();
+                }
+            });
+
+            $('#unit_submit').click(function (e) {
+                if (_readonly != "0") {
+                    $("#err").html(_err_readonly);
+                    $('#err').delay(100).show();
+                    $('#err').delay(2000).fadeOut();
+                    return false;
+                }
+
+                var body = $("#form1").serialize();
+                $.post("./admin.html?page=admin.batch&mode=unit&start={$start}&display={$display}", body, function (data, state) {
+                    var info = $.parseJSON(data);
+                    location.reload();
+                });
+            });
+
+            $("a.preview-box").colorbox({
+                transition: "none", width: "85%", height: "85%", fixed: true, maxWidth: 1140
+            });
+        });
+
+        function show_paint(id) {
+            window.cefQuery({
+                request: 'Prompt.q.paint2:' + id
+            });
+        }
+
+        function close_paint() {
+            window.cefQuery({
+                request: 'Prompt.q.closep:'
+            });
+            $.colorbox.close();
+        }
+        function mygoback() {
+            if (_vr_mask == 1) {
+                return;
+            }
+
+            history.back();
+        }
+
+        function mygoforward() {
+            if (_vr_mask == 1) {
+                return;
+            }
+            history.forward();
+        }
+
+        function myreload() {
+            if (_vr_mask == 1) {
+                return;
+            }
+
+            location.reload();
+        }
+
+
+        function jshow_mask() {
+            setTimeout(function () {
+                $.colorbox({
+                    transition: "none", width: "200", height: "200", fixed: true, overlayClose: false, escKey: false, //iframe: true,
+                    html: '<a class="paintx" href="javascript:;" onclick="close_paint();return false;">X</a>',
+                    onComplete: function () {
+                        $('#cboxContent').css('background-color', 'transparent');
+                        $('#cboxLoadedContent').css('background-color', 'transparent');
+                        $('#cboxClose').hide();
+                        _vr_mask = 1;
+                    },
+                    onClosed: function () {
+                        $('#cboxContent').css('background-color', '#000');
+                        $('#cboxLoadedContent').css('background-color', '#f1f1f1');
+                        $('#cboxClose').show();
+                        _vr_mask = 0;
+                    }
+                });
+            }, 0);
+        }
+
+        function jshow_close() {
+            $.colorbox.close();
+        }
+
+        function reload_img(id) {
+            var obj = $('#' + id);
+            var d = new Date();
+            var n = d.getTime();
+            var src0 = $(obj).attr('data-original') + "_coi.png?d=" + n;
+            $(obj).attr({ src: src0 });
+        }
+    </script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(498,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  PreComp.cpp
+  Conf.cpp
+  CriticalSection.cpp
+  Dir.cpp
+  File.cpp
+  FileName.cpp
+  HTTP_Client.cpp
+  InfoMap.cpp
+  int128s.cpp
+  int128u.cpp
+  MemoryDebug.cpp
+  OS_Utils.cpp
+  Thread.cpp
+  Translation.cpp
+  Utils.cpp
+  Ztring.cpp
+  ZtringList.cpp
+  ZtringListList.cpp
+  ZtringListListF.cpp
+  Http_Cookies.cpp
+  Http_Handler.cpp
+  Http_Request.cpp
+  Http_Utils.cpp
+  Html_Handler.cpp
+  Html_Request.cpp
+  ZenLib.vcxproj -> E:\voy\102\PhotoNest\tests\cefclient\Release\bin\ZenLib.lib

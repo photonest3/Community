@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        .stm-icon {
+            font-size: 20px;
+        }
+
+        #albumThumbnail img {
+            border: 0;
+        }
+
+        .pictures {
+            list-style: none;
+            margin: 0;
+            max-width: 30rem;
+            padding: 0;
+        }
+
+        #tabsheet {
+            margin-left: 0;
+        }
+
+        .jquery-ui #content-wrapper {
+            height: calc(100% - 20px);
+        }
+
+        .ooo {
+            top: 30px;
+            right: 30px;
+        }
+
+        FIELDSET {
+            padding: 0 10px;
+            margin: 0 1em;
+        }
+
+        #content-wrapper {
+            box-shadow: unset;
+            border-top: 0px;
+        }
+
+        #catModify input[type="text"], #catModify textarea {
+            border: unset;
+        }
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body id="theColorPage" class="thedark">
+    <div id="container" style="width:100%;">
+        <div id="content-wrapper" class="row" style="padding: 0; width:100%;">
+            <div class="eiw">
+                <div class="ooo">
+                    <div id="err" class="errors">
+                    </div>
+                </div>
+            </div>
+            <form action="" method="post" id="catModify">
+                <fieldset style="border-top: none;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td id="albumThumbnail">
+                                    <div class="thumbdiv" id="galley">
+                                        <ul class="pictures">
+                                            <li><img id="thumbnail" class="thumbnail" src="{$photourl}" alt="{$imagename}" style="max-width:144px; max-height:144px;" /></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td id="albumLinks" style="width: 300px; vertical-align: top; max-width:300px;">
+                                    <ul style="padding-left: 15px; margin: 0; -webkit-user-select: text;">
+                                        {$albumLinks}
+                                    </ul>
+                                </td>
+                                <td class="photoLinks" style="width: 100px; vertical-align: top;padding-left: 10px;">
+                                    <ul>
+                                        <li>
+                                            <a class="icon-download" href="./action.html?download=1&id={$id}">
+                                                {'Export'|@translate}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-trash" href="javascript:;" onclick="del_photo('{$id}');return false;">
+                                                {'Delete'|@translate}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="display:none;">
+                                    <ul class="menu slim sf-js-enabled sf-arrows">
+                                        <li id="menubar_categories">
+                                            <a href="javscript:;" onclick="return false;">{'Open With...'|@translate}</a>
+                                            <ul>
+                                                {$flist}
+                                                <li class="ui-widget-content2">
+                                                    <div>
+                                                        <a class="f02" href="javascript:;"
+                                                           onclick="opendialog();return false;">{'Other'|@translate}</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div id="filename" data-original-url="{$path}" style="display:none;"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>{'Properties'|@translate}</legend>
+                    <table style="text-align: left; float: left; left: 20px; -webkit-user-select: text;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>{'Title'|@translate}</strong>
+                                    <br />
+                                    <input type="text" class="middle" name="name" value="{$imagename}" maxlength="50" />
+                                </td>
+                                <td>
+                                    <strong>{'Author'|@translate}</strong>
+                                    <br />
+                                    <input type="text" class="middle" name="author" value="{$author}" maxlength="50" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <strong>{'Album'|@translate}</strong>
+                                    <br />
+                                    <input type="text" class="middle" name="name" value="{$categories}" readonly="readonly" maxlength="50" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <strong>{'Linked albums'|@translate}</strong>
+                                    <br />
+                                    <select data-selectize="categories"
+                                            placeholder="{'Type in a search term'|@translate}"
+                                            name="associate" multiple="multiple" style="width: 600px;"></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <strong>{'Tags'|@translate}</strong>
+                                    <br />
+                                    <select data-selectize="tags" data-value="[{$tags}]"
+                                            placeholder="{'Type in a search term'|@translate}"
+                                            data-create="true" name="tags" multiple="multiple" style="width: 600px;"></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <strong>{'Description'|@translate}</strong>
+                                    <br />
+                                    <textarea name="description" id="description" class="description" cols="50" rows="3"
+                                              style="overflow-y: hidden;height: 48px;">{$description}</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div style="height:20px;"></div>
+                                    <a class="filter-validate" onclick="submit_photo();return false;"
+                                       href="javascript:;" name="submit">{'Save Settings'|@translate}</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/superfish.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/i18n/jquery.ui.datepicker-en-GB.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.datepicker.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+
+    <script type="text/javascript">
+        var _fmt = "$sLongDate";
+        var _firstDay = parseInt('$firstDay');
+        var _addtitle = "{'Create'|@translate}";
+        var _photoid = "{$id}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _category = "{$category}";
+        var _tit20 = "{'Delete'|@translate}";
+        var _defval = [$associate];
+        var _control;
+
+        function reset(obj) {
+            var prev = $(obj).prev();
+            prev.val($(obj).attr('data-show'));
+
+            var o = $("#" + prev.attr('data-id'));
+            o.val($(obj).attr('data-value'));
+        }
+
+        function drawImg(picid) {
+            var canvas1 = document.getElementById('canvas1');
+            var dataURL = canvas1.toDataURL({ "format": "png" });
+            var img = document.getElementById('thumbnail');
+            img.src = dataURL;
+        }
+
+        function openfol(obj) {
+            window.cefQuery({
+                request: 'Prompt.q.file:' + $(obj).attr("filen")
+            });
+        }
+        function myFunction() {
+            var canvas1 = document.getElementById('canvas1');
+            var video = document.getElementById('test');
+            var ctx = canvas1.getContext("2d");
+            ctx.drawImage(video, 0, 0, video.clientWidth, video.clientHeight);
+        }
+
+        function openwith(fname) {
+            var src = $("#filename").attr('data-original-url');
+            src = src.substring(src.indexOf("?") + 1);
+            window.cefQuery({
+                request: 'Prompt.q.open:' + fname + "|" + src
+            });
+        }
+
+        function opendialog() {
+            var src = $("#filename").attr('data-original-url');
+            src = src.substring(src.indexOf("?") + 1);
+            window.cefQuery({
+                request: 'Prompt.q.openwith:' + src
+            });
+        }
+
+        function alb_selectize() {
+            var $area = $('[data-selectize=categories]').selectize({
+                valueField: 'id',
+                labelField: 'name',
+                sortField: 'name',
+                searchField: ['name'],
+                plugins: ['remove_button'],
+                create: (_readonly == "0") ? true : false,
+                render: {
+                    'option_create': function (data, escape) {
+                        return '<div class="create">' + _addtitle + ' <strong>' + data.input + '</strong>&hellip;</div>';
+                    }
+                }
+            });
+            _control = $area[0].selectize;
+            add_alb_opt();
+        }
+
+        function add_alb_opt() {
+            $.getJSON('./ws.php?format=json&method=categories.getAdminList&type=1', function (data) {
+                var v = "";
+                for (var i = 0; i < data.result.categories.length; i++) {
+                    var cats = data.result.categories[i];
+
+                    v = "~~" + cats.id + "~~";
+                    _control.addOption({
+                        id: v,
+                        name: cats.fullname,
+                        fullname: cats.fullname,
+                        selected: true
+                    });
+                }
+
+                var obj = eval(_defval);
+                if (obj.length > 0) {
+                    setTimeout(function () {
+                        _control.setValue(obj);
+                    }, 0);
+                }
+
+            });
+        }
+
+        $(document).ready(function () {
+
+            jQuery('.font-checkbox').fontCheckbox();
+
+
+            $('ul.slim').superfish();
+            $('ul.slim').show();
+
+            if (_readonly != "0") {
+                $('[data-selectize=tags]').removeAttr('data-create');
+            }
+
+            var tagsCache = new TagsCache();
+            tagsCache.selectize($('[data-selectize=tags]'), {
+                lang: {
+                    "Add": _addtitle
+                }
+            });
+
+            alb_selectize();
+
+            $(".datep").datepicker({
+                dateFormat: _fmt,
+                defaultDate: $(this).val(),
+                autoSize: true,
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-60:c+100",
+                firstDay: _firstDay,
+                prevText: '',
+                nextText: '',
+                yearSuffix: '',
+                showButtonPanel: true,
+                onChangeMonthYear: function (year, month, inst) {
+                    var myDate = new Date();
+                    t = new Date(year, month, inst.currentDay, myDate.getHours(), myDate.getMinutes(), myDate.getSeconds()).getTime() / 1000;
+                    var o = $("#" + $(this).attr('data-id'));
+                    o.val(t);
+
+                    var temp = _fmt;
+                    temp = temp.replace("yy", year).replace("m", month).replace("d", inst.currentDay);
+                    $(this).val(temp);
+                    o = $("#a" + $(this).attr('data-id'));
+                    o.show();
+                },
+                onSelect: function (text, inst) {
+                    var myDate = new Date();
+                    t = new Date(inst.currentYear, inst.currentMonth, inst.currentDay, myDate.getHours(), myDate.getMinutes(), myDate.getSeconds()).getTime() / 1000;
+                    var o = $("#" + $(this).attr('data-id'));
+                    o.val(t);
+                    o = $("#a" + $(this).attr('data-id'));
+                    o.show();
+                }
+            });
+        });
+
+        function del_photo(id) {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+            $.colorbox({
+                transition: "none", width: 437, height: 270, fixed: true, iframe: true, overlayClose: false,
+                title: _tit20,
+                href: function () {
+                    return "./delbox.html?type=3&nb=1&ids=" + id;
+                }
+            });
+        }
+
+        function submit_photo() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                dataType: "text",
+                url: "./admin.html?page=admin.photo&category=" + _category + "&photo=" + _photoid,
+                data: $('#catModify').serialize(),
+                success: function (result) {
+                    if (result == "ok") {
+                        parent._cbox_change = 1;
+                        parent.$.colorbox.close();
+                    }
+                    else if (result == "add") {
+                        parent._cbox_change = 3;
+                        parent.$.colorbox.close();
+                    }
+                    else {
+                        $("#err").html(result);
+                        $('#err').delay(100).show();
+                        $('#err').delay(2000).fadeOut();
+                    }
+                },
+                error: function () {
+                    $("#err").html("error");
+                    $('#err').delay(100).show();
+                    $('#err').delay(2000).fadeOut();
+                }
+            });
+            return false;
+        }
+    </script>
+</body>
+</html>

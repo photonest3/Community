@@ -1,0 +1,7 @@
+﻿  Building Custom Rule E:/voy/102/third/libarchive-master/cat/CMakeLists.txt
+  bsdcat.c
+  cmdline.c
+  err.c
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  bsdcat.vcxproj -> E:\voy\102\third\libarchive-master\build_vs2019_x64\bin\Release\bsdcat.exe

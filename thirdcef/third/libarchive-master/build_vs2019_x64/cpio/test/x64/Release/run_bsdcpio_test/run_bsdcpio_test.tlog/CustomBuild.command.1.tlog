@@ -1,0 +1,20 @@
+^E:\VOY\102\THIRD\LIBARCHIVE-MASTER\BUILD_VS2019_X64\CMAKEFILES\E6A8BE5D4779F32B64AB953302FB34AE\RUN_BSDCPIO_TEST.RULE
+setlocal
+..\..\bin\Release\bsdcpio_test.exe -p E:/voy/102/third/libarchive-master/build_vs2019_x64/bin/Release/bsdcpio.exe -r E:/voy/102/third/libarchive-master/cpio/test -vv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\VOY\102\THIRD\LIBARCHIVE-MASTER\CPIO\TEST\CMAKELISTS.TXT
+setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -SE:/voy/102/third/libarchive-master -BE:/voy/102/third/libarchive-master/build_vs2019_x64 --check-stamp-file E:/voy/102/third/libarchive-master/build_vs2019_x64/cpio/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

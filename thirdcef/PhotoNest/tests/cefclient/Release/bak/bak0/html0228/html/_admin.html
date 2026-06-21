@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <style type="text/css">
+        .stat-boxes {
+            text-align: left;
+            margin: 10px;
+        }
+
+        .stat-box {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            color: #777;
+        }
+
+        div.stat-box {
+            cursor: help;
+        }
+
+        .stat-box:hover {
+            color: #ff7700;
+        }
+
+        .stat-box i {
+            font-size: 50px;
+            float: left;
+            margin-right: 5px;
+        }
+
+        .stat-box .number, .stat-box .caption {
+            display: inline-block;
+            width: 120px;
+            text-align: left;
+        }
+
+        .stat-box .number {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .eiw .messages ul li {
+            list-style-type: none !important;
+        }
+
+        .eiw .messages .eiw-icon {
+            margin-right: 10px !important;
+        }
+
+        .subtitle {
+            font-size: 18px;
+        }
+
+        .errors0 {
+            margin-left: 50px;
+            text-align: center;
+            font-size: 125%;
+            color: red;
+            margin-bottom: 50px;
+        }
+
+            .errors0 li {
+                padding-top: 12px;
+                list-style-type: none;
+            }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+</head>
+<body class="jquery-ui">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container">
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1>
+                        <span>{'Dashboard'|@translate}</span>
+                    </h1>
+                    <br />
+                    <div class="content" style="-webkit-user-select: text;">
+                        <div class="eiw">
+                            {$error_lic}
+                        </div>
+                        <div class="stat-boxes">
+                            <a id="pics" class="stat-box" href="./admin.html?page=admin.galleries">
+                                <i class="icon-picture">
+                                </i><span class="number">
+                                    {$NB_PHOTOS}
+                                </span> <span class="caption">{'Photos'|@translate}</span>
+
+                            </a><a class="stat-box" href="./admin.html?page=admin.cat_list">
+                                <i class="icon-sitemap">
+                                </i><span class="number">{$NB_ALBUMS}</span> <span class="caption">{'Albums'|@translate}</span>
+                            </a><a class="stat-box" href="./admin.html?page=admin.tags">
+                                <i class="icon-tags"></i>
+                                <span class="number">{$NB_TAGS}</span>{$tag_associations}
+                            </a><a class="stat-box" style="display:none;"
+                                   href="./admin.html?page=admin.stats&{yearmonth}">
+                                <i class="icon-signal"></i><span class="number">{$NB_VIEWS}</span> <span class="caption">
+                                    {'Pages seen'|@translate}
+                                </span>
+                            </a><a class="stat-box" href="javascript:;" onclick="openfol(); return false;">
+                                <i class="icon-hdd"></i><span id="storage" class="number">
+                                    <img src="./templ/themes/default/images/loader.gif" alt="Loading..." />
+                                </span><span class="caption">{'Storage used'|@translate}</span>
+                            </a>
+                            {$first_added_age}
+                        </div>
+                    </div>
+                    <br />
+                    <p class="showCreateAlbum" style="font-size:100%;">
+                        <a href="./admin.html?page=admin.galleries" style="margin-left:10px; " id="btnA">
+                            <span>
+                                <span class="icon-plus">
+                                </span>{'Add Photos'|@translate}
+                            </span>
+                        </a>
+                    </p>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var _alb = "{$albumName}";
+
+        function openfol() {
+            window.cefQuery({
+                request: 'Prompt.q.folder:0'
+            });
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+
+            if (_alb == "public") {
+                $('#btnA').attr("href", "./admin.html?page=admin.photos_add");
+            }
+
+            $.get("./admin.html?page=admin.storage", function (data, state) {
+                if (data == "-1") {
+                    $("#storage").text("");
+                }
+                else {
+                    $("#storage").text(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

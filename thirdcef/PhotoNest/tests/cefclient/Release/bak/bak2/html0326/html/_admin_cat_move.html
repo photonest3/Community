@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <style type="text/css">
+        form.filter fieldset ul {
+            margin: 0;
+        }
+
+        form.filter fieldset ul, form.filter fieldset label {
+            display: block;
+            float: left;
+            margin-right: 1em;
+            padding: 0;
+        }
+
+        form.filter fieldset li {
+            list-style: none;
+            margin-bottom: 0.5em;
+        }
+
+            form.filter fieldset li label {
+                display: inline;
+                float: none;
+            }
+
+        form.filter fieldset ul.tagselection label {
+            display: inline;
+            float: none;
+            margin-right: 0.5em;
+        }
+
+        form.filter fieldset label input, form.filter fieldset label select, form.filter fieldset label span, form.filter fieldset label textarea {
+            display: block;
+            margin: 0.5em 0;
+        }
+
+            form.filter fieldset * label input, form.filter fieldset * label select, form.filter fieldset * label textarea, form.filter fieldset label span input, form.filter fieldset label span select, form.filter fieldset label span textarea {
+                display: inline;
+                vertical-align: top;
+                margin: 0 0.5em 0 0;
+            }
+
+            form.filter fieldset label span select {
+                margin: 0;
+            }
+
+        form.filter fieldset p {
+            clear: left;
+            display: block;
+        }
+
+        .category2 {
+            min-width: 200px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui" style="min-width: 1000px;">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container">
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1>
+                        <span>{'Albums'|@translate}</span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="normal_tab">
+                                <a href="./admin.html?page=admin.cat_list">
+                                    <span>
+                                        <span class="icon-th">
+                                        </span>{'List'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="selected_tab">
+                                <a href="./admin.html?page=admin.cat_move">
+                                    <span>
+                                        <span class="icon-move">
+                                        </span>{'Move'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos"><i class="eiw-icon icon-ok"></i><span id="liinfo"></span></div>
+                            </div>
+                        </div>
+
+                        <form id="form1" method="post" action="" class="filter">
+                            <fieldset>
+                                <legend>{'Move albums'|@translate}</legend>
+                                <label>
+                                    {'Virtual albums to move'|@translate}
+                                    <select class="categoryList" name="selection" multiple="multiple" style="min-width: 200px;width:350px;">
+                                        {$options}
+                                    </select>
+                                </label>
+                                <label>
+                                    {'New parent album'|@translate}
+                                    <select class="categoryDropDown" name="parent" style="min-width: 200px;width:350px;">
+                                        <option value="0">------------</option>
+                                        {$parent_options}
+                                    </select>
+                                </label>
+                                <p style="text-align: left; padding-top: 10px;">
+
+                                    <button name="submit" id="submit" type="button" onclick="submitclick();return false;" class="buttonLike">
+                                        {'OK'|@translate}
+                                    </button>
+
+                                </p>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+
+        function submitclick() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return false;
+            }
+
+            var body = $("#form1").serialize();
+            $.post("./admin.html?page=admin.cat_move", body, function (data, state) {
+
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    $('#liinfo').html(info.htm);
+                    $('#info').delay(100).show();
+                    $('#info').delay(2000).fadeOut();
+                }
+                else {
+                    $("#err").html(info.htm);
+                    $('#err').delay(100).show();
+                    $('#err').delay(2000).fadeOut();
+                }
+            });
+
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+        });
+    </script>
+</body>
+</html>

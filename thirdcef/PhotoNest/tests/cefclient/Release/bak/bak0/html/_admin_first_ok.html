@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.admin_add.css" />
+    <style type="text/css">
+        html, body {
+            -webkit-user-select: none;
+            background-color: #fff;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+        }
+
+        .row {
+            max-width: 1140px;
+            min-width: 768px;
+            margin: 0 auto;
+        }
+
+        .jquery-ui #container {
+            background: #fff;
+        }
+
+        #content-wrapper {
+            box-shadow: unset;
+            padding: 20px 0;
+            border-top: unset;
+            border-radius: unset;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        #content {
+            float: left;
+            width: 100%;
+            max-width: 1140px;
+        }
+
+            #content h1 {
+                margin-left: 15px;
+            }
+
+        .jquery-ui #content-wrapper::-webkit-scrollbar-thumb {
+            background: #bbb;
+        }
+
+        .jquery-ui #content-wrapper {
+            min-height: 90%;
+            height: calc(100% - 80px);
+            overflow-y: unset;
+        }
+    </style>
+</head>
+<body class="jquery-ui" style="background-color:#fff;overflow-y: auto;">
+    <div id="container">
+        <div id="content-wrapper" class="tinted row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1 id="titleh1">
+                        <span>{'Photo Directory'|@translate}</span>
+                    </h1>
+                    <div class="content" style="margin-top:20px;">
+                        <div class="eiw">
+                            <div id="err" class="errors">
+                            </div>
+                        </div>
+                        <div id="photosAddContent">
+                            <div id="infos1" class="infos" style="padding-top: 20px;">
+                                <i class="eiw-icon2 icon-ok"></i>
+                                <ul style="margin-top: -10px;"><li>{$nb} {'photos added to the album'|@translate}</li></ul>
+                            </div>
+                            <div class="errors" style="display: none">
+                                <i class="eiw-icon icon-cancel"></i>
+                            </div>
+                            <p class="afterUploadActions" style="margin: 15px;">
+                                <a id="visit" class="icon-left-open" href="javascript:;" onclick="location.replace('./a.html');return false;">{'Visit the gallery'|@translate}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

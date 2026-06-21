@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data><item><id>en</id><transl>ru</transl></item>
+<item><id>ltr</id><transl>ltr</transl></item>
+<item><id>Select an album</id><transl>Выберите альбом</transl></item>
+<item><id>... or</id><transl>... или </transl></item>
+<item><id>create a new album</id><transl>создать новый альбом</transl></item>
+<item><id>jump to album</id><transl>перейти в альбом</transl></item>
+<item><id>Parent album</id><transl>Родительский альбом</transl></item>
+<item><id>Album name</id><transl>Название альбома</transl></item>
+<item><id>Create</id><transl>Создать</transl></item>
+<item><id>nothing</id><transl>ничего</transl></item>
+<item><id>Dashboard</id><transl>Панель управления</transl></item>
+<item><id>Photos</id><transl>Фотографии</transl></item>
+<item><id>Albums</id><transl>Альбомы</transl></item>
+<item><id>%d associations</id><transl>связей: %d</transl></item>
+<item><id>Tags</id><transl>Теги</transl></item>
+<item><id>Pages seen</id><transl>Страниц просмотрено</transl></item>
+<item><id>Storage used</id><transl>Используется для хранения</transl></item>
+<item><id>Add Photos</id><transl>Добавить изображения</transl></item>
+<item><id>The album name must not be empty.</id><transl>Название альбома не может быть пустым.</transl></item>
+<item><id>Add another set of photos</id><transl>Добавить изображения</transl></item>
+<item><id>Select files</id><transl>Выбрать файлы</transl></item>
+<item><id>%d photos uploaded</id><transl>загружено изображений: %d</transl></item>
+<item><id>Manage this set of %d photos</id><transl>Редактировать этот набор из %d изображений</transl></item>
+<item><id>global mode</id><transl>Групповой режим</transl></item>
+<item><id>single mode</id><transl>Одиночный режим</transl></item>
+<item><id>Filter</id><transl>фильтр</transl></item>
+<item><id>remove this filter</id><transl>удалить этот фильтр</transl></item>
+<item><id>Predefined filter</id><transl>Префильтр</transl></item>
+<item><id>Empty caddie</id><transl>Опустошить корзинку</transl></item>
+<item><id>Album</id><transl>Альбом</transl></item>
+<item><id>include child albums</id><transl>включает вложенные альбомы</transl></item>
+<item><id>Type in a search term</id><transl>Определите критерий поиска</transl></item>
+<item><id>All tags</id><transl>Все теги</transl></item>
+<item><id>Any tag</id><transl>Любой тег</transl></item>
+<item><id>Dimensions</id><transl>Размеры</transl></item>
+<item><id>Search</id><transl>Поиск</transl></item>
+<item><id>Photo title</id><transl>Заголовок изображения</transl></item>
+<item><id>Photo description</id><transl>Описание изображения</transl></item>
+<item><id>File name</id><transl>Имя файла</transl></item>
+<item><id>Search for an author</id><transl>Поиск по автору</transl></item>
+<item><id>Add a filter</id><transl>Добавить фильтр</transl></item>
+<item><id>Filesize</id><transl>Размер файла</transl></item>
+<item><id>Creation date</id><transl>Дата съёмки</transl></item>
+<item><id>Remove all filters</id><transl>Удалить все фильтры</transl></item>
+<item><id>Refresh photo set</id><transl>Обновить набор изображений</transl></item>
+<item><id>Selection</id><transl>Выбор</transl></item>
+<item><id>Action</id><transl>Действие</transl></item>
+<item><id>No photo selected</id><transl>Ничего не выбрано</transl></item>
+<item><id>Choose an action</id><transl>Выберите действие</transl></item>
+<item><id>Delete selected photos</id><transl>Удалить выбранные изображения</transl></item>
+<item><id>Associate to album</id><transl>Привязать к альбому</transl></item>
+<item><id>Move to album</id><transl>Переместить в альбом</transl></item>
+<item><id>Dissociate from album</id><transl>Отделить из альбома</transl></item>
+<item><id>Add tags</id><transl>Добавить тэги</transl></item>
+<item><id>Set author</id><transl>Указать автора</transl></item>
+<item><id>Set title</id><transl>Указать название</transl></item>
+<item><id>Add to caddie</id><transl>Добавить в корзину</transl></item>
+<item><id>Are you sure?</id><transl>Уверены?</transl></item>
+<item><id>You must confirm deletion</id><transl>Вам нужно подтвердить удаление</transl></item>
+<item><id>Select at least one tag</id><transl>Выберите хотя бы один тэг</transl></item>
+<item><id>remove author</id><transl>удалить автора</transl></item>
+<item><id>Type the author name here</id><transl>напечатайте имя автора здесь</transl></item>
+<item><id>remove title</id><transl>удалить название</transl></item>
+<item><id>Type the title here</id><transl>напечатайте название здесь</transl></item>
+<item><id>Apply action</id><transl>Добавить действие</transl></item>
+<item><id>on the %d selected photos</id><transl>на %d выбранных изображениях</transl></item>
+<item><id>%d of %d photos selected</id><transl>%d из %d изображений выбрано</transl></item>
+<item><id>All %d photos are selected</id><transl>Все %d изображений были выбраны</transl></item>
+<item><id>List</id><transl>Список</transl></item>
+<item><id>Move</id><transl>Перемещение</transl></item>
+<item><id>apply automatic sort order</id><transl>применить автоматическую сортировку</transl></item>
+<item><id>Automatic sort order</id><transl>Автоматическая сортировка</transl></item>
+<item><id>Sort order</id><transl>Порядок сортировки</transl></item>
+<item><id><![CDATA[Album name, A &rarr; Z]]></id><transl><![CDATA[По названиям альбомов, от A &rarr; Z]]></transl></item>
+<item><id><![CDATA[Album name, Z &rarr; A]]></id><transl><![CDATA[По названиям альбомов, от Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Date created, new &rarr; old]]></id><transl><![CDATA[Дата создания, новые &rarr; старые]]></transl></item>
+<item><id>(determined from photos)</id><transl>(определяется из изображений)</transl></item>
+<item><id><![CDATA[Date created, old &rarr; new]]></id><transl><![CDATA[Дата создания, старые &rarr; новые]]></transl></item>
+<item><id>Apply to sub-albums</id><transl>Применить к вложенным альбомам</transl></item>
+<item><id>Save order</id><transl>Сохранить порядок</transl></item>
+<item><id>Save manual order</id><transl>Сохранить ручную сортировку</transl></item>
+<item><id>cancel manual order</id><transl>отменить ручную сортировку</transl></item>
+<item><id>Move albums</id><transl>Переместить альбом</transl></item>
+<item><id>Virtual albums to move</id><transl>Виртуальные альбомы для перемещения</transl></item>
+<item><id>New parent album</id><transl>Новый родительский альбом</transl></item>
+<item><id>Properties</id><transl>Свойства</transl></item>
+<item><id>Photos sort order</id><transl>Порядок сортировки изображений</transl></item>
+<item><id>Use the default photo sort order</id><transl>Использовать порядок сортировки изображений по умолчанию</transl></item>
+<item><id>Manual order</id><transl>Сортировать вручную</transl></item>
+<item><id>automatic order</id><transl>автоматический режим</transl></item>
+<item><id>Click-and-drag to re-order</id><transl>Перетащите чтобы изменить порядок</transl></item>
+<item><id>Save Settings</id><transl>Сохранить установки</transl></item>
+<item><id>Information</id><transl>Информация</transl></item>
+<item><id>manage sub-albums</id><transl>Управление вложенными альбомами</transl></item>
+<item><id>delete album</id><transl>удалить альбом</transl></item>
+<item><id>Name</id><transl>Название</transl></item>
+<item><id>Description</id><transl>Описание</transl></item>
+<item><id>Configuration</id><transl>Настройки</transl></item>
+<item><id>Basic settings</id><transl>Основные установки</transl></item>
+<item><id>Gallery title</id><transl>Название галереи</transl></item>
+<item><id>Default photos order</id><transl>Порядок изображений по умолчанию</transl></item>
+<item><id>Add a criteria</id><transl>Добавить критерий</transl></item>
+<item><id>Miscellaneous</id><transl>Разное</transl></item>
+<item><id>other</id><transl>другой</transl></item>
+<item><id>Week starts on</id><transl>Неделя начинается с</transl></item>
+<item><id>Batch Manager</id><transl>Пакетный менеджер</transl></item>
+<item><id>History</id><transl>История</transl></item>
+<item><id>Statistics</id><transl>Статистика</transl></item>
+<item><id>Tags selection</id><transl>Выбор тэгов</transl></item>
+<item><id>Select at least two tags to merge.</id><transl>Выберите по крайней мере две метки для объединения.</transl></item>
+<item><id>Display options</id><transl>Варианты показа</transl></item>
+<item><id>photos per page</id><transl>Изображений на странице</transl></item>
+<item><id>Downloads</id><transl>Загрузки</transl></item>
+<item><id>delete photo</id><transl>Удалить изображение</transl></item>
+<item><id>Title</id><transl>Название</transl></item>
+<item><id>Author</id><transl>Автор</transl></item>
+<item><id>Linked albums</id><transl>Связать альбомы</transl></item>
+<item><id>Album thumbnail</id><transl>Миниатюра альбома</transl></item>
+<item><id>Photo information updated</id><transl>Информация об изображении обновлена</transl></item>
+<item><id>Login</id><transl>Авторизация</transl></item>
+<item><id>Identification</id><transl>Вход</transl></item>
+<item><id>Username</id><transl>Имя пользователя</transl></item>
+<item><id>Password</id><transl>Пароль</transl></item>
+<item><id>Forgot your password?</id><transl>Забыли пароль?</transl></item>
+<item><id>Reset</id><transl>Отмена</transl></item>
+<item><id>Please enter a login name.</id><transl>Пожалуйста, введите имя пользователя.</transl></item>
+<item><id>Please enter your password.</id><transl>Пожалуйста, повторите попытку.</transl></item>
+<item><id>Please confirm the chosen password.</id><transl>Пожалуйста, подтвердите выбранный пароль.</transl></item>
+<item><id>Search for words</id><transl>Поиск по словам</transl></item>
+<item><id>Search for all terms</id><transl>Поиск по всем критериям</transl></item>
+<item><id>Search for any term</id><transl>Поиск по любому критерию</transl></item>
+<item><id>Apply on properties</id><transl>Применить к свойствам</transl></item>
+<item><id>Search tags</id><transl>Теги для поиска</transl></item>
+<item><id>Search by date</id><transl>Поиск по дате</transl></item>
+<item><id>Kind of date</id><transl>Тип даты</transl></item>
+<item><id>Search in albums</id><transl>Поиск в альбомах</transl></item>
+<item><id>Search in sub-albums</id><transl>Поиск во вложенных альбомах</transl></item>
+<item><id>stop the slideshow</id><transl>остановить слайдшоу</transl></item>
+<item><id>clean up</id><transl>очистить</transl></item>
+<item><id>Visit the gallery</id><transl>Перейти на сайт</transl></item>
+<item><id>Caddie</id><transl>Корзина</transl></item>
+<item><id>Orphans</id><transl>Одиночные</transl></item>
+<item><id>Recent photos</id><transl>Недавние изображения</transl></item>
+<item><id>Duplicates</id><transl>дубликаты</transl></item>
+<item><id>All</id><transl>Все</transl></item>
+<item><id>Your favorites</id><transl>Избранное</transl></item>
+<item><id>With no tag</id><transl>Без меток</transl></item>
+<item><id>With no album</id><transl>Без альбома</transl></item>
+<item><id>Edit</id><transl>Изменить</transl></item>
+<item><id>Tag</id><transl>Тег</transl></item>
+<item><id>No photo selected, %d photos in current set</id><transl>Ничего не выбрано, а всего в текущем наборе - %d изображений</transl></item>
+<item><id>Delete %d orphan photos</id><transl>Удаление %d одиночных изображений</transl></item>
+<item><id>%d photo deleted</id><transl>удалено изображений: %d</transl></item>
+<item><id>%d photos deleted</id><transl>удалено изображений: %d</transl></item>
+<item><id>Albums automatically sorted</id><transl>Автоматическая сотрировка альбомов</transl></item>
+<item><id>Virtual album added</id><transl>Виртуальный альбом добавлен</transl></item>
+<item><id>Edit album</id><transl>Редактирование альбома</transl></item>
+<item><id>%d album moved</id><transl>перемещено альбомов: %d</transl></item>
+<item><id>%d albums moved</id><transl>перемещено альбомов: %d</transl></item>
+<item><id>%d photos</id><transl>изображений: %d</transl></item>
+<item><id>View in gallery</id><transl>Смотреть в галерее</transl></item>
+<item><id>Manage photos</id><transl>Управление изображениями</transl></item>
+<item><id>Tag "%s" was added</id><transl>Тэг "%s" добавлен</transl></item>
+<item><id>Tag "%s" already exists</id><transl>Тэг "%s" уже есть</transl></item>
+<item><id>Add a tag</id><transl>Добавить метку</transl></item>
+<item><id>Select tags</id><transl>Выбор тэгов</transl></item>
+<item><id>New tag</id><transl>Новая метка</transl></item>
+<item><id>No destination tag selected</id><transl>Тэг не выбран, действие невозможно.</transl></item>
+<item><id>Edit selected tags</id><transl>Редактировать выделенные метки</transl></item>
+<item><id>Duplicate selected tags</id><transl>Дублировать выделенные теги</transl></item>
+<item><id>Merge selected tags</id><transl>Объединить выбранные метки</transl></item>
+<item><id>Delete selected tags</id><transl>Удалить выбранные метки</transl></item>
+<item><id>Display form</id><transl>Отображение формы</transl></item>
+<item><id>Edit tags</id><transl>Редактировать метки</transl></item>
+<item><id>Current name</id><transl>Текущее название</transl></item>
+<item><id>New name</id><transl>Новое название</transl></item>
+<item><id>Source tag</id><transl>Тег-источник</transl></item>
+<item><id>Name of the duplicate</id><transl>Название дубля</transl></item>
+<item><id>Merge tags</id><transl>Объединить метки</transl></item>
+<item><id>Select the destination tag</id><transl>Выбрать метку-получатель</transl></item>
+<item><id>Confirm merge</id><transl>Подтвердите объединение</transl></item>
+<item><id>(this tag will be deleted)</id><transl>(эта метка будет удалена)</transl></item>
+<item><id>First</id><transl>Первая</transl></item>
+<item><id>Previous</id><transl>Предыдущая</transl></item>
+<item><id>Next</id><transl>Следующая</transl></item>
+<item><id>Last</id><transl>Последняя</transl></item>
+<item><id>The whole set</id><transl>Все в наборе</transl></item>
+<item><id>Width</id><transl>Ширина</transl></item>
+<item><id>between %d and %d pixels</id><transl>между %d и %d пикселями</transl></item>
+<item><id>Height</id><transl>Высота</transl></item>
+<item><id>Ratio</id><transl>разрешение</transl></item>
+<item><id>between %s and %s</id><transl>между %s и %s</transl></item>
+<item><id>Portrait</id><transl>Портрет</transl></item>
+<item><id>Landscape</id><transl>Ландшафт</transl></item>
+<item><id>between %s and %s MB</id><transl>от %s до %s MB</transl></item>
+<item><id>display</id><transl>показать</transl></item>
+<item><id>all</id><transl>все</transl></item>
+<item><id>Remove tags</id><transl>Удалить тэги</transl></item>
+<item><id>Original file:</id><transl>Оригинал: </transl></item>
+<item><id>Added by %s</id><transl>Добавлен %s</transl></item>
+<item><id>Visited %d times</id><transl>Просмотров: %d</transl></item>
+<item><id>Numeric identifier : %d</id><transl>Идентификатор: %d</transl></item>
+<item><id>Album updated successfully</id><transl>Информация об альбоме успешно добавлена.</transl></item>
+<item><id>manage album photos</id><transl>управлять элементами альбома</transl></item>
+<item><id>Find a new random album thumbnail.</id><transl>Найти нового представителя случайным образом.</transl></item>
+<item><id>Refresh</id><transl>Обновить</transl></item>
+<item><id>This album contains no photo.</id><transl>Этот альбом не содержит изображений.</transl></item>
+<item><id>This album contains %d photos, added on %s.</id><transl>Этот альбом содержит изоюраженийй: %d, добавлен %s.</transl></item>
+<item><id>This album contains %d photos, added between %s and %s.</id><transl>Изображений в этом альбоме: %d, добавлен между %s и %s.</transl></item>
+<item><id>Delete album "%s".</id><transl>Уделение альбома "%s".</transl></item>
+<item><id>delete album and the %d orphan photos</id><transl>удаление альбома и %d несвязанных изображений</transl></item>
+<item><id>delete only album, not photos</id><transl>удаление только альбома, без изображений</transl></item>
+<item><id>Confirm deletion</id><transl>Подтверждение удаления</transl></item>
+<item><id><![CDATA[File name, A &rarr; Z]]></id><transl><![CDATA[Имя файла, А &rarr; Я]]></transl></item>
+<item><id><![CDATA[File name, Z &rarr; A]]></id><transl><![CDATA[Имя файла, Я &rarr; А]]></transl></item>
+<item><id><![CDATA[Photo title, A &rarr; Z]]></id><transl><![CDATA[Название фотографии, А &rarr; Я]]></transl></item>
+<item><id><![CDATA[Photo title, Z &rarr; A]]></id><transl><![CDATA[Название фотографии, Я &rarr; А]]></transl></item>
+<item><id><![CDATA[Visits, high &rarr; low]]></id><transl><![CDATA[Посещения, много &rarr; мало]]></transl></item>
+<item><id><![CDATA[Visits, low &rarr; high]]></id><transl><![CDATA[Посещения, мало &rarr; много]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 1 &rarr; 9]]></id><transl><![CDATA[Порядок номеров, 1 &rarr; 9]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 9 &rarr; 1]]></id><transl><![CDATA[Порядок номеров, 9 &rarr; 1]]></transl></item>
+<item><id>Manual sort order</id><transl>Сортировка вручную</transl></item>
+<item><id>day0</id><transl>Вс</transl></item>
+<item><id>day1</id><transl>Пн</transl></item>
+<item><id>delete</id><transl>удален</transl></item>
+<item><id>Delete</id><transl>удален</transl></item>
+<item><id>Allowed file types: %s.</id><transl>Допустимые типы файлов: %s.</transl></item>
+<item><id>No photos in the current set.</id><transl>Нет изображений в текущем наборе.</transl></item>
+<item><id>Select:</id><transl>Вы можете выбрать:</transl></item>
+<item><id>None</id><transl>Ничего</transl></item>
+<item><id>Invert</id><transl>Обратить</transl></item>
+<item><id>Logout</id><transl>Выход</transl></item>
+<item><id>First photo added</id><transl>Добавление первого изображения</transl></item>
+<item><id>%d photo</id><transl>%d изображение</transl></item>
+<item><id>in %d sub-album</id><transl>в %d вложенном альбоме</transl></item>
+<item><id>in %d sub-albums</id><transl>в %d вложенных альбомах</transl></item>
+<item><id>in this album</id><transl>в этом альбоме</transl></item>
+<item><id>Thumbnail</id><transl>Миниатюра</transl></item>
+<item><id>2small</id><transl>XXS - крошечный</transl></item>
+<item><id>xsmall</id><transl>XS - очень мелкий</transl></item>
+<item><id>small</id><transl>S - мелкий</transl></item>
+<item><id>medium</id><transl>M - средний</transl></item>
+<item><id>large</id><transl>L - крупный</transl></item>
+<item><id>%d week</id><transl>%d недель</transl></item>
+<item><id>%d weeks</id><transl>%d недель</transl></item>
+<item><id>%d day</id><transl>%d день</transl></item>
+<item><id>%d days</id><transl>%d дней</transl></item>
+<item><id>%d month</id><transl>%d месяц</transl></item>
+<item><id>%d months</id><transl>%d месяцев</transl></item>
+<item><id>%d year</id><transl>%d год</transl></item>
+<item><id>%d years</id><transl>%d лет</transl></item>
+<item><id>%s ago</id><transl>%s назад</transl></item>
+<item><id>Related tags</id><transl>Связанные слова</transl></item>
+<item><id>display your favorites photos</id><transl>показать ваши избранные изображения</transl></item>
+<item><id>display most visited photos</id><transl>показать наиболее популярные изображения</transl></item>
+<item><id>Most visited</id><transl>По популярности</transl></item>
+<item><id>display most recent photos</id><transl>показать больше свежих изображений</transl></item>
+<item><id>display recently updated albums</id><transl>показать недавно обновленные альбомы</transl></item>
+<item><id>Recent albums</id><transl>Последние альбомы</transl></item>
+<item><id>Display a random set of photos.</id><transl>Показать случайный набор фотографий.</transl></item>
+<item><id>Random photos</id><transl>Случайные изображения</transl></item>
+<item><id>Show the photos every day, every month.</id><transl>Показать фотографии каждый день, каждый месяц.</transl></item>
+<item><id>Calendar</id><transl>Календарь</transl></item>
+<item><id>display available tags</id><transl>Просмотр доступных тегов</transl></item>
+<item><id>Hello</id><transl>Привет,</transl></item>
+<item><id>Photo sizes</id><transl>Размер изображения</transl></item>
+<item><id>delete all photos from your favorites</id><transl>удалить все изображения из избранных</transl></item>
+<item><id>slideshow</id><transl>слайдшоу</transl></item>
+<item><id>return to normal view mode</id><transl>возвращение к нормальному режиму</transl></item>
+<item><id>Search criteria</id><transl>Условия для поиска</transl></item>
+<item><id>display this album</id><transl>показать этот альбом</transl></item>
+<item><id>group by letters</id><transl>сгруппировать по буквам</transl></item>
+<item><id>letters</id><transl>буквы</transl></item>
+<item><id>show tags cloud</id><transl>показать облако тегов</transl></item>
+<item><id>cloud</id><transl>облако</transl></item>
+<item><id>Default</id><transl>По умолчанию</transl></item>
+<item><id>View</id><transl>Просмотр</transl></item>
+<item><id>Monthly list</id><transl>Месяцы</transl></item>
+<item><id>Monthly calendar</id><transl>Календарь по месяцам</transl></item>
+<item><id>day2</id><transl>Вт</transl></item>
+<item><id>day3</id><transl>Ср</transl></item>
+<item><id>day4</id><transl>Чт</transl></item>
+<item><id>day5</id><transl>Пт</transl></item>
+<item><id>day6</id><transl>Сб</transl></item>
+<item><id>New password</id><transl>Новый пароль</transl></item>
+<item><id>Each of the listed criteria must be satisfied.</id><transl>Все перечисленные правила должны выполняться</transl></item>
+<item><id>No results for</id><transl>Нет результатов для</transl></item>
+<item><id>Empty query. No criteria has been entered.</id><transl>Пустой запрос. Нет критериев для поиска.</transl></item>
+<item><id>add this photo to your favorites</id><transl>добавить это изображение в избранные</transl></item>
+<item><id>Favorites</id><transl>Избранное</transl></item>
+<item><id>delete this photo from your favorites</id><transl>удалить это изображение из избранных</transl></item>
+<item><id>Show file metadata</id><transl>Показать метаданные</transl></item>
+<item><id>Download this file</id><transl>загрузить этот файл</transl></item>
+<item><id>Download</id><transl>Загрузить</transl></item>
+<item><id>set as album thumbnail</id><transl>установить как миниатюру альбома</transl></item>
+<item><id>Edit photo</id><transl>Редактировать изображение</transl></item>
+<item><id>month1</id><transl>Январь</transl></item>
+<item><id>month2</id><transl>Февраль</transl></item>
+<item><id>month3</id><transl>Март</transl></item>
+<item><id>month4</id><transl>Апрель</transl></item>
+<item><id>month5</id><transl>Май</transl></item>
+<item><id>month6</id><transl>Июнь</transl></item>
+<item><id>month7</id><transl>Июль</transl></item>
+<item><id>month8</id><transl>Август</transl></item>
+<item><id>month9</id><transl>Сентябрь</transl></item>
+<item><id>month10</id><transl>Октябрь</transl></item>
+<item><id>month11</id><transl>Ноябрь</transl></item>
+<item><id>month12</id><transl>Декабрь</transl></item>
+<item><id>Hour</id><transl>Час</transl></item>
+<item><id>Date</id><transl>Дата</transl></item>
+<item><id>Month</id><transl>Месяц</transl></item>
+<item><id>Year</id><transl>Год</transl></item>
+<item><id>Overall</id><transl>Обзор</transl></item>
+<item><id>today</id><transl>сегодня</transl></item>
+<item><id>Weekly list</id><transl>Недели</transl></item>
+<item><id>Visits</id><transl>Посещения</transl></item>
+<item><id>Invalid password!</id><transl>Неверное имя пользователя или пароль!</transl></item>
+<item><id>Current password is wrong</id><transl>Введен неправильный пароль</transl></item>
+<item><id>searched words : %s</id><transl>искомые слова: %s</transl></item>
+<item><id>created between %s (%s) and %s (%s)</id><transl>созданы между %s (%s) и %s (%s)</transl></item>
+<item><id>included</id><transl>включено</transl></item>
+<item><id>created on %s</id><transl>созданы %s</transl></item>
+<item><id>created after %s (%s)</id><transl>созданы после %s (%s)</transl></item>
+<item><id>created before %s (%s)</id><transl>созданы до %s (%s)</transl></item>
+<item><id>Search results</id><transl>Результаты поиска</transl></item>
+<item><id>Profile</id><transl>Профиль</transl></item>
+<item><id>Day</id><transl>День</transl></item>
+<item><id>Square</id><transl>Квадрат</transl></item>
+<item><id>width between %s and %s</id><transl>ширина от %s до %s</transl></item>
+<item><id><![CDATA[width = %s]]></id><transl><![CDATA[ширина = %s]]></transl></item>
+<item><id><![CDATA[width &gt;= %s]]></id><transl><![CDATA[ширина &gt;= %s]]></transl></item>
+<item><id><![CDATA[width &lt;= %s]]></id><transl><![CDATA[ширина &lt;= %s]]></transl></item>
+<item><id>height between %s and %s</id><transl>высота от %s до %s</transl></item>
+<item><id><![CDATA[height = %s]]></id><transl><![CDATA[высота = %s]]></transl></item>
+<item><id><![CDATA[height &gt;= %s]]></id><transl><![CDATA[высота &gt;= %s]]></transl></item>
+<item><id><![CDATA[height &lt;= %s]]></id><transl><![CDATA[высота &lt;= %s]]></transl></item>
+<item><id>ratio between %s and %s</id><transl>разрешение от %s до %s</transl></item>
+<item><id><![CDATA[ratio = %s]]></id><transl><![CDATA[разрешение = %s]]></transl></item>
+<item><id><![CDATA[ratio &gt;= %s]]></id><transl><![CDATA[разрешение &gt;= %s]]></transl></item>
+<item><id>File</id><transl>Файл</transl></item>
+<item><id>files</id><transl>файлы</transl></item>
+<item><id>Folder</id><transl>Папка</transl></item>
+<item><id>folders</id><transl>папки</transl></item>
+<item><id><![CDATA[ratio &lt;= %s]]></id><transl><![CDATA[разрешение &lt;= %s]]></transl></item>
+<item><id>Print</id><transl>Печать</transl></item>
+<item><id>Print to PDF</id><transl>Печать в PDF</transl></item>
+<item><id>Full Screen</id><transl>Полноэкранный режим&#009;F11</transl></item>
+<item><id>Check For Updates...</id><transl>Проверка обновлений...</transl></item>
+<item><id>Zoom</id><transl>увеличение</transl></item>
+<item><id>Zoom In</id><transl>Увеличить&#009;Ctrl+</transl></item>
+<item><id>Zoom Out</id><transl>Уменьшить&#009;Ctrl-</transl></item>
+<item><id>100%</id><transl>100%&#009;Ctrl+0</transl></item>
+<item><id>1 file</id><transl>1 файл</transl></item>
+<item><id>%d files</id><transl>%d файлов</transl></item>
+<item><id>Numeric identifier</id><transl>Порядок номеров</transl></item>
+<item><id>Manage</id><transl>Управление</transl></item>
+<item><id>Album alburl now contains %d photos</id><transl>Альбом alburl содержит изображений: %d</transl></item>
+<item><id>Settings</id><transl>Установки</transl></item>
+<item><id>Folder:</id><transl>Папка:</transl></item>
+<item><id>Add Directory</id><transl>Добавить каталог</transl></item>
+<item><id>sLongDate</id><transl>d MM yy</transl></item>
+<item><id>sYearMonth</id><transl>MM yy</transl></item>
+<item><id>unset</id><transl>очистить</transl></item>
+<item><id>File/directory read error</id><transl>Ошибка чтения файла/папки</transl></item>
+<item><id>Select the folder containing your photos</id><transl>Выберите папку, содержащую ваши фотографии</transl></item>
+<item><id>Each directory here is an album.</id><transl>Каждая папка здесь - это альбом.</transl></item>
+<item><id>Encrypting photos does not move or copy files to the new location.</id><transl>При шифровании фотографий файлы не перемещаются и не копируются в новое место.</transl></item>
+
+<item><id>Specials</id><transl>Избранное</transl></item>
+<item><id>Create first album</id><transl>Создать первый альбом</transl></item>
+<item><id>Create first encrypted album</id><transl>Создать первый зашифрованный альбом</transl></item>
+<item><id>Duplicate file error.</id><transl>Ошибка дублирования файла.</transl></item>
+<item><id>Filetype not allowed</id><transl>Тип файла не разрешен</transl></item>
+<item><id>max filesize</id><transl>максимальный размер файла</transl></item>
+
+<item><id>Add to Gallery</id><transl>Добавить в галерею</transl></item>
+<item><id>Add to Encrypted Gallery</id><transl>Добавить в зашифрованную галерею</transl></item>
+<item><id>Encrypted Photos</id><transl>Зашифрованные фотографии</transl></item>
+<item><id>Encrypted</id><transl>Зашифрованные</transl></item>
+<item><id>To be encrypted</id><transl>Будет зашифрован</transl></item>
+<item><id>photos added to the album</id><transl>фотографии добавлены в альбом</transl></item>
+<item><id>Photo Directory</id><transl>Фотографический каталог</transl></item>
+<item><id>Slideshow</id><transl>Слайд-шоу</transl></item>
+<item><id>first photo added on %s</id><transl>первая фотография добавлена на %s</transl></item>
+<item><id>Music</id><transl>Музыка</transl></item>
+<item><id>Add to your favorites</id><transl>Добавить в избранное</transl></item>
+<item><id>Already exists</id><transl>Уже есть</transl></item>
+<item><id>The operation completed successfully.</id><transl>Операция завершена успешно.</transl></item>
+<item><id>Confirm Removal</id><transl>Подтвердить удаление</transl></item>
+<item><id>Quality</id><transl>Качество</transl></item>
+<item><id>My Gallery</id><transl>Моя галерея</transl></item>
+<item><id>Creating password</id><transl>Создание пароля</transl></item>
+<item><id>Details</id><transl>Подробности</transl></item>
+
+<item><id>BACK_ON_PAGE</id><transl>Повернутися назад на одну сторінку</transl></item>
+<item><id>FIND_POSITION</id><transl>Знайти свою позицію</transl></item>
+<item><id>SEARCH_MY_POSITION</id><transl>Знайти мою позицію на мапі</transl></item>
+<item><id>DISPLAY_ON_MAP</id><transl>показати на мапі %s</transl></item>
+<item><id>CLICKED_MAP</id><transl>Ви натиснули на мапу в</transl></item>
+<item><id>SHOW_COORD</id><transl>Показати координати</transl></item>
+<item><id>CENTER_MAP</id><transl>Центр мапи тут</transl></item>
+<item><id>ZOOM_IN</id><transl>Увеличить</transl></item>
+<item><id>ZOOM_OUT</id><transl>Уменьшить</transl></item>
+<item><id>METERS_FROM_POINT</id><transl>Ви у %s метрах від цієї точки</transl></item>
+<item><id>items</id><transl>пунктів</transl></item>
+<item><id>PIWIGO_GALLERY</id><transl>Перейти до галереї</transl></item>
+<item><id>VIEW_OSM</id><transl>Переглянути на OpenStreetMap</transl></item>
+<item><id>HOME_NAME</id><transl>Начало</transl></item>
+<item><id>HOME_PREV_NAME</id><transl>Предыдущая</transl></item>
+
+<item><id>Location</id><transl>Местоположение</transl></item>
+<item><id>File Size</id><transl>Размер файла</transl></item>
+<item><id>Camera Make</id><transl>Марка фотокамеры</transl></item>
+<item><id>Camera Model</id><transl>Модель фотокамеры</transl></item>
+<item><id>Camera Date</id><transl>Дата на фотокамере</transl></item>
+<item><id>Digitised Date</id><transl>Оцифрованная дата</transl></item>
+<item><id>Modified Date</id><transl>Дата изменения</transl></item>
+<item><id>File Date</id><transl>Дата добавления</transl></item>
+<item><id>Orientation</id><transl>Ориентация</transl></item>
+<item><id>Flash</id><transl>Вспышка</transl></item>
+<item><id>Focal Length</id><transl>Фокусное расстояние</transl></item>
+<item><id>Exposure Time</id><transl>Выдержка</transl></item>
+<item><id>F Number</id><transl>Диафрагменное число</transl></item>
+<item><id>ISO</id><transl>ISO</transl></item>
+<item><id>White Balance</id><transl>Баланс белого</transl></item>
+<item><id>Metering Mode</id><transl>Режим измерения</transl></item>
+<item><id>Colour Space</id><transl>Цветовое пространство</transl></item>
+<item><id>JPEG Quality</id><transl>Качество JPEG</transl></item>
+<item><id>GPS Latitude</id><transl>GPS: широта</transl></item>
+<item><id>GPS Longitude</id><transl>GPS: долгота</transl></item>
+<item><id>GPS Altitude Ref</id><transl>GPS: высота над уровнем моря</transl></item>
+<item><id>X Resolution</id><transl>Разрешение X</transl></item>
+<item><id>Y Resolution</id><transl>Разрешение Y</transl></item>
+<item><id>Resolution Unit</id><transl>Единица разрешения</transl></item>
+<item><id>Software</id><transl>Программное обеспечение</transl></item>
+<item><id>YCbCr Positioning</id><transl>Позиционирование YCbCr</transl></item>
+
+<item><id>Export location:</id><transl>Путь к папке для экспорта:</transl></item>
+<item><id>Browse...</id><transl>Обзор...</transl></item>
+<item><id>Name of exported folder:</id><transl>Папка для экспорта:</transl></item>
+<item><id>Add numbers to file names to preserve order</id><transl>Пронумеровать файлы и экспортировать по порядку</transl></item>
+<item><id>Export</id><transl>Экспорт</transl></item>
+<item><id>Export to Folder</id><transl>Экспорт в папку</transl></item>
+<item><id>Remove from Album</id><transl>Удалить из альбома</transl></item>
+<item><id>Delete from Disk</id><transl>Удалить с диска</transl></item>
+
+<item><id>Play slideshow</id><transl>Показать слайдшоу</transl></item>
+<item><id>Pause slideshow</id><transl>Остановить слайдшоу</transl></item>
+<item><id>Reduce slideshow speed</id><transl>Уменьшить скорость слайдшоу</transl></item>
+<item><id>Increase slideshow speed</id><transl>Увеличить скорость слайдшоу</transl></item>
+<item><id>Open With...</id><transl>Открыть с помощью...</transl></item>
+<item><id>Recent files</id><transl>Последние файлы</transl></item>
+<item><id>Create Movie</id><transl>Создать фильм</transl></item>
+<item><id>Collages</id><transl>Коллажи</transl></item>
+<item><id>My creation</id><transl>Мое творение</transl></item>
+<item><id>Photo movie</id><transl>Фотофильм</transl></item>
+<item><id>Photo wall</id><transl>Фотостена</transl></item>
+
+<item><id>Record video</id><transl>Записать видео</transl></item>
+<item><id>Stop</id><transl>Стоп</transl></item>
+<item><id>Screenshot</id><transl>Снимок экрана</transl></item>
+<item><id>Go back</id><transl>Вернуться</transl></item>	
+<item><id>Recording</id><transl>Запись</transl></item>
+<item><id>jump to my creation</id><transl>переход к моему творению</transl></item>
+<item><id>Play</id><transl>Играть</transl></item>
+
+<item><id>To decrypt previous photos, please enter the password you used last time.</id><transl>Для расшифровки предыдущих фотографий введите пароль, который вы использовали в прошлый раз.</transl></item>
+<item><id>Current password</id><transl>Текущий пароль</transl></item>
+<item><id>The password hint will be visible to everyone who uses this computer.</id><transl>Подсказка пароля будет видна всем, кто использует этот компьютер.</transl></item>
+<item><id>Password hint</id><transl>Подсказка пароля</transl></item>
+<item><id>The destination folder is the root folder. Please choose a different folder.</id><transl>Папка назначения - это корневая папка. Пожалуйста, выберите другую папку.</transl></item>
+<item><id>The destination folder is a system folder. Please choose a different folder.</id><transl>Папка назначения - системная папка. Пожалуйста, выберите другую папку.</transl></item>
+<item><id>Unable to decrypt krf file, key mismatch</id><transl>Невозможно расшифровать файл krf, несовпадение ключей</transl></item>
+<item><id>Remove from album, decrypt photos</id><transl>Удаление из альбома, расшифровка фотографий</transl></item>
+<item><id>Are are you sure you want to leave this page?</id><transl>Вы уверены, что хотите покинуть эту страницу?</transl></item>
+<item><id>Are are you sure you want to exit?</id><transl>Вы уверены, что хотите выйти?</transl></item>
+<item><id>Canceled</id><transl>Отменена</transl></item>
+<item><id>This file is currently in use</id><transl>Этот файл используется в настоящее время</transl></item>
+<item><id>Build</id><transl>Построить</transl></item>
+<item><id>ISO Filename:</id><transl>Имя файла ISO:</transl></item>
+<item><id>Dump Image Files (ISO)</id><transl>Дамп файлов образов (ISO)</transl></item>
+<item><id>Press F11 to exit full screen</id><transl>Нажмите F11, чтобы выйти из полноэкранного режима</transl></item>
+<item><id>Formating...</id><transl>Формирование...</transl></item>
+<item><id>Exit full screen</id><transl>Выход из режима полного экрана</transl></item>
+<item><id>Drag image here</id><transl>Перетащите изображение сюда</transl></item>
+<item><id>Support drag and drop</id><transl>Поддержка перетаскивания</transl></item>
+<item><id>Add to album</id><transl>Добавить в альбом</transl></item>
+<item><id>Invalid parent album</id><transl>Неправильный родительский альбом</transl></item>
+<item><id>Advanced</id><transl>Дополнительно</transl></item>
+<item><id>Type</id><transl>Тип</transl></item>
+<item><id>Images</id><transl>Изображения</transl></item>
+<item><id>Videos</id><transl>Видео</transl></item>
+<item><id>Duplicates</id><transl>дубликаты</transl></item>
+<item><id>Remove Duplicates</id><transl>Удаление дубликатов</transl></item>
+<item><id>Restore</id><transl>Восстановить</transl></item>
+<item><id>There is only 1 photo.</id><transl>Есть только 1 фотография.</transl></item>
+<item><id>Directory</id><transl>Каталог</transl></item>
+<item><id>Not found</id><transl>Не найдено</transl></item>
+<item><id>No album selected</id><transl>Альбом не выбран</transl></item>
+<item><id>Set as background</id><transl>Установить в качестве фона</transl></item>
+<item><id>Background image</id><transl>Фоновое изображение</transl></item>
+<item><id>Use background image</id><transl>Использовать фоновое изображение</transl></item>
+<item><id>No background image</id><transl>Нет фонового изображения</transl></item>
+<item><id>Header background image only</id><transl>Только фоновое изображение заголовка</transl></item>
+<item><id>Log in</id><transl>Войти</transl></item>
+<item><id>Skin</id><transl>Кожа</transl></item>
+<item><id>Mark image quality</id><transl>Качество изображения марки</transl></item>
+<item><id>Select All</id><transl>Выбрать все</transl></item>
+
+<item><id>Delete album</id><transl>Удалить альбом</transl></item>
+<item><id>Tag "%s" succesfully deleted</id><transl>Тег "%s" успешно удален</transl></item>
+<item><id>Yes, rename</id><transl>Да, переименовать</transl></item>
+<item><id>Duplicate</id><transl>Дубликат</transl></item>
+<item><id>Merge</id><transl>Объединить</transl></item>
+<item><id>Tag name</id><transl>Имя тега</transl></item>
+<item><id>Rename</id><transl>Переименовать</transl></item>
+<item><id>no photo</id><transl>нет фото</transl></item>
+<item><id>Selection mode</id><transl>Режим выбора</transl></item>
+<item><id>Delete tag</id><transl>Удалить метку</transl></item>
+<item><id>Are you sure to continue?</id><transl>Вы уверены, что хотите продолжить?</transl></item>
+
+<item><id>Choose filters</id><transl>Выберите фильтры</transl></item>
+<item><id>File type</id><transl>Тип файла</transl></item>
+<item><id>OSM</id><transl>OSM</transl></item>
+<item><id>Clear</id><transl>Очистить</transl></item>
+<item><id>OSM Geotagged</id><transl>OSM Помеченные геотегами</transl></item>
+<item><id>OSM Not geotagged</id><transl>OSM Без геотегов</transl></item>
+<item><id>Admin</id><transl>Администратор</transl></item>
+<item><id>Search in</id><transl>Поиск в</transl></item>
+<item><id>All videos</id><transl>Все видео</transl></item>
+<item><id>Yes, copy</id><transl>Да, копировать</transl></item>
+<item><id>Review</id><transl>Просмотр</transl></item>
+<item><id>Delete orphan tags</id><transl>Удаление бесхозных тегов</transl></item>
+<item><id>You have %s orphan tags</id><transl>У вас есть %s бесхозных тегов</transl></item>
+<item><id>Delete them</id><transl>Удалить их</transl></item>
+<item><id>Keep them</id><transl>Сохранить их</transl></item>
+<item><id>At least 2 selected tags are needed to merge</id><transl>Для объединения необходимо как минимум 2 выбранных тега</transl></item>
+<item><id>Visit</id><transl>Посетите</transl></item>
+<item><id>General</id><transl>Общие</transl></item>
+<item><id>Administration Home</id><transl>Администрация Главная</transl></item>
+
+<item><id>Customize</id><transl>Настройте</transl></item>
+<item><id>Choose which folders to see in PhotoNest</id><transl>Выберите, какие папки будут отображаться в PhotoNest</transl></item>
+<item><id>Folders added here will still be in their original locations.</id><transl>Папки, добавленные здесь, останутся на своих прежних местах.</transl></item>
+<item><id>Add to PhotoNest</id><transl>Добавить в PhotoNest</transl></item>
+<item><id>delete album, not folders</id><transl>удалить альбом, но не папки</transl></item>
+<item><id>Setting the PhonoNest password</id><transl>Установка пароля PhonoNest</transl></item>
+<item><id>Add to PhotoNest and encrypt photos</id><transl>Добавить в PhotoNest и зашифровать фотографии</transl></item>
+<item><id>delete album, decrypt photos</id><transl>удалить альбом, расшифровать фотографии</transl></item>
+<item><id>Choose which folders to be encrypted</id><transl>Выберите, какие папки будут зашифрованы</transl></item>
+<item><id>Create</id><transl>Создайте</transl></item>
+<item><id>Visit PhotoNest</id><transl>Посетите PhotoNest</transl></item>
+<item><id>there are some files to add</id><transl>есть несколько файлов, которые нужно добавить</transl></item>
+
+<item><id>Last import</id><transl>Последний импорт</transl></item>
+<item><id>Imported %s on %s</id><transl>Импортировано %s на %s</transl></item>
+<item><id>display a calendar by imported date</id><transl>отображение календаря по дате импорта</transl></item>
+<item><id>photos imported during the last %d days</id><transl>фотографии, импортированные за последние %d дней</transl></item>
+<item><id>display a calendar by creation date</id><transl>отображение календаря по дате создания</transl></item>
+
+<item><id>Imported between %s (%s) and %s (%s)</id><transl>Импортировано между %s (%s) и %s (%s)</transl></item>
+<item><id>Imported on %s</id><transl>Импортировано на %s</transl></item>
+<item><id>Imported after %s (%s)</id><transl>Импортировано после %s (%s)</transl></item>
+<item><id>Imported before %s (%s)</id><transl>Импортировано до %s (%s))</transl></item>
+<item><id>Importing photos does not move or copy files to the new location.</id><transl>Импорт фотографий не приводит к перемещению или копированию файлов в новое место.</transl></item>
+
+<item><id>Imported</id><transl>Импортировано</transl></item>
+<item><id>To be imported</id><transl>Будет импортировано</transl></item>
+<item><id>Imported date</id><transl>Дата импорта</transl></item>
+<item><id><![CDATA[Date imported, new &rarr; old]]></id><transl><![CDATA[Дата импорта, новая &rarr; старая]]></transl></item>
+<item><id><![CDATA[Date imported, old &rarr; new]]></id><transl><![CDATA[Дата импорта, старый &rarr; новый]]></transl></item>
+<item><id>Imported photos</id><transl>Импортированные фотографии</transl></item>
+<item><id>Import photos</id><transl>Импортировать фотографии</transl></item>
+
+<item><id>Added</id><transl>Добавлено</transl></item>
+<item><id>To be added</id><transl>Будет добавлен</transl></item>
+
+<item><id>Confirm password</id><transl>Подтвердите пароль</transl></item>
+<item><id>photos filetype not allowed</id><transl>тип файла фотографии недопустим</transl></item>
+<item><id>photos too small</id><transl>фотографии слишком малы</transl></item>
+<item><id>files are deleted.</id><transl>файлы будут удалены.</transl></item>
+<item><id>clean up the album</id><transl>очистить альбом</transl></item>
+<item><id>delete album</id><transl>удалить альбом</transl></item>
+<item><id>Manage your photo collection</id><transl>Управление коллекцией фотографий</transl></item>
+<item><id>Add</id><transl>Добавить</transl></item>
+<item><id>Add folder</id><transl>Добавить папку</transl></item>
+<item><id>Allowed file types</id><transl>Разрешенные типы файлов</transl></item>
+<item><id>Minimum width</id><transl>Минимальная ширина</transl></item>
+<item><id>Minimum height</id><transl>Минимальная высота</transl></item>
+<item><id>pixels</id><transl>пикселей</transl></item>
+<item><id>Empty favorites</id><transl>Пустое избранное</transl></item>
+<item><id>Create a password</id><transl>Создать пароль</transl></item>
+
+<item><id>Are you sure you want to move this file to the Recycle Bin?</id><transl>Вы уверены, что хотите переместить этот файл в корзину?</transl></item>
+<item><id>Are you sure you want to move these files to the Recycle Bin?</id><transl>Вы уверены, что хотите переместить эти файлы в корзину?</transl></item>
+<item><id>Are you sure you want to remove this photo from the current collection?</id><transl>Вы уверены, что хотите удалить эту фотографию из текущей коллекции?</transl></item>
+<item><id>Are you sure you want to delete these items?</id><transl>Вы уверены, что хотите удалить эти элементы?</transl></item>
+<item><id>Are you sure you want to empty caddie?</id><transl>Вы уверены, что хотите очистить caddie?</transl></item>
+<item><id>Are you sure you want to empty your favorites?</id><transl>Вы уверены, что хотите очистить избранное?</transl></item>
+<item><id>Browse</id><transl>Обзор</transl></item>
+
+<item><id>Face Classification</id><transl>Классификация лиц</transl></item>
+<item><id>Same people</id><transl>Одинаковые люди</transl></item>
+<item><id>Classify</id><transl>Классифицировать</transl></item>
+<item><id>Select the merged image</id><transl>Выбрать объединенное изображение</transl></item>
+<item><id>Selected</id><transl>Выбранные</transl></item>
+<item><id>At least 2 selected</id><transl>Выбрано не менее 2</transl></item>
+<item><id>Calculating the image quality ...</id><transl>Расчет качества изображения ...</transl></item>
+<item><id>More</id><transl>Больше</transl></item>
+<item><id>Date taken</id><transl>Дата съемки</transl></item>
+<item><id>PhotoNest encrypted version</id><transl>Зашифрованная версия PhotoNest</transl></item>
+<item><id>Add example</id><transl>Добавить пример</transl></item>
+</data>

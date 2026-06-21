@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+ <item><id>Open...</id><transl>打开...</transl></item>
+ <item><id>Brush</id><transl>画笔</transl></item>
+ <item><id>Lasso</id><transl>套索</transl></item>
+ <item><id>Rectangle</id><transl>矩形</transl></item>
+ <item><id>Magic Wand</id><transl>魔棒</transl></item>
+ <item><id>Eraser</id><transl>橡皮擦</transl></item>
+ <item><id>Move</id><transl>移动</transl></item>
+ <item><id>Save</id><transl>保存</transl></item>
+ <item><id>Undo</id><transl>还原</transl></item>
+ <item><id>Redo</id><transl>重做</transl></item>
+ <item><id>Center</id><transl>居中</transl></item>
+ <item><id>Crop</id><transl>裁剪</transl></item>
+ <item><id>Remove unnecessary Objects</id><transl>去掉多余的物体</transl></item>
+ <item><id>Adjust</id><transl>调整</transl></item>
+ <item><id>Brightness</id><transl>亮度</transl></item>
+ <item><id>Contrast</id><transl>对比度</transl></item>
+ <item><id>Backlight</id><transl>背光</transl></item>
+ <item><id>White balance</id><transl>白平衡</transl></item>
+ <item><id>AutoLevel</id><transl>自动色阶</transl></item>
+ <item><id>Original image</id><transl>原图</transl></item>
+ <item><id>About...</id><transl>关于...</transl></item>
+ <item><id>Registration...</id><transl>注册...</transl></item>
+ <item><id>Rotate by 180°</id><transl>旋转180度</transl></item>
+ <item><id>Rotate left</id><transl>向左旋转</transl></item>
+ <item><id>Rotate right</id><transl>向右旋转</transl></item>
+ <item><id>Flip</id><transl>翻转</transl></item>
+ <item><id>Mirror</id><transl>镜向</transl></item>
+ <item><id>Close</id><transl>关闭</transl></item>
+ <item><id>Discard Changes</id><transl>放弃更改</transl></item>
+ <item><id>Cancel</id><transl>取消</transl></item>
+ <item><id>Arrow</id><transl>箭头</transl></item>
+ <item><id>Ellipse</id><transl>椭圆</transl></item>
+ <item><id>Line</id><transl>直线</transl></item>
+ <item><id>Save As...</id><transl>另存为</transl></item>
+ <item><id>Selection</id><transl>选择</transl></item>
+ <item><id>Opaque</id><transl>不透明</transl></item>
+ <item><id>OK</id><transl>确定</transl></item>
+ <item><id>Background</id><transl>背景色</transl></item>
+ <item><id>Copy</id><transl>复制</transl></item>
+ <item><id>Paste</id><transl>粘贴</transl></item>
+ <item><id>Cut</id><transl>剪切</transl></item>
+ <item><id>Tolerance</id><transl>容错率</transl></item>
+ <item><id>Font</id><transl>字体</transl></item>
+ <item><id>Optimize</id><transl>优化</transl></item>
+ <item><id>Text</id><transl>文本</transl></item>
+ <item><id>Drag files here</id><transl>把文件拖到这里</transl></item>
+ <item><id>Pencil</id><transl>铅笔</transl></item>
+ <item><id>Color Fill</id><transl>颜色填充</transl></item>
+ <item><id>Color Picker</id><transl>颜色选择器</transl></item>
+ <item><id>Thickness</id><transl>线宽</transl></item>
+ <item><id>Apply</id><transl>应用</transl></item>
+ <item><id>Retain</id><transl>保留</transl></item>
+ <item><id>Remove</id><transl>去除</transl></item>
+ <item><id>File is too big</id><transl>文件过大</transl></item>
+ <item><id>Background Matting</id><transl>抠图换背景</transl></item>
+ <item><id>Image Stitching</id><transl>图像拼接</transl></item>
+ <item><id>Rotate</id><transl>旋转</transl></item>
+ <item><id>Change Background</id><transl>更换背景</transl></item>
+ <item><id>Paste As New</id><transl>黏贴为新图片</transl></item>
+ <item><id>Transparent</id><transl>透明</transl></item>
+ <item><id>Saved successfully</id><transl>保存成功</transl></item>
+ <item><id>Normal clone</id><transl>正常克隆</transl></item>
+ <item><id>Mixed clone</id><transl>混合克隆</transl></item>
+ <item><id>Monochrome transfer</id><transl>基于特征的迁移融合</transl></item>
+ <item><id>Home</id><transl>主页</transl></item>
+ <item><id>Drawing Tool</id><transl>绘图工具</transl></item>
+ <item><id>Color</id><transl>颜色</transl></item>
+ <item><id>The outside of the rectangle is the background</id><transl>矩形的外侧是背景</transl></item>
+ <item><id>Remove smeared objects</id><transl>去掉涂抹的物体</transl></item>
+ <item><id>Sharpen</id><transl>锐化</transl></item>
+ <item><id>Enhancement</id><transl>增强</transl></item>
+ <item><id>Changes have not been saved</id><transl>更改未被保存</transl></item>
+  <item><id>Not yet completed</id><transl>尚未完成</transl></item>
+<item><id>Save Failure</id><transl>保存失败</transl></item>
+ <item><id>Canvas area exceeds the maximum limit (2/3)</id><transl>画布面积超过最大限制（2/3）</transl></item>
+ <item><id>Select sticker</id><transl>选择贴图</transl></item>
+ <item><id>Select a rectangular area around the object you want to segment</id><transl>围绕您要分离的目标选择一个矩形区域</transl></item>
+ <item><id>Expiration Date:</id><transl>到期日期：</transl></item>
+ <item><id>30 days trial period</id><transl>30天试用期</transl></item>
+ <item><id>Activate using a license key</id><transl>使用许可证密钥激活</transl></item>
+ <item><id>Buy Now</id><transl>订购</transl></item>
+ <item><id>Activate</id><transl>激活</transl></item>
+ <item><id>Copyright (c) 2023 PhotoZK. All rights reserved.</id><transl>版权所有（c）2023 PhotoZK。保留所有权利。</transl></item>
+ <item><id>This product is licensed to:</id><transl>此产品授权给：</transl></item>
+ <item><id>Warning: This program is protected by copyright law and international treaties.</id><transl>警告：本程序受版权法和国际条约保护。</transl></item>
+ <item><id>Third software</id><transl>第三方软件</transl></item>
+ <item><id>Perpetual License</id><transl>永久许可证</transl></item>
+ <item><id>Registration</id><transl>注册</transl></item>
+ <item><id>Activation completed!</id><transl>注册完成！</transl></item>
+ <item><id>Please check your license key, and then try again.</id><transl>请检查您的许可证密钥，然后重试。</transl></item>
+ <item><id>An error occurred</id><transl>出错</transl></item>
+ <item><id>About</id><transl>关于</transl></item>
+ <item><id>Language</id><transl>语言</transl></item>
+<item><id>Activation Expired</id><transl>激活已过期</transl></item>
+ <item><id>Nostalgic</id><transl>怀旧</transl></item>
+ <item><id>Feather</id><transl>羽化</transl></item>
+ <item><id>Comic strip</id><transl>连环画</transl></item>
+ <item><id>Sketch</id><transl>素描</transl></item>
+ <item><id>Decolor</id><transl>去色</transl></item>
+ <item><id>Mosaic</id><transl>马赛克</transl></item>
+ <item><id>Read-only attribute</id><transl>只读属性</transl></item>
+ <item><id>An error occurred</id><transl>出现错误</transl></item>
+ <item><id>Choose a color</id><transl>选择颜色</transl></item>
+ <item><id>Change Sky Background</id><transl>更改天空背景</transl></item>
+ <item><id>No sky detected</id><transl>没有检测到天空</transl></item>
+ <item><id>Activated.</id><transl>已激活。</transl></item>
+<item><id>Too big</id><transl>太大</transl></item>
+<item><id>Too small</id><transl>太小</transl></item>
+<item><id>Complete image fusion</id><transl>完成图像融合</transl></item>
+ <item><id>Finish the cutting</id><transl>完成抠图</transl></item>
+<item><id>Yes</id><transl>是</transl></item>
+<item><id>Don't Save</id><transl>不保存</transl></item>
+<item><id>Do you want to save changes to aa.jpg?</id><transl>您想将更改保存到 aa.jpg 吗？</transl></item>
+<item><id>Change...</id><transl>更改...</transl></item>
+<item><id>Loading</id><transl>加载中</transl></item>
+<item><id>Loading...</id><transl>加载中...</transl></item>
+<item><id>1-year license</id><transl>1年许可证</transl></item>
+<item><id>3-year license</id><transl>3年许可证</transl></item>
+<item><id>This license is expired.</id><transl>该许可证已过期。</transl></item>
+<item><id>30-day trial period, expiration date:</id><transl>30 天试用期，到期日期：</transl></item>
+<item><id>This license is in use.</id><transl>该许可证正在使用中。</transl></item>
+</data>
+
+

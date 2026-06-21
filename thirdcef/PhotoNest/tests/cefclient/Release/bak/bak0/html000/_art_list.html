@@ -1,0 +1,73 @@
+
+<div class="wrapper flex-images">
+    {$art_list}
+</div>
+<br />
+<div id="toolbar" style="margin-left:20px;display:none;">
+    <p>
+        <a id="applyAction" href="javascript:;" class="cancelbtn" onclick="applyactionclick();return false;">
+            {'Delete'|@translate}
+        </a>
+        <span id="applyOnDetails" style="margin-left:10px;"></span>
+    </p>
+</div>
+
+<script type="text/javascript">
+    var _tit = "{'on the %d selected photos'|@translate}";
+    var _tit201 = "{'Delete'|@translate}";
+
+    function sel_change() {
+        var items = $('.font-checkbox input:checked');
+        if (items.length > 0) {
+            var temp = _tit;
+            temp = temp.replace("%d", items.length);
+            $('#applyOnDetails').text(temp);
+            $("#applyAction").removeAttr("disabled");
+            $('#toolbar').show();
+        }
+        else {
+            $('#applyOnDetails').text('');
+            $("#applyAction").attr("disabled", "true");
+            $('#toolbar').hide();
+        }
+    }
+
+    function sel_click(obj) {
+        var item = $(obj).parent().find('.font-checkbox input');
+        item.prop('checked', !item.prop('checked'));
+
+        $(obj).parent().find('.font-checkbox span').toggleClass("icon-check icon-check-empty");
+        sel_change();
+    }
+
+    function applyactionclick() {
+        if (_readonly != "0") {
+            $("#err").html(_err_readonly);
+            $('#err').delay(100).show();
+            $('#err').delay(2000).fadeOut();
+            return;
+        }
+
+        $.colorbox({
+            transition: "none", width: 437, height: 270, fixed: true, overlayClose: false, escKey: false, opacity: .6,closeButton: false,
+            //title: _tit201,
+            href: './index.html?act=index.del_art_areyou'
+        });
+    }
+
+    function btn_del_arts() {
+        var items = $('.font-checkbox input:checked');
+        var total = items.length;
+        var artids = "";
+        for (var i = 0; i < total; i++) {
+            artids += items[i].value + ",";
+        }
+
+        $.get("./index.html?act=index.del_art&artids=" + artids, function (data, state) {
+            if (data == "ok") {
+                location.reload();
+            }
+        });
+    }
+
+</script>

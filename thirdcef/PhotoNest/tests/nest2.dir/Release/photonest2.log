@@ -1,0 +1,89 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (..\photonest2.dir\Release\) contains files shared from another project (photonest2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Building Custom Rule E:/voy/102/tests/cefclient/CMakeLists.txt
+  Blowfish.cpp
+  IsoHandler.cpp
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(321,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(325,86): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(622,84): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(627,80): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  MimeType.cpp
+  timestamp.cpp
+  binding_test.cc
+E:\voy\102\tests\cefclient\browser\timestamp.cpp(261,57): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  browser_window.cc
+  bytes_write_handler.cc
+  client_app_delegates_browser.cc
+  client_browser.cc
+  client_handler.cc
+  client_handler_osr.cc
+  client_handler_std.cc
+  dialog_test.cc
+  image_cache.cc
+  main_context.cc
+  main_context_impl.cc
+  media_router_test.cc
+  osr_renderer.cc
+  preferences_test.cc
+  response_filter_test.cc
+  root_window.cc
+  root_window_create.cc
+  root_window_manager.cc
+  root_window_views.cc
+  scheme_test.cc
+  server_test.cc
+E:\voy\102\tests\cefclient\browser\scheme_test.cc(333,19): warning C4018: '<': signed/unsigned mismatch
+E:\voy\102\tests\cefclient\browser\scheme_test.cc(421,33): warning C4018: '>=': signed/unsigned mismatch
+E:\voy\102\tests\cefclient\browser\scheme_test.cc(425,38): warning C4018: '>=': signed/unsigned mismatch
+E:\voy\102\tests\cefclient\browser\scheme_test.cc(438,32): warning C4018: '>=': signed/unsigned mismatch
+E:\voy\102\tests\cefclient\browser\scheme_test.cc(477,21): warning C4018: '>=': signed/unsigned mismatch
+  test_runner.cc
+  urlrequest_test.cc
+  views_menu_bar.cc
+  views_overlay_controls.cc
+  views_style.cc
+  views_window.cc
+  window_test.cc
+  window_test_runner.cc
+  window_test_runner_views.cc
+  client_app_browser.cc
+  extension_util.cc
+  file_util.cc
+  geometry_util.cc
+  main_message_loop.cc
+  main_message_loop_external_pump.cc
+  main_message_loop_std.cc
+  client_app_delegates_common.cc
+  scheme_test_common.cc
+  client_app.cc
+  client_app_other.cc
+  client_switches.cc
+  client_app_delegates_renderer.cc
+  client_renderer.cc
+  performance_test.cc
+  performance_test_tests.cc
+  client_app_renderer.cc
+  cefclient_win.cc
+  browser_window_osr_win.cc
+E:\voy\102\tests\cefclient\cefclient_win.cc(201,46): warning C4302: 'type cast': truncation from 'HANDLE' to 'ATOM'
+  browser_window_std_win.cc
+  main_context_impl_win.cc
+  main_message_loop_multithreaded_win.cc
+  osr_accessibility_helper.cc
+  osr_accessibility_node.cc
+  osr_accessibility_node_win.cc
+  osr_d3d11_win.cc
+  osr_dragdrop_win.cc
+  osr_ime_handler_win.cc
+  osr_render_handler_win.cc
+  osr_render_handler_win_d3d11.cc
+  osr_render_handler_win_gl.cc
+  osr_window_win.cc
+  resource_util_win_idmap.cc
+  root_window_win.cc
+  temp_window_win.cc
+  window_test_runner_win.cc
+  main_message_loop_external_pump_win.cc
+  resource_util_win.cc
+  util_win.cc
+  photonest2.vcxproj -> E:\voy\102\PhotoNest\tests\cefclient\Release\bin\photonest2.exe
+  Adding manifest...															

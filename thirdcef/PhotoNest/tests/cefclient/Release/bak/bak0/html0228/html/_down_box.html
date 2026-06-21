@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        .pleft {
+            text-align: left;
+            margin-left: 30px;
+            line-height: 15px;
+        }
+
+        .pleft2 {
+            text-align: left;
+            margin-left: 50px;
+            line-height: 15px;
+        }
+    </style>
+</head>
+<body id="theColorPage" style="overflow:hidden;" class="thedark">
+
+    <div style="padding-top:20px;" class="delete_popin" id="catModify">
+        <p class="pleft"><span>{'Export location:'|@translate}</span></p>
+
+        <p class="pleft2">
+            <input type="text" id="fpath" style="width:400px;" readonly="readonly" value="" />
+            <a style="margin-left:10px;" href="javascript:;" onclick="selfol(); return false;">
+                {'...'|@translate}
+            </a>
+        </p>
+        <p class="pleft down">
+            <span>{'Name of exported folder:'|@translate}</span>
+        </p>
+
+        <p class="pleft2 down"><input type="text" id="fname" oninput="fname_change(this)" value="" style="width:300px;" /></p>
+        <p class="pleft down">
+            <input id="order" type="checkbox" /> <label for="order">
+                {'Add numbers to file names to preserve order'|@translate}
+            </label>
+        </p>
+
+        <p class="pleft down">
+            <span id="titie"> </span>
+        </p>
+
+        <center>
+            <p class="popin-actions" style="margin-top:25px;">
+                <a class="filter-validate" href="javascript:;" onclick="down_zip();return false;">
+                    {'Export'|@translate}
+                </a>
+                <a class="cancelbtn" href="javascript:;" onclick="cancel_zip();return false;">
+                    {'Cancel'|@translate}
+                </a>
+            </p>
+        </center>
+    </div>
+
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var _ids = "{$ids}";
+        var _nb = "{$total}";
+        var _path = "{$defdir}";
+        var _name = "{$defpath}";
+        var _down = "{$down}";
+        var _file1 = "{'1 file'|@translate}";
+        var _files = "{'%d files'|@translate}";
+
+        $(document).ready(function () {
+            $("#fpath").val(_path);
+            $("#fname").val(_name);
+
+            if (_down == "1") {
+                $(".down").css("visibility", "hidden");
+                $(".popin-actions").css("margin-top", "5px");
+            }
+
+            var title = _file1;
+            if (_nb != "1") {
+                title = _files;
+                title = title.replace("%d", _nb);
+            }
+            $("#titie").html(title);
+        });
+
+        function selfol() {
+            window.cefQuery({
+                request: 'Prompt.q.dir:1'
+            });
+        }
+        function cefQuerySuccess(response) {
+            _path = response + "/Export/";
+            $("#fpath").val(_path);
+        }
+
+        function fname_change(obj) {
+            var v = $(obj).val();
+            $("#fpath").val(_path + v + "/");
+        }
+
+        function down_zip() {
+            var fp = $("#fpath").val();
+
+            var url = "./index.html?act=index.zip";
+            url += "&ids=" + _ids;
+            url += "&fpath=" + encodeURIComponent(fp);
+            url += "&order=" + $("#order").is(':checked');
+
+            $.get(url, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    window.cefQuery({
+                        request: 'Prompt.q.viewdir:' + $("#fpath").val()
+                    });
+                    parent.$.colorbox.close();
+                }
+            });
+        }
+
+        function cancel_zip() {
+            parent.$.colorbox.close();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <title>PhotoNest</title>
+    <style type="text/css">
+        html, body {
+            -webkit-user-select: none;
+        }
+
+        body {
+            background: #fff;
+            color: #9f9f9f;
+            font-weight: 400;
+            font-style: normal;
+            position: relative;
+            cursor: auto;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            min-width: 300px;
+            font-family: 'Open Sans', sans-serif;
+            box-shadow: none;
+            border: 0 !important;
+        }
+
+        .row {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+            max-width: 71.25rem;
+        }
+
+        .sb-site-container > div {
+            background: #fff;
+        }
+
+        .main {
+            padding: 0;
+            -webkit-transform-origin: 50% 0%;
+            -moz-transform-origin: 50% 0%;
+            -ms-transform-origin: 50% 0%;
+            -o-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+        }
+
+            .main p {
+                font-size: .95rem;
+            }
+
+        FORM {
+            padding: 0;
+            margin: 0;
+        }
+
+        FIELDSET {
+            padding: 1em;
+            margin: 1em 0.5em;
+            border: none;
+            margin-bottom: 0;
+        }
+
+        LEGEND {
+            font-style: italic;
+            color: #000;
+        }
+
+        .properties UL {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .properties LI {
+            margin-bottom: 0.5em;
+            padding: 0;
+            line-height: 1.8em;
+            clear: left;
+        }
+
+        .properties SPAN.property {
+            float: left;
+            width: 50%;
+            text-align: right;
+            margin: 0;
+            padding: 0 0.5em 0 0;
+        }
+
+        .properties P {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .login {
+            width: 200px;
+        }
+
+        label {
+            font-size: .875rem;
+            color: #000;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .titrePage {
+            line-height: 24px;
+            color: #eaeae9;
+            height: auto;
+            background-image: none;
+            padding: 0 10px;
+        }
+
+        .login {
+            cursor: text !important;
+        }
+
+        .errors {
+            color: crimson;
+            background: transparent;
+        }
+
+        .star {
+            color: #ff0000;
+        }
+
+        .gen {
+            color: #000;
+        }
+
+        label {
+            -webkit-user-select: text;
+        }
+
+
+        .buttonLike {
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+            color: #fff;
+            margin-left: 0;
+            padding: 5px 10px;
+            background-color: #ff7700;
+        }
+
+        .prof_pass {
+            color: #9f9f9f;
+        }
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body id="theCategoryPage">
+    <div class="sb-site-container" style="padding-bottom: 10px;">
+        <div>
+            <main class="main">
+                <div class="module row">
+                    <div id="registerPage">
+                        <div id="content" class="content contentWithMenu">
+                            <div class="titrePage" style="height:50px;">
+                                <div id="errors" class="errors" style="display:flex;"></div>
+                            </div>
+                            <form method="post" id="reg" action="" class="properties" name="register_form">
+                                <fieldset>
+                                    <ul>
+                                        <li style="display:none;">
+                                            <span class="property">
+                                                <label for="login">
+                                                    <span class="star">*</span> {'Username'|@translate}
+                                                </label>
+                                            </span>
+                                            <input class="login" type="text" name="login" id="login" value="" maxlength="25" />
+                                        </li>
+                                        <li>
+                                            <span class="property">
+                                                <label for="password">
+                                                    <span class="star">*</span> {'Password'|@translate}
+                                                </label>
+                                            </span>
+                                            <input class="login" type="password" name="password" id="password" maxlength="25" onkeydown="on_return1();" />
+                                        </li>
+                                        <li>
+                                            <span class="property">
+                                                <label for="password_conf">
+                                                    <span class="star">*</span> {'Confirm Password'|@translate}
+                                                </label>
+                                            </span>
+                                            <input class="login" type="password" name="password_conf" id="password_conf" maxlength="25" onkeydown="on_return2();" />
+                                        </li>
+                                        <li style="padding-top:10px;">
+                                            <span class="property">
+                                                <label for="hint">
+                                                    {'Password hint'|@translate}
+                                                </label>
+                                            </span>
+                                            <input class="login" type="text" name="hint" id="hint" value="" maxlength="50" />
+                                        </li>
+                                        <li>
+                                            <span class="property prof_pass" style="-webkit-user-select: text;width: 100%; text-align: left;">
+                                                {'The password hint will be visible to everyone who uses this computer.'|@translate}
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <p class="bottomButtons">
+                                    <input type="button" id="submit" class="buttonLike" onclick="submitclick();return false;" value="{'OK'|@translate}" />
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var _err1 = "<li>{'Please enter your password.'|@translate}</li>";
+        var _err2 = "<li>{'Please confirm the chosen password.'|@translate}</li>";
+        var err = "";
+
+        $(document).ready(function () {
+            setTimeout(function () {
+                $("#password").focus();
+            }, 50);
+        });
+
+        function on_return1() {
+            if (err == _err1) {
+                $('#errors').html("");
+            }
+        }
+
+        function on_return2() {
+            if (err == _err2) {
+                $('#errors').html("");
+            }
+        }
+
+        function submitclick() {
+            err = "";
+            $('#errors').html("");
+            var pass = $('#password').val();
+            var pass_conf = $('#password_conf').val();
+
+            if ($.trim(pass) == "") {
+                err = _err1;
+            }
+            else if ($.trim(pass) != $.trim(pass_conf)) {
+                err = _err2;
+            }
+
+            if ($.trim(pass) == "") {
+                $("#password").focus();
+            }
+            else if ($.trim(pass) != $.trim(pass_conf)) {
+                $("#password_conf").focus();
+            }
+
+            if (err != "") {
+                $('#errors').html('<ul style="list-style: none;">' + err + '</ul>');
+                return;
+            }
+            $("#submit").attr("disabled", "true");
+
+            var body = "";
+            body += "&password=" + encodeURIComponent($('[name="password"]').val());
+            body += "&password_conf=" + encodeURIComponent($('[name="password_conf"]').val());
+            body += "&hint=" + encodeURIComponent($('[name="hint"]').val());
+
+            $.post("./ws.php?method=ws.register_ok", body, function (data, state) {
+                var info = $.parseJSON(data);
+                $("#submit").removeAttr("disabled");
+                if (info.stat == "ok") {
+                    window.cefQuery({
+                        request: 'Prompt.q.enckey:'
+                    });
+                    parent.$.colorbox.close();
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,786 @@
+body {
+    background-color: #141414;
+    color: #bbb;
+}
+
+#titrecontent {
+    background-color: #141414;
+}
+
+.col-lg-5 .icon-spin6, .col-lg-5 .icon-cancel {
+    color: #bbb;
+}
+
+#theCategoryPage .header {
+    background: #141414;
+}
+
+.nav-wrapper.topbar-sticky-pos {
+    background: #141414;
+}
+
+#theHeader h1 a {
+    color: #ddd;
+}
+
+.menu .menubar_1, .menu .hello {
+    background: transparent;
+    color: #ddd;
+    text-shadow: none;
+}
+
+
+#qsearchInput {
+    background-color: #d3d3d3;
+    border: 1px solid #d3d3d3;
+    color: #fff;
+    border-radius: 0;
+}
+
+#cmdCaddie span, #cmdSetRepresentative span {
+    /*  color: #ddd;*/
+}
+
+A .stm-icon {
+    color: #ddd;
+}
+
+    A .stm-icon:hover {
+        color: #ddd;
+    }
+
+#theCategoryPage::-webkit-scrollbar-thumb, #theColorPage::-webkit-scrollbar-thumb {
+    background: #848588;
+}
+
+#theCategoryPage::-webkit-scrollbar-button, #theColorPage::-webkit-scrollbar-button {
+    background-color: #848588;
+}
+
+#mydiv::-webkit-scrollbar-thumb, #searchform::-webkit-scrollbar-thumb, #searchform1::-webkit-scrollbar-thumb {
+    background: #848588;
+}
+
+#mydiv::-webkit-scrollbar-button, #searchform::-webkit-scrollbar-button, #searchform1::-webkit-scrollbar-button {
+    background-color: #848588;
+}
+
+.menu ul a {
+    line-height: 1;
+}
+
+.menu .sfHover > a, .menu a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.menu p, .menu ul, .menu a {
+    color: #ddd;
+}
+
+.menu span:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.menu h2 {
+    color: #ddd;
+}
+
+.menu > li.child-active > a, .menu > li > a.active {
+    background: #3F3F3F;
+}
+
+.menu > li.sfHover > a, .menu > li > a:hover {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.menu li > ul {
+    background: #3F3F3F;
+    box-shadow: 2px 2px 5px gray;
+}
+
+    .menu li > ul .sfHover > a, .menu li > ul a:hover {
+        background: #3F3F3F;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+.menu li ul ul {
+    background: #3F3F3F;
+    box-shadow: 2px 2px 5px gray;
+}
+
+    .menu li ul ul .sfHover > a, .menu li ul ul a:hover {
+        background: #3F3F3F;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+.menu span.badge {
+    background-color: #777;
+    color: #fafafa;
+}
+
+    .menu span.badge.color2 {
+        background-color: #777;
+        border-radius: 20px;
+        color: #fafafa;
+        text-shadow: 0 0 10px black;
+        text-decoration: none;
+    }
+
+.menu span.badge3 {
+    background-color: #3F3F3F;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.titrePage H2 span.badge {
+    background-color: #777;
+    border-radius: 20px;
+    color: #fafafa;
+    text-shadow: 0 0 10px black
+}
+
+hr {
+    border: 1px solid #bbb;
+    width: 70%;
+    margin-left: 20px;
+}
+
+#zzz {
+    background-color: #3f3f3f;
+    color: #bbb;
+}
+
+.sel_a, .tagsa, .divpaint {
+    color: #ddd;
+}
+
+    .sel_a:hover, .divpaint:hover {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+
+#titleh2 a {
+    color: #bbb;
+}
+
+    #titleh2 a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+.thumbLegend a {
+    color: #bbb;
+}
+
+    .thumbLegend a:hover, .itemtit:hover {
+        color: #bbb;
+        text-decoration: underline;
+    }
+
+h2, h3, h4, h5, h6 {
+    color: #bbb;
+}
+
+.itemtit {
+    color: #bbb;
+}
+
+a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 {
+    color: #bbb;
+    text-decoration: underline;
+}
+
+
+
+.icon-check, .icon-check-empty {
+    color: #bbb;
+}
+
+.tip_drag {
+    color: #bbb;
+}
+
+
+.thumbLegend2 a {
+    color: #bbb;
+}
+
+.image_stack img {
+    background-color: #141414;
+}
+
+A {
+    color: #bbb;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+.viewer-backdrop {
+    background-color: unset;
+}
+
+
+.titrePage .switchBox {
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 5px;
+    background-color: #3F3F3F;
+    color: #fff;
+    padding: 10px
+}
+
+    .titrePage .switchBox A, .titrePage .switchBox span {
+        color: #ddd;
+    }
+
+        .titrePage .switchBox A:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+A .stm-icon {
+    opacity: 0.9
+}
+
+A:hover .stm-icon {
+    opacity: 1
+}
+
+
+.titrePage H2 A:hover {
+    /* color: #bbb*/
+}
+
+.titrePage H2 A {
+    /*   color: #bbb;*/
+    text-shadow: none
+}
+
+.titrePage A {
+    color: #bbb;
+}
+
+    .titrePage A:hover {
+        color: #bbb;
+    }
+
+.actionButtons, .actionTags {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #141414;
+}
+
+#imageHeaderBar .imageNumber {
+    color: #bbb;
+}
+
+#tabcontent {
+    background-color: #3f3f3f;
+}
+
+#theCategoryPage .nav {
+    border-bottom: 1px solid #222;
+}
+
+#content {
+    background-color: #141414;
+    border: unset;
+}
+
+.trash {
+    background: unset;
+    border: 1px dashed #333;
+}
+
+.selbtn {
+    background: unset;
+}
+
+
+.icon-filter {
+    color: #bbb;
+}
+
+    .icon-filter:hover {
+        color: #bbb;
+    }
+
+
+.filter blockquote, .filter UL, .filter P {
+    background-color: unset;
+}
+
+.filter fieldset label, fieldset legend {
+    color: #bbb;
+}
+
+.adv_search {
+    background-color: #141414;
+}
+
+#dates a {
+    /* color: #bbb;*/
+}
+
+#dates .selected {
+    color: #bbb;
+    font-weight: bold;
+}
+
+#calendarViewSwitchLink, .titrePage .switchBox .switchbox1, .titrePage .switchBox span {
+    color: #bbb;
+}
+
+.viewer-title {
+    color: #bbb;
+}
+
+.detail_tag, .detail_album {
+    color: #bbb;
+}
+
+label {
+    color: #bbb;
+    -webkit-user-select: text;
+}
+
+
+.tabs-style-iconfall nav a, .tabs-style-iconfall nav a:hover {
+    color: #bbb;
+}
+
+.tabs-style-iconfall nav li.tab-current a {
+    color: #bbb;
+}
+
+.jmn-video-panelinner {
+    color: #bbb;
+}
+
+/*-----------*/
+
+.sel_a:hover, .divpaint:hover {
+    text-decoration: underline;
+}
+
+.cboxIframe {
+    background: #333;
+}
+
+#theColorPage {
+    background: #141414;
+    color: #bbb;
+}
+
+    #theColorPage.thedark {
+        background: #333;
+        color: #fff;
+    }
+
+#cboxLoadedContent {
+    background: #333;
+    color: #bbb;
+}
+
+#theColorPage.thepic {
+    background: #141414;
+    color: #bbb;
+}
+
+#theColorPage fieldset legend, #theColorPage fieldset label {
+    color: #ddd;
+}
+
+
+#colorbox {
+    background: #333;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+    color: #bbb;
+    border-radius: 5px;
+}
+
+.filter-validate {
+    background: #ff7700bb;
+    color: #ffeacf;
+}
+
+.filter-validate {
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 4px 10px;
+    white-space: nowrap;
+    border: 0;
+}
+
+    .filter-validate:hover {
+        background: #ff7700bb;
+        color: #ffeacf;
+        text-decoration: none;
+    }
+
+
+::placeholder {
+    background-color: unset;
+    color: #000;
+}
+
+#qsearchInput::placeholder {
+    background-color: unset;
+    color: #646466;
+}
+
+#resbar {
+    background-color: unset;
+}
+
+    #toolbar, #resbar a, #toolbar a {
+        color: #ddd;
+    }
+
+#applyOnDetails {
+    color: #ddd;
+    font-size: 12px;
+}
+
+
+#content-wrapper {
+    background-color: #333;
+}
+
+#quicksearch .do_search {
+    color: #000;
+}
+
+    #quicksearch .do_search:hover {
+        color: #000;
+        text-decoration: unset;
+    }
+
+.stm-icon-cancel2 {
+    color: #777;
+}
+
+    .stm-icon-cancel2:hover {
+        color: #fff;
+    }
+
+
+#cboxClose {
+    right: 8px;
+    background: unset;
+    top: -28px;
+    float: right;
+    text-indent: unset;
+}
+
+
+#cboxTitle {
+    top: -25px;
+    left: 5px;
+    color: #bbb;
+}
+
+#mydiv {
+    background-color: unset;
+}
+
+#theColorPage .sb-site-container {
+    background-color: unset;
+}
+
+.calendarViews span {
+    color: #bbb
+}
+
+#container {
+    background: unset;
+}
+
+#theLoginPage .properties a {
+    color: #bbb;
+}
+
+#theLoginPage .properties input {
+    color: #bbb;
+    background-color: unset;
+    border: 1px solid #bbb;
+}
+
+.detail_td1, .tabcontenttag {
+    color: #bbb;
+}
+
+.detail_td2 {
+    color: #ddd;
+}
+
+    .detail_td2:hover {
+        color: #ddd;
+    }
+
+.loc_a {
+    color: #ddd;
+}
+
+    .loc_a:hover {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+.ul2 {
+    background-color: #333;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+}
+
+#tabtags .selectize-input input::placeholder {
+    color: #bbb;
+}
+
+#catModify .selectize-input input::placeholder {
+    color: #bbb;
+}
+
+#searchform .selectize-input input::placeholder {
+    color: #bbb;
+}
+
+#catSearch1 .selectize-input input::placeholder {
+    color: #bbb;
+}
+
+.switchBoxTitle {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+#searchBox1 .switchBoxTitle {
+    border-bottom: 1px solid gray;
+}
+
+.tagLine td a, #fullTagCloud span a {
+    color: #ddd;
+}
+
+    .tagLine td a:hover, #fullTagCloud span a:hover {
+        color: #ddd;
+    }
+
+.viewer-clock-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255,255, 0.7);
+}
+
+    .viewer-clock-btn a {
+        background-color: transparent;
+        color: rgba(255, 255,255, 0.7);
+        text-decoration: none;
+    }
+
+        .viewer-clock-btn a:hover {
+            color: #fff;
+        }
+
+#tiptip_content {
+    background: #3F3F3F;
+}
+
+#tiptip_holder a {
+    color: #ddd;
+}
+
+    #tiptip_holder a:hover {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    #tiptip_holder.tip_bottom #tiptip_arrow_inner {
+        border-bottom-color: #3F3F3F;
+    }
+}
+
+.dark-theme .current {
+    box-shadow: unset;
+}
+
+.stm-icon-favorite-del:before {
+    color: #ff7700;
+}
+
+.pn-icon-caddie-del:before {
+    color: #ff7700;
+}
+
+#timeline {
+    background: radial-gradient(#aaa 30%,transparent 0) left 38px repeat-x;
+    background-size: 6px 6px;
+}
+
+#dates li {
+    background: radial-gradient(#aaa 30%,transparent 0) center bottom no-repeat;
+    background-size: 20px 20px;
+}
+
+#catModify #fpath {
+    background: transparent;
+    color: #777;
+}
+
+/*------------------------------------------*/
+
+#searchBox label, #searchBox label span {
+    color: #ddd;
+}
+
+#searchform legend {
+    color: #ddd;
+}
+
+#searchform .slider-info {
+    color: #ddd;
+}
+
+.titrePage .switchBox A, .titrePage .switchBox span {
+    /* color: #7F0906; */
+}
+
+#searchform FIELDSET {
+    color: #ddd;
+}
+
+#searchBox .switchBoxTitle a:hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#searchform .filter-validate:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*------------*/
+.icon-left-open:hover, .icon-down-open:hover {
+    color: #ddd;
+}
+
+.icon-left-open, .icon-down-open {
+    color: #ddd;
+}
+
+#searchBox .icon-left-open:hover, #searchBox .icon-down-open:hover {
+    color: #fff;
+}
+
+#searchBox .icon-left-open, #searchBox .icon-down-open {
+    color: #ddd;
+}
+
+/*.selectize-control.multi .selectize-input > div.active {
+    background: unset;
+    color: #ffffff;
+    border: unset;
+}
+
+.selectize-input, .selectize-input.focus {
+    background-color: #f4ab4f;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: unset;
+}
+
+    .selectize-input input, .selectize-input input:focus {
+        background-color: unset;
+        border-radius: 5px
+    }*/
+
+
+.detail_td2 TEXTAREA, #tabtags .selectize-input, #tabtags .selectize-input input {
+    background-color: unset;
+    border: 1px solid #555;
+    color: #ddd;
+    border-radius: 5px;
+    border: 0;
+}
+
+.detail_td2 TEXTAREA {
+    border: 1px solid #555;
+}
+
+#catSearch input, #catSearch .selectize-input, #catSearch .selectize-input input,
+#catSearch1 input, #catSearch1 .selectize-input, #catSearch1 .selectize-input input {
+    background-color: #555;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+}
+
+#catModify TEXTAREA, #catModify input, #catModify .selectize-input, #catModify .selectize-input input {
+    background-color: unset;
+    border: 1px solid #555;
+    color: #ddd;
+    border-radius: 4px;
+}
+
+    #catModify .selectize-input input {
+        border: none;
+    }
+
+/*.filter input, .filter input:focus,*/
+INPUT[type="text"], INPUT[type="password"], TEXTAREA {
+    background-color: #777;
+    border-radius: 5px;
+    color: #fff
+}
+
+.filter-manager-controller-container {
+    background: #141414;
+}
+
+    .filter-manager-controller-container label {
+        color: #fff;
+    }
+
+#filterbtn {
+    background-color: #3F3F3F;
+}
+
+    #filterbtn .filter-actions {
+        color: #aaa;
+    }
+
+        #filterbtn .filter-actions:hover {
+            background-color: unset;
+            color: #fff;
+            text-decoration: none;
+        }
+
+#searchform1 #filterbtn {
+    background-color: #333;
+}
+
+    #searchform1 #filterbtn .filter-actions {
+        color: #aaa;
+    }
+
+        #searchform1 #filterbtn .filter-actions:hover {
+            background-color: unset;
+            color: #777;
+            text-decoration: none;
+        }
+
+#searchBox .switchBoxTitle a span {
+    color: #fff;
+    /*.titrePage .switchBox A*/
+}

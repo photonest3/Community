@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+ <item><id>Open...</id><transl>開く...</transl></item>
+ <item><id>Brush</id><transl>ブラシ</transl></item>
+ <item><id>Lasso</id><transl>投げ縄</transl></item>
+ <item><id>Rectangle</id><transl>矩形</transl></item>
+ <item><id>Magic Wand</id><transl>魔法の杖</transl></item>
+ <item><id>Eraser</id><transl>消しゴム</transl></item>
+ <item><id>Move</id><transl>移動</transl></item>
+ <item><id>Save</id><transl>保存</transl></item>
+ <item><id>Undo</id><transl>元に戻す</transl></item>
+ <item><id>Redo</id><transl>やり直し</transl></item>
+ <item><id>Center</id><transl>中央</transl></item>
+ <item><id>Crop</id><transl>トリミング</transl></item>
+ <item><id>Remove unnecessary Objects</id><transl>不要なオブジェクトを削除する</transl></item>
+ <item><id>Adjust</id><transl>調整</transl></item>
+ <item><id>Brightness</id><transl>明るさ</transl></item>
+ <item><id>Contrast</id><transl>コントラスト</transl></item>
+ <item><id>Backlight</id><transl>バックライト</transl></item>
+ <item><id>White balance</id><transl>ホワイトバランス</transl></item>
+ <item><id>AutoLevel</id><transl>オートレベル</transl></item>
+ <item><id>Original image</id><transl>原画</transl></item>
+ <item><id>About...</id><transl>について...</transl></item>
+ <item><id>Registration...</id><transl>登録...</transl></item>
+ <item><id>Rotate by 180°</id><transl>180度回転</transl></item>
+ <item><id>Rotate left</id><transl>左に回転</transl></item>
+ <item><id>Rotate right</id><transl>右に回転</transl></item>
+ <item><id>Flip</id><transl>反転</transl></item>
+ <item><id>Mirror</id><transl>鏡面</transl></item>
+ <item><id>Close</id><transl>閉じる</transl></item>
+ <item><id>Discard Changes</id><transl>変更を破棄</transl></item>
+ <item><id>Cancel</id><transl>キャンセル</transl></item>
+ <item><id>Arrow</id><transl>アロー</transl></item>
+ <item><id>Ellipse</id><transl>楕円</transl></item>
+ <item><id>Line</id><transl>直線</transl></item>
+ <item><id>Save As...</id><transl>名前を付けて保存...</transl></item>
+ <item><id>Selection</id><transl>選択</transl></item>
+ <item><id>Opaque</id><transl>不透明の</transl></item>
+ <item><id>OK</id><transl>OK</transl></item>
+ <item><id>Background</id><transl>背景</transl></item>
+ <item><id>Copy</id><transl>コピー</transl></item>
+ <item><id>Paste</id><transl>貼り付け</transl></item>
+ <item><id>Cut</id><transl>カット</transl></item>
+ <item><id>Tolerance</id><transl>許容範囲</transl></item>
+ <item><id>Font</id><transl>文字</transl></item>
+ <item><id>Optimize</id><transl>最適化</transl></item>
+ <item><id>Text</id><transl>テキスト</transl></item>
+ <item><id>Drag files here</id><transl>ファイルをここにドラッグ</transl></item>
+ <item><id>Pencil</id><transl>鉛筆</transl></item>
+ <item><id>Color Fill</id><transl>カラーフィル</transl></item>
+ <item><id>Color Picker</id><transl>カラーピッカ</transl></item>
+ <item><id>Thickness</id><transl>厚み</transl></item>
+ <item><id>Apply</id><transl>適用</transl></item>
+ <item><id>Retain</id><transl>保持する</transl></item>
+ <item><id>Remove</id><transl>除去</transl></item>
+<item><id>File is too big</id><transl>ファイルが大きすぎます</transl></item>
+ <item><id>Background Matting</id><transl>バックグランドマット</transl></item>
+ <item><id>Image Stitching</id><transl>イメージステッチ</transl></item>
+ <item><id>Rotate</id><transl>回転</transl></item>
+ <item><id>Change Background</id><transl>背景を変更する</transl></item>
+ <item><id>Paste As New</id><transl>新しいとして貼り付ける</transl></item>
+ <item><id>Transparent</id><transl>透明</transl></item>
+ <item><id>Saved successfully</id><transl>正常に保存されました</transl></item>
+ <item><id>Normal clone</id><transl>ノーマルクローン</transl></item>
+ <item><id>Mixed clone</id><transl>ミックスクローン</transl></item>
+ <item><id>Monochrome transfer</id><transl>モノクロ転写</transl></item>
+ <item><id>Home</id><transl>ホーム</transl></item>
+ <item><id>Drawing Tool</id><transl>描画ツール</transl></item>
+ <item><id>Color</id><transl>カラー</transl></item>
+ <item><id>The outside of the rectangle is the background</id><transl>矩形の外側が背景</transl></item>
+ <item><id>Remove smeared objects</id><transl>汚れたオブジェクトを削除する</transl></item>
+ <item><id>Sharpen</id><transl>シャープ</transl></item>
+ <item><id>Enhancement</id><transl>エンハンスメント</transl></item>
+ <item><id>Changes have not been saved</id><transl>変更が保存されていない</transl></item>
+  <item><id>Not yet completed</id><transl>未完成</transl></item>
+<item><id>Save Failure</id><transl>セーブの失敗</transl></item>
+ <item><id>Canvas area exceeds the maximum limit (2/3)</id><transl>キャンバス面積が上限を超えた(2/3)</transl></item>
+ <item><id>Select sticker</id><transl>シールを選択する</transl></item>
+ <item><id>Select a rectangular area around the object you want to segment</id><transl>分割したいオブジェクトの周囲を矩形で選択する</transl></item>
+ <item><id>Expiration Date:</id><transl>有効期限: </transl></item>
+ <item><id>30 days trial period</id><transl>30日間の試用期間</transl></item>
+ <item><id>Activate using a license key</id><transl>ライセンスキーを使用したアクティブ化</transl></item>
+ <item><id>Buy Now</id><transl>今すぐ購入</transl></item>
+ <item><id>Activate</id><transl>アクティブ化</transl></item>
+ <item><id>Copyright (c) 2023 PhotoZK. All rights reserved.</id><transl>著作権所有（c）2023 PhotoZK。すべての権利を保持します。</transl></item>
+ <item><id>This product is licensed to:</id><transl>この商品のライセンスは次のとおりです</transl></item>
+ <item><id>Warning: This program is protected by copyright law and international treaties.</id><transl>ワーニング このプログラムは、著作権法および国際条約によって保護されています</transl></item>
+ <item><id>Third software</id><transl>サードソフトウェア</transl></item>
+ <item><id>Perpetual License</id><transl>永久ライセンス</transl></item>
+ <item><id>Registration</id><transl>登録</transl></item>
+ <item><id>Activation completed!</id><transl>アクティベーションが完了しました</transl></item>
+ <item><id>Please check your license key, and then try again.</id><transl>ライセンスキーを確認し、再度お試しください。</transl></item>
+ <item><id>An error occurred</id><transl>エラー</transl></item>
+ <item><id>About</id><transl>について</transl></item>
+ <item><id>Language</id><transl>言語</transl></item>
+<item><id>Activation Expired</id><transl>有効期限が切れました</transl></item>
+ <item><id>Nostalgic</id><transl>懐旧</transl></item>
+ <item><id>Feather</id><transl>羽</transl></item>
+ <item><id>Comic strip</id><transl>絵本</transl></item>
+ <item><id>Sketch</id><transl>スケッチ</transl></item>
+ <item><id>Decolor</id><transl>漂白する</transl></item>
+ <item><id>Mosaic</id><transl>モザイク</transl></item>
+ <item><id>Read-only attribute</id><transl>読み取り専用プロパティ</transl></item>
+ <item><id>An error occurred</id><transl>エラーが発生しました</transl></item>
+ <item><id>Choose a color</id><transl>色を選択</transl></item>
+ <item><id>Change Sky Background</id><transl>空の背景を変更する</transl></item>
+ <item><id>No sky detected</id><transl>空が検出されなかった</transl></item>
+ <item><id>Activated.</id><transl>アクティブ化。</transl></item>
+<item><id>Too big</id><transl>大きすぎる</transl></item>
+<item><id>Too small</id><transl>小さすぎる</transl></item>
+<item><id>Complete image fusion</id><transl>画像融合を完了する</transl></item>
+<item><id>Finish the cutting</id><transl>カットを終了する</transl></item>
+ <item><id>Yes</id><transl>はい</transl></item>
+<item><id>Don't Save</id><transl>保存しない</transl></item>
+<item><id>Do you want to save changes to aa.jpg?</id><transl>aa.jpgの変更を保存しますか？</transl></item>
+<item><id>Change...</id><transl></transl></item>
+<item><id>Loading</id><transl>ローディング</transl></item>
+<item><id>Loading...</id><transl>読み込み中...</transl></item>
+<item><id>1-year license</id><transl>1年間ライセンス</transl></item>
+<item><id>3-year license</id><transl>3年ライセンス</transl></item>
+<item><id>This license is expired.</id><transl>このライセンスは失効しています。</transl></item>
+<item><id>This license is in use.</id><transl>このライセンスは使用中です。</transl></item>
+<item><id>30-day trial period, expiration date:</id><transl>30日間の試用期間、有効期限:</transl></item>
+</data>
+
+
+
+
+
+
+

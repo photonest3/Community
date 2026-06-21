@@ -1,0 +1,21 @@
+<form method="post" id="orphanTagForm" action="" onsubmit="myclear(); return false;">
+    <div class="DeleteAlbumPopInContainer">
+        <div class="RenameTagPopInContainer">
+            <div class="DeleteIconTitle">
+                <span>{'Delete orphan photos'|@translate}?</span>
+            </div>
+            <div class="RenameTagInputContainer" style="text-align: center;">
+                <div class="jconfirm-content"><span>{'You have %s orphan photos'|@translate}</span></div>
+            </div>
+            <div class="DeleteAlbumFormValidation">
+                <div class="DeleteAlbumSubmit" onclick="myclear();return false;">
+                    <span>{'Delete them'|@translate}</span>
+                </div>
+
+                <div class="DeleteAlbumCancel" onclick="$('.info-warning').hide();btn_cancel();return false;">
+                    <span>{'Keep them'|@translate}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

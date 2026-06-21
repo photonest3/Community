@@ -1,0 +1,706 @@
+body {
+    background-color: #141414;
+    color: #bbb;
+}
+
+.col-lg-5 .icon-spin6, .col-lg-5 .icon-cancel {
+    color: #bbb;
+}
+
+#theCategoryPage .header {
+    background: #141414;
+}
+
+body[class*=topbar].clear .nav-wrapper.topbar-sticky-pos {
+    background: #141414;
+}
+
+#theHeader h1 a {
+    color: #ddd;
+}
+
+.menubar_1 {
+    background: transparent;
+    color: #ddd !important;
+    text-shadow: none;
+}
+
+
+#qsearchInput {
+    background-color: #d3d3d3 !important;
+    border: 1px solid #d3d3d3;
+    color: #000;
+    border-radius: 0 !important;
+}
+
+#cmdCaddie span, #cmdSetRepresentative span {
+    color: #ddd;
+}
+
+A .stm-icon {
+    color: #ddd;
+}
+
+    A .stm-icon:hover {
+        color: #ddd;
+    }
+
+#theCategoryPage::-webkit-scrollbar-thumb, #theColorPage::-webkit-scrollbar-thumb {
+    background: #848588;
+}
+
+#theCategoryPage::-webkit-scrollbar-button, #theColorPage::-webkit-scrollbar-button {
+    background-color: #848588;
+}
+
+#mydiv::-webkit-scrollbar-thumb {
+    background: #848588;
+}
+
+#mydiv::-webkit-scrollbar-button {
+    background-color: #848588;
+}
+
+body[class*=topbar] .menu ul a {
+    line-height: 1;
+}
+
+body[class*=topbar] .menu .sfHover > a, body[class*=topbar] .menu a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+body[class*=topbar] .menu p, body[class*=topbar] .menu ul, body[class*=topbar] .menu a {
+    color: #ddd;
+}
+
+body[class*=topbar] .menu span:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+body[class*=topbar] .menu h2 {
+    color: #ddd;
+}
+
+body[class*=topbar] .menu > li.child-active > a, body[class*=topbar] .menu > li > a.active {
+    background: #3F3F3F;
+}
+
+body[class*=topbar] .menu > li.sfHover > a, body[class*=topbar] .menu > li > a:hover {
+ /*   background: #3F3F3F !important;*/
+    background-color: transparent !important;
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+body[class*=topbar] .menu li > ul {
+    background: #3F3F3F;
+    box-shadow: 2px 2px 5px gray;
+}
+
+    body[class*=topbar] .menu li > ul .sfHover > a, body[class*=topbar] .menu li > ul a:hover {
+        background: #3F3F3F;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+body[class*=topbar] .menu li ul ul {
+    background: #3F3F3F;
+    box-shadow: 2px 2px 5px gray;
+}
+
+    body[class*=topbar] .menu li ul ul .sfHover > a, body[class*=topbar] .menu li ul ul a:hover {
+        background: #3F3F3F;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+body[class*=topbar] .menu span.badge {
+    background-color: #777;
+    color: #fafafa;
+}
+
+body[class*=topbar] .menu span.color2 {
+    background-color: #777;
+    border-radius: 20px;
+    color: #fafafa;
+    text-shadow: 0 0 10px black;
+    text-decoration: none !important;
+}
+
+body[class*=topbar] .menu span.badge3 {
+    background-color: #3F3F3F;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.titrePage H2 span.badge {
+    background-color: #777;
+    border-radius: 20px;
+    color: #fafafa;
+    text-shadow: 0 0 10px black
+}
+
+hr {
+    border: 1px solid #bbb;
+    width: 70%;
+    margin-left: 20px;
+}
+
+#zzz {
+    background-color: #3f3f3f;
+    color: #bbb;
+}
+
+.sel_a, .tagsa, .thumbLegend .divpaint {
+    color: #ddd;
+}
+
+    .sel_a:hover, .thumbLegend .divpaint:hover {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+    .sel_a:focus {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+
+#titleh2 a {
+    color: #bbb;
+}
+
+    #titleh2 a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+.thumbLegend a {
+    color: #bbb;
+}
+
+    .thumbLegend a:hover {
+        color: #bbb;
+        text-decoration: underline;
+    }
+
+    .thumbLegend a:focus {
+        color: #bbb;
+        text-decoration: underline;
+    }
+
+h2, h3, h4, h5, h6 {
+    color: #bbb;
+}
+
+.itemtit {
+    color: #bbb;
+}
+
+a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 {
+    color: #bbb;
+    text-decoration: underline;
+}
+
+.icon-left-open:hover, .icon-down-open:hover {
+    color: #ddd;
+}
+
+.icon-left-open, .icon-down-open {
+    color: #ddd;
+}
+
+
+
+.icon-check {
+    color: #bbb;
+}
+
+.icon-check-empty {
+    color: #bbb;
+}
+
+.tip_drag {
+    color: #bbb;
+}
+
+
+.thumbLegend2 a {
+    color: #bbb;
+}
+
+.image_stack img {
+    background-color: #141414;
+}
+
+A {
+    color: #bbb;
+}
+
+    a:hover, a:focus {
+        color: #bbb;
+        text-decoration: underline;
+    }
+
+.viewer-backdrop {
+    background-color: unset;
+}
+
+
+.titrePage .switchBox {
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 5px;
+    background-color: #3F3F3F !important;
+    color: #fff;
+    padding: 10px
+}
+
+    .titrePage .switchBox A {
+        color: #ddd;
+    }
+
+        .titrePage .switchBox A:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+A .stm-icon {
+    opacity: 0.9
+}
+
+A:hover .stm-icon {
+    opacity: 1
+}
+
+
+.titrePage H2 A:hover {
+    color: #bbb
+}
+
+.titrePage H2 A {
+    color: #bbb;
+    text-shadow: none
+}
+
+.titrePage A {
+    color: #bbb;
+}
+
+    .titrePage A:hover {
+        color: #bbb;
+    }
+
+.actionButtons, .actionTags {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #141414;
+}
+
+#imageHeaderBar .imageNumber {
+    color: #bbb;
+}
+
+#tabcontent {
+    background-color: #3f3f3f;
+}
+
+#theCategoryPage .nav {
+    border-bottom: 1px solid #222;
+}
+
+.search_results a,
+.search_results a:hover {
+    color: #bbb;
+}
+
+
+.thumbLegend a :hover {
+    color: #bbb;
+}
+
+#content {
+    background-color: #141414;
+    border: unset;
+}
+
+.trash {
+    background: unset;
+    border: 1px dashed #333;
+}
+
+.selbtn {
+    background: unset;
+}
+
+
+.icon-filter {
+    color: #bbb;
+}
+
+    .icon-filter:hover {
+        color: #bbb;
+    }
+
+
+.filter blockquote, .filter UL, .filter P {
+    background-color: unset;
+}
+
+.filter fieldset label, fieldset legend {
+    color: #bbb;
+}
+
+.adv_search {
+    background-color: #141414;
+}
+
+#calendarViewSwitchLink {
+    color: #fff !important;
+}
+
+#dates a {
+    color: #bbb;
+}
+
+#dates .selected {
+    color: #fff;
+}
+
+.viewer-title {
+    color: #bbb;
+}
+
+.detail_tag, .detail_album {
+    color: #bbb;
+}
+
+label {
+    color: #bbb;
+    -webkit-user-select: text;
+}
+
+
+.tabs-style-iconfall nav a {
+    color: #bbb !important;
+}
+
+.tabs-style-iconfall nav li.tab-current a {
+    color: #bbb;
+}
+
+.jmn-video-panelinner {
+    color: #bbb;
+}
+
+.icon-search:hover {
+    text-decoration: underline !important;
+}
+/*-----------*/
+
+.sel_a:focus, .sel_a:hover, .thumbLegend .divpaint:hover {
+    text-decoration: underline;
+}
+
+.cboxIframe {
+    background: #141414;
+}
+
+#theColorPage {
+    background: #141414;
+    color: #bbb;
+}
+
+.thedark {
+    background: #333 !important;
+    color: #bbb;
+}
+
+#cboxLoadedContent {
+    background: #333;
+    color: #bbb;
+}
+
+.thepic {
+    background: #141414 !important;
+    color: #bbb;
+}
+
+
+.vdobox {
+    background: #333;
+}
+
+#theColorPage fieldset legend, #theColorPage fieldset label {
+    color: #bbb;
+}
+
+
+#colorbox {
+    background: #333;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+    color: #bbb;
+    border-radius: 5px;
+}
+
+.filter-validate {
+    background: #ff7700bb;
+    color: #ffeacf !important;
+}
+
+.filter-validate {
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px !important;
+    font-weight: 600;
+    padding: 4px 10px !important;
+    white-space: nowrap;
+    border: 0;
+    text-decoration: none;
+}
+
+    .filter-validate:hover {
+        background: #ff7700bb;
+        color: #ffeacf;
+    }
+
+.filter-cancel {
+    background: #555;
+    color: #ccc
+}
+
+    .filter-cancel:hover {
+        background: #444
+    }
+
+
+::placeholder {
+    background-color: unset;
+    color: #000;
+}
+
+#qsearchInput::placeholder {
+    background-color: unset;
+    color: #646466;
+}
+
+#resbar {
+    background-color: unset;
+}
+
+    #toolbar, #resbar a, #toolbar a {
+        color: #ddd;
+    }
+
+#applyOnDetails {
+    color: #ddd;
+    font-size: 12px;
+}
+
+.titrePage {
+    color: #022601 !important;
+}
+
+
+#content-wrapper {
+    background-color: #333;
+}
+
+.return {
+    color: #000;
+}
+
+    .return:hover {
+        color: #000 !important;
+        text-decoration: unset !important;
+    }
+
+.stm-icon-cancel2 {
+    color: #777;
+}
+
+    .stm-icon-cancel2:hover {
+        color: #fff;
+    }
+
+
+#cboxClose {
+    right: 8px;
+    background: unset;
+    top: -28px;
+    float: right;
+    text-indent: unset;
+}
+
+
+#cboxTitle {
+    top: -25px;
+    left: 5px;
+    color: #bbb;
+}
+
+#mydiv {
+    background-color: unset;
+}
+
+#theColorPage .sb-site-container {
+    background-color: unset;
+}
+
+.calendarViews span {
+    color: #bbb
+}
+
+#container {
+    background: unset;
+}
+
+#theLoginPage .properties a {
+    color: #bbb;
+}
+
+#theLoginPage .properties input {
+    color: #bbb;
+    background-color: unset !important;
+    border: 1px solid #bbb;
+}
+
+.detail_td1, .tabcontenttag {
+    color: #bbb;
+}
+
+.detail_td2 {
+    color: #ddd;
+}
+
+    .detail_td2:hover {
+        color: #ddd;
+    }
+
+.loc_a {
+    color: #ddd !important;
+}
+
+    .loc_a:hover {
+        text-decoration: underline;
+    }
+
+.filter input, .filter input:focus, INPUT[type="text"], INPUT[type="password"], TEXTAREA {
+    background-color: #777 !important;
+    border-radius: 5px !important;
+    color: #fff
+}
+
+.selectize-control.multi .selectize-input > div.active {
+    background: unset !important;
+    color: #ffffff;
+    border: unset !important;
+}
+
+.selectize-input, .selectize-input.focus {
+    background-color: #f4ab4f !important;
+    border-radius: 5px !important;
+    border: 0;
+    box-shadow: unset;
+}
+
+    .selectize-input input, .selectize-input input:focus {
+        background-color: unset !important;
+        border-radius: 5px
+    }
+
+
+.detail_td2 TEXTAREA, #tabtags .selectize-input, #tabtags .selectize-input input {
+    background-color: unset !important;
+    border: 1px solid #555;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+#catModify TEXTAREA, #catModify input, #catModify .selectize-input, #catModify .selectize-input input {
+    background-color: unset !important;
+    border: 1px solid #555 !important;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+    #catModify .selectize-input input {
+        border: none !important;
+    }
+
+#catModify .selectize-input {
+    background-image: none;
+}
+
+.ul2 {
+    background-color: #333;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+}
+
+#tabtags .selectize-input input::placeholder {
+    color: #717175;
+}
+
+#catModify .selectize-input input::placeholder {
+    color: #717175;
+}
+
+.switchBoxTitle {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.tagLine td a, #fullTagCloud span a {
+    color: #ddd;
+}
+
+    .tagLine td a:hover, #fullTagCloud span a:hover {
+        color: #ddd;
+    }
+
+.viewer-clock-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255,255, 0.7);
+}
+
+    .viewer-clock-btn a {
+        background-color: transparent;
+        color: rgba(255, 255,255, 0.7);
+        text-decoration: none !important;
+    }
+
+        .viewer-clock-btn a:hover {
+            color: #fff;
+        }
+
+#tiptip_content {
+    background: #3F3F3F;
+}
+
+#tiptip_holder a {
+    color: #ddd;
+}
+
+    #tiptip_holder a:hover {
+        color: #ddd;
+        text-decoration: underline !important;
+    }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    #tiptip_holder.tip_bottom #tiptip_arrow_inner {
+        border-bottom-color: #3F3F3F;
+    }
+}
+
+.dark-theme .current {
+    box-shadow: unset;
+}
+.stm-icon-favorite-del:before {
+    color: #ff7700;
+}
+.pn-icon-caddie-del:before {
+    color: #ff7700;
+}

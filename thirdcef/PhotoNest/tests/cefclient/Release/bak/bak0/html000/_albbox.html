@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <style type="text/css">
+        .selectize-input {
+            padding: 4px 8px;
+        }
+
+        .picname {
+            font-size: 12px;
+            margin-left: 20px;
+        }
+
+        .ooo {
+            min-height: 30px;
+            top: 10px;
+            float: right;
+            right: 20px;
+            width: 260px;
+            position: fixed;
+        }
+
+        FIELDSET {
+            margin: 0 0.5em;
+        }
+
+        #categoryNameError0 {
+            color: #f22;
+        }
+
+        .properties P {
+            text-align: left;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+</head>
+<body id="theColorPage" style="overflow: hidden; min-width: unset;" class="thedark">
+    <div class="eiw">
+        <div class="ooo">
+            <div id="info" class="infos">
+            </div>
+        </div>
+    </div>
+    <div id="addto" style="text-align: left; overflow: hidden;">
+        <form action="./index.html?act=addto" method="post" id="catModify" class="properties" onsubmit="return false;">
+            <fieldset style="border-top: none;">
+                <p style="margin-top:-5px; margin-bottom:5px;">
+                    {'Select an album'|@translate}
+                </p>
+                <select data-selectize="categories" data-value="[]" id="category"
+                        placeholder="{'... or'|@translate} {'create a new album'|@translate}"
+                        name="category" style="width: 200px;"></select>
+                <p>
+                    <span id="categoryNameError0" style="visibility: hidden;">
+                        {'The album name must not be empty.'|@translate}
+                    </span>
+                </p>
+                <p>
+                    <span class="picname">{$name}</span>
+                </p>
+                <p class="popin-actions" style="margin-top: 30px;">
+                    <a class="filter-validate" href="javascript:;" onclick="addto();return false;">
+                        {'Add to album'|@translate}
+                    </a><a href="javascript:;" class="cancelbtn filter-cancel" style="border:0;" onclick="jumpto();return false;">{'jump to album'|@translate}</a>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript">
+        var _lang = "{'Create'|@translate}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _control;
+
+        function addto() {
+            if (_readonly != "0") {
+                $("#info").html(_err_readonly);
+                $('#info').delay(100).show();
+                $('#info').delay(2000).fadeOut();
+                return;
+            }
+
+            $('#info').html("");
+            $('#info').css('display', 'none');
+            var catid = _control.getValue();
+            jQuery('#categoryNameError0').css("visibility", "hidden");
+
+            if ($.trim(catid) == "") {
+                jQuery('#categoryNameError0').css("visibility", "visible");
+            }
+            else {
+                $(".filter-validate").attr("disabled", "true");
+                $.get("./albbox.html?type=add&category=" + encodeURIComponent(catid) + "&src=" + parent.getSrc(), function (info, state) {
+                    var data = jQuery.parseJSON(info);
+                    var vv = '<i class="eiw-icon icon-ok"></i>';
+                    if (data.stat == 'error') {
+                        $('#info').html(data.message);
+                    }
+                    else {
+                        $('#info').html(vv + "{'Saved successfully'|@translate}");
+                        var v = "~~" + data.result.category + "~~";
+                        _control.clearOptions();
+                        add_alb_opt(v);
+                    }
+
+                    $('#info').show();
+                    $('#info').fadeOut(3000);
+                    $(".filter-validate").removeAttr("disabled");
+                });
+            }
+        }
+
+        function jumpto() {
+            var cid = "";
+            var catid = _control.getValue();
+            if (catid.indexOf("~~") >= 0) {
+                cid = catid.substr(2, catid.length - 4);
+            }
+
+            window.cefQuery({
+                request: 'Prompt.q.jumpto:' + cid
+            });
+
+            window.cefQuery({
+                request: 'Prompt.q.disabledrag:0'
+            });
+
+            parent.$.colorbox.close();
+        }
+
+        function alb_selectize() {
+            var $area = $('[data-selectize=categories]').selectize({
+                valueField: 'id',
+                labelField: 'name',
+                sortField: 'name',
+                searchField: ['name'],
+                plugins: ['remove_button'],
+                create: (_readonly == "0") ? true : false,
+                render: {
+                    'option_create': function (data, escape) {
+                        return '<div class="create">' + _lang + ' <strong>' + data.input + '</strong>&hellip;</div>';
+                    }
+                },
+                onChange(value) {
+                    jQuery('#categoryNameError0').css("visibility", "hidden");
+                },
+                onOptionAdd(value, data) {
+                    jQuery('#categoryNameError0').css("visibility", "hidden");
+                }
+            });
+            _control = $area[0].selectize;
+            add_alb_opt("");
+
+        }
+
+
+        function add_alb_opt(val) {
+            $.getJSON('./ws.php?format=json&method=categories.getAdminList&type=1', function (data) {
+                var v = "";
+                for (var i = 0; i < data.result.categories.length; i++) {
+                    var cats = data.result.categories[i];
+
+                    v = "~~" + cats.id + "~~";
+                    _control.addOption({
+                        id: v,
+                        name: cats.fullname,
+                        fullname: cats.fullname
+                    });
+                }
+
+                if (val != "") {
+                    setTimeout(function () {
+                        _control.setValue(val);
+                    }, 0);
+                }
+
+            });
+        }
+
+        $(document).ready(function () {
+            alb_selectize();
+            jQuery('.font-checkbox').fontCheckbox();
+
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,678 @@
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.col-lg-5 .icon-spin6, .col-lg-5 .icon-cancel {
+    color: #000;
+}
+
+#theCategoryPage .header {
+    background: #BF0D08;
+}
+
+body[class*=topbar].clear .nav-wrapper.topbar-sticky-pos {
+    background: #BF0D08;
+}
+
+#theHeader h1 a {
+    color: #fff;
+}
+
+.menubar_1 {
+    background: transparent;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+
+#qsearchInput {
+    background-color: transparent !important;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 0 !important;
+}
+
+#cmdCaddie span, #cmdSetRepresentative span {
+    color: #BF0D08;
+}
+
+A .stm-icon {
+    color: #BF0D08;
+}
+
+    A .stm-icon:hover {
+        color: #BF0D08;
+    }
+
+.titrePage A, .titrePage A:hover, .titrePage H2 A, .titrePage H2 A:hover {
+    color: #7F0906;
+}
+
+#theCategoryPage::-webkit-scrollbar-thumb, #theColorPage::-webkit-scrollbar-thumb {
+    background: #BF0D08;
+}
+
+#theCategoryPage::-webkit-scrollbar-button, #theColorPage::-webkit-scrollbar-button {
+    background-color: #BF0D08;
+}
+
+#mydiv::-webkit-scrollbar-thumb {
+    background: #BF0D08;
+}
+
+#mydiv::-webkit-scrollbar-button {
+    background-color: #BF0D08;
+}
+
+body[class*=topbar] .menu ul a {
+    line-height: 1;
+}
+
+body[class*=topbar] .menu .sfHover > a, body[class*=topbar] .menu a:hover {
+    color: #fff;
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+body[class*=topbar] .menu p, body[class*=topbar] .menu ul, body[class*=topbar] .menu a {
+    color: #7F0906;
+}
+
+body[class*=topbar] .menu span:hover {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+body[class*=topbar] .menu h2 {
+    color: #7F0906;
+}
+
+body[class*=topbar] .menu > li.child-active > a, body[class*=topbar] .menu > li > a.active {
+    background: #fff;
+}
+
+body[class*=topbar] .menu > li.sfHover > a, body[class*=topbar] .menu > li > a:hover {
+  /*  background-color: #BF0D08 !important;*/
+    background-color: transparent !important;
+    color: #fff !important;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+body[class*=topbar] .menu li > ul {
+    background: #fff;
+    box-shadow: 2px 2px 5px black;
+}
+
+    body[class*=topbar] .menu li > ul .sfHover > a, body[class*=topbar] .menu li > ul a:hover {
+        background: #BF0D08;
+        color: #fff;
+        text-decoration: none;
+        text-shadow: none;
+    }
+
+body[class*=topbar] .menu li ul ul {
+    background: #fff;
+}
+
+    body[class*=topbar] .menu li ul ul .sfHover > a, body[class*=topbar] .menu li ul ul a:hover {
+        background: #BF0D08;
+        color: #fff;
+        text-decoration: none;
+        text-shadow: none;
+    }
+
+body[class*=topbar] .menu span.badge {
+    background-color: #BF0D08;
+    color: #fff;
+}
+
+body[class*=topbar] .menu span.color2 {
+    background-color: #BF0D08;
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px #000
+}
+
+body[class*=topbar] .menu span.badge3 {
+    background-color: unset;
+    color: #7F0906;
+}
+
+.titrePage H2 span.badge {
+    background-color: #BF0D08;
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px black
+}
+
+hr {
+    border: 1px solid #BF0D08;
+    width: 70%;
+    margin-left: 20px;
+}
+
+#zzz {
+    background-color: #323232;
+    color: #fff;
+}
+
+.sel_a, .tagsa, .thumbLegend .divpaint {
+    color: #BF0D08;
+}
+
+    .sel_a:hover, .thumbLegend .divpaint:hover {
+        color: #BF0D08;
+        text-decoration: underline;
+    }
+
+    .sel_a:focus {
+        color: #BF0D08;
+        text-decoration: underline;
+    }
+
+#titleh2 {
+    color: #BF0D08;
+}
+
+    #titleh2 a {
+        color: #BF0D08;
+    }
+
+        #titleh2 a:hover {
+            color: #BF0D08;
+            text-decoration: underline;
+        }
+
+.thumbLegend a {
+    color: #000;
+}
+
+    .thumbLegend a:hover {
+        color: #BF0D08;
+        text-decoration: underline;
+    }
+
+    .thumbLegend a:focus {
+        color: #000;
+        text-decoration: underline;
+    }
+
+h2, h3, h4, h5, h6 {
+    color: #000;
+}
+
+.itemtit {
+    color: #000;
+}
+
+a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 {
+    color: #BF0D08;
+    text-decoration: underline;
+}
+
+.icon-left-open:hover, .icon-down-open:hover {
+    color: #BF0D08;
+}
+
+.icon-left-open, .icon-down-open {
+    color: #BF0D08;
+}
+
+.icon-check {
+    color: #000;
+}
+
+.icon-check-empty {
+    color: #000;
+}
+
+.tip_drag {
+    color: #000;
+}
+
+
+.thumbLegend2 a {
+    color: #000;
+}
+
+.image_stack img {
+    background-color: #fff;
+}
+
+
+A {
+    color: #000;
+}
+
+    a:hover, a:focus {
+        color: #BF0D08;
+        text-decoration: underline;
+    }
+
+.viewer-backdrop {
+    background-color: unset;
+}
+
+
+.titrePage .switchBox {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    color: #000;
+    padding: 10px;
+}
+
+    .titrePage .switchBox A {
+        color: #7F0906;
+    }
+
+        .titrePage .switchBox A:hover {
+            background-color: #BF0D08;
+            color: white;
+            text-decoration: none;
+        }
+
+A .stm-icon {
+    opacity: 0.9
+}
+
+A:hover .stm-icon {
+    opacity: 1
+}
+
+
+.titrePage H2 A:hover {
+    color: #BF0D08
+}
+
+.titrePage H2 A {
+    color: #000;
+    text-shadow: none
+}
+
+.titrePage A {
+    color: #000;
+}
+
+    .titrePage A:hover {
+        color: #BF0D08;
+    }
+
+.actionButtons, .actionTags {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #fff;
+}
+
+#imageHeaderBar .imageNumber {
+    color: #000;
+}
+
+#tabcontent {
+    background-color: #323232;
+}
+
+.search_results a,
+.search_results a:hover {
+    color: #BF0D08;
+}
+
+
+.thumbLegend a :hover {
+    color: #BF0D08;
+}
+
+#content {
+    background-color: #fff;
+    border: unset;
+}
+
+.trash {
+    background: unset;
+    border: 1px dashed #333;
+}
+
+.selbtn {
+    background: unset;
+}
+
+.icon-filter {
+    color: #000;
+}
+
+    .icon-filter:hover {
+        color: #BF0D08;
+    }
+
+.filter blockquote, .filter UL, .filter P {
+    background-color: unset;
+}
+
+.filter fieldset label, fieldset legend {
+    color: #000;
+}
+
+.adv_search {
+    background-color: #fff;
+}
+
+#calendarViewSwitchLink {
+    color: #BF0D08 !important;
+}
+
+#dates a {
+    color: #000;
+}
+
+#dates .selected {
+    color: #BF0D08;
+}
+
+.viewer-title {
+    color: #000;
+}
+
+.detail_tag, .detail_album {
+    color: #000;
+}
+
+label {
+    color: #000;
+    -webkit-user-select: text;
+}
+
+.tabs-style-iconfall nav a {
+    color: #000 !important;
+}
+
+.tabs-style-iconfall nav li.tab-current a {
+    color: #000;
+}
+
+.jmn-video-panelinner {
+    color: #000;
+}
+
+.icon-search:hover {
+    text-decoration: none !important;
+}
+/*-----*/
+
+.sel_a:focus, .sel_a:hover, .thumbLegend .divpaint:hover {
+    text-decoration: none;
+}
+
+.cboxIframe {
+    background: #fff;
+}
+
+#theColorPage, #cboxLoadedContent {
+    background: #fff;
+    color: #000;
+}
+
+.vdobox {
+    background: #fff;
+}
+
+#theColorPage fieldset legend, #theColorPage fieldset label {
+    color: #000;
+}
+
+#colorbox {
+    background: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+    color: #000;
+    border-radius: 5px;
+}
+
+.filter-validate {
+    background: #BF0D08;
+    color: white !important;
+}
+
+.filter-validate {
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px !important;
+    font-weight: 600;
+    padding: 4px 10px !important;
+    white-space: nowrap;
+    border: 0;
+    text-decoration: none !important;
+}
+
+    .filter-validate:hover {
+        background: #BF0D08;
+        color: white;
+    }
+
+.filter-cancel {
+    background: unset;
+    color: #000 !important;
+}
+
+    .filter-cancel:hover {
+        color: #BF0D08 !important;
+    }
+
+
+::placeholder {
+    background-color: unset;
+    color: #000;
+}
+
+#qsearchInput::placeholder {
+    background-color: unset;
+    color: #d6d6d6;
+}
+
+#resbar {
+    background-color: unset;
+}
+
+    #toolbar, #resbar a, #toolbar a {
+        color: #BF0D08;
+    }
+
+#applyOnDetails {
+    color: #000;
+    font-size: 12px;
+}
+
+.titrePage {
+    color: #022601 !important;
+}
+
+#content-wrapper {
+    background-color: unset;
+}
+
+.return {
+    color: #fff;
+}
+
+.stm-icon-cancel2 {
+    color: #777;
+}
+
+    .stm-icon-cancel2:hover {
+        color: #022601;
+    }
+
+
+#cboxClose {
+    right: 8px;
+    background: unset;
+    top: -28px;
+    float: right;
+    text-indent: unset;
+}
+
+#cboxTitle {
+    top: -25px;
+    left: 5px;
+    color: #555;
+}
+
+#mydiv {
+    background-color: unset;
+}
+
+#theColorPage .sb-site-container {
+    background-color: unset;
+}
+
+#container {
+    background: unset;
+}
+
+#theLoginPage .properties a {
+    color: #000;
+}
+
+#theLoginPage .properties input {
+    color: #000;
+    background-color: unset !important;
+    border: 1px solid gray;
+}
+
+
+.detail_td1, .tabcontenttag {
+    color: #aaa;
+}
+
+.detail_td2 {
+    color: #D2D2D2;
+}
+
+    .detail_td2:hover {
+        color: #D2D2D2;
+    }
+
+.loc_a {
+    color: #D2D2D2 !important;
+}
+
+    .loc_a:hover {
+        text-decoration: underline;
+    }
+
+.filter input, .filter input:focus, INPUT[type="text"], INPUT[type="password"], TEXTAREA {
+    background-color: #eee !important;
+    border-radius: 5px !important;
+    color: #444;
+    border: none;
+}
+
+.selectize-input, .selectize-input.focus {
+    background-color: #f8e6e6 !important;
+    border-radius: 5px !important;
+    border: 0;
+    box-shadow: unset;
+}
+
+    .selectize-input input, .selectize-input input:focus {
+        background-color: #f8e6e6 !important;
+        border-radius: 5px !important;
+        color: #444;
+        border: 0;
+    }
+
+.detail_td2 TEXTAREA, #tabtags .selectize-input, #tabtags .selectize-input input {
+    background-color: unset !important;
+    border: 1px solid #3f3f3f;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+#catModify TEXTAREA, #catModify input, #catModify .selectize-input, #catModify .selectize-input input {
+    background-color: #f8f8f8 !important;
+    border-radius: 5px !important;
+    color: #000;
+    border: 1px solid #DDD !important;
+}
+
+    #catModify .selectize-input input {
+        border: none !important;
+    }
+
+#catModify .selectize-input {
+    background-image: none;
+}
+
+.ul2 {
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+}
+
+#tabtags .selectize-input input::placeholder {
+    color: #aaa;
+}
+
+#catModify .selectize-input input::placeholder {
+    color: #717175;
+}
+
+.switchBoxTitle {
+    border-bottom: 2px solid #400403;
+    color: #7F0906;
+}
+
+.dark-theme a:hover {
+    color: #fff;
+}
+
+.tagLine td a, #fullTagCloud span a {
+    color: #BF0D08;
+}
+
+    .tagLine td a:hover, #fullTagCloud span a:hover {
+        color: #BF0D08;
+    }
+
+.viewer-clock-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255,255, 0.7);
+}
+
+    .viewer-clock-btn a {
+        background-color: transparent;
+        color: rgba(255, 255,255, 0.7);
+        text-decoration: none !important;
+    }
+
+        .viewer-clock-btn a:hover {
+            color: #fff;
+        }
+
+#tiptip_content {
+    background: #fff;
+}
+
+#tiptip_holder a {
+    color: #7F0906;
+}
+
+    #tiptip_holder a:hover {
+        background-color: #BF0D08;
+        color: white;
+        text-decoration: none;
+    }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    #tiptip_holder.tip_bottom #tiptip_arrow_inner {
+        border-bottom-color: #ccc;
+    }
+}
+.stm-icon-favorite-del:before {
+    color: #000;
+}
+.pn-icon-caddie-del:before {
+    color: #000;
+}

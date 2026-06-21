@@ -1,0 +1,148 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>完美冻结列和行 </title>
+    <style type="text/css">
+    #stripeddiv {
+    width: 600px;
+    height: 400px;
+    overflow: scroll;
+    border: 1px solid #777777;
+}
+
+#stripeddiv table {
+    border-spacing: 0;
+}
+
+#stripeddiv th {
+    border-left: none;
+    border-right: 1px solid #bbbbbb;
+    padding: 5px;
+    width: 80px;
+    min-width: 80px;
+    position: sticky;
+    top: 0;
+    background: #727272;
+    color: #e0e0e0;
+    font-weight: normal;
+}
+
+#stripeddiv td {
+    border-left: none;
+    border-right: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+    padding: 5px;
+    width: 80px;
+    min-width: 80px;
+}
+
+
+#stripeddiv th:nth-child(1),
+#stripeddiv td:nth-child(1) {
+    position: sticky;
+    left: 0;
+    width: 150px;
+    min-width: 150px;
+}
+
+#stripeddiv th:nth-child(2),
+#stripeddiv td:nth-child(2) {
+    position: sticky;
+    /* 1st cell left/right padding + 1st cell width + 1st cell left/right border width */
+    /* 0 + 5 + 150 + 5 + 1 */
+    left: 161px;
+    width: 50px;
+    min-width: 50px;
+}
+
+#stripeddiv td:nth-child(1),
+#stripeddiv td:nth-child(2) {
+    background: #ffebb5;
+}
+
+#stripeddiv th:nth-child(1),
+#stripeddiv th:nth-child(2) {
+    z-index: 2;
+}
+    
+	</style>
+</head>
+<body>
+ <div class="div1", id="stripeddiv">
+    <table>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+
+        <tr>
+            <td>Row Data 1</td>
+            <td>Row Data 2</td>
+            <td>Row Data 3</td>
+            <td>Row Data 4</td>
+            <td>Row Data 5</td>
+            <td>Row Data 6</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

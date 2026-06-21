@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data><item><id>en</id><transl>cn</transl></item>
+<item><id>ltr</id><transl>ltr</transl></item>
+<item><id>Select an album</id><transl>选择一个相册</transl></item>
+<item><id>... or</id><transl>...或 </transl></item>
+<item><id>create a new album</id><transl>创建一个新相册</transl></item>
+<item><id>jump to album</id><transl>跳转到相册</transl></item>
+<item><id>Parent album</id><transl>父相册</transl></item>
+<item><id>Album name</id><transl>相册名称</transl></item>
+<item><id>Create</id><transl>创建</transl></item>
+<item><id>nothing</id><transl>没有内容</transl></item>
+<item><id>Dashboard</id><transl>面板</transl></item>
+<item><id>Photos</id><transl>图片</transl></item>
+<item><id>Albums</id><transl>相册</transl></item>
+<item><id>%d associations</id><transl>%d张关联图片</transl></item>
+<item><id>Tags</id><transl>标签</transl></item>
+<item><id>Pages seen</id><transl>已访问过的页面</transl></item>
+<item><id>Storage used</id><transl>已使用的储存空间</transl></item>
+<item><id>Add Photos</id><transl>添加图片</transl></item>
+<item><id>The album name must not be empty.</id><transl>相册名称不能为空</transl></item>
+<item><id>Add another set of photos</id><transl>添加另一组图片</transl></item>
+<item><id>Select files</id><transl>选择文件</transl></item>
+<item><id>Learn more</id><transl>了解更多</transl></item>
+<item><id>Manage this set of %d photos</id><transl>管理本集合的 %d 张图片</transl></item>
+<item><id>global mode</id><transl>全局模式</transl></item>
+<item><id>single mode</id><transl>单一模式</transl></item>
+<item><id>Filter</id><transl>过滤</transl></item>
+<item><id>remove this filter</id><transl>删除此过滤器</transl></item>
+<item><id>Predefined filter</id><transl>预定义过滤器</transl></item>
+<item><id>Empty caddie</id><transl>清空标记图片库</transl></item>
+<item><id>Album</id><transl>相册</transl></item>
+<item><id>include child albums</id><transl>包含子相册</transl></item>
+<item><id>Type in a search term</id><transl>输入搜索关键字</transl></item>
+<item><id>All tags</id><transl>符合所有标签</transl></item>
+<item><id>Any tag</id><transl>符合任一标签</transl></item>
+<item><id>Dimensions</id><transl>尺寸</transl></item>
+<item><id>Search</id><transl>搜索</transl></item>
+<item><id>Photo title</id><transl>相片标题</transl></item>
+<item><id>Photo description</id><transl>相片描述</transl></item>
+<item><id>File name</id><transl>文件名</transl></item>
+<item><id>Search for an author</id><transl>作者</transl></item>
+<item><id>Add a filter</id><transl>添加过滤器</transl></item>
+<item><id>Filesize</id><transl>文件大小</transl></item>
+<item><id>Creation date</id><transl>创建日期</transl></item>
+<item><id>Remove all filters</id><transl>删除所有过滤器</transl></item>
+<item><id>Refresh photo set</id><transl>刷新图片集</transl></item>
+<item><id>Selection</id><transl>选择</transl></item>
+<item><id>Action</id><transl>操作</transl></item>
+<item><id>No photo selected</id><transl>没有图片被选中</transl></item>
+<item><id>Choose an action</id><transl>选择一项操作</transl></item>
+<item><id>Delete selected photos</id><transl>删除选中的图片</transl></item>
+<item><id>Associate to album</id><transl>关联到相册</transl></item>
+<item><id>Move to album</id><transl>移动到相册</transl></item>
+<item><id>Dissociate from album</id><transl>取消与相册的关联</transl></item>
+<item><id>Add tags</id><transl>添加标签</transl></item>
+<item><id>Set author</id><transl>设置作者</transl></item>
+<item><id>Set title</id><transl>设置标题</transl></item>
+<item><id>Add to caddie</id><transl>添加到标记图片库</transl></item>
+<item><id>Are you sure?</id><transl>确定？</transl></item>
+<item><id>You must confirm deletion</id><transl>您必须确认删除操作</transl></item>
+<item><id>Select at least one tag</id><transl>至少选择一个标签</transl></item>
+<item><id>remove author</id><transl>删除作者</transl></item>
+<item><id>Type the author name here</id><transl>在此输入作者名称</transl></item>
+<item><id>remove title</id><transl>删除标题</transl></item>
+<item><id>Type the title here</id><transl>在此输入标题</transl></item>
+<item><id>Apply action</id><transl>执行操作</transl></item>
+<item><id>on the %d selected photos</id><transl>于此 %d 张所选图片</transl></item>
+<item><id>%d of %d photos selected</id><transl>%d 张已选 / 总 %d 张图片</transl></item>
+<item><id>All %d photos are selected</id><transl>全部 %d 张图片已选中</transl></item>
+<item><id>List</id><transl>列表</transl></item>
+<item><id>Move</id><transl>移动</transl></item>
+<item><id>apply automatic sort order</id><transl>应用自动排序</transl></item>
+<item><id>Automatic sort order</id><transl>自动排序</transl></item>
+<item><id>Sort order</id><transl>排序方式</transl></item>
+<item><id><![CDATA[Album name, A &rarr; Z]]></id><transl><![CDATA[相册名称， A &rarr; Z]]></transl></item>
+<item><id><![CDATA[Album name, Z &rarr; A]]></id><transl><![CDATA[相册名称， Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Date created, new &rarr; old]]></id><transl><![CDATA[创建日期，新 &rarr; 旧]]></transl></item>
+<item><id>(determined from photos)</id><transl>（取决于图片）</transl></item>
+<item><id><![CDATA[Date created, old &rarr; new]]></id><transl><![CDATA[创建日期，旧 &rarr; 新]]></transl></item>
+<item><id>Apply to sub-albums</id><transl>应用到子相册</transl></item>
+<item><id>Save order</id><transl>保存排序</transl></item>
+<item><id>Save manual order</id><transl>保存手动排序</transl></item>
+<item><id>cancel manual order</id><transl>取消手动排序</transl></item>
+<item><id>Move albums</id><transl>移动相册</transl></item>
+<item><id>Virtual albums to move</id><transl>待移动的虚拟相册</transl></item>
+<item><id>New parent album</id><transl>新的父相册</transl></item>
+<item><id>Properties</id><transl>属性</transl></item>
+<item><id>Photos sort order</id><transl>管理图片排序</transl></item>
+<item><id>Use the default photo sort order</id><transl>使用默认的图片排序</transl></item>
+<item><id>Manual order</id><transl>手动排序</transl></item>
+<item><id>automatic order</id><transl>自动排序</transl></item>
+<item><id>Click-and-drag to re-order</id><transl>拖放进行排序</transl></item>
+<item><id>Save Settings</id><transl>保存设置</transl></item>
+<item><id>Information</id><transl>信息</transl></item>
+<item><id>manage sub-albums</id><transl>管理子相册</transl></item>
+<item><id>delete album</id><transl>删除相册</transl></item>
+<item><id>Name</id><transl>名字</transl></item>
+<item><id>Description</id><transl>描述</transl></item>
+<item><id>Configuration</id><transl>设置</transl></item>
+<item><id>Basic settings</id><transl>基本设置</transl></item>
+<item><id>Gallery title</id><transl>图库标题</transl></item>
+<item><id>Default photos order</id><transl>默认图片排序</transl></item>
+<item><id>Add a criteria</id><transl>添加条件</transl></item>
+<item><id>Miscellaneous</id><transl>其他</transl></item>
+<item><id>other</id><transl>其他</transl></item>
+<item><id>Week starts on</id><transl>星期起始于</transl></item>
+<item><id>Batch Manager</id><transl>批量管理</transl></item>
+<item><id>History</id><transl>历史记录</transl></item>
+<item><id>Statistics</id><transl>统计</transl></item>
+<item><id>Tags selection</id><transl>标签选择</transl></item>
+<item><id>Select at least two tags to merge.</id><transl>请至少选择2个标签以合并</transl></item>
+<item><id>Display options</id><transl>显示选项</transl></item>
+<item><id>photos per page</id><transl>张图片/页</transl></item>
+<item><id>Downloads</id><transl>下载</transl></item>
+<item><id>delete photo</id><transl>删除图片</transl></item>
+<item><id>Title</id><transl>标题</transl></item>
+<item><id>Author</id><transl>作者</transl></item>
+<item><id>Linked albums</id><transl>已关联的相册</transl></item>
+<item><id>Album thumbnail</id><transl>作为相册的缩略图</transl></item>
+<item><id>Photo information updated</id><transl>图片信息已更新</transl></item>
+<item><id>Login</id><transl>登录</transl></item>
+<item><id>Identification</id><transl>用户信息</transl></item>
+<item><id>Username</id><transl>用户名</transl></item>
+<item><id>Password</id><transl>密码</transl></item>
+<item><id>Forgot your password?</id><transl>忘记密码？</transl></item>
+<item><id>Reset</id><transl>重置</transl></item>
+<item><id>Please enter a login name.</id><transl>请输入用户名。</transl></item>
+<item><id>Please enter your password.</id><transl>请输入密码。</transl></item>
+<item><id>Please confirm the chosen password.</id><transl>请再次输入所选定的密码。</transl></item>
+<item><id>Search for words</id><transl>搜索关键词</transl></item>
+<item><id>Search for all terms</id><transl>符合全部关键词</transl></item>
+<item><id>Search for any term</id><transl>符合任一关键词</transl></item>
+<item><id>Apply on properties</id><transl>应用到属性</transl></item>
+<item><id>Search tags</id><transl>搜索标签</transl></item>
+<item><id>Search by date</id><transl>按日期搜索</transl></item>
+<item><id>Kind of date</id><transl>日期类型</transl></item>
+<item><id>Search in albums</id><transl>在相册中搜索</transl></item>
+<item><id>Search in sub-albums</id><transl>也在子相册中搜索</transl></item>
+<item><id>stop the slideshow</id><transl>停止幻灯片放映</transl></item>
+<item><id>clean up</id><transl>清除</transl></item>
+<item><id>Visit the gallery</id><transl>浏览图库</transl></item>
+<item><id>Caddie</id><transl>标记图片库</transl></item>
+<item><id>Orphans</id><transl>没有任何关联</transl></item>
+<item><id>Recent photos</id><transl>最新图片</transl></item>
+<item><id>Duplicates</id><transl>副本</transl></item>
+<item><id>All</id><transl>所有</transl></item>
+<item><id>Your favorites</id><transl>收藏夹</transl></item>
+<item><id>With no tag</id><transl>没有标签</transl></item>
+<item><id>With no album</id><transl>没有相册</transl></item>
+<item><id>Edit</id><transl>编辑</transl></item>
+<item><id>Tag</id><transl>标签</transl></item>
+<item><id>No photo selected, %d photos in current set</id><transl>没有图片被选中，当前集合中有 %d 张图片</transl></item>
+<item><id>Delete %d orphan photos</id><transl>删除 %d 没有任何关联的图片</transl></item>
+<item><id>%d photo deleted</id><transl>%d张图片已删除</transl></item>
+<item><id>%d photos deleted</id><transl>%d张图片已删除</transl></item>
+<item><id>Albums automatically sorted</id><transl>相册已自动排序</transl></item>
+<item><id>Virtual album added</id><transl>虚拟相册已添加</transl></item>
+<item><id>Edit album</id><transl>编辑相册</transl></item>
+<item><id>%d album moved</id><transl>%d个相册已移动</transl></item>
+<item><id>%d albums moved</id><transl>%d个相册已移动</transl></item>
+<item><id>%d photos</id><transl>%d张图片</transl></item>
+<item><id>View in gallery</id><transl>在图库中查看</transl></item>
+<item><id>Manage photos</id><transl>管理图片</transl></item>
+<item><id>Tag "%s" was added</id><transl>标签 "%s" 已添加</transl></item>
+<item><id>Tag "%s" already exists</id><transl>标签 "%s" 已存在</transl></item>
+<item><id>Add a tag</id><transl>添加标签</transl></item>
+<item><id>Select tags</id><transl>选择标签</transl></item>
+<item><id>New tag</id><transl>新建标签</transl></item>
+<item><id>No destination tag selected</id><transl>未选择标签，无法执行操作。</transl></item>
+<item><id>Edit selected tags</id><transl>编辑选中的标签</transl></item>
+<item><id>Duplicate selected tags</id><transl>复制选中的标签</transl></item>
+<item><id>Merge selected tags</id><transl>合并选中的标签</transl></item>
+<item><id>Delete selected tags</id><transl>删除选中的标签</transl></item>
+<item><id>Display form</id><transl>显示表单</transl></item>
+<item><id>Edit tags</id><transl>编辑标签</transl></item>
+<item><id>Current name</id><transl>现用名</transl></item>
+<item><id>New name</id><transl>新名称</transl></item>
+<item><id>Source tag</id><transl>源标签</transl></item>
+<item><id>Name of the duplicate</id><transl>副本的名称</transl></item>
+<item><id>Merge tags</id><transl>合并标签</transl></item>
+<item><id>Select the destination tag</id><transl>选择目标标签</transl></item>
+<item><id>Confirm merge</id><transl>确认合并</transl></item>
+<item><id>(this tag will be deleted)</id><transl>（此标签将被删除）</transl></item>
+<item><id>First</id><transl>首页</transl></item>
+<item><id>Previous</id><transl>前页</transl></item>
+<item><id>Next</id><transl>下一页</transl></item>
+<item><id>Last</id><transl>最后</transl></item>
+<item><id>The whole set</id><transl>整个集合</transl></item>
+<item><id>Width</id><transl>宽度</transl></item>
+<item><id>between %d and %d pixels</id><transl>在 %d 与 %d 像素之间</transl></item>
+<item><id>Height</id><transl>高度</transl></item>
+<item><id>Ratio</id><transl>比例</transl></item>
+<item><id>between %s and %s</id><transl>在 %s 和 %s 之间</transl></item>
+<item><id>Portrait</id><transl>人像(高＞宽)</transl></item>
+<item><id>Landscape</id><transl>风景(宽＞高)</transl></item>
+<item><id>between %s and %s MB</id><transl>在 %s 和 %s MB 之间</transl></item>
+<item><id>display</id><transl>显示</transl></item>
+<item><id>all</id><transl>所有</transl></item>
+<item><id>Remove tags</id><transl>删除所有标签</transl></item>
+<item><id>Original file:</id><transl>原文件：</transl></item>
+<item><id>Added by %s</id><transl>由%s添加</transl></item>
+<item><id>Visited %d times</id><transl>访问数：%d</transl></item>
+<item><id>Numeric identifier : %d</id><transl>数字ID：%d</transl></item>
+<item><id>Album updated successfully</id><transl>相册更新成功</transl></item>
+<item><id>manage album photos</id><transl>管理相册中的图片</transl></item>
+<item><id>Find a new random album thumbnail.</id><transl>采用新的随机相册缩略图。</transl></item>
+<item><id>Refresh</id><transl>刷新</transl></item>
+<item><id>This album contains no photo.</id><transl>此相册中没有图片。</transl></item>
+<item><id>This album contains %d photos, added on %s.</id><transl>此相册包含%d张图片，添加于%s。</transl></item>
+<item><id>This album contains %d photos, added between %s and %s.</id><transl>此相册包含%d张图片，添加于%s和%s之间。</transl></item>
+<item><id>Delete album "%s".</id><transl>删除相册 "%s"。</transl></item>
+<item><id>delete album and the %d orphan photos</id><transl>删除相册和 %d 张无关联图片</transl></item>
+<item><id>delete only album, not photos</id><transl>仅删除相册，不删除图片</transl></item>
+<item><id>Confirm deletion</id><transl>确认删除</transl></item>
+<item><id><![CDATA[File name, A &rarr; Z]]></id><transl><![CDATA[文件名，A &rarr; Z]]></transl></item>
+<item><id><![CDATA[File name, Z &rarr; A]]></id><transl><![CDATA[文件名，Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Photo title, A &rarr; Z]]></id><transl><![CDATA[图片标题，A &rarr; Z]]></transl></item>
+<item><id><![CDATA[Photo title, Z &rarr; A]]></id><transl><![CDATA[图片标题，Z &rarr; A]]></transl></item>
+<item><id><![CDATA[Visits, high &rarr; low]]></id><transl><![CDATA[访问量，高 &rarr; 低]]></transl></item>
+<item><id><![CDATA[Visits, low &rarr; high]]></id><transl><![CDATA[访问量，低 &rarr; 高]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 1 &rarr; 9]]></id><transl><![CDATA[数字ID，1 &rarr; 9]]></transl></item>
+<item><id><![CDATA[Numeric identifier, 9 &rarr; 1]]></id><transl><![CDATA[数字ID，9 &rarr; 1]]></transl></item>
+<item><id>Manual sort order</id><transl>手动排序</transl></item>
+<item><id>day0</id><transl>星期日</transl></item>
+<item><id>day1</id><transl>星期一</transl></item>
+<item><id>delete</id><transl>删除</transl></item>
+<item><id>Delete</id><transl>删除</transl></item>
+<item><id>Allowed file types: %s.</id><transl>允许的文件类型：%s。</transl></item>
+<item><id>No photos in the current set.</id><transl>当前集合没有图片。</transl></item>
+<item><id>Select:</id><transl>选择：</transl></item>
+<item><id>None</id><transl>无</transl></item>
+<item><id>Invert</id><transl>反选</transl></item>
+<item><id>Logout</id><transl>注销</transl></item>
+<item><id>First photo added</id><transl>首张图片已添加</transl></item>
+<item><id>%d photo</id><transl>%d张图片</transl></item>
+<item><id>in %d sub-album</id><transl>在%d个子相册中</transl></item>
+<item><id>in %d sub-albums</id><transl>在%d个子相册中</transl></item>
+<item><id>in this album</id><transl>在此相册里</transl></item>
+<item><id>Thumbnail</id><transl>缩略图</transl></item>
+<item><id>2small</id><transl>XXS - 微小</transl></item>
+<item><id>xsmall</id><transl>XS - 特小</transl></item>
+<item><id>small</id><transl>S - 小</transl></item>
+<item><id>medium</id><transl>M - 中</transl></item>
+<item><id>large</id><transl>L - 大</transl></item>
+<item><id>%d week</id><transl>%d周</transl></item>
+<item><id>%d weeks</id><transl>%d周</transl></item>
+<item><id>%d day</id><transl>%d天</transl></item>
+<item><id>%d days</id><transl>%d天</transl></item>
+<item><id>%d month</id><transl>%d个月</transl></item>
+<item><id>%d months</id><transl>%d个月</transl></item>
+<item><id>%d year</id><transl>%d年</transl></item>
+<item><id>%d years</id><transl>%d年</transl></item>
+<item><id>%s ago</id><transl>%s以前</transl></item>
+<item><id>Related tags</id><transl>关联的标签</transl></item>
+<item><id>display your favorites photos</id><transl>显示加入收藏的图片</transl></item>
+<item><id>display most visited photos</id><transl>显示查看次数最多的图片</transl></item>
+<item><id>Most visited</id><transl>最受关注</transl></item>
+<item><id>display most recent photos</id><transl>显示最新图片</transl></item>
+<item><id>display recently updated albums</id><transl>显示最近更新的相册</transl></item>
+<item><id>Recent albums</id><transl>最新相册</transl></item>
+<item><id>Display a random set of photos.</id><transl>显示一组随机图片</transl></item>
+<item><id>Random photos</id><transl>随机图片</transl></item>
+<item><id>Show the photos every day, every month.</id><transl>逐年逐月逐日显示</transl></item>
+<item><id>Calendar</id><transl>图片日历</transl></item>
+<item><id>display available tags</id><transl>显示现有标签</transl></item>
+<item><id>Hello</id><transl>您好</transl></item>
+<item><id>Photo sizes</id><transl>缩放图片</transl></item>
+<item><id>delete all photos from your favorites</id><transl>删除收藏夹里的所有图片</transl></item>
+<item><id>slideshow</id><transl>幻灯片放映</transl></item>
+<item><id>return to normal view mode</id><transl>返回到普通视图</transl></item>
+<item><id>Search criteria</id><transl>搜索条件</transl></item>
+<item><id>display this album</id><transl>显示此相册根目录下的图片</transl></item>
+<item><id>group by letters</id><transl>按字母顺序分类</transl></item>
+<item><id>letters</id><transl>字母</transl></item>
+<item><id>show tags cloud</id><transl>显示标签云</transl></item>
+<item><id>cloud</id><transl>云</transl></item>
+<item><id>Default</id><transl>默认</transl></item>
+<item><id>View</id><transl>视图</transl></item>
+<item><id>Monthly list</id><transl>月列表</transl></item>
+<item><id>Monthly calendar</id><transl>月历</transl></item>
+<item><id>day2</id><transl>星期二</transl></item>
+<item><id>day3</id><transl>星期三</transl></item>
+<item><id>day4</id><transl>星期四</transl></item>
+<item><id>day5</id><transl>星期五</transl></item>
+<item><id>day6</id><transl>星期六</transl></item>
+<item><id>New password</id><transl>新密码</transl></item>
+<item><id>Each of the listed criteria must be satisfied.</id><transl>每项列出的条件均需满足。</transl></item>
+<item><id>No results for</id><transl>没有结果</transl></item>
+<item><id>Empty query. No criteria has been entered.</id><transl>空查询。未输入任何条件。</transl></item>
+<item><id>add this photo to your favorites</id><transl>将图片添加到收藏</transl></item>
+<item><id>Favorites</id><transl>收藏</transl></item>
+<item><id>delete this photo from your favorites</id><transl>从收藏夹中删除此图片</transl></item>
+<item><id>Show file metadata</id><transl>显示文件元数据</transl></item>
+<item><id>Download this file</id><transl>下载此文件</transl></item>
+<item><id>Download</id><transl>下载</transl></item>
+<item><id>set as album thumbnail</id><transl>设为相册缩略图</transl></item>
+<item><id>Edit photo</id><transl>编辑图片</transl></item>
+<item><id>month1</id><transl>一月</transl></item>
+<item><id>month2</id><transl>二月</transl></item>
+<item><id>month3</id><transl>三月</transl></item>
+<item><id>month4</id><transl>四月</transl></item>
+<item><id>month5</id><transl>五月</transl></item>
+<item><id>month6</id><transl>六月</transl></item>
+<item><id>month7</id><transl>七月</transl></item>
+<item><id>month8</id><transl>八月</transl></item>
+<item><id>month9</id><transl>九月</transl></item>
+<item><id>month10</id><transl>十月</transl></item>
+<item><id>month11</id><transl>十一月</transl></item>
+<item><id>month12</id><transl>十二月</transl></item>
+<item><id>Hour</id><transl>小时</transl></item>
+<item><id>Date</id><transl>日期</transl></item>
+<item><id>Month</id><transl>月</transl></item>
+<item><id>Year</id><transl>年</transl></item>
+<item><id>Overall</id><transl>概览</transl></item>
+<item><id>today</id><transl>今天</transl></item>
+<item><id>Weekly list</id><transl>周列表</transl></item>
+<item><id>Visits</id><transl>访问量</transl></item>
+<item><id>Invalid password!</id><transl>密码无效！</transl></item>
+<item><id>Current password is wrong</id><transl>当前密码错误</transl></item>
+<item><id>searched words : %s</id><transl>搜索词：%s</transl></item>
+<item><id>created between %s (%s) and %s (%s)</id><transl>创建于 %s (%s) 和 %s (%s) 之间</transl></item>
+<item><id>included</id><transl>包括</transl></item>
+<item><id>created on %s</id><transl>创建于 %s</transl></item>
+<item><id>created after %s (%s)</id><transl>创建于 %s (%s) 之后</transl></item>
+<item><id>created before %s (%s)</id><transl>创建于 %s (%s) 之前</transl></item>
+<item><id>Search results</id><transl>搜索结果</transl></item>
+<item><id>Profile</id><transl>用户信息</transl></item>
+<item><id>Day</id><transl>日</transl></item>
+<item><id>Square</id><transl>正方形</transl></item>
+<item><id>width between %s and %s</id><transl>宽度 在 %s 与 %s 像素之间</transl></item>
+<item><id><![CDATA[width = %s]]></id><transl><![CDATA[宽度 = %s]]></transl></item>
+<item><id><![CDATA[width &gt;= %s]]></id><transl><![CDATA[宽度 &gt;= %s]]></transl></item>
+<item><id><![CDATA[width &lt;= %s]]></id><transl><![CDATA[宽度 &lt;= %s]]></transl></item>
+<item><id>height between %s and %s</id><transl>高度 在 %s 与 %s 像素之间</transl></item>
+<item><id><![CDATA[height = %s]]></id><transl><![CDATA[高度 = %s]]></transl></item>
+<item><id><![CDATA[height &gt;= %s]]></id><transl><![CDATA[高度 &gt;= %s]]></transl></item>
+<item><id><![CDATA[height &lt;= %s]]></id><transl><![CDATA[高度 &lt;= %s]]></transl></item>
+<item><id>ratio between %s and %s</id><transl>比例 在 %s 与 %s 之间</transl></item>
+<item><id><![CDATA[ratio = %s]]></id><transl><![CDATA[比例 = %s]]></transl></item>
+<item><id><![CDATA[ratio &gt;= %s]]></id><transl><![CDATA[比例 &gt;= %s]]></transl></item>
+<item><id><![CDATA[ratio &lt;= %s]]></id><transl><![CDATA[比例 &lt;= %s]]></transl></item>
+<item><id>File</id><transl>文件</transl></item>
+<item><id>files</id><transl>个文件</transl></item>
+<item><id>Folder</id><transl>文件夹</transl></item>
+<item><id>folders</id><transl>个文件夹</transl></item>
+<item><id>Print</id><transl>打印</transl></item>
+<item><id>Print to PDF</id><transl>打印为PDF</transl></item>
+<item><id>Full Screen</id><transl>全屏&#009;F11</transl></item>
+<item><id>Check For Updates...</id><transl>检查更新...</transl></item>
+<item><id>Zoom</id><transl>缩放</transl></item>
+<item><id>Zoom In</id><transl>放大&#009;Ctrl+</transl></item>
+<item><id>Zoom Out</id><transl>缩小&#009;Ctrl-</transl></item>
+<item><id>100%</id><transl>100%&#009;Ctrl+0</transl></item>
+<item><id>1 file</id><transl>1 个文件</transl></item>
+<item><id>%d files</id><transl>%d 个文件</transl></item>
+<item><id>Numeric identifier</id><transl>数字ID</transl></item>
+<item><id>Manage</id><transl>管理</transl></item>
+<item><id>Album alburl now contains %d photos</id><transl>相册 alburl 现包含 %d 张图片</transl></item>
+<item><id>Settings</id><transl>设置</transl></item>
+<item><id>Folder:</id><transl>文件夹：</transl></item>
+<item><id>Add Directory</id><transl>添加目录</transl></item>
+<item><id>sLongDate</id><transl>yy年m月d日</transl></item>
+<item><id>sYearMonth</id><transl>yy年m月</transl></item>
+<item><id>unset</id><transl>复原</transl></item>
+<item><id>File/directory read error</id><transl>文件/目录读取错误</transl></item>
+<item><id>Select the folder containing your photos</id><transl>选择包含照片的文件夹</transl></item>
+<item><id>Each directory here is an album.</id><transl>这里的每个目录都是一个相册。</transl></item>
+<item><id>Encrypting photos does not move or copy files to the new location.</id><transl>加密图片不会将文件移动或复制到新位置。</transl></item>
+
+<item><id>Specials</id><transl>特色浏览</transl></item>
+<item><id>Create first album</id><transl>创建第一个相册</transl></item>
+<item><id>Create first encrypted album</id><transl>创建第一个加密相册</transl></item>
+<item><id>Duplicate file error.</id><transl>重复文件错误。</transl></item>
+<item><id>Filetype not allowed</id><transl>图片格式错误或者不支持。</transl></item>
+<item><id>max filesize</id><transl>最大文件大小</transl></item>
+
+<item><id>Add to Gallery</id><transl>添加到图库</transl></item>
+<item><id>Add to Encrypted Gallery</id><transl>添加到加密图库</transl></item>
+<item><id>Encrypted Photos</id><transl>已加密的图片</transl></item>
+<item><id>Encrypted</id><transl>已加密</transl></item>
+<item><id>To be encrypted</id><transl>待加密</transl></item>
+<item><id>photos added to the album</id><transl>张图片已添加到相册</transl></item>
+<item><id>Photo Directory</id><transl>照片目录</transl></item>
+<item><id>Slideshow</id><transl>幻灯片</transl></item>
+<item><id>first photo added on %s</id><transl>第一张图片添加于：%s</transl></item>
+<item><id>Music</id><transl>影片演示时配上音乐</transl></item>
+<item><id>Add to your favorites</id><transl>添加到收藏</transl></item>
+<item><id>Already exists</id><transl>已存在</transl></item>
+<item><id>The operation completed successfully.</id><transl>操作已成功完成。</transl></item>
+<item><id>Confirm Removal</id><transl>确认移除</transl></item>
+<item><id>Quality</id><transl>品质</transl></item>
+<item><id>My Gallery</id><transl>我的图库</transl></item>
+<item><id>Creating password</id><transl>创建密码</transl></item>
+<item><id>Details</id><transl>详情</transl></item>
+
+<item><id>BACK_ON_PAGE</id><transl>返回上一页</transl></item>
+<item><id>FIND_POSITION</id><transl>找到我的位置</transl></item>
+<item><id>SEARCH_MY_POSITION</id><transl>在地图上搜索我的位置</transl></item>
+<item><id>DISPLAY_ON_MAP</id><transl>在地图上显示%s</transl></item>
+<item><id>CLICKED_MAP</id><transl>你在...点击了地图</transl></item>
+<item><id>SHOW_COORD</id><transl>显示坐标</transl></item>
+<item><id>CENTER_MAP</id><transl>以此为中心居中地图</transl></item>
+<item><id>ZOOM_IN</id><transl>放大</transl></item>
+<item><id>ZOOM_OUT</id><transl>缩小</transl></item>
+<item><id>METERS_FROM_POINT</id><transl>您距此位置还有不到 %s 米</transl></item>
+<item><id>items</id><transl>项目</transl></item>
+<item><id>PIWIGO_GALLERY</id><transl>前往图库</transl></item>
+<item><id>VIEW_OSM</id><transl>在 OpenStreetMap 查看</transl></item>
+<item><id>HOME_NAME</id><transl>主页</transl></item>
+<item><id>HOME_PREV_NAME</id><transl>前页</transl></item>
+
+<item><id>Location</id><transl>位置</transl></item>
+<item><id>File Size</id><transl>文件大小</transl></item>
+<item><id>Camera Make</id><transl>相机制造商</transl></item>
+<item><id>Camera Model</id><transl>相机型号</transl></item>
+<item><id>Camera Date</id><transl>相机日期</transl></item>
+<item><id>Digitised Date</id><transl>数字化日期</transl></item>
+<item><id>Modified Date</id><transl>修改日期</transl></item>
+<item><id>File Date</id><transl>文件日期</transl></item>
+<item><id>Orientation</id><transl>方向</transl></item>
+<item><id>Flash</id><transl>闪光灯</transl></item>
+<item><id>Focal Length</id><transl>焦距</transl></item>
+<item><id>Exposure Time</id><transl>曝光时间</transl></item>
+<item><id>F Number</id><transl>编号</transl></item>
+<item><id>ISO</id><transl>ISO</transl></item>
+<item><id>White Balance</id><transl>白平衡</transl></item>
+<item><id>Metering Mode</id><transl>测光模式</transl></item>
+<item><id>Colour Space</id><transl>颜色空间</transl></item>
+<item><id>JPEG Quality</id><transl>JPEG 质量</transl></item>
+<item><id>GPS Latitude</id><transl>GPS 纬度</transl></item>
+<item><id>GPS Longitude</id><transl>GPS 经度</transl></item>
+<item><id>GPS Altitude Ref</id><transl>GPS 海拔高度参考</transl></item>
+<item><id>X Resolution</id><transl>分辨率为 X</transl></item>
+<item><id>Y Resolution</id><transl>Y 分辨率</transl></item>
+<item><id>Resolution Unit</id><transl>分辨率单位</transl></item>
+<item><id>Software</id><transl>软件</transl></item>
+<item><id>YCbCr Positioning</id><transl>YCbCr 定位</transl></item>
+
+<item><id>Export location:</id><transl>导出位置：</transl></item>
+<item><id>Browse...</id><transl>浏览...</transl></item>
+<item><id>Name of exported folder:</id><transl>导出的文件夹的名称：</transl></item>
+<item><id>Add numbers to file names to preserve order</id><transl>在文件名中添加数字以保留顺序</transl></item>
+<item><id>Export</id><transl>导出</transl></item>
+<item><id>Export to Folder</id><transl>导出到文件夹</transl></item>
+<item><id>Remove from Album</id><transl>从相册中移除</transl></item>
+<item><id>Delete from Disk</id><transl>从磁盘删除</transl></item>
+
+<item><id>Play slideshow</id><transl>播放</transl></item>
+<item><id>Pause slideshow</id><transl>暂停</transl></item>
+<item><id>Reduce slideshow speed</id><transl>减慢播放速度</transl></item>
+<item><id>Increase slideshow speed</id><transl>加快播放速度</transl></item>
+<item><id>Open With...</id><transl>打开方式...</transl></item>
+<item><id>Recent files</id><transl>最近访问的文件</transl></item>
+<item><id>Create Movie</id><transl>创建影片</transl></item>
+<item><id>Collages</id><transl>拼贴</transl></item>
+<item><id>My creation</id><transl>我的创建</transl></item>
+<item><id>Photo movie</id><transl>照片电影</transl></item>
+<item><id>Photo wall</id><transl>照片墙</transl></item>
+
+<item><id>Record video</id><transl>录制视频</transl></item>
+<item><id>Stop</id><transl>停止</transl></item>
+<item><id>Screenshot</id><transl>屏幕快照</transl></item>
+<item><id>Go back</id><transl>返回</transl></item>
+<item><id>Recording</id><transl>录制中</transl></item>
+<item><id>jump to my creation</id><transl>跳转到我的创建</transl></item>
+<item><id>Play</id><transl>播放</transl></item>
+
+<item><id>To decrypt previous photos, please enter the password you used last time.</id><transl>要解密以前的照片，请输入上次使用的密码。</transl></item>
+<item><id>Current password</id><transl>当前密码</transl></item>
+<item><id>The password hint will be visible to everyone who uses this computer.</id><transl>密码提示将对使用此计算机的所有人可见。</transl></item>
+<item><id>Password hint</id><transl>密码提示</transl></item>
+<item><id>The destination folder is the root folder. Please choose a different folder.</id><transl>目标文件夹是根文件夹，请选择其他文件夹。</transl></item>
+<item><id>The destination folder is a system folder. Please choose a different folder.</id><transl>目标文件夹是系统文件夹，请选择其他文件夹。</transl></item>
+<item><id>Unable to decrypt krf file, key mismatch</id><transl>不能解密krf文件，密钥不匹配</transl></item>
+<item><id>Remove from album, decrypt photos</id><transl>从相册移除，解密照片</transl></item>
+<item><id>Are are you sure you want to leave this page?</id><transl>你确定你要离开这个页面吗？</transl></item>
+<item><id>Are are you sure you want to exit?</id><transl>你确定你要退出吗？</transl></item>
+<item><id>Canceled</id><transl>已取消</transl></item>
+<item><id>This file is currently in use</id><transl>该文件目前正在使用中</transl></item>
+<item><id>Build</id><transl>生成</transl></item>
+<item><id>ISO Filename:</id><transl>ISO文件：</transl></item>
+<item><id>Dump Image Files (ISO)</id><transl>转储图像文件（ISO）</transl></item>
+<item><id>Press F11 to exit full screen</id><transl>按F11退出全屏</transl></item>
+<item><id>Formating...</id><transl>正在格式化...</transl></item>
+<item><id>Exit full screen</id><transl>退出全屏</transl></item>
+<item><id>Drag image here</id><transl>把图片拖到这里</transl></item>
+<item><id>Support drag and drop</id><transl>支持拖放</transl></item>
+<item><id>Add to album</id><transl>添加到相册</transl></item>
+<item><id>Invalid parent album</id><transl>父相册无效</transl></item>
+<item><id>Advanced</id><transl>高级</transl></item>
+<item><id>Type</id><transl>类型</transl></item>
+<item><id>Images</id><transl>图片</transl></item>
+<item><id>Videos</id><transl>视频</transl></item>
+<item><id>Duplicates</id><transl>副本</transl></item>
+<item><id>Remove Duplicates</id><transl>删除重复项</transl></item>
+<item><id>Restore</id><transl>恢复</transl></item>
+<item><id>There is only 1 photo.</id><transl>只有 1 张照片。</transl></item>
+<item><id>Directory</id><transl>目录</transl></item>
+<item><id>Not found</id><transl>未找到</transl></item>
+<item><id>No album selected</id><transl>没有选中的相册</transl></item>
+<item><id>Set as background</id><transl>设为背景</transl></item>
+<item><id>Background image</id><transl>背景图</transl></item>
+<item><id>Use background image</id><transl>使用背景图</transl></item>
+<item><id>No background image</id><transl>无背景图</transl></item>
+<item><id>Header background image only</id><transl>仅限标题背景图片</transl></item>
+<item><id>Log in</id><transl>登录</transl></item>
+<item><id>Skin</id><transl>皮肤</transl></item>
+<item><id>Mark image quality</id><transl>标记图像质量</transl></item>
+<item><id>Select All</id><transl>全选</transl></item>
+
+<item><id>Delete album</id><transl>删除相册</transl></item>
+<item><id>Tag "%s" succesfully deleted</id><transl>标签 "%s" 已删除</transl></item>
+<item><id>Yes, rename</id><transl>重命名</transl></item>
+<item><id>Duplicate</id><transl>复制</transl></item>
+<item><id>Merge</id><transl>合并</transl></item>
+<item><id>Tag name</id><transl>标签名称</transl></item>
+<item><id>Rename</id><transl>重命名</transl></item>
+<item><id>no photo</id><transl>没有图片</transl></item>
+<item><id>Selection mode</id><transl>选择模式</transl></item>
+<item><id>Delete tag</id><transl>删除标签</transl></item>
+<item><id>Are you sure to continue?</id><transl>你确定要继续吗？</transl></item>
+
+<item><id>Choose filters</id><transl>选择过滤器</transl></item>
+<item><id>File type</id><transl>文件类型</transl></item>
+<item><id>OSM</id><transl>OSM 地图</transl></item>
+<item><id>Clear</id><transl>清除</transl></item>
+<item><id>OSM Geotagged</id><transl>OSM 有地理标记</transl></item>
+<item><id>OSM Not geotagged</id><transl>OSM 没有地理标记</transl></item>
+<item><id>Admin</id><transl>管理</transl></item>
+<item><id>Search in</id><transl>搜索</transl></item>
+<item><id>All videos</id><transl>所有视频</transl></item>
+<item><id>Yes, copy</id><transl>复制</transl></item>
+<item><id>Review</id><transl>查看</transl></item>
+<item><id>Delete orphan tags</id><transl>删除未关联任何图片的标签</transl></item>
+<item><id>You have %s orphan tags</id><transl>您有 %s 个孤立的标签</transl></item>
+<item><id>Delete them</id><transl>删除</transl></item>
+<item><id>Keep them</id><transl>保留</transl></item>
+<item><id>At least 2 selected tags are needed to merge</id><transl>至少需要 2 个选定的标记才能合并</transl></item>
+<item><id>Visit</id><transl>访问</transl></item>
+<item><id>General</id><transl>总体</transl></item>
+<item><id>Administration Home</id><transl>管理界面首页</transl></item>
+
+<item><id>Customize</id><transl>自定义</transl></item>
+<item><id>Choose which folders to see in PhotoNest</id><transl>选择要在 PhotoNest 中查看的文件夹</transl></item>
+<item><id>Folders added here will still be in their original locations.</id><transl>在此添加的文件夹仍会保留在原来的位置。</transl></item>
+<item><id>Add to PhotoNest</id><transl>添加到 PhotoNest</transl></item>
+<item><id>delete album, not folders</id><transl>删除相册，不删除文件夹</transl></item>
+<item><id>Setting the PhonoNest password</id><transl>设置 PhonoNest 密码</transl></item>
+<item><id>Add to PhotoNest and encrypt photos</id><transl>添加到 PhotoNest 并加密照片</transl></item>
+<item><id>delete album, decrypt photos</id><transl>删除相册、解密照片</transl></item>
+<item><id>Choose which folders to be encrypted</id><transl>选择要加密的文件夹</transl></item>
+<item><id>Create</id><transl>生成密码</transl></item>
+<item><id>Visit PhotoNest</id><transl>访问 PhotoNest</transl></item>
+<item><id>there are some files to add</id><transl>有一些文件要添加</transl></item>
+
+<item><id>photos imported during the last %d days</id><transl>在最近%d天里导入的图片</transl></item>
+<item><id>display a calendar by creation date</id><transl>按创建日期显示日历</transl></item>
+<item><id>Last import</id><transl>最后导入</transl></item>
+<item><id>Imported %s on %s</id><transl>导入于 %s, %s</transl></item>
+<item><id>display a calendar by imported date</id><transl>按导入日期显示日历</transl></item>
+
+<item><id>Imported between %s (%s) and %s (%s)</id><transl>导入于 %s (%s) 和 %s (%s) 之间</transl></item>
+<item><id>Imported on %s</id><transl>导入于 %s</transl></item>
+<item><id>Imported after %s (%s)</id><transl>导入于 %s (%s) 之后</transl></item>
+<item><id>Imported before %s (%s)</id><transl>导入于 %s (%s) 之前</transl></item>
+<item><id>Importing photos does not move or copy files to the new location.</id><transl>导入图片不会将文件移动或复制到新位置。</transl></item>
+
+<item><id>Imported</id><transl>已导入</transl></item>
+<item><id>To be imported</id><transl>待导入</transl></item>
+<item><id>Imported date</id><transl>导入日期</transl></item>
+<item><id><![CDATA[Date imported, new &rarr; old]]></id><transl><![CDATA[导入日期，新 &rarr; 旧]]></transl></item>
+<item><id><![CDATA[Date imported, old &rarr; new]]></id><transl><![CDATA[导入日期，旧 &rarr; 新]]></transl></item>
+<item><id>Imported photos</id><transl>已导入的图片</transl></item>
+<item><id>Import photos</id><transl>导入照片</transl></item>
+
+<item><id>Added</id><transl>已添加</transl></item>
+<item><id>To be added</id><transl>待添加</transl></item>
+
+<item><id>Confirm password</id><transl>确认密码</transl></item>
+<item><id>photos filetype not allowed</id><transl>张图片文件类型不允许</transl></item>
+<item><id>photos too small</id><transl>张图片太小</transl></item>
+<item><id>files are deleted.</id><transl>个文件已删除。</transl></item>
+<item><id>clean up the album</id><transl>清理相册</transl></item>
+<item><id>delete album</id><transl>删除相册</transl></item>
+<item><id>Manage your photo collection</id><transl>管理您的图像收藏</transl></item>
+<item><id>Add</id><transl>添加</transl></item>
+<item><id>Add folder</id><transl>添加文件夹</transl></item>
+<item><id>Allowed file types</id><transl>允许的文件类型</transl></item>
+<item><id>Minimum width</id><transl>最小宽度</transl></item>
+<item><id>Minimum height</id><transl>最小高度</transl></item>
+<item><id>pixels</id><transl>像素</transl></item>
+<item><id>Empty favorites</id><transl>清空收藏夹</transl></item>
+<item><id>Create a password</id><transl>创建密码</transl></item>
+
+<item><id>Are you sure you want to move this file to the Recycle Bin?</id><transl>确定要把此文件放入回收站吗？</transl></item>
+<item><id>Are you sure you want to move these files to the Recycle Bin?</id><transl>您确定要将这些文件放入回收站吗？</transl></item>
+<item><id>Are you sure you want to remove this photo from the current collection?</id><transl>您确定要从当前集合中移除这张照片吗？</transl></item>
+<item><id>Are you sure you want to delete these items?</id><transl>您确定要删除这些项目吗？</transl></item>
+<item><id>Are you sure you want to empty caddie?</id><transl>您确定要清空图片标记库吗？</transl></item>
+<item><id>Are you sure you want to empty your favorites?</id><transl>您确定要清空收藏夹吗？</transl></item>
+<item><id>Browse</id><transl>浏览</transl></item>
+
+<item><id>Face Classification</id><transl>人脸分类</transl></item>
+<item><id>Same people</id><transl>同一人</transl></item>
+<item><id>Classify</id><transl>分类</transl></item>
+<item><id>Select the merged image</id><transl>选择合并后的图像</transl></item>
+<item><id>Selected</id><transl>选中</transl></item>
+<item><id>At least 2 selected</id><transl>至少选择2个</transl></item>
+<item><id>Calculating the image quality ...</id><transl>正在计算图像质量...</transl></item>
+<item><id>More</id><transl>更多</transl></item>
+<item><id>Date taken</id><transl>拍摄日期</transl></item>
+<item><id>PhotoNest encrypted version</id><transl>PhotoNest 加密版</transl></item>
+<item><id>Add example</id><transl>添加示例</transl></item>
+</data>

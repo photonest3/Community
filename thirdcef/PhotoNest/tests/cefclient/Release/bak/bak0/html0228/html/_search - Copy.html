@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.slider.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.search.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body id="theColorPage" class="topbar-float black topbar-fixed clear thedark">
+
+    <div id="searchform">
+        <form class="filter" method="post" name="search" id="frm1">
+            <fieldset>
+                <legend>{'Search for words'|@translate}</legend>
+                <p>
+                    <input type="text" name="search_allwords" value="{$search_allwords}" maxlength="25" />
+
+                    <br />
+                    <label>
+                        <input type="radio" name="mode" value="AND" o='mode_and' />
+                        {'Search for all terms'|@translate}
+                    </label>
+                    <label>
+                        <input type="radio" name="mode" value="OR" o='mode_or' />
+                        {'Search for any term'|@translate}
+                    </label>
+
+                    <br />
+                    <label>
+                        <input type="checkbox" name="search_in_name" value="1" o='search_in_name' />
+                        {'Photo title'|@translate}
+                    </label>
+                    <label>
+                        <input type="checkbox" name="search_in_comment" value="1" o='search_in_comment' />
+                        {'Photo description'|@translate}
+                    </label>
+                    <label>
+                        <input type="checkbox" name="search_in_file" value="1" o='search_in_file' />
+                        {'File name'|@translate}
+                    </label>
+                    <label>
+                        <input type="checkbox" name="search_in_tags" value="1" o='search_in_tags' />
+                        {'Tags'|@translate}
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset g='category'>
+                <legend>{'Search in albums'|@translate}</legend>
+                <p>
+                    <select id="categories" name="cat" multiple="multiple" style="display:none;">
+                        {$category_opt}
+                    </select>
+                    <label>
+                        <input type="checkbox" name="subcats" value="1" o='subcats' />
+                        {'Search in sub-albums'|@translate}
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>{'Type'|@translate}</legend>
+                <p>
+                    <label>
+                        <input type="checkbox" name="search_images" value="1" o='search_images' />
+                        {'Images'|@translate}
+                    </label>
+                    <label>
+                        <input type="checkbox" name="search_videos" value="1" o='search_videos' />
+                        {'Videos'|@translate}
+                    </label>
+                    <label>
+                        <input type="checkbox" name="search_gps" value="1" o='search_gps' />
+                        {'GPS'|@translate}
+                    </label>
+                </p>
+            </fieldset>
+
+
+            <fieldset id="bydate" g='bydate'>
+                <legend>{'Search by date'|@translate}</legend>
+                <ul>
+                    <!--        <li>
+                                <label>
+                                    {'Kind of date'|@translate}
+                                </label>
+                            </li>-->
+                    <li>
+                        <label>
+                            <input id="date_creation" type="radio" name="date_type" value="date_creation" o='date_creation' />
+                            {'Creation date'|@translate}
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input id="date_available" type="radio" name="date_type" value="date_available" o='date_available' />
+                            {'Synchronization date'|@translate}
+                        </label>
+                    </li>
+                </ul>
+                <ul>
+                    <li id="createdate_li" o='createdate_li'>
+                    </li>
+                    <li id="postdate_li" o='postdate_li'>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset g='dimension'>
+                <legend><a href="javascript:;" ; onclick="advdimension();return false;">{'Dimensions'|@translate} &nbsp; <span id="arrd1"><i class="icon-down-open"></i></span></a></legend>
+
+                <blockquote id="s_dimension"></blockquote>
+
+            </fieldset>
+
+            <fieldset id="byadv" style="ooobyadvooo;">
+                <legend><a href="javascript:;" ; onclick="adv();return false;">{'Advanced'|@translate} &nbsp; <span id="arrd"><i class="icon-down-open"></i></span></a></legend>
+
+            </fieldset>
+
+            <div id="adv_search" style="margin-left:0px;ooodispooo;">
+
+                <fieldset g='tags'>
+                    <legend style="margin-left:20px;">{'Search tags'|@translate}</legend>
+                    <p>
+                        <select id="tags" placeholder="{'Type in a search term'|@translate}" name="tags"
+                                multiple="multiple" style="display:none;">
+                            {$tag_opt}
+                        </select>
+                        <label>
+                            <span>
+                                <input type="radio" name="tag_mode" value="AND" o='tag_mode_and' />
+                                {'All tags'|@translate}
+                            </span>
+                        </label>
+                        <label>
+                            <span>
+                                <input type="radio" name="tag_mode" value="OR" o='tag_mode_or' />
+                                {'Any tag'|@translate}
+                            </span>
+                        </label>
+                    </p>
+                </fieldset>
+
+                <fieldset g='author'>
+                    <legend style="margin-left:20px;">{'Search for an author'|@translate}</legend>
+                    <p>
+                        <select id="authors" placeholder="{'Type in a search term'|@translate}" name="authors"
+                                multiple="multiple" style="display:none;">
+                            {$author_opt}
+                        </select>
+                    </p>
+                </fieldset>
+                <div style="height:70px;"></div>
+            </div>
+            <span style="position:fixed; top:30px; right:30px;">
+                <a id="search_submit" class="filter-validate">
+                    {'OK'|@translate}
+                </a>
+                <a class="cancelbtn" href="javascript:;" onclick="myreset();return false;">{'Reset'|@translate}</a>
+            </span>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.slider.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript">
+        var control1, control2, control3;
+
+        function backto(url) {
+            window.location = url;
+        };
+        function myreset() {
+            //document.getElementById("frm1").reset();
+            $("input[name=search_allwords]").val("");
+            $("input[name=mode][value='AND']").prop("checked", true);
+            $("input[name=search_in_name]").prop("checked", true);
+            $("input[name=search_in_comment]").prop("checked", true);
+            $("input[name=search_in_file]").prop("checked", true);
+            $("input[name=search_in_tags]").prop("checked", false);
+            $("input[name=subcats]").prop("checked", true);
+            $('.slider-choice').click();
+            $("input[name=search_images]").prop("checked", true);
+            $("input[name=search_videos]").prop("checked", true);
+            $("input[name=search_gps]").prop("checked", false);
+            $("#s_dimension").hide();
+            $("#adv_search").hide();
+
+            if (control1) {
+                control1.clear();
+            }
+            if (control2) {
+                control2.clear();
+            }
+            if (control3) {
+                control3.clear();
+            }
+        }
+
+        function advdimension() {
+            $("#s_dimension").toggle();
+            var val = "1";
+            if ($("#s_dimension").is(":hidden")) {
+                val = "0";
+                $("#arrd1").html('<i class="icon-down-open"></i>');
+            }
+            else {
+                $("#arrd1").html('<i2 class="icon-down-open"></i2>');
+            }
+        };
+        function adv() {
+            $("#adv_search").toggle();
+            if ($("#adv_search").is(":hidden")) {
+                $("#arrd").html('<i class="icon-down-open"></i>');
+            }
+            else {
+                $("#arrd").html('<i2 class="icon-down-open"></i2>');
+            }
+        };
+
+        $(document).ready(function () {
+            $.getJSON("./index.html?act=index.slider", function (data) {
+                if (data.stat == "ok") {
+                    $("#postdate_li").html(data.result.slider_postdate);
+                    $("#createdate_li").html(data.result.slider_createdate);
+                    $("#s_dimension").html(data.result.slider_dimension);
+
+                    var sliders = data.result.slider_josn;
+                    $('[data-slider=createdates]').dblSlider(sliders.createdates);
+                    $('[data-slider=postdates]').dblSlider(sliders.postdates);
+
+                    $('[data-slider=widths]').dblSlider(sliders.widths);
+                    $('[data-slider=heights]').dblSlider(sliders.heights);
+                    $('[data-slider=ratios]').dblSlider(sliders.ratios);
+
+                    if (data.result.dimension == "0") {
+                        $("#s_dimension").hide();
+                    }
+                }
+                else {
+                    $("#bydate").hide();
+                    $("#byadv").hide();
+                    $("#adv_search").hide();
+                    $("#s_dimension").hide();
+                }
+            });
+            setTimeout(function () {
+                $("input[name=search_allwords]").focus();
+            }, 50);
+
+
+            jQuery('.font-checkbox').fontCheckbox();
+
+            if ($("#s_dimension").is(":hidden")) {
+            }
+            else {
+                $("#arrd0").html('<i2 class="icon-down-open"></i2>');
+            }
+
+
+            if ($("#adv_search").is(":hidden")) {
+            }
+            else {
+                $("#arrd").html('<i2 class="icon-down-open"></i2>');
+            }
+
+            $('#date_creation').click(function (e) {
+                $('#createdate_li').show();
+                $('#postdate_li').hide();
+            });
+
+            $('#date_available').click(function (e) {
+                $('#createdate_li').hide();
+                $('#postdate_li').show();
+            });
+
+            var $area1 = $('#authors').selectize({
+                plugins: ['remove_button'],
+                maxOptions: $(this).find("option").length
+            });
+            if ($area1) {
+                control1 = $area1[0].selectize;
+            }
+
+            var $area2 = $('#tags').selectize({
+                plugins: ['remove_button'],
+                maxOptions: $(this).find("option").length
+            });
+            if ($area2) {
+                control2 = $area2[0].selectize;
+            }
+
+            var $area3 = $('#categories').selectize({
+                plugins: ['remove_button'],
+                maxOptions: $(this).find("option").length
+            });
+            if ($area3) {
+                control3 = $area3[0].selectize;
+            }
+
+            $("#search_submit").on("click", function () {
+                var body = $("#frm1").serialize();
+                $.post("./index.html?search=q", body, function (data, state) {
+                    var info = $.parseJSON(data);
+                    if (info.stat == "ok") {
+                        parent.location.href = "./index.html?search=q";
+                    }
+                });
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>

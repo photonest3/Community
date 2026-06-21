@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <style type="text/css">
+        .delete_popin {
+            padding: 20px 30px;
+            min-width: 350px;
+            min-height: 230px;
+            height: 100%;
+        }
+
+            .delete_popin p {
+                margin: 0;
+            }
+
+            .delete_popin ul {
+                padding: 0;
+                margin: 30px 0;
+            }
+
+                .delete_popin ul li {
+                    list-style-type: none;
+                    margin: 10px 0;
+                }
+
+            .delete_popin .buttonLike {
+                padding: 5px;
+                margin-right: 10px;
+            }
+
+            .delete_popin p.popin-actions {
+                margin-top: 30px;
+            }
+
+        #cboxLoadedContent {
+            background: #000;
+            padding: 1px;
+            text-align: center;
+        }
+
+        .pictures {
+            list-style: none;
+            margin: 0;
+            max-width: 30rem;
+            padding: 0;
+            text-align: center;
+        }
+
+        .lishow {
+            display: block;
+        }
+
+        .lihide {
+            display: none;
+        }
+
+        .category2 {
+            min-width: 300px;
+            width: 500px;
+            text-align: left;
+            display: inline-block;
+            float: left;
+        }
+
+        .entry-title {
+            float: left;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        .alb {
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+            font-weight: normal;
+            color: #333;
+            float: left;
+            margin-left: 5px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        .showInfo {
+            margin: 0;
+            text-align: left;
+            font-weight: normal;
+            color: #333;
+            float: left;
+            margin-left: -5px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        .selectize-input {
+            padding: 4px 8px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui" style="min-width: 1000px;">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container">
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <div style="background-color: #f3f3f3;height: 60px; margin-left:5px;">
+                        <span class="alb">
+                            <a class="showInfo" href="./admin.html?page=admin.cat_list"><span style="letter-spacing: 0">{'Albums'|@translate}</span></a>
+                        </span>
+
+
+                        <span class="entry-title">
+                            {$titlename}
+                        </span>
+                    </div>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="selected_tab">
+                                <a href="./admin.html?page=admin.album&properties=1&category={$cat_id}">
+                                    <span><span class="icon-pencil"></span>{'Properties'|@translate} </span>
+                                </a>
+                            </li>
+                            <li class="normal_tab">
+                                <a href="./admin.html?page=admin.album&sort_order=1&category={$cat_id}">
+                                    <span><span class="icon-shuffle"></span>{'Photos sort order'|@translate} </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="content" style="-webkit-user-select: text;">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos"></div>
+                            </div>
+                        </div>
+                        <div class="titrePage">
+                        </div>
+                        <div id="catModify">
+                            <fieldset>
+                                <span class="entry-title0">
+                                    <select class="category2" data-selectize="categories" onchange="seleccat(this);">
+
+                                        {$catoptions}
+                                    </select>
+                                </span>
+                                <legend>{'Information'|@translate}</legend>
+                                <table style="width: 100%">
+                                    <tbody>
+                                        <tr>
+                                            {$albumThumbnail}
+                                            <td id="albumLinks">
+                                                <p>
+                                                    {$albumLinks_p}
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a class="stm-icon pn-icon-eye" href="./index.html?category={$cat_id}">
+                                                            {'jump to album'|@translate}
+                                                            &rarr;
+                                                        </a>
+                                                    </li>
+                                                    {$manage_photos_li}
+                                                    <li class="dispadd" style="text-transform: lowercase;">
+                                                        <a class="icon-plus-circled"
+                                                           href="./admin.html?page=admin.photos_add&album={$cat_id}">
+                                                            {'Add Photos'|@translate}
+                                                        </a>
+                                                    </li>
+                                                    <li>{$categoryUl_li_2} </li>
+                                                    <li class="dispsyn">
+                                                        <a class="icon-exchange" href="./admin.html?page=admin.galleries">
+                                                            {'Photo Directory'|@translate}
+                                                        </a>
+                                                        <br />
+                                                        {'Folder:'|@translate} <a href="javascript:;" onclick="openfol(this); return false;"
+                                                                                  root="{$root}">{$synroot}</a>
+                                                    </li>
+                                                    <li class="dispdel">
+                                                        <a class="icon-trash deleteAlbum" href="#">
+                                                            {'delete album'|@translate}
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                            <form id="form1" action="" method="post">
+                                <fieldset>
+                                    <legend>{'Properties'|@translate}</legend>
+                                    <p>
+                                        <strong>{'Name'|@translate}</strong>
+                                        <br />
+                                        <input type="text" class="large" name="name" value="{$name}" maxlength="50" />
+                                    </p>
+                                    <p>
+                                        <strong>{'Parent album'|@translate}</strong>
+                                        <br />
+                                        <select data-selectize="categories" ame="parent" style="width: 600px;">
+                                            <option value="0">------------</option>
+                                            {$parent_options}
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <strong>{'Description'|@translate}</strong>
+                                        <br />
+                                        <textarea cols="50" rows="3" name="comment" id="comment" class="description">{$comment}</textarea>
+                                    </p>
+                                    <p style="margin: 0">
+                                        <button name="submit" id="submit" type="button" onclick="submitclick();return false;" class="buttonLike">
+                                            <i class="icon-floppy"></i>{'Save Settings'|@translate}
+                                        </button>
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var _cat_id = "{$cat_id}";
+        var _parent_id = "{$parent_id}";
+        var _representative = "{$photo}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _deltitle = "{'delete album'|@translate}";
+        var _cbox_change = 0;
+
+        $('[data-selectize=categories]').selectize({});
+
+        function openfol(obj) {
+            window.cefQuery({
+                request: 'Prompt.q.folder:' + $(obj).attr("root")
+            });
+        }
+        function is_readonly() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return true;
+            }
+            return false;
+        }
+
+        function seleccat(obj) {
+            var v = $(obj).val();
+            var href = "./admin.html?page=admin.album&properties=1";
+            if (v != "" && v != "0") {
+                href += "&category=" + v;
+                location.href = href;
+            }
+        }
+
+        function submitclick() {
+            if (is_readonly()) {
+                return;
+            }
+
+            var body = $("#form1").serialize();
+
+            $.post("./admin.html?page=admin.album&properties=1&category={$cat_id}", body, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    $('#info').html(info.htm);
+                    $('#info').delay(100).show();
+                    $('#info').delay(2000).fadeOut();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            jQuery('.font-checkbox').fontCheckbox();
+
+
+            $(".selectize-control").show();
+
+            $(document).on('click', '.refreshRepresentative', function (e) {
+                if (is_readonly()) {
+                    return;
+                }
+
+                $.ajax({
+                    url: "./ws.php?format=json&method=categories.refreshRepresentative&representative=" + _representative,
+                    type: "POST",
+                    data: {
+                        category_id: _cat_id
+                    },
+                    success: function (resp) {
+                        var data = $.parseJSON(resp);
+                        if (data.stat == 'ok') {
+                            _representative = data.result.photo;
+                            if (data.result.ext == "mp3" || data.result.ext == "mp4" || data.result.ext == "webm" || data.result.ext == "ogg") {
+                                $(".video-js").find("a").attr('href', data.result.url);
+                                $("#videimg").attr('src', data.result.src);
+                                $("#duration").text(data.result.duration);
+                                $(".albumThumbnailImage").hide();
+                                $(".video-js").show();
+                            }
+                            else {
+                                $("#box_ori").attr('src', data.result.src);
+                                $("#box_ori").attr('data-original', data.result.ori);
+                                $(".albumThumbnailImage").show();
+                                $(".video-js").hide();
+                            }
+                        }
+                    }
+                });
+
+                e.preventDefault();
+            });
+
+            $(document).on('click', '.deleteRepresentative', function (e) {
+                $.ajax({
+                    url: "./ws.php?format=json&method=categories.deleteRepresentative",
+                    type: "POST",
+                    data: {
+                        category_id: _cat_id
+                    },
+                    success: function (resp) {
+                        var data = $.parseJSON(resp);
+                        if (data.stat == 'ok') {
+                            $(".albumThumbnailImage").hide();
+                        }
+                    }
+                });
+
+                e.preventDefault();
+            });
+
+            $(".deleteAlbum").click(function () {
+                if (is_readonly()) {
+                    return;
+                }
+
+                $.colorbox({
+                    width: 437, height: 270, overlayClose: false,
+                    inline: true,
+                    title: _deltitle,
+                    href: ".delete_popin"
+                });
+                return false;
+            });
+
+            $(document).on('click', '.close-delete_popin', function (e) {
+                $.colorbox.close();
+                e.preventDefault();
+            });
+
+            $("a.preview-box").colorbox({
+                transition: "none", width: "85%", height: "85%", fixed: true, maxWidth: 1140
+            });
+        });
+    </script>
+</body>
+</html>

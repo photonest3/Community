@@ -1,0 +1,15 @@
+﻿  Building Custom Rule E:/voy/102/third/libarchive-master/tar/CMakeLists.txt
+  bsdtar.c
+  cmdline.c
+  creation_set.c
+  read.c
+  subst.c
+  util.c
+  write.c
+  err.c
+  line_reader.c
+  passphrase.c
+  bsdtar_windows.c
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  bsdtar.vcxproj -> E:\voy\102\third\libarchive-master\build_vs2019_x64\bin\Release\bsdtar.exe

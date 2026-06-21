@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <style type="text/css">
+        .article-nav a:hover:before {
+            display: inherit;
+        }
+
+        .article-nav a:hover span {
+            width: 0;
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        body.topbar-float.clear .nav {
+            border-bottom: none;
+        }
+
+        body[class*=topbar] .sb-site-container > div {
+            box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+        }
+
+        .actionButtons {
+            margin-top: -38px;
+            margin-right: 100px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .slider-nav {
+            position: absolute;
+            width: 70%;
+            margin: 0 auto;
+            max-width: 500px;
+            bottom: 0;
+            visibility: hidden;
+        }
+
+        .slick-slide {
+            margin: 0 20px;
+        }
+
+            .slick-slide img {
+                clear: both;
+                margin: auto;
+                display: block;
+                max-height: min(700px, calc(100vh - 150px));
+                width: auto;
+            }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+        #theColorPage::-webkit-scrollbar {
+            width: 0 !important;
+        }
+
+
+        #cboxContent {
+            margin-top: 0;
+        }
+
+        .lazy .slick-track {
+            margin-top: 60px;
+        }
+
+        .viewer-footer {
+            bottom: 30px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body id="theColorPage" class="topbar-float black topbar-fixed clear thepic ">
+    <div class="sb-site-container" style="position: fixed;width: 100%; top:0;">
+        <div style="background: transparent;">
+            <header class="header" style="display: block; opacity: 1; margin-top: -20px;">
+                <div id="nav-wrapper" class="nav-wrapper" style="transform: translateY(0px);">
+                    <nav class="nav">
+                        <div class="titrePage0" id="imageHeaderBar">
+                            <div class="imageNumber">
+                                <span id="photos" style="margin-right:5px;"></span>
+                            </div>
+                            <div class="browsePath0">
+                            </div>
+                        </div>
+                        <div class="actionButtons">
+                            {$actionButtons}
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+    {$calendar_nav}
+    <table style="width: 90%;max-width: 1140px;">
+        <tr>
+            <td style="text-align:center; vertical-align:middle; height: calc(100vh - 150px);">
+                <section class="lazy slider ">
+                    {$picture_content}
+                </section>
+            </td>
+        </tr>
+    </table>
+    <section class="slider-nav">
+        {$slider_nav}
+    </section>
+    <div class="viewer-container viewer-backdrop" touch-action="none">
+        <div class="viewer-footer">
+            <div class="viewer-title">
+                <span id="filename"></span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script src="./templ/themes/default/js/plugins/slick/slick.min.js" type="text/javascript"
+            charset="utf-8"></script>
+    <script type="text/javascript">
+        var _total = parseInt('{$total}');
+        var _init = parseInt('{$init}');
+        var _from = parseInt('{$from}');
+        var _to = parseInt('{$to}');
+        var _href = "";
+        var _current = "";
+        var _in = 0;
+        var _step = 50;
+        var _loading = false;
+        var _dr = "next";
+
+        var _currentSlide = -1;
+        var _LastReloadDr = "";
+
+        function reload(from, to, dr) {
+            _loading == true;
+            _init = 0;
+            _LastReloadDr = dr;
+            $.get("./picture.html?act=picture.get_page&page0=slide&from=" + from + "&to=" + to, function (data, state) {
+                var info = $.parseJSON(data);
+                if (dr == "next") {
+                    $(".lazy").slick('slickRemove2', _step, true, info.slider_for);
+                    $(".slider-nav").slick('slickRemove2', _step, true, info.slider_nav);
+                }
+                else {
+                    $(".lazy").slick('slickRemove2', _step, false, info.slider_for);
+                    $(".slider-nav").slick('slickRemove2', _step, false, info.slider_nav);
+                }
+                _loading = false;
+                _from = from;
+                _to = to;
+            });
+        }
+
+        $(document).on('ready', function () {
+            $(document).mousemove(function (e) {
+                _in++;
+                if (e.clientY < 120) {
+                    $('.actionButtons').fadeIn();
+                }
+                else {
+                    if (_in > 10) {
+                        $('.actionButtons').fadeOut();
+                    }
+                }
+
+                if (e.clientX < 200) {
+                    $('.previous').fadeIn();
+                }
+                else {
+                    $('.previous').fadeOut();
+                }
+
+                var off = $(document).width() - e.clientX;
+                if (off < 200) {
+                    $('.next').fadeIn();
+                }
+                else {
+                    $('.next').fadeOut();
+                }
+            });
+
+            function set_title() {
+                _current = $(".slick-active img").attr("data-idx");
+                var alt = $(".slick-active img").attr("alt0");
+                $("#filename").text(alt);
+                $("#photos").text(_current + ' / ' + _total);
+            }
+
+            function adj_height() {
+                var h = document.body.clientHeight;
+                var h0 = $(".slick-active img").height();
+                $('.slider-nav').css("visibility", "visible");
+            }
+
+            $(".lazy").on('init', function (event, slick, currentSlide, nextSlide) {
+                set_title();
+                $(".slick-active img").load(function () {
+                    adj_height();
+                });
+            });
+
+            $(".lazy").on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                set_title();
+                if (_loading == true) {
+                    return;
+                }
+
+                var from, to;
+                if (slick.slideCount < _total) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    var curr_idx = parseInt($(".slick-active img").attr("data-idx"));
+                    if (_dr == "prev") {
+                        var first_idx = parseInt($(".slick-slide:not(.slick-cloned) img:first").attr("data-idx"));
+                        if (curr_idx < first_idx + 10) {
+                            from = _from - _step;
+                            to = _from;
+
+                            if (_LastReloadDr == "next") {
+                                from = _from - 3 * _step;
+                                to = from + _step;
+                            }
+                            if (_from <= 0) {
+                                from = _total - _step;
+                                to = _total;
+                            }
+                            reload(from, to, _dr);
+                        }
+                    }
+                    else if (_dr == "next") {
+                        var last_idx = parseInt($(".slick-slide:not(.slick-cloned) img:last").attr("data-idx"));
+                        if (curr_idx > last_idx - 10) {
+                            from = _to;
+                            to = from + _step;
+
+                            if (_LastReloadDr == "prev") {
+                                from = _from + 3 * _step;
+                                to = from + _step;
+                            }
+                            if (from >= _total) {
+                                from = 0;
+                                to = _step;
+                            }
+                            reload(from, to, _dr);
+                        }
+                    }
+                }
+
+                _loading = false;
+            });
+
+            $(".lazy").on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                if (currentSlide > nextSlide) {
+                    _dr = "prev";
+                }
+                else {
+                    _dr = "next";
+                }
+                //                $(".slick-current img").hide();
+            });
+
+            $(".lazy").slick({
+                lazyLoad: 'ondemand',
+                dots: false,
+                //	speed:10,
+                fade: true,
+                // adaptiveHeight: true,
+                // variableWidth: true,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                asNavFor: '.slider-nav',
+                arrows: false,
+                centerMode: true,
+                initialSlide: _init,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+
+            $('.slider-nav').slick({
+                slidesToShow: 10,
+                // slidesToScroll: 1,
+                asNavFor: '.lazy',
+                dots: false,
+                //variableWidth: true,
+                arrows: false,
+                centerMode: true,
+                initialSlide: _init,
+                focusOnSelect: true
+            });
+
+            $(".lazy").slick('slickPlay');
+            $('.slider-nav').css('left', ($(window).width() - $('.slider-nav').width()) / 2 + $(window).scrollLeft() + 'px');
+        });
+
+        var _speed = 3000;
+        function slideshow_start(btn) {
+            if (btn == "cmdinc") {
+                _speed -= 1000;
+                if (_speed <= 1000) {
+                    _speed = 1000;
+                }
+            }
+            else if (btn == "cmddec") {
+                _speed += 1000;
+                if (_speed > 5000) {
+                    _speed = 5000;
+                }
+            }
+
+            $.get("./picture.html?act=picture.get_speed&btn=" + btn + "&speed=" + _speed, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    $("#cmdslideshow").html(info.result.cmdslideshow);
+                    $("#cmdinc").html(info.result.cmdinc);
+                    $("#cmddec").html(info.result.cmddec);
+                    if (btn == "stop") {
+                        $(".lazy").slick('slickPause');
+                    }
+                    else {
+                        $(".lazy").slick('slickSetOption', { autoplaySpeed: _speed });
+                        $(".lazy").slick('slickPlay');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

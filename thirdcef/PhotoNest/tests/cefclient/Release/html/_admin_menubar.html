@@ -1,0 +1,112 @@
+<aside>
+    <ul>
+        <li style="padding:20px;">
+            <a href="javascript:;" onclick="admin_url('');return false;" title="{'Visit PhotoNest'|@translate}"><span class="home" style="display:block;"><i class="icon-home"></i> {'Browse'|@translate}</span></a>
+        </li>
+    </ul>
+    <ul style="margin-top:0;">
+        <li g='dashboard'><a href="javascript:;" onclick="admin_url('./admin.html');return false;"><i class="icon-television"></i> {'Dashboard'|@translate}</a></li>
+        <li g='galleries'><a href="javascript:;" onclick="admin_url('./admin.html?page=admin.galleries');return false;"><i class="icon-plus"></i> {'Add Photos'|@translate}{$pending_span}</a></li>
+        <li g='cat_list'><a href="javascript:;" onclick="admin_url('./admin.html?page=admin.cat_list');return false;"><i class="icon-sitemap"></i> {'Albums'|@translate}</a></li>
+        <li g='tags'><a href="javascript:;" onclick="admin_url('./admin.html?page=admin.tags');return false;"><i class="icon-tags"></i> {'Tags'|@translate}</a></li>
+        <li g='global'><a href="javascript:;" onclick="admin_url('./admin.html?page=admin.batch&from=1&mode=global');return false;"><i class="icon-pencil"></i> {'Batch Manager'|@translate}</a></li>
+        {$menubar_in_caddie} {$menubar_no_album}
+        {$menubar_duplicates}
+    </ul>
+    <br />
+    <ul>
+        <li g='configuration'><a href="javascript:;" onclick="admin_url('./admin.html?page=admin.config&section=main');return false;"><i class="icon-cog"></i> {'Configuration'|@translate}</a></li>
+        <li g='stats'><a href="javascript:;" onclick="admin_url('./admin.html?page=admin.stats&{yearmonth}');return false;"><i class="icon-back-in-time"></i> {'History'|@translate}</a></li>
+    </ul>
+
+
+	<ul id="btnVersion">
+	   <li> <a href="javascript:;" onclick="openphotonest();return false;">
+			<span>
+				{'PhotoNest encrypted version'|@translate}
+			</span>
+		</a></li>
+	</ul>
+</aside>
+<script type="text/javascript">
+    var storage = window.localStorage;
+    if (location.href.indexOf("admin.tags") > 0) {
+    }
+    else {
+        storage.schtag = "";
+    }
+
+    function admin_url(url) {
+        if (url == "") {
+            if (storage.a) {
+                url = storage.a;
+            }
+            else {
+                url = "./index.html";
+            }
+        }
+
+        if (storage.b == '1') {
+            $('#aru').html("{'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;");
+            $('#info').attr("cmd", url);
+            $('#info').delay(100).show();
+            $('#info').delay(5000).fadeOut();
+        }
+        else {
+            window.location = url;
+        }
+    }
+
+    function get_pending(ty) {
+        $.get("./ws.php?method=categories.get_nb&ty=" + ty, function (data, state) {
+            var info = $.parseJSON(data);
+            if (info.stat == "err") {
+                setTimeout("get_pending('0')", 700);
+            }
+            else if (info.stat == "ok") {
+                var nb = parseInt(info.nb);
+                if (nb == 0) {
+                    $("#pending").hide();
+                }
+                else {
+                    $("#pending").show();
+                }
+            }
+        });
+    }
+
+    function myactivate(activate) {
+        if (activate == "1") {
+            if (storage.idx == "0") {
+                var sub = Math.ceil((new Date().getTime() - storage.curr) / 1000);
+
+                if (location.href.indexOf("admin.galleries") > 0) {
+                    if (sub > 6) {
+                        setTimeout("need_refresh()", 100);
+                    }
+                }
+                else {
+                    if (sub > 6) {
+                        setTimeout("get_pending('1')", 100);
+                    }
+                }
+            }
+        }
+        storage.idx = activate;
+        if (activate == "0") {
+            storage.curr = new Date().getTime();
+        }
+    }
+
+	function openphotonest() {
+		window.cefQuery({
+			request: 'Prompt.q.openphotonest:0'
+		});
+	}
+
+	$(document).ready(function () {	  
+		 if ("{$album}" == "private") {
+			$('#btnVersion').hide();
+		}
+   })	
+</script>

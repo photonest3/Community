@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{469662FC-B9F7-3C9E-98AA-23AFF1485D4B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>bsdtar_test</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bsdtar_test.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bsdtar_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bsdtar_test.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bsdtar_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">bsdtar_test.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">bsdtar_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">bsdtar_test.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">bsdtar_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w14062 /w14254 /w14295 /w14296 /w14389 /w14505 /w14514 /w14702 /w14706</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/Debug/bsdtar_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/voy/102/third/libarchive-master/build_vs2019_x64/bin/Debug/bsdtar_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/Release/bsdtar_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/voy/102/third/libarchive-master/build_vs2019_x64/bin/Release/bsdtar_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/MinSizeRel/bsdtar_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/voy/102/third/libarchive-master/build_vs2019_x64/bin/MinSizeRel/bsdtar_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIST_H;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\voy\102\third\libarchive-master\libarchive;E:\voy\102\third\libarchive-master\build_vs2019_x64;E:\voy\102\third\libarchive-master\tar\..\libarchive_fe;E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test;E:\voy\102\third\libarchive-master\test_utils;E:\voy\102\third\libarchive-master\tar\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/RelWithDebInfo/bsdtar_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/voy/102/third/libarchive-master/build_vs2019_x64/bin/RelWithDebInfo/bsdtar_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\voy\102\third\libarchive-master\tar\test\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/voy/102/third/libarchive-master/tar/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -SE:/voy/102/third/libarchive-master -BE:/voy/102/third/libarchive-master/build_vs2019_x64 --check-stamp-file E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\list.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/voy/102/third/libarchive-master/tar/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -SE:/voy/102/third/libarchive-master -BE:/voy/102/third/libarchive-master/build_vs2019_x64 --check-stamp-file E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\list.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/voy/102/third/libarchive-master/tar/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -SE:/voy/102/third/libarchive-master -BE:/voy/102/third/libarchive-master/build_vs2019_x64 --check-stamp-file E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\list.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/voy/102/third/libarchive-master/tar/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"c:\Program Files\CMake\bin\cmake.exe" -SE:/voy/102/third/libarchive-master -BE:/voy/102/third/libarchive-master/build_vs2019_x64 --check-stamp-file E:/voy/102/third/libarchive-master/build_vs2019_x64/tar/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\list.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\voy\102\third\libarchive-master\build_vs2019_x64\tar\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\voy\102\third\libarchive-master\test_utils\test_utils.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\test_utils\test_main.c" />
+    <ClInclude Include="E:\voy\102\third\libarchive-master\tar\test\test.h" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_0.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_basic.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_copy.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_empty_mtree.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_Z.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_bz2.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_grz.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_gz.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_lrz.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_lz.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_lz4.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_lzma.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_lzo.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_xz.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_extract_tar_zstd.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_format_newc.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_help.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_leading_slash.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_missing_file.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_C_upper.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_C_mtree.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_H_upper.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_L_upper.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_O_upper.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_T_upper.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_U_upper.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_X_upper.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_a.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_acls.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_b.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_b64encode.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_exclude.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_exclude_vcs.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_fflags.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_gid_gname.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_grzip.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_ignore_zeros.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_j.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_k.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_keep_newer_files.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_lrzip.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_lz4.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_lzma.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_lzop.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_n.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_newer_than.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_nodump.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_older_than.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_passphrase.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_q.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_r.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_s.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_safe_writes.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_uid_uname.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_uuencode.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_xattrs.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_xz.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_z.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_option_zstd.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_patterns.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_print_longpath.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_stdio.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_strip_components.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_symlink_dir.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_version.c" />
+    <ClCompile Include="E:\voy\102\third\libarchive-master\tar\test\test_windows.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\voy\102\third\libarchive-master\build_vs2019_x64\ZERO_CHECK.proj">
+      <Project>{ED202B7B-F920-3343-86BD-32F8CEB328A8}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

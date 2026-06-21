@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello1/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" id="black" href="./templ/themes/default/u3.black.css" />
+    <style type="text/css">
+
+        .errors {
+            color: crimson;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .properties SPAN.property {
+            float: unset;
+            width: unset;
+        }
+
+
+        .stm a:hover {
+            text-decoration: none;
+        }
+
+        .stm {
+            /*  border: 1px solid gray;
+            border-radius: 5px !important;
+            font-size: 13px;*/
+            padding: 5px 5px;
+            cursor: pointer;
+        }
+
+        fieldset h3, fieldset label {
+            color: unset;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+</head>
+<body id="theLoginPage" class="topbar-float black topbar-fixed clear" style="overflow-x: hidden;"
+      onkeydown="on_return();">
+    <div class="sb-site-container0 boxFather0" style="padding-bottom: 50px;">
+        <div style="min-height: 414px;">
+            <main class="main">
+                <div class="module row ">
+                    <div class="center2 properties">
+                        <fieldset>
+                            <ul>
+                                <li>
+                                    <center>
+                                        <div id="theHeader"><h1><span class="show-for-print">{$gallery_title}</span></h1></div>
+                                    </center>
+                                </li>
+                                <li style="margin-top:30px;">
+                                    <center>
+                                        <label class="prof_pass property" for="password" style="-webkit-user-select: text; margin-right:5px;">
+                                            {'Password'|@translate}
+                                        </label>
+
+                                        <input tabindex="2" class="login" type="password" name="password"
+                                               id="password" value="" size="25" maxlength="25" />
+                                        <span class="stm">
+                                            <a class="icon-right" id="submit" title="Log in" onclick="submitclick();return false;">
+                                            </a>
+                                        </span>
+                                    </center>
+                                </li>
+                                <li id="byhint">
+                                    <center>
+                                        <span class="property" style="-webkit-user-select: text;">
+                                            {'Password hint'|@translate}
+                                        </span>
+                                        <span id="hintval" style="-webkit-user-select: text;">{$hint}</span>
+                                    </center>
+                                </li>
+                                <li>
+                                    <div style="height:50px;">
+                                        <center>
+                                            <div id="errors" style="display:none;" class="errors"></div>
+                                        </center>
+                                    </div>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var _err1 = "<li>{'Please enter your password.'|@translate}</li>";
+        var _err5 = "<li>{'Invalid password!'|@translate}</li>";
+        var _hint = "{$hint}";
+
+        window.cefQuery({
+            request: 'Prompt.q.loading:1'
+        });
+
+        $(document).ready(function () {
+            $('#byhint').css('visibility', 'hidden');
+            setTimeout(function () {
+                $("#password").focus();
+            }, 50);
+        });
+
+        function on_return() {
+            if (window.event.keyCode == 13) {
+                submitclick();
+            }
+        }
+
+        function submitclick() {
+            var err = "";
+            var pass = $('#password').val();
+
+            if ($.trim(pass) == "") {
+                err += _err1;
+                $("#password").focus();
+            }
+
+            if (err != "") {
+                $('#errors').show();
+                $('#errors').html("<ul>" + err + "</ul>");
+                $('#errors').delay(2000).fadeOut();
+
+                if (_hint != "") {
+                    $('#byhint').css('visibility', 'visible');
+                }
+                return;
+            }
+            $("#submit").attr("disabled", "true");
+
+            var body = "";
+            body += "&password=" + encodeURIComponent($('[name="password"]').val());
+
+            $.post("./ws.php?method=ws.login_ok", body, function (data, state) {
+                var info = $.parseJSON(data);
+                $("#submit").removeAttr("disabled");
+                if (info.stat == "ok") {
+                    window.cefQuery({
+                        request: 'Prompt.q.enckey:'
+                    });
+                    location.replace('./last.html');
+                }
+                else {
+                    $("#password").focus();
+                    $('#errors').html("<ul>" + _err5 + "</ul>");
+                    $('#errors').show();
+                    $('#errors').delay(2000).fadeOut();
+                    if (_hint != "") {
+                        $('#byhint').css('visibility', 'visible');
+                    }
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

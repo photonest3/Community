@@ -1,0 +1,25 @@
+<form id="tag_duplicate_form" action="" method="post" onsubmit="duplicate_submit(); return false;">
+    <input type="hidden" name="edit_list" value="{$values}" />
+    <div class="RenameTagPopInContainer">
+        <div class="AddIconTitle">
+            <span>{'Source tag'|@translate} "{$name}"</span>
+        </div>
+        <div class="RenameTagInputContainer" style="text-align: left;">
+            <label class="tag-property-label TagRenameLabelUsername">
+                <span>{'Name of the duplicate'|@translate}</span>
+                <br />
+                <input type="text" class="tag-property-input" name="tag_name-{$id}" value="{$name} copy"
+                       size="50" maxlength="25" />
+            </label>
+        </div>
+        <div class="TagErrors icon-cancel">
+        </div>
+      
+        <div class="TagSubmitOptions">
+            <div class="TagSubmit" onclick="duplicate_submit();return false;">{'Yes, copy'|@translate}</div>
+            <div class="TagCancel">
+                <span onclick="btn_cancel();return false;">{'Cancel'|@translate}</span>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        .td_right {
+            text-align: right;
+        }
+
+        .popin-actions {
+            margin-top: 30px;
+        }
+
+        body, h3, dt, h2, .throw, .content, label, LEGEND {
+            /*        color: #333;*/
+        }
+
+        #fname0 {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body id="theColorPage" style="min-width: 300px;" class="thedark">
+    <div style="padding-top: 30px;">
+        <center>
+            <p id="fname0"></p>
+            <div id="cont" style="height: 40px;">
+                <span id="fname"></span>
+                <br />
+            </div>
+            <p class="popin-actions" style="display: block;">
+                <a id="deleteConfirm" class="filter-validate" href="javascript:;" onclick="btn_del_imgs();return false;">
+                    <i class="icon-trash"></i>{'OK'|@translate}
+                </a><span id="deteleLoading" style="display: none">
+                    <img src="./templ/themes/default/images/ajax-loader-small.gif" />
+                </span><a class="cancelbtn" href="javascript:;" onclick="cancel_del_img();return false;">
+                    {'Cancel'|@translate}
+                </a>
+            </p>
+        </center>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var _ids = "{$ids}";
+        var _idx = "{$idx}";
+        var _type = "{$type}";
+        var _artid = "{$artid}";
+        var _nb = "{$total}";
+        var _filename = "{$filename}";
+        var _file1 = "{'Are you sure you want to move this file to the Recycle Bin?'|@translate}";
+        var _files = "{'Are you sure you want to move these 999 items to the Recycle Bin?'|@translate}";
+        var _file3 = "{'Are you sure you want to remove this photo from the current collection?'|@translate}";
+
+        $(document).ready(function () {
+            var title = _file1;
+            if (_type == "0") {
+                //$("#fname").html(_filename);
+            }
+            else if (_type == "7") {
+                title = _file3;
+            }
+            else {
+                if (_nb > 1) {
+                    title = _files;
+                    title = title.replace("999", _nb);
+                }
+            }
+            $("#fname0").html(title);
+        });
+
+        function btn_del_imgs() {
+
+            var url = "./delbox.html?act=index.delimg&ids=" + _ids + "&type=" + _type + "&artid=" + _artid;
+            if (_type == "0") {
+                url = "./delbox.html?act=index.delimg&idx=" + _idx + "&type=" + _type;
+            }
+
+            window.cefQuery({
+                request: 'Prompt.q.disabledrag:0'
+            });
+
+            $.get(url, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    if (_type == "0") {
+                        //viewer
+                        if (info.path == "") {
+                            parent.window.location = "./view.html";
+                        }
+                        else {
+                            parent.window.location = "./view.html?path=" + info.path;
+                        }
+                    }
+                    else if (_type == "1") {
+                        //index
+                        parent.window.location.reload();
+                    }
+                    else if (_type == "2") {
+                        //picture
+                        parent.vr_del();
+                        parent.$.colorbox.close();
+                    }
+                    else if (_type == "7") {
+                        //art_zoom
+                        parent.window.location.replace("./index.html?act=index.zoom&ids=" + info.ids + "&artid=" + info.artid);
+                    }
+                    else if (_type == "9") {
+                        //batch
+                        parent.window.location.reload();
+                    }
+                    else {
+                        //cbox_edit
+                        parent.parent._cbox_change = 2;
+                        parent.parent.$.colorbox.close();
+                    }
+                }
+            });
+        }
+
+        function cancel_del_img() {
+            parent.$.colorbox.close();
+        }
+    </script>
+</body>
+</html>

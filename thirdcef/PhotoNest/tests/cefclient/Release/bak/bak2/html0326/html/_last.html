@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.admin_add.css" />
+    <style type="text/css">
+        #stripeddiv {
+            display: none;
+        }
+
+        .my-center {
+            position: absolute;
+            bottom: 50%;
+            top: 50%;
+            margin-top: -25px;
+            height: 50px;
+            width: 300px;
+            margin-left: 50%;
+            left: -150px;
+        }
+
+        #info {
+            margin-top: 20px;
+            margin-right: 20px;
+            padding: 3px 30px 0 10px;
+        }
+
+        .progress-extended {
+            display: none;
+        }
+
+        #uploadingActions {
+            vertical-align: text-bottom;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .progress {
+            background-color: unset;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+</head>
+<body class="jquery-ui" style="min-width: 500px;">
+    <div id="info" class="infos">
+        <label id="aru"></label>
+        <a id="aru2" href="javascript:;" onclick="cancel_ok();return false;">{'Yes'|@translate}</a>
+    </div>
+    <div id="stripeddiv">
+        <table id="striped" class="table table-striped" cellpadding="0" cellspacing="0">
+            <tbody id="folder" class="files" style="vertical-align: top;">
+                <tr class="template-upload fade in" style="border: 1px solid #000; background-color: #bbb;
+                    width: 100%;">
+                    <th style="width: 280px; overflow: hidden; max-width: 280px;">
+                        <span class="name">{'Folder'|@translate}</span>
+                    </th>
+                    <th style="width: 80px;">
+                    </th>
+                    <th class="thead0" style="width: 200px; overflow: hidden; max-width: 200px;">
+                        <span class="preview">{'Album'|@translate}</span>
+                    </th>
+                    <th style="width: 120px;">
+                        <span class="size" id="td_upload">{'Synchronized'|@translate}</span>
+                    </th>
+                    <th style="width: 120px;">
+                        <span class="size" id="td_tobe">{'To be synchronized'|@translate}</span>
+                    </th>
+                    <th style="width: 120px;">
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="fileupload-buttonbar my-center">
+        <div class="col-lg-5">
+            <div class="progress-extended fileupload-process">
+                <i class="icon-spin6"></i>
+            </div>
+            <div id="uploadingActions">
+                <a id="cancelUpload" class="icon-cancel" style="display:none;" title="{'Cancel'|@translate}">
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-5 fileupload-progress fade">
+            <div id="progressbarall" class="progress progress-striped active" aria-valuemin="0"
+                 aria-valuemax="100" style="display: none">
+                <div class="progress-bar progress-bar-success" style="width: 0%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _url = "newurl";
+        var _aru1 = "{'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;";
+        var _aru2 = "{'Are are you sure you want to exit?'|@translate}&nbsp; &nbsp;";
+        var _loading = "{'Loading'|@translate} &nbsp;";
+
+        var _idx = 0;
+        var _sending = 0;
+        var _sent = 0;
+        var _len = 0;
+        var _all_cancel = 0;
+
+        var uploadedPhotos = [];
+        var uploadedCats = [];
+        var _all_ok = 1;
+        var _count = 0;
+        var _pending = 0;
+        var _pre_idx = 0;
+        var _pre_sending = 0;
+        var _pre_len = 0;
+        var _cmd = "";
+
+        function myreload() {
+            window.cefQuery({
+                request: 'Prompt.q.syn_root:'
+            });
+
+            setTimeout(function () {
+                window.location.replace(_url);
+            }, 0);
+        }
+
+        function close_uploading(cmd) {
+            _cmd = cmd;
+            if (_cmd == "close") {
+                $('#aru').html(_aru2);
+            }
+            else {
+                $('#aru').html(_aru1);
+            }
+            $('#info').delay(100).show();
+            $('#info').delay(2000).fadeOut();
+        }
+
+        function notify_uploading(val) {
+            var storage = window.localStorage;
+            storage.b = val;
+            window.cefQuery({
+                request: 'Prompt.q.uploading:' + val
+            });
+        }
+
+        function cancel_ok() {
+            _all_cancel = 1;
+            if (_cmd == "close") {
+                window.cefQuery({
+                    request: 'Prompt.q.close:0'
+                });
+                return;
+            }
+
+            var cancelval = setInterval(function () {
+                if (_sending == 0) {
+                    clearInterval(cancelval);
+                    complete("1");
+                }
+            }, 100);
+        }
+
+        function complete(cancel) {
+            var catids = uploadedCats.join(",");
+            //var image_ids = uploadedPhotos.join(",");
+            notify_uploading("0");
+
+            $.getJSON('./ws.php?method=upload.complete&id=' + catids + '&cancel=' + cancel + "&nb=" + uploadedPhotos.length, function (data) {
+                myreload();
+            });
+        }
+
+        function progressall(file) {
+            var progress = Math.floor(_sent * 100 / _len);
+            $('#cancelUpload').show();
+
+            $('.progress-extended').html(_loading + _sent + " / " + _len);
+            $('.fileupload-progress')
+                .find('.progress')
+                .attr('aria-valuenow', progress)
+                .children()
+                .first()
+                .css('width', progress + '%');
+
+            if (file) {
+                var folders = $("#folder").find('.progress');
+                for (var i = 0; i < folders.length; i++) {
+                    var folder = folders[i];
+                    var txt = $(folder).attr('dir0');
+                    var pos = file.lastIndexOf("/");
+                    var path = file.substr(0, pos);
+                    if (path == txt) {
+                        var sizes = $(folder).attr('sizes');
+                        var idx = $(folder).attr('idx');
+                        var all = parseInt(sizes);
+                        var nb = parseInt(idx);
+                        if (all > 0) {
+                            nb++;
+                            $(folder).attr('idx', nb);
+                            var progress2 = Math.floor(nb * 100 / all);
+                            $(folder)
+                                .attr('aria-valuenow', progress2)
+                                .children()
+                                .first()
+                                .html(nb)
+                                .css('width', progress2 + '%');
+
+                            if (nb == all) {
+                                $(folder).removeClass("progress-striped");
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
+            if (_sent == _len) {
+                complete("0");
+            }
+        }
+
+        function post_data(info) {
+            _len = info.files.length;
+            var interval = setInterval(function () {
+                if (_all_cancel > 0) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                if (_idx >= _len) {
+                    clearInterval(interval);
+                }
+                else if (_sending < 5) {
+                    for (var i = 0; i < 5; i++) {
+                        setTimeout(function () {
+                            if (_idx < _len) {
+                                _sending++;
+                                var cat_id = info.files[_idx].cat_id;
+                                var file = info.files[_idx].filename;
+                                var postdata = "file=" + file;
+                                $.post("./upload.html?category=" + cat_id, postdata, function (data, state) {
+                                    var r = $.parseJSON(data);
+                                    var res = r.result;
+                                    var fullname = '';
+
+                                    if (r.stat == "ok") {
+                                        fullname = res.fullname;
+                                        uploadedPhotos.push(parseInt(res.image_id));
+                                    }
+                                    else //if (r.stat == "small")
+                                    {
+                                        fullname = r.file;
+                                        uploadedPhotos.push(0);
+                                    }
+
+                                    if (uploadedCats.indexOf(cat_id) < 0) {
+                                        uploadedCats.push(cat_id);
+                                    }
+
+                                    _sent++;
+                                    _sending--;
+                                    progressall(fullname);
+                                });
+                                _idx++;
+                            }
+                        }, 0);
+                        if (_sending >= _len) {
+                            break;
+                        }
+                    }
+                }
+            }, 100);
+        }
+
+        function pre_data() {
+            var folders = $("#folder").find('.state');
+            _count = folders.length;
+            _pre_len = _count;
+
+            if (_pre_len == 0) {
+                complete("0");
+                return;
+            }
+
+            var pre_val = setInterval(function () {
+                if (_all_cancel > 0) {
+                    clearInterval(pre_val);
+                    return;
+                }
+
+                if (_pre_idx >= _pre_len) {
+                    clearInterval(pre_val);
+                }
+                else if (_pre_sending < 30) {
+                    for (var i = 0; i < 30; i++) {
+                        _pre_sending++;
+                        var folder = folders[_pre_idx];
+                        var id = $(folder).attr('catid');
+
+                        $.getJSON('./ws.php?method=galleries.pending&id=' + id, function (data) {
+                            if (data.stat == "ok") {
+                                var info = data.result;
+                                $('#trid' + info.id).find('.uploaded').text(info.uploaded);
+                                $('#trid' + info.id).find('.pending').text(info.pending);
+                                $('#trid' + info.id).find('.state').attr('state', info.state);
+                                $('#trid' + info.id).find('.progress').attr('sizes', info.sizes);
+
+                                _pending += parseInt(info.pending);
+                                if (info.state != "ok") {
+                                    _all_ok = 0;
+                                }
+                                _pre_sending--;
+                            }
+                            _count--;
+
+                            if (_count == 0) {
+                                if (_pending != 0) {
+                                    setTimeout(function () { myupload(); }, 0);
+                                }
+                                else {
+                                    complete("0");
+                                }
+                            }
+                        });
+                        _pre_idx++;
+                        if (_pre_idx >= _pre_len) {
+                            break;
+                        }
+
+                        if (_pre_sending >= _pre_len) {
+                            break;
+                        }
+                    }
+                }
+            }, 10);
+        }
+
+        function proc_upload() {
+            var ids = "";
+            var folders = $("#folder").find('.state');
+            for (var i = 0; i < folders.length; i++) {
+                var folder = folders[i];
+                var id = $(folder).attr('catid');
+                var state = $(folder).attr('state');
+                if (state != "ok") {
+                    ids += id + ",";
+                }
+            }
+
+            if (ids == "") {
+                complete("0");
+            }
+            else {
+                $('.progress-extended').css("display", "inline-block");
+                //$('#progressbarall').show();
+
+                $.post("./ws.php?method=galleries.categories", "ids=" + ids, function (data, state) {
+                    var info = $.parseJSON(data);
+                    if (info.stat == "ok") {
+                        if (info.files.length > 0) {
+                            post_data(info);
+                        }
+                        else {
+                            complete("0");
+                        }
+                    }
+                    else {
+                        complete("0");
+                    }
+                });
+            }
+        }
+
+        function myupload() {
+            if (_all_ok == 1) {
+                $.post("./ws.php?method=galleries.clear", "rename=1", function (data, state) {
+                    var info = $.parseJSON(data);
+                    if (info.stat == "ok") {
+                        myreload();
+                    }
+                });
+                return false;
+            }
+
+            notify_uploading("1");
+
+            var ids = "";
+            var datas = "";
+            var folders = $("#folder").find('.state');
+
+            for (var i = 0; i < folders.length; i++) {
+                var folder = folders[i];
+                var id = $(folder).attr('catid');
+                var path = $(folder).attr('path');
+                path = encodeURIComponent(path);
+
+                if (id.indexOf('i') >= 0) {
+                    ids += id + ",";
+                    datas += path + ",";
+                }
+            }
+
+            $.post("./ws.php?method=galleries.clear", "ids=" + ids + "&files=" + datas, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    window.cefQuery({
+                        request: 'Prompt.q.syn_root:'
+                    });
+
+                    for (var i = 0; i < info.cats.length; i++) {
+                        var cat = info.cats[i];
+                        $('#trid' + cat.id).find('.state').attr('catid', cat.newid);
+                        $('#trid' + cat.id).attr('id', 'trid' + cat.newid);
+                    }
+                    proc_upload();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            window.cefQuery({
+                request: 'Prompt.q.loading:1'
+            });
+
+            if (_readonly != "0") {
+                myreload();
+                return;
+            }
+
+            $.get("./index.html?act=index.get_nb", function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "err") {
+                    setTimeout(function () { $('.progress-extended').css("display", "inline-block"); }, 0);
+
+                    $.get('./ws.php?method=galleries.init', function (data) {
+                        if (data != " ") {
+                            $("#folder").append(data);
+                            setTimeout(function () { pre_data(); }, 0);
+                        }
+                        else {
+                            complete("0");
+                        }
+                    });
+                }
+                else {
+                    complete("0");
+                }
+            });
+
+            $("#cancelUpload").click(function () {
+                _all_cancel = 1;
+                var cancelval = setInterval(function () {
+                    if (_sending == 0) {
+                        clearInterval(cancelval);
+                        complete("1");
+                    }
+                }, 0);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

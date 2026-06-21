@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-10OMLDT</Machine>
+    <WindowsUser>zxf</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>photonest.PhotoNest</PackageIdentityName>
+    <PackageIdentityPublisher>CN=923AE994-2EFC-4E97-865B-9920B65109D6</PackageIdentityPublisher>
+    <IntermediateOutputPath>E:\voy\102\PhotoNest\PhotoNest\obj\x64\Release\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath></WindowsSdkPath>
+    <LayoutDir>E:\voy\102\PhotoNest\PhotoNest\bin\x64\Release\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="E:\voy\102\PhotoNest\PhotoNest\bin\x64\Release\Upload\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\background\default.jpg">
+      <PackagePath>background\default.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sky\QR0001.jpg">
+      <PackagePath>extension\sky\QR0001.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sky\QR0002.jpg">
+      <PackagePath>extension\sky\QR0002.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sky\QR0003.jpg">
+      <PackagePath>extension\sky\QR0003.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sky\QR0004.jpg">
+      <PackagePath>extension\sky\QR0004.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1510.jpg">
+      <PackagePath>extension\sticker\QR1510.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1512.jpg">
+      <PackagePath>extension\sticker\QR1512.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1514.jpg">
+      <PackagePath>extension\sticker\QR1514.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1516.jpg">
+      <PackagePath>extension\sticker\QR1516.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1518.jpg">
+      <PackagePath>extension\sticker\QR1518.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1519.jpg">
+      <PackagePath>extension\sticker\QR1519.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1522.jpg">
+      <PackagePath>extension\sticker\QR1522.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1523.jpg">
+      <PackagePath>extension\sticker\QR1523.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1527.jpg">
+      <PackagePath>extension\sticker\QR1527.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1528.jpg">
+      <PackagePath>extension\sticker\QR1528.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1533.jpg">
+      <PackagePath>extension\sticker\QR1533.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1536.jpg">
+      <PackagePath>extension\sticker\QR1536.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1537.jpg">
+      <PackagePath>extension\sticker\QR1537.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1538.jpg">
+      <PackagePath>extension\sticker\QR1538.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1540.jpg">
+      <PackagePath>extension\sticker\QR1540.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1545.jpg">
+      <PackagePath>extension\sticker\QR1545.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1547.jpg">
+      <PackagePath>extension\sticker\QR1547.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1548.jpg">
+      <PackagePath>extension\sticker\QR1548.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1549.jpg">
+      <PackagePath>extension\sticker\QR1549.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1550.jpg">
+      <PackagePath>extension\sticker\QR1550.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1551.jpg">
+      <PackagePath>extension\sticker\QR1551.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\lena\QR1701.jpg">
+      <PackagePath>sample\lena\QR1701.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\lena\QR1705.jpg">
+      <PackagePath>sample\lena\QR1705.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\QR1001.jpg">
+      <PackagePath>sample\QR1001.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\QR1002.jpg">
+      <PackagePath>sample\QR1002.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\QR1003.jpg">
+      <PackagePath>sample\QR1003.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\QR1004.jpg">
+      <PackagePath>sample\QR1004.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\QR1005.jpg">
+      <PackagePath>sample\QR1005.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1301.jpg">
+      <PackagePath>sample\sea\QR1301.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1302.jpg">
+      <PackagePath>sample\sea\QR1302.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1303.jpg">
+      <PackagePath>sample\sea\QR1303.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1304.jpg">
+      <PackagePath>sample\sea\QR1304.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1305.jpg">
+      <PackagePath>sample\sea\QR1305.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1309.jpg">
+      <PackagePath>sample\sea\QR1309.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1313.jpg">
+      <PackagePath>sample\sea\QR1313.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\sample\sea\QR1314.jpg">
+      <PackagePath>sample\sea\QR1314.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\images\bg.jpg">
+      <PackagePath>templ\admin\themes\default\images\bg.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\bg.jpg">
+      <PackagePath>templ\themes\default\images\bg.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\mp3.jpg">
+      <PackagePath>templ\themes\default\images\mp3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\mp4.jpg">
+      <PackagePath>templ\themes\default\images\mp4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\avocado-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\avocado-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\blueberry-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\blueberry-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\cafe_latte-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\cafe_latte-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\dark-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\dark-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\glacier-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\glacier-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\neon_orange-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\neon_orange-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\neon_pink-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\neon_pink-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\newspaper-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\newspaper-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\quartz-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\quartz-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\splash-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\splash-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\strawberry_jam-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\strawberry_jam-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\swimming_pool-screenshot.jpg">
+      <PackagePath>templ\themes\default\skins\swimming_pool-screenshot.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\db\photo.db">
+      <PackagePath>db\photo.db</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\extension\sticker\QR1521.png">
+      <PackagePath>extension\sticker\QR1521.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\Images\SplashScreen.scale-200.png">
+      <PackagePath>Images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\Images\LockScreenLogo.scale-200.png">
+      <PackagePath>Images\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\Images\Square150x150Logo.scale-200.png">
+      <PackagePath>Images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\Images\Square44x44Logo.scale-200.png">
+      <PackagePath>Images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\Images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\Images\StoreLogo.png">
+      <PackagePath>Images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\Images\Wide310x150Logo.scale-200.png">
+      <PackagePath>Images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\images\cat_move.png">
+      <PackagePath>templ\admin\themes\default\images\cat_move.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\images\restore.png">
+      <PackagePath>templ\admin\themes\default\images\restore.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\images\restore1.png">
+      <PackagePath>templ\admin\themes\default\images\restore1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\images\warning.png">
+      <PackagePath>templ\admin\themes\default\images\warning.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\bg-scrollbar-thumb-y.png">
+      <PackagePath>templ\osm\leaflet\images\bg-scrollbar-thumb-y.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\bg-scrollbar-track-y.png">
+      <PackagePath>templ\osm\leaflet\images\bg-scrollbar-track-y.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\bg-scrollbar-trackend-y.png">
+      <PackagePath>templ\osm\leaflet\images\bg-scrollbar-trackend-y.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\check.png">
+      <PackagePath>templ\osm\leaflet\images\check.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\edit-in-osm.png">
+      <PackagePath>templ\osm\leaflet\images\edit-in-osm.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\elevation.png">
+      <PackagePath>templ\osm\leaflet\images\elevation.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\layers-2x.png">
+      <PackagePath>templ\osm\leaflet\images\layers-2x.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\layers.png">
+      <PackagePath>templ\osm\leaflet\images\layers.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\leaf-green.png">
+      <PackagePath>templ\osm\leaflet\images\leaf-green.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\leaf-orange.png">
+      <PackagePath>templ\osm\leaflet\images\leaf-orange.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\leaf-red.png">
+      <PackagePath>templ\osm\leaflet\images\leaf-red.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\leaf-shadow.png">
+      <PackagePath>templ\osm\leaflet\images\leaf-shadow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\mapicons-blue.png">
+      <PackagePath>templ\osm\leaflet\images\mapicons-blue.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\mapicons-green.png">
+      <PackagePath>templ\osm\leaflet\images\mapicons-green.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\mapicons-shadow.png">
+      <PackagePath>templ\osm\leaflet\images\mapicons-shadow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\marker-blue.png">
+      <PackagePath>templ\osm\leaflet\images\marker-blue.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\marker-green.png">
+      <PackagePath>templ\osm\leaflet\images\marker-green.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\marker-icon%402x.png">
+      <PackagePath>templ\osm\leaflet\images\marker-icon%402x.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\marker-icon-2x.png">
+      <PackagePath>templ\osm\leaflet\images\marker-icon-2x.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\marker-icon.png">
+      <PackagePath>templ\osm\leaflet\images\marker-icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\marker-red.png">
+      <PackagePath>templ\osm\leaflet\images\marker-red.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\marker-shadow.png">
+      <PackagePath>templ\osm\leaflet\images\marker-shadow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\pin-icon-end.png">
+      <PackagePath>templ\osm\leaflet\images\pin-icon-end.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\pin-icon-start.png">
+      <PackagePath>templ\osm\leaflet\images\pin-icon-start.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\pin-shadow.png">
+      <PackagePath>templ\osm\leaflet\images\pin-shadow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\search-icon-mobile.png">
+      <PackagePath>templ\osm\leaflet\images\search-icon-mobile.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\search-icon.png">
+      <PackagePath>templ\osm\leaflet\images\search-icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\toggle.png">
+      <PackagePath>templ\osm\leaflet\images\toggle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\transparent-pixel.png">
+      <PackagePath>templ\osm\leaflet\images\transparent-pixel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\art.png">
+      <PackagePath>templ\themes\default\images\art.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\gif.png">
+      <PackagePath>templ\themes\default\images\gif.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\mp3.png">
+      <PackagePath>templ\themes\default\images\mp3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\mp4.png">
+      <PackagePath>templ\themes\default\images\mp4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\none.png">
+      <PackagePath>templ\themes\default\images\none.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\paint.png">
+      <PackagePath>templ\themes\default\images\paint.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\start.png">
+      <PackagePath>templ\themes\default\images\start.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\u3.down.png">
+      <PackagePath>templ\themes\default\images\u3.down.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\u3.edit.png">
+      <PackagePath>templ\themes\default\images\u3.edit.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\colorbox\css\style2\images\controls.png">
+      <PackagePath>templ\themes\default\js\plugins\colorbox\css\style2\images\controls.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\timel\images\biggerdot.png">
+      <PackagePath>templ\themes\default\js\plugins\timel\images\biggerdot.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_flat_0_aaaaaa_40x100.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_flat_0_aaaaaa_40x100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_flat_75_ffffff_40x100.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_flat_75_ffffff_40x100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_glass_55_fbf9ee_1x400.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_glass_55_fbf9ee_1x400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_glass_65_ffffff_1x400.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_glass_65_ffffff_1x400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_glass_75_dadada_1x400.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_glass_75_dadada_1x400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_glass_75_e6e6e6_1x400.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_glass_75_e6e6e6_1x400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_glass_95_fef1ec_1x400.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_glass_95_fef1ec_1x400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-icons_222222_256x240.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-icons_222222_256x240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-icons_2e83ff_256x240.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-icons_2e83ff_256x240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-icons_454545_256x240.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-icons_454545_256x240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-icons_888888_256x240.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-icons_888888_256x240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\ui-icons_cd0a0a_256x240.png">
+      <PackagePath>templ\themes\default\js\ui\theme\images\ui-icons_cd0a0a_256x240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\chrome_100_percent.pak">
+      <PackagePath>nest1\chrome_100_percent.pak</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\chrome_200_percent.pak">
+      <PackagePath>nest1\chrome_200_percent.pak</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\locales\en-US.pak">
+      <PackagePath>nest1\locales\en-US.pak</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\resources.pak">
+      <PackagePath>nest1\resources.pak</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\chrome_elf.dll">
+      <PackagePath>nest1\chrome_elf.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\d3dcompiler_47.dll">
+      <PackagePath>nest1\d3dcompiler_47.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\libcef.dll">
+      <PackagePath>nest1\libcef.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\libEGL.dll">
+      <PackagePath>nest1\libEGL.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\libGLESv2.dll">
+      <PackagePath>nest1\libGLESv2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\locales.dll">
+      <PackagePath>nest1\locales.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\photol.dll">
+      <PackagePath>nest1\photol.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\scheme.dll">
+      <PackagePath>nest1\scheme.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\templ.dll">
+      <PackagePath>nest1\templ.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\vk_swiftshader.dll">
+      <PackagePath>nest1\vk_swiftshader.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\vulkan-1.dll">
+      <PackagePath>nest1\vulkan-1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\help\credits.html">
+      <PackagePath>nest1\help\credits.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\help\cutout.html">
+      <PackagePath>nest1\help\cutout.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\demo.html">
+      <PackagePath>templ\admin\themes\default\fontello1\demo.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\demo.html">
+      <PackagePath>templ\admin\themes\default\fontello\demo.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\DESCRIPTION.en_us.html">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\DESCRIPTION.en_us.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\index.html">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\fontello\demo.html">
+      <PackagePath>templ\themes\default\skins\fontello\demo.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\icudtl.dat">
+      <PackagePath>nest1\icudtl.dat</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\model\brisque_model_live.yml">
+      <PackagePath>nest1\model\brisque_model_live.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\model\brisque_range_live.yml">
+      <PackagePath>nest1\model\brisque_range_live.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\model\haarcascade_frontalface_alt2.yml">
+      <PackagePath>nest1\model\haarcascade_frontalface_alt2.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\model\haarcascade_lefteye_2splits.yml">
+      <PackagePath>nest1\model\haarcascade_lefteye_2splits.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\model\haarcascade_righteye_2splits.yml">
+      <PackagePath>nest1\model\haarcascade_righteye_2splits.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\paint.exe">
+      <PackagePath>nest1\paint.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\snapshot_blob.bin">
+      <PackagePath>nest1\snapshot_blob.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\v8_context_snapshot.bin">
+      <PackagePath>nest1\v8_context_snapshot.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\nest1\vk_swiftshader_icd.json">
+      <PackagePath>nest1\vk_swiftshader_icd.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\config.json">
+      <PackagePath>templ\admin\themes\default\fontello1\config.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\config.json">
+      <PackagePath>templ\admin\themes\default\fontello\config.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\bower.json">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\fontello\config.json">
+      <PackagePath>templ\themes\default\skins\fontello\config.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\css\animation.css">
+      <PackagePath>templ\admin\themes\default\fontello1\css\animation.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\css\fontello-codes.css">
+      <PackagePath>templ\admin\themes\default\fontello1\css\fontello-codes.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\css\fontello-embedded.css">
+      <PackagePath>templ\admin\themes\default\fontello1\css\fontello-embedded.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\css\fontello-ie7-codes.css">
+      <PackagePath>templ\admin\themes\default\fontello1\css\fontello-ie7-codes.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\css\fontello-ie7.css">
+      <PackagePath>templ\admin\themes\default\fontello1\css\fontello-ie7.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\css\fontello.css">
+      <PackagePath>templ\admin\themes\default\fontello1\css\fontello.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\css\animation.css">
+      <PackagePath>templ\admin\themes\default\fontello\css\animation.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\css\fontello-codes.css">
+      <PackagePath>templ\admin\themes\default\fontello\css\fontello-codes.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\css\fontello-embedded.css">
+      <PackagePath>templ\admin\themes\default\fontello\css\fontello-embedded.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\css\fontello-ie7-codes.css">
+      <PackagePath>templ\admin\themes\default\fontello\css\fontello-ie7-codes.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\css\fontello-ie7.css">
+      <PackagePath>templ\admin\themes\default\fontello\css\fontello-ie7.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\css\fontello.css">
+      <PackagePath>templ\admin\themes\default\fontello\css\fontello.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\open-sans.css">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\open-sans.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\open-sans.expanded.css">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\open-sans.expanded.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\open-sans.prefixed.css">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\open-sans.prefixed.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\u3.add.css">
+      <PackagePath>templ\admin\themes\default\u3.add.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\u3.batch.css">
+      <PackagePath>templ\admin\themes\default\u3.batch.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\u3.folder.css">
+      <PackagePath>templ\admin\themes\default\u3.folder.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\u3.tags.css">
+      <PackagePath>templ\admin\themes\default\u3.tags.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\u3.theme.css">
+      <PackagePath>templ\admin\themes\default\u3.theme.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\fontello\css\animation.css">
+      <PackagePath>templ\osm\fontello\css\animation.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\fontello\css\osm-codes.css">
+      <PackagePath>templ\osm\fontello\css\osm-codes.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\fontello\css\osm.css">
+      <PackagePath>templ\osm\fontello\css\osm.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\jcarousel.responsive.css">
+      <PackagePath>templ\osm\leaflet\jcarousel.responsive.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\leaflet.contextmenu.css">
+      <PackagePath>templ\osm\leaflet\leaflet.contextmenu.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\leaflet.css">
+      <PackagePath>templ\osm\leaflet\leaflet.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\MarkerCluster.css">
+      <PackagePath>templ\osm\leaflet\MarkerCluster.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\MarkerCluster.Default.css">
+      <PackagePath>templ\osm\leaflet\MarkerCluster.Default.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\iconset.css">
+      <PackagePath>templ\themes\default\iconset.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\colorbox\css\style2\colorbox.css">
+      <PackagePath>templ\themes\default\js\plugins\colorbox\css\style2\colorbox.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\film\css\tabs.css">
+      <PackagePath>templ\themes\default\js\plugins\film\css\tabs.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\film\css\tabstyles.css">
+      <PackagePath>templ\themes\default\js\plugins\film\css\tabstyles.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\film\progressjs.css">
+      <PackagePath>templ\themes\default\js\plugins\film\progressjs.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\css\jquery.fileupload-noscript.css">
+      <PackagePath>templ\themes\default\js\plugins\fupload\css\jquery.fileupload-noscript.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\css\jquery.fileupload-ui-noscript.css">
+      <PackagePath>templ\themes\default\js\plugins\fupload\css\jquery.fileupload-ui-noscript.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\css\jquery.fileupload-ui.css">
+      <PackagePath>templ\themes\default\js\plugins\fupload\css\jquery.fileupload-ui.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\css\jquery.fileupload.css">
+      <PackagePath>templ\themes\default\js\plugins\fupload\css\jquery.fileupload.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\jqcloud\jqcloud.css">
+      <PackagePath>templ\themes\default\js\plugins\jqcloud\jqcloud.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\pagination\simplePagination.css">
+      <PackagePath>templ\themes\default\js\plugins\pagination\simplePagination.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\selectize\selectize.clear.css">
+      <PackagePath>templ\themes\default\js\plugins\selectize\selectize.clear.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\selectize\selectize.dark.css">
+      <PackagePath>templ\themes\default\js\plugins\selectize\selectize.dark.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\timel\timel.css">
+      <PackagePath>templ\themes\default\js\plugins\timel\timel.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\tipTip\tipTip.css">
+      <PackagePath>templ\themes\default\js\plugins\tipTip\tipTip.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\viewer\css\viewer.css">
+      <PackagePath>templ\themes\default\js\plugins\viewer\css\viewer.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.accordion.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.accordion.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.all.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.all.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.autocomplete.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.autocomplete.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.base.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.base.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.button.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.button.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.core.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.core.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.datepicker.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.datepicker.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.dialog.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.dialog.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.menu.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.menu.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.progressbar.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.progressbar.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.resizable.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.resizable.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.selectable.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.selectable.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.slider.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.slider.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.spinner.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.spinner.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.tabs.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.tabs.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.theme.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.theme.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.timepicker-addon.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.timepicker-addon.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\jquery.ui.tooltip.css">
+      <PackagePath>templ\themes\default\js\ui\theme\jquery.ui.tooltip.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\avocado.css">
+      <PackagePath>templ\themes\default\skins\avocado.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\blueberry.css">
+      <PackagePath>templ\themes\default\skins\blueberry.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\cafe_latte.css">
+      <PackagePath>templ\themes\default\skins\cafe_latte.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\dark.css">
+      <PackagePath>templ\themes\default\skins\dark.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\glacier.css">
+      <PackagePath>templ\themes\default\skins\glacier.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\neon_orange.css">
+      <PackagePath>templ\themes\default\skins\neon_orange.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\neon_pink.css">
+      <PackagePath>templ\themes\default\skins\neon_pink.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\newspaper.css">
+      <PackagePath>templ\themes\default\skins\newspaper.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\quartz.css">
+      <PackagePath>templ\themes\default\skins\quartz.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\splash.css">
+      <PackagePath>templ\themes\default\skins\splash.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\strawberry_jam.css">
+      <PackagePath>templ\themes\default\skins\strawberry_jam.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\swimming_pool.css">
+      <PackagePath>templ\themes\default\skins\swimming_pool.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\superfish.css">
+      <PackagePath>templ\themes\default\superfish.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\u3.art.css">
+      <PackagePath>templ\themes\default\u3.art.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\u3.black.css">
+      <PackagePath>templ\themes\default\u3.black.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\u3.index.css">
+      <PackagePath>templ\themes\default\u3.index.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\u3.pic.css">
+      <PackagePath>templ\themes\default\u3.pic.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\u3.video.css">
+      <PackagePath>templ\themes\default\u3.video.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\font\fontello.eot">
+      <PackagePath>templ\admin\themes\default\fontello1\font\fontello.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\font\fontello.eot">
+      <PackagePath>templ\admin\themes\default\fontello\font\fontello.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\font\fontawesome-webfont.eot">
+      <PackagePath>templ\admin\themes\default\font\fontawesome-webfont.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\fontello\font\osm.eot">
+      <PackagePath>templ\osm\fontello\font\osm.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\fontello\font\modus.eot">
+      <PackagePath>templ\themes\default\skins\fontello\font\modus.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\font\fontello.svg">
+      <PackagePath>templ\admin\themes\default\fontello1\font\fontello.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\font\fontello.svg">
+      <PackagePath>templ\admin\themes\default\fontello\font\fontello.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\font\fontawesome-webfont.svg">
+      <PackagePath>templ\admin\themes\default\font\fontawesome-webfont.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\images\cancel.svg">
+      <PackagePath>templ\admin\themes\default\images\cancel.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\images\cancelhover.svg">
+      <PackagePath>templ\admin\themes\default\images\cancelhover.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\fontello\font\osm.svg">
+      <PackagePath>templ\osm\fontello\font\osm.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\fontello\font\modus.svg">
+      <PackagePath>templ\themes\default\skins\fontello\font\modus.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\font\fontello.ttf">
+      <PackagePath>templ\admin\themes\default\fontello1\font\fontello.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\font\fontello.ttf">
+      <PackagePath>templ\admin\themes\default\fontello\font\fontello.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\font\fontawesome-webfont.ttf">
+      <PackagePath>templ\admin\themes\default\font\fontawesome-webfont.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\fontello\font\osm.ttf">
+      <PackagePath>templ\osm\fontello\font\osm.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\fontello\font\modus.ttf">
+      <PackagePath>templ\themes\default\skins\fontello\font\modus.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\font\fontello.woff">
+      <PackagePath>templ\admin\themes\default\fontello1\font\fontello.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\font\fontello.woff">
+      <PackagePath>templ\admin\themes\default\fontello\font\fontello.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\BoldItalic\OpenSans-BoldItalic.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\BoldItalic\OpenSans-BoldItalic.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Bold\OpenSans-Bold.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Bold\OpenSans-Bold.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Italic\OpenSans-Italic.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Italic\OpenSans-Italic.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\LightItalic\OpenSans-LightItalic.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\LightItalic\OpenSans-LightItalic.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Light\OpenSans-Light.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Light\OpenSans-Light.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Regular\OpenSans-Regular.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Regular\OpenSans-Regular.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Semibold\OpenSans-Semibold.woff">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Semibold\OpenSans-Semibold.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\fontello\font\osm.woff">
+      <PackagePath>templ\osm\fontello\font\osm.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\fontello\font\modus.woff">
+      <PackagePath>templ\themes\default\skins\fontello\font\modus.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello1\font\fontello.woff2">
+      <PackagePath>templ\admin\themes\default\fontello1\font\fontello.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fontello\font\fontello.woff2">
+      <PackagePath>templ\admin\themes\default\fontello\font\fontello.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\BoldItalic\OpenSans-BoldItalic.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\BoldItalic\OpenSans-BoldItalic.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Bold\OpenSans-Bold.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Bold\OpenSans-Bold.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Italic\OpenSans-Italic.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Italic\OpenSans-Italic.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\LightItalic\OpenSans-LightItalic.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\LightItalic\OpenSans-LightItalic.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Light\OpenSans-Light.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Light\OpenSans-Light.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Regular\OpenSans-Regular.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Regular\OpenSans-Regular.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\Semibold\OpenSans-Semibold.woff2">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\Semibold\OpenSans-Semibold.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\font\fontawesome-webfont.woff2">
+      <PackagePath>templ\admin\themes\default\font\fontawesome-webfont.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\skins\fontello\font\modus.woff2">
+      <PackagePath>templ\themes\default\skins\fontello\font\modus.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\fonts\METADATA.pb">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\fonts\METADATA.pb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\open-sans.less">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\open-sans.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\open-sans.scss">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\open-sans.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\fonts\open-sans\README.md">
+      <PackagePath>templ\admin\themes\default\fonts\open-sans\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\colorbox\LICENSE.md">
+      <PackagePath>templ\themes\default\js\plugins\colorbox\LICENSE.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\film\LICENSE.md">
+      <PackagePath>templ\themes\default\js\plugins\film\LICENSE.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\js\datepicker.js">
+      <PackagePath>templ\admin\themes\default\js\datepicker.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\js\tags.js">
+      <PackagePath>templ\admin\themes\default\js\tags.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\admin\themes\default\js\u3.common.min.js">
+      <PackagePath>templ\admin\themes\default\js\u3.common.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\jquery.jcarousel.min.js">
+      <PackagePath>templ\osm\leaflet\jquery.jcarousel.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\leaflet-omnivore.min.js">
+      <PackagePath>templ\osm\leaflet\leaflet-omnivore.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\leaflet.contextmenu.js">
+      <PackagePath>templ\osm\leaflet\leaflet.contextmenu.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\leaflet.js">
+      <PackagePath>templ\osm\leaflet\leaflet.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\leaflet.markercluster.js">
+      <PackagePath>templ\osm\leaflet\leaflet.markercluster.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\jquery.min.js">
+      <PackagePath>templ\themes\default\js\jquery.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\colorbox\jquery.colorbox.js">
+      <PackagePath>templ\themes\default\js\plugins\colorbox\jquery.colorbox.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\film\build.min.js">
+      <PackagePath>templ\themes\default\js\plugins\film\build.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\film\progressjs.js">
+      <PackagePath>templ\themes\default\js\plugins\film\progressjs.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\jquery.fileupload-audio.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\jquery.fileupload-audio.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\jquery.fileupload-image.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\jquery.fileupload-image.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\jquery.fileupload-process.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\jquery.fileupload-process.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\jquery.fileupload-validate.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\jquery.fileupload-validate.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\jquery.fileupload-video.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\jquery.fileupload-video.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\jquery.fileupload.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\jquery.fileupload.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\jquery.iframe-transport.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\jquery.iframe-transport.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\js\tmpl.min.js">
+      <PackagePath>templ\themes\default\js\plugins\fupload\js\tmpl.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\jqcloud\jqcloud.js">
+      <PackagePath>templ\themes\default\js\plugins\jqcloud\jqcloud.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\masnory\js\jquery.flex-images.js">
+      <PackagePath>templ\themes\default\js\plugins\masnory\js\jquery.flex-images.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\masnory\js\jquery.infinitescroll.js">
+      <PackagePath>templ\themes\default\js\plugins\masnory\js\jquery.infinitescroll.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\pagination\jquery.simplePagination.js">
+      <PackagePath>templ\themes\default\js\plugins\pagination\jquery.simplePagination.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\selectize\selectize.min.js">
+      <PackagePath>templ\themes\default\js\plugins\selectize\selectize.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\timel\jquery.timelinr.js">
+      <PackagePath>templ\themes\default\js\plugins\timel\jquery.timelinr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\tipTip\jquery.tipTip.js">
+      <PackagePath>templ\themes\default\js\plugins\tipTip\jquery.tipTip.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\viewer\js\viewer.u3.min.js">
+      <PackagePath>templ\themes\default\js\plugins\viewer\js\viewer.u3.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\superfish.js">
+      <PackagePath>templ\themes\default\js\superfish.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-de.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-de.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-en-GB.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-en-GB.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-es.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-es.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-fr.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-fr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-it.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-it.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-ja.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-ja.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-ru.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-ru.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\i18n\jquery.ui.datepicker-zh-CN.js">
+      <PackagePath>templ\themes\default\js\ui\i18n\jquery.ui.datepicker-zh-CN.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.accordion.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.accordion.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.autocomplete.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.autocomplete.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.button.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.button.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.core.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.core.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.datepicker.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.datepicker.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.dialog.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.dialog.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.draggable.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.draggable.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.droppable.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.droppable.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-blind.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-blind.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-bounce.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-bounce.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-clip.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-clip.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-drop.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-drop.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-explode.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-explode.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-fade.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-fade.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-fold.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-fold.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-highlight.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-highlight.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-pulsate.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-pulsate.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-scale.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-scale.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-shake.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-shake.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-slide.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-slide.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect-transfer.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect-transfer.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.effect.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.effect.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.menu.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.menu.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.mouse.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.mouse.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.position.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.position.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.progressbar.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.progressbar.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.resizable.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.resizable.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.selectable.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.selectable.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.slider.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.slider.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.sortable.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.sortable.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.spinner.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.spinner.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.tabs.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.tabs.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.timepicker-addon.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.timepicker-addon.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.tooltip.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.tooltip.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\minified\jquery.ui.widget.min.js">
+      <PackagePath>templ\themes\default\js\ui\minified\jquery.ui.widget.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\osm\leaflet\images\loader.gif">
+      <PackagePath>templ\osm\leaflet\images\loader.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\ajax-loader-small.gif">
+      <PackagePath>templ\themes\default\images\ajax-loader-small.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\ajax_loader.gif">
+      <PackagePath>templ\themes\default\images\ajax_loader.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\load50.gif">
+      <PackagePath>templ\themes\default\images\load50.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\loader.gif">
+      <PackagePath>templ\themes\default\images\loader.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\images\loading.gif">
+      <PackagePath>templ\themes\default\images\loading.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\colorbox\css\style2\images\loading.gif">
+      <PackagePath>templ\themes\default\js\plugins\colorbox\css\style2\images\loading.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\img\loading.gif">
+      <PackagePath>templ\themes\default\js\plugins\fupload\img\loading.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\fupload\img\progressbar.gif">
+      <PackagePath>templ\themes\default\js\plugins\fupload\img\progressbar.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\timel\images\dot.gif">
+      <PackagePath>templ\themes\default\js\plugins\timel\images\dot.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\ui\theme\images\animated-overlay.gif">
+      <PackagePath>templ\themes\default\js\ui\theme\images\animated-overlay.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\selectize\LICENSE">
+      <PackagePath>templ\themes\default\js\plugins\selectize\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\templ\themes\default\js\plugins\viewer\LICENSE">
+      <PackagePath>templ\themes\default\js\plugins\viewer\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\PhotoNest\bin\x64\Release\Upload\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\voy\102\PhotoNest\tests\cefclient\Release\bin\nest1.exe">
+      <PackagePath>nest1\nest1.exe</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.UWPDesktop</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.UWPDesktop, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.UWPDesktop</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.UWPDesktop, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.UWPDesktop</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.UWPDesktop, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Retail\ARM64\Microsoft.VCLibs.ARM64.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.UWPDesktop</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.UWPDesktop, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.UWPDesktop</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.UWPDesktop, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

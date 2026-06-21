@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<item>
+		<id>actionButtons_favorite_add</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="add_to_favorites();return false;" title="{'add this photo to your favorites'|@translate}" class="stm-state-default stm-button" ><span class="stm-icon stm-icon-favorite-add"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_favorite_del</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="remove_favorites();return false;" title="{'delete this photo from your favorites'|@translate}" class="stm-state-default stm-button" ><span class="stm-icon stm-icon-favorite-del"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_cmdCaddie</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="add_to_caddie(this);return false;" title="{'Add to caddie'|@translate}" class="stm-state-default stm-button" ><span class="stm-icon pn-icon-caddie-add"> </span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_cmdMeta</id>
+		<templ>
+			<![CDATA[<a id="media" href="javascript:;" onclick="show_metadata(); return false;" title="{'Details'|@translate}" class="stm-state-default stm-button" ><span class="stm-icon pn-icon-eye-off"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_slideshow_start</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="slideshow_start('start');return false;" title="{'Play slideshow'|@translate}" class="stm-state-default stm-button"><span class="stm-icon stm-icon-play"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_slideshow_stop</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="slideshow_start('stop');return false;" title="{'Pause slideshow'|@translate}" class="stm-state-default stm-button"><span class="stm-icon stm-icon-pause"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_slideshow_dec</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="slideshow_start('cmddec');return false;" title="{'Reduce slideshow speed'|@translate}" class="stm-state-default stm-button"><span class="stm-icon jmn-video-prev"></span></a>  1 ×]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_slideshow_inc</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="slideshow_start('cmdinc');return false;" title="{'Increase slideshow speed'|@translate}" class="stm-state-default stm-button"><span class="stm-icon jmn-video-next"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_slideshow_dec_span</id>
+		<templ>
+			<![CDATA[<span class="stm-icon jmn-video-prev" title="{'Reduce slideshow speed'|@translate}"></span>  1 ×]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_slideshow_inc_span</id>
+		<templ>
+			<![CDATA[<span class="stm-icon jmn-video-next" title="{'Increase slideshow speed'|@translate}"></span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_properties</id>
+		<templ>
+			<![CDATA[<a id="cmdProp"  href="javascript:;" onclick="show_prop();return false;" title="{'Properties'|@translate}" class="stm-state-default stm-button" ><span class="stm-icon pn-icon-info-circled-1"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_representative</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="set_as_representative();return false;" title="{'set as album thumbnail'|@translate}" class="stm-state-default stm-button" ><span class="stm-icon stm-icon-representative"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_representative_span</id>
+		<templ>
+			<![CDATA[<span class="stm-state-disabled stm-icon stm-icon-representative" title="{'Album thumbnail'|@translate}"></span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>actionButtons_editphoto</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" title="{'Edit'|@translate}" class="stm-state-default stm-button" onclick="show_paint(); return false;" ><span class="stm-icon stm-icon-edit"></span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>picture_next</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="if(_vr) _vr.next(true);return false;" class="next" g='next'><span> </span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>picture_pre</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="if(_vr) _vr.prev(true);return false;" class="previous" g='pre'><span> </span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>picture_next3</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="diaporama.next();return false;" class="next" g='next'><span> </span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>picture_pre3</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="diaporama.prev();return false;" class="previous" g='pre'><span> </span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>slick_btn</id>
+		<templ>
+			<![CDATA[<div><span>•</span></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>details_tr</id>
+		<templ>
+			<![CDATA[<tr><td class="detail_td1" ><span class="detail_td_name">{$name}</span></td></tr><tr><td class="detail_td2" ><span class="detail_td_val">{$value}</span></td></tr>]]>
+		</templ>
+	</item>
+	<item>
+		<id>details_album</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="parent.gocat({$cat_id}); return false;" title="{'jump to album'|@translate}" class="loc_a">{$value}</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>details_desc</id>
+		<templ>
+			<![CDATA[<tr><td class="detail_td1" ><span class="detail_td_name">{'Description'|@translate}</span></td></tr><tr><td class="detail_td2" ><textarea cols="50" rows="2" style="max-width:200px; resize:none;"  maxlength="500" onblur="ondescblur(this);" class="description">{$comment}</textarea></td></tr><tr><td class="detail_td1"><a id="btnexif" href="javascript:;" onclick="show_details(this);return false;" class="detail_td_name" style="float:right;right:0;opacity100;" ><i class="icon-down-open"></i></a></td></tr><tr><td class="detail_td1"><table id="tbexif">]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>details_td_loc</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="show_loc(this); return false;" title="{$title}" class="loc_a">{$value}</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>details_key</id>
+		<templ>
+			<![CDATA[Fname,FileDate,Album,quality,FileSize,Dimensions,Make,Model,DateTimeOriginal,DateTimeDigitized,DateTime,Orientation,Flash,FocalLength,ExposureTime,ExposureProgram,FNumber,ISOSpeedRatings,LightSource,MeteringMode,ColorSpace,Quality,GPSLatitude,GPSLongitude,GPSAltitudeRef,XResolution,YResolution,ResolutionUnit,Software,YCbCrPositioning]]>
+		</templ>
+	</item>
+	<item>
+		<id>details_val</id>
+		<templ>
+			<![CDATA[{'Name'|@translate},{'File Date'|@translate},{'Album'|@translate},{'Quality'|@translate},{'File Size'|@translate},{'Dimensions'|@translate},{'Camera Make'|@translate},{'Camera Model'|@translate},{'Date taken'|@translate},{'Digitised Date'|@translate},{'Modified Date'|@translate},{'Orientation'|@translate},{'Flash'|@translate},{'Focal Length'|@translate},{'Exposure Time'|@translate},{'Exposure Program'|@translate},{'F Number'|@translate},{'ISO'|@translate},{'White Balance'|@translate},{'Metering Mode'|@translate},{'Colour Space'|@translate},{'JPEG Quality'|@translate},{'GPS Latitude'|@translate},{'GPS Longitude'|@translate},{'GPS Altitude Ref'|@translate},{'X Resolution'|@translate},{'Y Resolution'|@translate},{'Resolution Unit'|@translate},{'Software'|@translate},{'YCbCr Positioning'|@translate}]]>
+		</templ>
+	</item>
+</data>

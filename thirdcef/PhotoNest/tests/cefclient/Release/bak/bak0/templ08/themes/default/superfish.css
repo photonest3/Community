@@ -1,0 +1,211 @@
+
+
+
+
+
+
+ .menu .sf-with-ul:after
+{
+    content: "";
+}
+
+.menu .sf-with-ul:after
+{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu, 
+.sb-slidebar > ul li.mtree-node > a:before, body[class*=sidebar] .nav > .menu li.mtree-node > a:before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+.nav-wrapper.topbar-sticky-pos {
+    background: rgba(20,20,20,.5);
+    color: #bbb;
+}
+
+
+.nav-wrapper {
+    -webkit-transition: background .2s cubic-bezier(.25,.46,.45,.94);
+    -moz-transition: background .2s cubic-bezier(.25,.46,.45,.94);
+    transition: background .2s cubic-bezier(.25,.46,.45,.94);
+}
+
+.topbar-sticky-pos {
+    position: fixed;
+    width: 100%;
+}
+
+    .topbar-sticky-pos .menu {
+        padding: 5px 0;
+    }
+
+    .topbar-sticky-pos h1 {
+        margin-top: 10px;
+    }
+
+
+.menu {
+    right: 0;
+    z-index: 2;
+}
+
+
+.menu, .menu ul, .menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .menu li, .menu a {
+        position: relative;
+        line-height: 100%;
+    }
+
+        .menu li:hover {
+            z-index: 2;
+        }
+
+        .menu .sfHover > a, .menu a:hover {
+            color: #fff;
+        }
+
+    .menu p, .menu ul, .menu a {
+        color: #bbb;
+    }
+
+    .menu a {
+        touch-action: manipulation;
+        white-space: nowrap;
+        display: block;
+    }
+
+    .menu h2 {
+        color: #bbb;
+        font-size: 1.2rem;
+    }
+
+    .menu > li {
+        float: left;
+    }
+
+        .menu > li > a {
+            border-radius: 3px;
+            padding: 1.5em;
+            letter-spacing: .05em;
+        }
+
+            .menu > li.child-active > a, .menu > li > a.active {
+                background: #131313;
+            }
+
+            .menu > li.sfHover > a, .menu > li > a:hover {
+                background: #121212;
+                color: #bbb;
+            }
+
+        .menu > li.sfHover > a {
+            border-radius: 3px 3px 0 0;
+        }
+
+    .menu .sf-with-ul:after {
+        font-size: .6em;
+        margin: 0 -15px 0 .5em;
+          }
+
+    .menu > li > ul, .menu .mega {
+        -webkit-transform-origin: center top;
+        -moz-transform-origin: center top;
+        -ms-transform-origin: center top;
+        -o-transform-origin: center top;
+        transform-origin: center top;
+    }
+
+    .menu li > ul {
+        backface-visibility: hidden;
+        padding: .5rem 0;
+        position: absolute;
+        background: #121212;
+    }
+
+        .menu li > ul > li > a {
+            padding: .75em 1.5em;
+        }
+
+        .menu li > ul .sfHover > a, .menu li > ul a:hover {
+            background: #101010;
+        }
+
+        .menu li > ul .sf-with-ul:after {
+            float: right;
+        }
+
+    .menu li ul ul {
+        top: 0;
+        left: 100%;
+        background: #101010;
+    }
+
+        .menu li ul ul .sfHover > a, .menu li ul ul a:hover {
+            background: #0e0e0e;
+        }
+
+.sb-site-container > div {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+.menu {
+    display: inline-block;
+}
+
+
+.menu span.badge {
+    margin-left: 5px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    color: #bbb;
+    font-size: 12px;
+    background-color: #333;
+}
+
+.menu span.color2 {
+    color: #0f0;
+}
+
+.menu span.badge3 {
+    padding: 2px 7px;
+    /*border-radius: 20px;*/
+    color: #bbb;
+    background-color: #333;
+    margin-left: 5px;
+}
+
+
+.menu ul a {
+    position: relative;
+    line-height: 0.6;
+    font-size: 14px;
+}
+
+
+

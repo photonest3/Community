@@ -1,0 +1,2 @@
+		//navcat is used default:cipher = aes128cbc 
+		sqlite3mc_config(_pDB, "default:cipher", sqlite3mc_cipher_index("aes128cbc"));

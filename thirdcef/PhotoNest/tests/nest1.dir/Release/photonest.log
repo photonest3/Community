@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (..\photonest.dir\Release\) contains files shared from another project (photonest.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  cefclient_win.cc
+E:\voy\102\tests\cefclient\cefclient_win.cc(201,46): warning C4302: 'type cast': truncation from 'HANDLE' to 'ATOM'
+  photonest.vcxproj -> E:\voy\102\PhotoNest\tests\cefclient\Release\bin\photonest.exe
+  Adding manifest...															

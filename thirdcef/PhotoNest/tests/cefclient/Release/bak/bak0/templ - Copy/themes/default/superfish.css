@@ -1,0 +1,324 @@
+
+
+
+
+
+/*
+.fa-angle-down:before, body[class*=topbar] .menu .sf-with-ul:after, .button-down:before, .scroll-nav button.next:before {
+    content: "";
+}
+
+.model:before, .button-buy:before, body[class*=topbar] .menu .sf-with-ul:after, body[class*=topbar] .mega > button.close, body[class*=topbar] .mega.carousel button:not(.close), body[class*=topbar] .mega.list .preview > div:last-child button, body[class*=topbar] .mega.list a:before, .file a.back, h6.date:before, h6.amount:before, h6.folder_amount:before,
+.image-container:before, .article-nav a:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+body[class*=topbar].topbar-float .menu, body[class*=topbar] .mega.carousel button:not(.close), body[class*=topbar] .mega.list a:before, .sb-slidebar > ul li.mtree-node > a:before, body[class*=sidebar] .nav > .menu li.mtree-node > a:before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+*/
+
+
+
+ body[class*=topbar] .menu .sf-with-ul:after
+{
+    content: "";
+}
+
+body[class*=topbar] .menu .sf-with-ul:after
+{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+body[class*=topbar].topbar-float .menu, 
+
+.sb-slidebar > ul li.mtree-node > a:before, body[class*=sidebar] .nav > .menu li.mtree-node > a:before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+body[class*=topbar].clear .nav-wrapper.topbar-sticky-pos {
+    background: rgba(20,20,20,.5);
+    color: #bbb;
+}
+
+body.topbar-float.clear .nav {
+    border-bottom: 1px solid #1a1a1a;
+}
+
+body[class*=topbar] .nav-wrapper {
+    -webkit-transition: background .2s cubic-bezier(.25,.46,.45,.94);
+    -moz-transition: background .2s cubic-bezier(.25,.46,.45,.94);
+    transition: background .2s cubic-bezier(.25,.46,.45,.94);
+}
+
+body[class*=topbar] .topbar-sticky-pos {
+    position: fixed;
+    width: 100%;
+}
+
+    body[class*=topbar] .topbar-sticky-pos .menu {
+        padding: 5px 0;
+    }
+
+    body[class*=topbar] .topbar-sticky-pos h1 {
+        margin-top: 10px;
+    }
+
+
+body[class*=topbar].topbar-float .menu {
+    right: 0;
+    z-index: 2;
+}
+
+
+body[class*=topbar] .menu, body[class*=topbar] .menu ul, body[class*=topbar] .menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    body[class*=topbar] .menu li, body[class*=topbar] .menu a {
+        position: relative;
+        line-height: 100%;
+    }
+
+        body[class*=topbar] .menu li:hover {
+            z-index: 2;
+        }
+
+        body[class*=topbar] .menu .sfHover > a, body[class*=topbar] .menu a:hover {
+            color: #fff;
+        }
+
+    body[class*=topbar] .menu p, body[class*=topbar] .menu ul, body[class*=topbar] .menu a {
+        color: #bbb;
+    }
+
+    body[class*=topbar] .menu a {
+        touch-action: manipulation;
+        white-space: nowrap;
+        display: block;
+    }
+
+    body[class*=topbar] .menu h2 {
+        color: #bbb;
+        font-size: 1.2rem;
+    }
+
+    body[class*=topbar] .menu > li {
+        float: left;
+    }
+
+        body[class*=topbar] .menu > li > a {
+            border-radius: 3px;
+            padding: 1.5em;
+            letter-spacing: .05em;
+        }
+
+            body[class*=topbar] .menu > li.child-active > a, body[class*=topbar] .menu > li > a.active {
+                background: #131313;
+            }
+
+            body[class*=topbar] .menu > li.sfHover > a, body[class*=topbar] .menu > li > a:hover {
+                background: #121212 !important;
+                color: #bbb !important;
+            }
+
+        body[class*=topbar] .menu > li.sfHover > a {
+            border-radius: 3px 3px 0 0;
+        }
+
+    body[class*=topbar] .menu .sf-with-ul:after {
+        font-size: .6em;
+        margin: 0 -15px 0 .5em;
+          }
+
+    body[class*=topbar] .menu > li > ul, body[class*=topbar] .menu .mega {
+        -webkit-transform-origin: center top;
+        -moz-transform-origin: center top;
+        -ms-transform-origin: center top;
+        -o-transform-origin: center top;
+        transform-origin: center top;
+    }
+
+    body[class*=topbar] .menu li > ul {
+        backface-visibility: hidden;
+        padding: .5rem 0;
+        position: absolute;
+        background: #121212;
+    }
+
+        body[class*=topbar] .menu li > ul > li > a {
+            padding: .75em 1.5em;
+        }
+
+        body[class*=topbar] .menu li > ul .sfHover > a, body[class*=topbar] .menu li > ul a:hover {
+            background: #101010;
+        }
+
+        body[class*=topbar] .menu li > ul .sf-with-ul:after {
+            float: right;
+        }
+
+    body[class*=topbar] .menu li ul ul {
+        top: 0;
+        left: 100%;
+        background: #101010;
+    }
+
+        body[class*=topbar] .menu li ul ul .sfHover > a, body[class*=topbar] .menu li ul ul a:hover {
+            background: #0e0e0e;
+        }
+
+body[class*=topbar] .sb-site-container > div {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+
+/*
+body[class*=sidebar] .main {
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+body[class*=sidebar] .header {
+    min-height: 100vh;
+    min-width: 280px;
+}
+
+body[class*=sidebar] .nav-wrapper {
+    position: fixed !important;
+    min-width: 280px;
+    width: auto;
+    max-width: 350px;
+    height: 100vh;
+    padding: 30px 30px 20px;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+    body[class*=sidebar] .nav-wrapper:hover .menu, body[class*=sidebar] .nav-wrapper .menu.sidebar-top {
+        opacity: 1;
+        -webkit-transition: all .3s ease-out;
+        -moz-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+    }
+
+body[class*=sidebar] .nav > div {
+    text-align: center;
+}
+
+
+body[class*=sidebar] .nav > .menu {
+    opacity: .5;
+    margin: 2em 0;
+    padding-bottom: 2em;
+    -webkit-transition: opacity 5s ease-out;
+    -moz-transition: opacity 5s ease-out;
+    transition: opacity 5s ease-out;
+}
+
+    body[class*=sidebar] .nav > .menu li li > a {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    body[class*=sidebar] .nav > .menu a {
+    }
+
+body[class*=sidebar] .header {
+    float: left;
+}
+
+body[class*=sidebar] [class^=nav-fade] {
+    left: 0;
+}
+
+body[class*=sidebar] .article-nav {
+    right: 0;
+}
+
+body[class*=sidebar-right] .header {
+    float: right;
+}
+
+    body[class*=sidebar-right] .header > div {
+        right: 0;
+    }
+
+body[class*=sidebar-right] [class^=nav-fade] {
+    left: auto;
+    right: 0;
+}
+
+body[class*=sidebar-right] .article-nav {
+    right: auto;
+    left: 0;
+}
+*/
+
+body[class*=topbar] .menu {
+    display: inline-block;
+}
+
+
+body[class*=topbar] .menu span.badge {
+    margin-left: 5px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    color: #bbb;
+    font-size: 12px;
+    background-color: #333;
+}
+
+body[class*=topbar] .menu span.color2 {
+    color: #0f0;
+}
+
+body[class*=topbar] .menu span.badge3 {
+    padding: 2px 7px;
+    /*border-radius: 20px;*/
+    color: #bbb;
+    background-color: #333;
+    margin-left: 5px;
+}
+
+
+body[class*=topbar] .menu ul a {
+    position: relative;
+    line-height: 0.6;
+    font-size: 14px;
+}
+
+
+

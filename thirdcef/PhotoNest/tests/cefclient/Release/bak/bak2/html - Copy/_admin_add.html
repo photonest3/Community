@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.admin_add.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <style type="text/css">
+        .fol {
+            float: right;
+            margin-top: -50px;
+            margin-right: 50px;
+        }
+
+        .addAlbumEmpty {
+            text-align: center;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .addAlbumEmptyCenter {
+            position: relative;
+            margin: auto;
+            height: calc(100vh - 200px);
+        }
+
+        .addAlbumEmptyTitle {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .addAlbumEmptyInfos {
+            font-size: 14px;
+            margin-bottom: 35px !important;
+            margin-top: 20px !important;
+        }
+
+        .addAlbumEmpty a {
+            display: inline-block;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+            .addAlbumEmpty a:hover {
+                text-decoration: none;
+            }
+
+            .addAlbumEmpty a::first-letter {
+                text-transform: capitalize;
+            }
+
+        #striped {
+            table-layout: fixed;
+        }
+
+        #folder {
+            vertical-align: top;
+            -webkit-user-select: text;
+            display: block;
+            height: 290px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #uploadedPhotos {
+            word-break: break-word;
+        }
+
+        .fuploaderr {
+            cursor: pointer;
+        }
+
+        #infos0 {
+            float: right;
+            right: 15px;
+            min-height: 30px;
+            margin: 0;
+            display: none;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        .selectize-input {
+            padding: 4px 8px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui ">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container" o='style'>
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1 id="titleh1" o='title'>
+                        <span>{'Add Photos'|@translate}</span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="normal_tab">
+                                <a href="./admin.html?page=admin.galleries">
+                                    <span>
+                                        <span class="icon-exchange">
+                                        </span>{'Folder'|@translate}{$pending_span}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="selected_tab">
+                                <a href="./admin.html?page=admin.photos_add">
+                                    <span>
+                                        <span class="icon-plus">
+                                        </span>{'Add Photos'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content" style="margin-top: 20px;">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos">
+                                    <p>
+                                        <label id="aru">
+                                            {'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;
+                                        </label>
+                                        <a href="javascript:;" onclick="admin_ok();return false;">{'Yes'|@translate}</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: none;">
+                            <div id="addAlbumForm" style="background-color: white; width: 630px; height: 300px; overflow-y:hidden;">
+                                <div style="height: 40px;">
+                                    <div id="infos0" class="infos">
+                                        {'Already exists'|@translate}
+                                    </div>
+                                </div>
+
+                                <form>
+                                    {'Parent album'|@translate}
+                                    <br />
+                                    <select name="category_parent"></select>
+                                    {'Album name'|@translate}
+                                    <br />
+                                    <input name="category_name" type="text" maxlength="50" />
+                                    <span id="categoryNameError" style="color: red;">
+                                        {'The album name must not be empty.'|@translate}
+                                    </span>
+                                    <br />
+                                    <br />
+                                    <input type="submit" value="{'Create'|@translate}" class="buttonLike" />
+                                    <span id="albumCreationLoading" style="display: none">
+                                        <img src="./templ/themes/default/images/ajax-loader-small.gif" />
+                                    </span>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="photosAddContent">
+                            <div id="info2" class="infos" style="display: none">
+                                <i class="eiw-icon2 icon-ok"></i>
+                            </div>
+                            <div class="errors" style="display: none">
+                                <i class="eiw-icon icon-cancel"></i>
+                                <ul></ul>
+                            </div>
+                            <p class="afterUploadActions" style="margin: 10px; display: none;">
+                                <a class="batchLink" style="display: none;">|</a> <a href="./admin.html?page=admin.photos_add"
+                                                                                     id="another" style="display: none;">
+                                    {'Add another set of photos'|@translate}|
+                                </a><a id="visit" style="display: none;" href="./index.html">{'Visit the gallery'|@translate}</a>
+                            </p>
+                            <form id="uploadForm" enctype="multipart/form-data" method="post" action="./admin.html?page=admin.photos_add&result=1"
+                                  o='uploadform'>
+                                <fieldset class="selectAlbum">
+                                    <legend>{'Select an album'|@translate}</legend>
+                                    <div class="selectedAlbum" style="display: none">
+                                        <span class="icon-sitemap"></span>
+                                    </div>
+                                    <div class="selectAlbumBlock">
+                                        <div id="albumSelection" style="display: none;">
+                                            <select data-selectize="categories" data-value="[{$selected_category}]" data-default="first"
+                                                    name="category" style="width: 600px"></select>
+                                            <br />
+                                        </div>
+                                        {'... or'|@translate} <a id="add_album" href="javascript:;" onclick="addalb();return false;"
+                                                                 data-add-album="category" title="{'create a new album'|@translate}">
+                                            {'create a new album'|@translate}
+                                        </a>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="selectFiles" style="display: none">
+                                    <span id="addFiles" class="btn btn-success fileinput-button buttonLike">
+                                        {'Select files'|@translate}
+                                        <input type="file" name="files[]" accept=".jpg,.jpeg,.png,.gif,.webp,.bmp,.mp3,.ogg,.mp4,.webm;" multiple="multiple" />
+                                    </span>
+                                    <p id="uploadWarningsSummary">
+                                        {$upload_file_types}. <a class="icon-info-circled-1  showInfo" title="{'Learn more'|@translate}">
+                                        </a>
+                                    </p>
+                                    <span id="deteleLoading" style="display: none">
+                                        <img src="./templ/themes/default/images/ajax-loader-small.gif" />
+                                    </span>
+                                    <p id="uploadWarnings">
+                                        {$uploadWarnings}<label>
+                                            {'max filesize'|@translate}
+                                        </label>
+                                        <input type="text" maxlength="5" size="5" id="maxFileSize" value="{$maxFileSize}" />
+                                        MB
+                                    </p>
+                                    <div class="container">
+                                        <div id="stripeddiv" style="-webkit-user-select: text;">
+                                            <table id="striped" class="table table-striped" cellpadding="0" cellspacing="0">
+                                                <tbody id="folder" class="files" style="vertical-align: top;"></tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row fileupload-buttonbar" style="display: block; width: 100%;">
+                                            <div class="col-lg-7">
+                                                <button id="startUpload" class="buttonLike start" disabled="disabled">
+                                                    {'Add Photos'|@translate}
+                                                </button>
+                                                <div id="uploadingActions" style="display: none">
+                                                    <button id="cancelUpload" class="buttonLike icon-cancel-circled cancel">
+                                                        {'Cancel'|@translate}
+                                                    </button>
+                                                </div>
+                                                <div id="div_nb" style="display: inline-block; margin-left: 10px;">
+                                                    <span id="span_nb"></span> {'files'|@translate}
+                                                </div>
+                                                <div class="progress-extended fileupload-process">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 fileupload-progress fade" style="margin-left: 20px;">
+                                                <div id="progressbarall" class="progress progress-striped active" aria-valuemin="0"
+                                                     aria-valuemax="100" style="display: none;">
+                                                    <div class="progress-bar progress-bar-success" style="width: 0%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <fieldset style="display: none">
+                                <legend>{'Photos'|@translate}</legend>
+                                <div id="uploadedPhotos">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div id="uploader_filelist" class="my-center2" o='droptext' style="display: none;">
+                        <span class="plupload_droptext">{'Drag files here'|@translate}</span>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="template-upload" type="text/x-tmpl">
+        {% for (var i=0, file; file=o.files[i]; i++) { %}
+        <tr class="template-upload fade" style="border: 1px solid #000;">
+            <td style="width: 380px; overflow: hidden; max-width:480px;">
+                <span class="preview"></span>    {% if (window.innerWidth > 480 || !o.options.loadImageFileTypes.test(file.type)) { %}
+                <p class="name">{%=file.name%}</p>
+                {% } %}
+                <strong class="error text-danger"></strong>
+            </td>
+            <td style="width:100px;">
+                <span class="size">Processing...</span>
+            </td>
+            <td style="width:100px;">
+                <div style="width:50px;" class=" progress progress-striped active" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+            </td>
+            <td style="width:20px;">
+                {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-primary start" disabled style="display:none;">
+                    <span>Start</span>
+                </button>
+                {% } %}
+                {% if (!i) { %}
+                <div class="btn btn-warning cancel">
+                    <a href="javascript:;" onclick="return false;"></a>
+                </div>
+                {% } %}
+            </td>
+        </tr>
+        {% } %}
+    </script>
+    <script type="text/javascript">
+        var _photosUploaded_label = "{'%d photos'|@translate}";
+        var _albumSummary_label = "{'Album alburl now contains %d photos'|@translate}";
+        var _batch_Label = "{'Manage this set of %d photos'|@translate}";
+        var uploadedPhotos = [];
+        var _all_cancel = 0;
+        var _is_done = 0;
+        var _cbox_change = 0;
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _aru1 = "{'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;";
+        var _aru2 = "{'Are are you sure you want to exit?'|@translate}&nbsp; &nbsp;";
+        var _maxVal = "200";
+    </script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/fupload/js/tmpl.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/fupload/js/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/fupload/js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/fupload/js/jquery.fileupload-process.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/fupload/js/jquery.fileupload-validate.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.button.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.spinner.min.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        window.cefQuery({
+            request: 'Prompt.q.loading:1'
+        });
+
+        var categoriesCache = new CategoriesCache('./ws.php?format=json&method=categories.getAdminList&type=1');
+        categoriesCache.selectize($('[data-selectize=categories]'), {
+            filter: function (categories, options) {
+                if (categories.length > 0) {
+                    $("#albumSelection, .selectFiles").show();
+                    $("#uploader_filelist").show();
+                }
+                return categories;
+            }
+        });
+
+        function addalb() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+            $('#add_album').addAlbum({
+                afterSelect: function () {
+                    $("#albumSelection, .selectFiles").show();
+                    $("#uploader_filelist").show();
+                }
+            });
+        }
+
+        function close_uploading(cmd) {
+            if (cmd == "close") {
+                $('#aru').html(_aru2);
+            }
+            else {
+                $('#aru').html(_aru1);
+            }
+
+            $('#info').attr("cmd", cmd);
+            $('#info').delay(100).show();
+            $('#info').delay(2000).fadeOut();
+        }
+
+        function admin_ok() {
+            storage.b = '0';
+
+            var cmd = $('#info').attr("cmd");
+            if (!cmd) {
+                return;
+            }
+
+            if (cmd == "close") {
+                window.cefQuery({
+                    request: 'Prompt.q.close:0'
+                });
+                return;
+            }
+
+            $.getJSON('./ws.php?method=upload.brisque', function (data) {
+                if (cmd == "back") {
+                    history.back();
+                }
+                else if (cmd == "forward") {
+                    history.forward();
+                }
+                else if (cmd == "reload") {
+                    location.reload();
+                }
+                else {
+                    window.cefQuery({
+                        request: 'Prompt.q.uploading:0'
+                    });
+                    window.location = cmd;
+                }
+            });
+        }
+
+        function fupload_err(obj) {
+            window.cefQuery({
+                request: 'Prompt.q.fupload_err:' + $(obj).attr("fname")
+            });
+        }
+        function playbox(url) {
+            $.colorbox({
+                href: url, transition: "none", width: "85%", height: "85%", fixed: true, opacity: 1, //maxWidth: 1140,
+                onComplete: function () {
+                    $('body').css('overflow-y', 'hidden');
+                    $('#cboxLoadedContent').css('background', '#000');
+                    $('#cboxOverlay').css('background-color', '#000');
+                    $('#cboxWrapper').css('background-color', '#000');
+                    $('#cboxClose').removeClass('stm-icon-cancel2').addClass('stm-icon-cancel3');
+
+                },
+                onClosed: function () {
+                    document.body.style.removeProperty('overflow-y');
+                    document.getElementById('cboxOverlay').style.removeProperty('background-color');
+                    document.getElementById('cboxWrapper').style.removeProperty('background-color');
+                    $('#cboxClose').removeClass('stm-icon-cancel3').addClass('stm-icon-cancel2');
+                }
+
+            });
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            jQuery('.font-checkbox').fontCheckbox();
+
+            _maxVal = $("#maxFileSize").val();
+
+            $('#div_nb').hide();
+            $("#uploadWarningsSummary").hide();
+
+            $('#uploadForm').fileupload({
+                acceptFileTypes: /(\.|\/)(gif|jpe?g|png|bmp|mp3|ogg|mp4|webp|webm)$/i,
+                limitConcurrentUploads: 5,
+                maxFileSize: parseInt(_maxVal),
+                url: './upload.html'
+            });
+
+            $("#maxFileSize").spinner({ max: 999, min: 1, step: 1 });
+
+            $("#maxFileSize").keyup(function () {
+                $(this).val($(this).val().replace(/[^0-9.]/g, ''));
+                if (parseInt($("#maxFileSize").val()) > 999) {
+                    $("#maxFileSize").val("999");
+                }
+            }).bind("paste", function () {
+                return false;
+            });
+
+            var cancelval = setInterval(function () {
+                if (_maxVal != $("#maxFileSize").val()) {
+                    _maxVal = $("#maxFileSize").val();
+                    $.post("./admin.html?page=admin.maxfilesize&size=" + _maxVal, ' ', function (data, state) { });
+                }
+            }, 500);
+        });
+
+        function show_paint(id) {
+            window.cefQuery({
+                request: 'Prompt.q.paint2:' + id
+            });
+        }
+
+        function close_paint() {
+            window.cefQuery({
+                request: 'Prompt.q.closep:'
+            });
+            $.colorbox.close();
+        }
+
+        function jshow_mask() {
+            setTimeout(function () {
+                $.colorbox({
+                    transition: "none", width: "200", height: "200", fixed: true, overlayClose: false, escKey: false,
+                    //iframe: true,
+                    html: '<a class="paintx" href="javascript:;" onclick="close_paint();return false;">X</a>',
+                    onComplete: function () {
+                        $('#cboxContent').css('background-color', 'transparent');
+                        $('#cboxLoadedContent').css('background', 'transparent');
+                        $('#cboxClose').hide();
+                    },
+                    onClosed: function () {
+                        document.getElementById('cboxContent').style.removeProperty('background-color');
+                        $('#cboxClose').show();
+                    }
+                });
+            }, 0);
+        }
+        function jshow_close() {
+            $.colorbox.close();
+        }
+        function reload_img(id) {
+            var obj = $('#pic_' + id);
+            var d = new Date();
+            var n = d.getTime();
+            var src0 = $(obj).attr('data-original') + "?d=" + n;
+            $(obj).attr({ src: src0 });
+        }
+
+                                                                                    //fileupload-ui.u3.min.js, startUpload
+    </script>
+    <script type="text/javascript" src="./jquery.fileupload-ui.u3.min.js"></script>
+</body>
+</html>

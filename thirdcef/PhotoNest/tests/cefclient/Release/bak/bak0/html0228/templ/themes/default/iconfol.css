@@ -1,0 +1,153 @@
+
+
+/*BEGIN themes/modus/css/iconfontello.css.tpl */
+@font-face {
+    font-family: 'modus';
+    src: url(skins/fontello/font/modus.eot?66556310);
+    src: url(skins/fontello/font/modus.eot?66556310#iefix) format('embedded-opentype'), url(skins/fontello/font/modus.woff2?66556310) format('woff2'), url(skins/fontello/font/modus.woff?66556310) format('woff'), url(skins/fontello/font/modus.ttf?66556310) format('truetype'), url(skins/fontello/font/modus.svg?66556310#modus) format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+
+[class^="stm-icon-"]:before, [class*=" stm-icon-"]:before {
+    font-family: "modus";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.col1 {
+    margin-left: 0;
+}
+
+.col2 {
+    margin-left: 0;
+}
+
+    .col2:before {
+        content: '\2026'
+    }
+
+.col3 {
+    margin-left: 0;
+}
+
+    .col3:before {
+        content: "\2026\2026";
+    }
+
+.col4 {
+    margin-left: 0;
+}
+
+    .col4:before {
+        content: "\2026\2026\2026";
+    }
+
+.col5 {
+    margin-left: 0;
+}
+
+    .col5:before {
+        content: "........";
+    }
+
+.col6 {
+    margin-left: 0;
+}
+
+    .col6:before {
+        content: "..........";
+    }
+
+.col7 {
+    margin-left: 0;
+}
+
+    .col7:before {
+        content: "............";
+    }
+
+.col8 {
+    margin-left: 0;
+}
+
+    .col8:before {
+        content: "..............";
+    }
+
+.col9 {
+    margin-left: 0;
+}
+
+    .col9:before {
+        content: "................";
+    }
+
+.col10 {
+    margin-left: 0;
+}
+
+    .col10:before {
+        content: "..................";
+    }
+
+.col11 {
+    margin-left: 0;
+}
+
+    .col11:before {
+        content: "....................";
+    }
+
+.col12 {
+    margin-left: 0;
+}
+
+    .col12:before {
+        content: "......................";
+    }
+
+.col13 {
+    margin-left: 0;
+}
+
+    .col13:before {
+        content: "........................";
+    }
+
+.col14 {
+    margin-left: 0;
+}
+
+    .col14:before {
+        content: "..........................";
+    }
+
+.col15 {
+    margin-left: 0;
+}
+
+    .col15:before {
+        content: "............................";
+    }
+
+.col16 {
+    margin-left: 0;
+}
+
+    .col16:before {
+        content: "..............................";
+    }

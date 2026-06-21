@@ -1,0 +1,1 @@
+MainPackage=E:\voy\102\PhotoNest\PhotoNest\bin\x64\Release\PhotoNest_1.0.1.0_x64.appx

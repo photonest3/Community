@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<item>
+		<id>menubar_duplicates</id>
+		<templ>
+			<![CDATA[<li g='duplicates'><a href="javascript:;" onclick="admin_url('./admin.html?page=admin.batch&from=1&filter=duplicates');return false;">
+	  <i class="icon-clock"></i> {'Duplicates'|@translate}<span class="adminMenubarCounter">{$NB_PHOTOS_DUP}</span></a></li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>menubar_in_caddie</id>
+		<templ>
+			<![CDATA[<li g='caddie'>
+			  <a href="javascript:;" onclick="admin_url('./admin.html?page=admin.batch&from=1&filter=caddie');return false;">
+				<i class="icon-flag"></i> {'Caddie'|@translate}<span class="adminMenubarCounter">{$NB_PHOTOS_IN_CADDIE}</span></a>
+			</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>menubar_no_album</id>
+		<templ>
+			<![CDATA[<li g='no_album'>
+			  <a href="javascript:;" onclick="admin_url('./admin.html?page=admin.batch&from=1&filter=no_album');return false;">
+				<i class="icon-heart-broken"></i> {'Orphans'|@translate}<span class="adminMenubarCounter">{$NB_PHOTOS_NO_ALBUM}</span>
+			  </a>
+			</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>prefilter</id>
+		<templ>
+			<![CDATA[<select name="filter_prefilter" id="prefilter" >
+			  <option value="all_photos" class="" g='all_photos'>{'All'|@translate}</option>
+            <option value="videojs" class="" g='videojs'>{'All videos'|@translate}</option>
+			  <option value="caddie" class="icon-flag" g='caddie'>{'Caddie'|@translate}</option>
+			  <option value="duplicates" class="" g='duplicates'>{'Duplicates'|@translate}</option>
+			  <option value="last_import" class="" g='last_import' >{'Last import'|@translate}</option>
+            <option value="osm0" class="" g='osm0'>{'OSM Geotagged'|@translate}</option>
+          <option value="osm1" class="" g='osm1'>{'OSM Not geotagged'|@translate}</option>
+			  <option value="no_album" class="icon-heart-broken" g='no_album'>{'With no album'|@translate}({'Orphans'|@translate})</option>
+			  <option value="no_tag" class="" g='no_tag'>{'With no tag'|@translate}</option>
+				  <option value="favorites" class="" g='favorites'>{'Your favorites'|@translate}</option>
+		  
+		  </select>]]>
+		</templ>
+	</item>
+	<item>
+		<id>btn_unit_edit</id>
+		<templ>
+			<![CDATA[<a class="coi-box0 icon-pencil" href="javascript:;" onclick="show_paint({$id});return false;">{'Edit'|@translate}</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>elementEdit</id>
+		<templ>
+			<![CDATA[<fieldset class="elementEdit">
+	<legend>{$name}</legend>
+	<span class="thumb">
+	{$thumb}{$btn_unit_edit}
+	</span>
+	<table style="margin-left:50px;">
+		<tr>
+			<td><strong>{'Title'|@translate}</strong></td>
+			<td><input type="text" class="large" name="name-{$id}" value="{$name}" maxlength="25" /></td>
+		</tr>
+		<tr>
+			<td><strong>{'Author'|@translate}</strong></td>
+			<td><input type="text" class="large" name="author-{$id}" value="{$author}" maxlength="25" /></td>
+		</tr>
+		<tr>
+			<td><strong>{'Creation date'|@translate}</strong></td>
+			<td>
+  <input type="hidden" id="date_creation-{$id}" name="date_creation-{$id}" value="{$createval}" "/>
+  <label>
+	<i class="icon-calendar"></i>
+	<input type="text" class="datep middle" data-id="date_creation-{$id}" value="{$createtime}" readonly="readonly"  maxlength="25" />
+	<a id="adate_creation-{$id}" href="javascript:;" style="display:none;" onclick="reset(this); return false;" data-value="{$createval}" data-show="{$createtime}">{'unset'|@translate}</a>
+  </label>
+		  </td>
+		</tr>
+		<tr>
+			<td><strong>{'Tag'|@translate}</strong></td>
+			<td>
+				<select data-selectize="tags" data-value="[{$tag_value}]"
+						placeholder="{'Type in a search term'|@translate}"
+						data-create="true" name="tags-{$id}" multiple style="width:500px;"></select>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>{'Description'|@translate}</strong></td>
+			<td><textarea cols="50" rows="3" name="description-{$id}" id="description-{$id}" class="description">{$comment}</textarea></td>
+		</tr>
+	</table>
+</fieldset>]]>
+		</templ>
+	</item>
+	<item>
+		<id>categoryUl_li</id>
+		<templ>
+			<![CDATA[<li class="categoryLi virtual_cat" id="cat_{$id}">
+		<p class="albumTitle">
+			<img src="./templ/admin/themes/default/images/cat_move.png" class="drag_button" style="display:none;"
+			alt="{'Click-and-drag to re-order'|@translate}" title="{'Click-and-drag to re-order'|@translate}" />
+			<strong>{$categoryUl_li_1}</strong>
+			<span class="albumInfos"><span class="userSeparator">&middot;</span> {$photo} <span class="userSeparator">&middot;</span>
+			{$sub_photo} {$sub_album}</span>
+		</p>
+		<input type="hidden" name="catOrd_{$id}" value="{$orderVal}" />
+		<p class="albumActions">
+			<a href="./admin.html?page=admin.album&properties=1&category={$id}"><span class="icon-pencil"></span>{'Edit'|@translate}</a>
+			<span class="userSeparator">&middot;</span><a class="icon-picture" href="./admin.html?page=admin.batch&from=1&filter=album&album={$id}"> {'manage album photos'|@translate}</a>
+			<span class="userSeparator">&middot;</span><a href="./index.html?category={$id}"><span class="icon-eye"></span>{'jump to album'|@translate}</a>
+			<span class="userSeparator">&middot;</span><a class="icon-plus" href="./admin.html?page=admin.galleries">{'Add Photos'|@translate}</a>
+		</p>
+	</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>beatch_selectedMessage</id>
+		<templ>
+			<![CDATA[{'No photo selected, %d photos in current set'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>orphan_photos</id>
+		<templ>
+			<![CDATA[{'Delete %d orphan photos'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>beatch_thumbnail_li</id>
+		<templ>
+			<![CDATA[<li g='thumbSelected'>
+		<span class="wrap1">
+			<label class="font-checkbox">
+				<span class="icon-check"></span><input type="checkbox" name="selection" g='checked' value="{$id}" />
+				<span class="wrap2">
+				  <div class="actions">
+		  <a class="coi-box0 icon-pencil" href="javascript:;" onclick="show_paint({$id});return false;" title="{'Edit'|@translate}"></a>
+		  </div>
+				  <img id="{$id}" class="thumb0 imgbg" data-original="{$oriurl}" src="{$path}"
+				  alt="{$name}" title="{$name}<br>{$oriwidth}&amp;times;{$oriheight} pixels, {$size}" g="style"  />
+				</span>
+			</label>
+		</span>
+</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>beatch_video_li</id>
+		<templ>
+			<![CDATA[<li g='thumbSelected'>
+<span class="wrap1">
+	<label class="font-checkbox">
+		<span class="icon-check"></span><input type="checkbox" name="selection" g='checked' value="{$id}"/>
+		<span class="wrap2">
+			<div class="thumbdiv video-js vjs-has-started">
+				<img class="thumb0" src="{$path}" alt="{$name}" title="{$name}<br>{$oriwidth}&amp;times;{$oriheight} pixels, {$size}" g="style" />
+				vcontrol_js
+			</div>
+		</span>
+	</label>
+</span>
+</li>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>batch_save_infos</id>
+		<templ>
+			<![CDATA[<i class="eiw-icon icon-ok"></i>{'Saved successfully'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_list_order</id>
+		<templ>
+			<![CDATA[<i class="eiw-icon icon-ok"></i>{'Albums automatically sorted'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_move_infos0</id>
+		<templ>
+			<![CDATA[{'No album selected'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_parent_infos</id>
+		<templ>
+			<![CDATA[{'Invalid parent album'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_move_infos1</id>
+		<templ>
+			<![CDATA[{'%d album moved'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_move_infos99</id>
+		<templ>
+			<![CDATA[{'%d albums moved'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>tag_li</id>
+		<templ>
+			<![CDATA[<li><div class="tag-box" style="opacity: 1;">
+		<label class="font-checkbox no-bold"><span class="icon-check" style="display:none"></span>
+		<input type="checkbox" name="tags" checked value="{$id}"/>{$name}(%d) <a class="icon-ellipsis-vert showInfo" mtitle='tag_mtitle'></a></label></div></li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>tag_mtitle</id>
+		<templ>
+			<![CDATA[tag-dropdown-header<a class="icon-pencil" href="javascript:;" onclick="displayAct(1,{$id}); return false;">{'Edit'|@translate}</a><a class="icon-docs duplicate" href="javascript:;" onclick="displayAct(2,{$id}); return false;">{'Duplicate'|@translate}<a class="icon-trash" href="javascript:;" onclick="displayAct(6,{$id}); return false;">{'Delete'|@translate}</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>tag_no_photo</id>
+		<templ>
+			<![CDATA[<div class="tag-dropdown-header"><b>{$name}</b><i>{'no photo'|@translate}</i></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>tag_have_photo</id>
+		<templ>
+			<![CDATA[<div class="tag-dropdown-header"><b>{$name}</b><a style="padding-top:0;" href="javascript:;" onclick="displayAct(100,{$id}); return false;"><i>photonb</i></a></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>tag_orphan</id>
+		<templ>
+			<![CDATA[<div class="info-warning tag-info icon-attention not-in-selection-mode"><p>{'You have %s orphan tags'|@translate}<a class="icon-eye" href="javascript:;" onclick="displayAct(0, 0);return false;">{'Review'|@translate}</a> </p></div>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>tag_infos</id>
+		<templ>
+			<![CDATA[<p>{'Tag "%s" was added'|@translate}</p>]]>
+		</templ>
+	</item>
+	<item>
+		<id>tag_error</id>
+		<templ>
+			<![CDATA[<p>{'Tag "%s" already exists'|@translate}</p>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>tag_del_infos</id>
+		<templ>
+			<![CDATA[<p>{'Tag "%s" succesfully deleted'|@translate}</p>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>tag_merge_form_label</id>
+		<templ>
+			<![CDATA[<label class="font-checkbox">
+                            <span class="icon-dot-circled"></span><input type="radio" name="destination_tag" value="{$id}" g='checked' />{$name}<span class="warningDeletion">{'(this tag will be deleted)'|@translate} </span></label><br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>selectSet</id>
+		<templ>
+			<![CDATA[<a href="#" id="selectSet">{'The whole set'|@translate}</a> ]]>
+		</templ>
+	</item>
+	<item>
+		<id>slider_widths</id>
+		<templ>
+			<![CDATA[<div data-slider="widths" class="dimensionslider">
+	  {'Width'|@translate} <span class="slider-info">{'between %d and %d pixels'|@translate}</span>
+	  | <a class="slider-choice" data-min="{$width_min_o}" data-max="{$width_max_o}">{'Reset'|@translate}</a>
+	  <div class="slider-slider"></div>
+	  <input type="hidden" data-input="min" name="dimension_min_width" value="{$width_min}" />
+	  <input type="hidden" data-input="max" name="dimension_max_width" value="{$width_max}" />
+ 	  <input type="hidden" data-input="min" name="width_min_o" value="{$width_min_o}" />
+	  <input type="hidden" data-input="max" name="width_max_o" value="{$width_max_o}" />
+ </div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>slider_heights</id>
+		<templ>
+			<![CDATA[<div data-slider="heights" class="dimensionslider">
+	{'Height'|@translate} <span class="slider-info">{'between %d and %d pixels'|@translate}</span>
+	| <a class="slider-choice" data-min="{$height_min_o}" data-max="{$height_max_o}">{'Reset'|@translate}</a>
+	<div class="slider-slider"></div>
+	<input type="hidden" data-input="min" name="dimension_min_height" value="{$height_min}" />
+	<input type="hidden" data-input="max" name="dimension_max_height" value="{$height_max}" />
+	<input type="hidden" data-input="min" name="height_min_o" value="{$height_min_o}" />
+	<input type="hidden" data-input="max" name="height_max_o" value="{$height_max_o}" />
+</div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>slider_ratios</id>
+		<templ>
+			<![CDATA[<div data-slider="ratios" class="dimensionslider">
+	  {'Ratio'|@translate} ({'Width'|@translate}/{'Height'|@translate}) <span class="slider-info">{'between %s and %s'|@translate}</span>
+	  | <a class="slider-choice" data-min="{$ratio_min_o}" data-max="{$ratio_min1}">{'Portrait'|@translate}</a>
+	| <a class="slider-choice" data-min="0.95" data-max="1.05">{'Square'|@translate}</a>
+	  | <a class="slider-choice" data-min="{$ratio_max0}" data-max="{$ratio_max_o}">{'Landscape'|@translate}</a>
+	  | <a class="slider-choice" data-min="{$ratio_min_o}" data-max="{$ratio_max_o}">{'Reset'|@translate}</a>
+	  <div class="slider-slider"></div>
+	  <input type="hidden" data-input="min" name="dimension_min_ratio" value="{$ratio_min}" />
+	  <input type="hidden" data-input="max" name="dimension_max_ratio" value="{$ratio_max}" />
+ 	  <input type="hidden" data-input="min" name="ratio_min_o" value="{$ratio_min_o}" />
+	  <input type="hidden" data-input="max" name="ratio_max_o" value="{$ratio_max_o}" />
+ </div> ]]>
+		</templ>
+	</item>
+	<item>
+		<id>slider_filesize</id>
+		<templ>
+			<![CDATA[<div data-slider="filesizes" class="dimensionslider">
+		  <span class="slider-info">{'between %s and %s MB'|@translate}</span> | <a class="slider-choice" data-min="{$filesize_min_o}" data-max="{$filesize_max_o}">{'Reset'|@translate}</a>
+		  <div class="slider-slider"></div>
+		  <input type="hidden" data-input="min" name="filesize_min" value="{$filesize_min}" />
+		  <input type="hidden" data-input="max" name="filesize_max" value="{$filesize_max}" />
+		  <input type="hidden" data-input="min" name="filesize_min_o" value="{$filesize_min_o}" />
+		  <input type="hidden" data-input="max" name="filesize_max_o" value="{$filesize_max_o}" />
+	  </div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>slider_createdate</id>
+		<templ>
+			<![CDATA[<div data-slider="date_creation" class="dateslider">
+			  <span class="slider-info">%s - %s</span> | <a class="slider-choice" data-min="{$createdate_min_o}" data-max="{$createdate_max_o}">{'Reset'|@translate}</a>
+			  <div class="slider-slider slidate"></div>
+			  <input type="hidden" data-input="min" name="createdate_min" value="{$createdate_min}" />
+			  <input type="hidden" data-input="max" name="createdate_max" value="{$createdate_max}" />
+			  <input type="hidden" data-input="min" name="createdate_min_o" value="{$createdate_min_o}" />
+			  <input type="hidden" data-input="max" name="createdate_max_o" value="{$createdate_max_o}" />
+		  </div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>slider_postdate</id>
+		<templ>
+			<![CDATA[<div data-slider="date_available" class="dateslider">
+			  <span class="slider-info">%s - %s</span> | <a class="slider-choice" data-min="{$postdate_min_o}" data-max="{$postdate_max_o}">{'Reset'|@translate}</a>
+			  <div class="slider-slider slidate"></div>
+			  <input type="hidden" data-input="min" name="postdate_min" value="{$postdate_min}" />
+			  <input type="hidden" data-input="max" name="postdate_max" value="{$postdate_max}" />
+			  <input type="hidden" data-input="min" name="postdate_min_o" value="{$postdate_min_o}" />
+			  <input type="hidden" data-input="max" name="postdate_max_o" value="{$postdate_max_o}" />
+		  </div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>navigationBar_global</id>
+		<templ>
+			<![CDATA[<div style="clear:both;">
+		  <div style="float:left">
+			{$navigationBar}
+		  </div>
+		  <div style="float:right;margin-top:10px;">
+			  {$display20} {'photos per page'|@translate}
+		  </div>
+	  </div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>display20_span</id>
+		<templ>
+			<![CDATA[<span class="dis00" >20</span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>display20</id>
+		<templ>
+			<![CDATA[<a href="./admin.html?page=admin.batch&mode=global&display=20">20</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>option_del_tags</id>
+		<templ>
+			<![CDATA[<option value="del_tags">{'Remove tags'|@translate}</option> ]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos_file</id>
+		<templ>
+			<![CDATA[<li><span style="white-space: nowrap;">{'Original file:'|@translate}</span> <a href="javascript:;" style="word-break: break-word;" onclick="openfol(this);return false;" filen="{$filen}">{$dest}</a></li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos_posted</id>
+		<templ>
+			<![CDATA[<li>{'Synchronization date'|@translate} : %s</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos_added</id>
+		<templ>
+			<![CDATA[<li>{'Added by %s'|@translate}</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos_size</id>
+		<templ>
+			<![CDATA[<li>{$size}</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos_creation</id>
+		<templ>
+			<![CDATA[<li>{'Creation date'|@translate} :
+  <input type="hidden" id="p{$id}" name="creation" value="{$createval}"/>
+  <label>
+	<i class="icon-calendar"></i>
+	<input type="text" class="datep middle" data-id="p{$id}" value="{$creation}"  readonly="readonly"  maxlength="25" />
+	<a id="ap{$id}" href="javascript:;" style="display:none;" onclick="reset(this); return false;" data-value="{$createval}" data-show="{$creation}">{'unset'|@translate}</a>
+  </label></li> ]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos_hit</id>
+		<templ>
+			<![CDATA[<li>{'Visited %d times'|@translate}</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos_id</id>
+		<templ>
+			<![CDATA[<li>{'Numeric identifier : %d'|@translate}</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_infos</id>
+		<templ>
+			<![CDATA[<i class="eiw-icon icon-ok"></i>{'Photo information updated'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_infos</id>
+		<templ>
+			<![CDATA[<i class="eiw-icon icon-ok"></i>{'Album updated successfully'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>rank_of_image</id>
+		<templ>
+			<![CDATA[<li class="rank-of-image">
+	<img src="{$url}" class="thumbnail" alt="{$name}" title="{$name}" style="max-width:100px; max-height:100px; "/>
+	<input type="text" name="rank_{$id}" value="{$rank}" style="display:none"  maxlength="25" />
+</li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>manage_photos_li</id>
+		<templ>
+			<![CDATA[<li><a class="icon-picture" href="./admin.html?page=admin.batch&from=1&filter=album&album={$cat_id}"> {'manage album photos'|@translate}</a></li>]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_albumThumbnail2</id>
+		<templ>
+			<![CDATA[<td id="albumThumbnail">
+			<div class="albumThumbnailImage" id="galley" style="width:150px; height:110px;display_pic">
+				<ul class="pictures">
+					<li>
+						<img id = "box_ori" data-original="{$oriurl}" class="thumbnail imgbg" src="{$repsrc}"
+						style="max-width:144px; max-height:100px;border: 2px solid #ddd;"/>
+
+					</li>
+				</ul>
+			</div>
+			<div class="video-js vjs-has-started" style="width:150px; height:110px;display_vdo">
+				 <img id="videimg" src="{$repsrc}" style="max-width:144px; max-height:100px;"/>
+	  vcontrol_js
+			</div>
+			<p class="albumThumbnailActions">
+				<a href="javascript:;" class="refreshRepresentative" title="{'Find a new random album thumbnail.'|@translate}">{'Refresh'|@translate}</a>
+			</p>
+		</td>]]>
+		</templ>
+	</item>
+	<item>
+		<id>albumLinks_p0</id>
+		<templ>
+			<![CDATA[{'This album contains no photo.'|@translate}<br/>{'Numeric identifier : %d'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>albumLinks_p1</id>
+		<templ>
+			<![CDATA[{'This album contains %d photos, added on %s.'|@translate}<br/>{'Numeric identifier : %d'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>albumLinks_p</id>
+		<templ>
+			<![CDATA[{'This album contains %d photos, added between %s and %s.'|@translate}<br/>{'Numeric identifier : %d'|@translate} ]]>
+		</templ>
+	</item>
+	<item>
+		<id>image_order</id>
+		<templ>
+			<![CDATA[<select style="margin-top: 10px;" name="image_order[]">
+		<option value="" g='none'></option>
+		<option value="file ASC" g='file ASC'>{'File name, A &rarr; Z'|@translate}</option>
+		<option value="file DESC" g='file DESC'>{'File name, Z &rarr; A'|@translate}</option>
+		<option value="a.name ASC" g='name ASC'>{'Photo title, A &rarr; Z'|@translate}</option>
+		<option value="a.name DESC" g='name DESC'>{'Photo title, Z &rarr; A'|@translate}</option>
+		<option value="date_creation DESC" g='date_creation DESC'>{'Date created, new &rarr; old'|@translate}</option>
+		<option value="date_creation ASC" g='date_creation ASC'>{'Date created, old &rarr; new'|@translate}</option>
+		<option value="date_available DESC" g='date_available DESC'>{'Date imported, new &rarr; old'|@translate}</option>
+		<option value="date_available ASC" g='date_available ASC'>{'Date imported, old &rarr; new'|@translate}</option>
+		<option value="hit DESC" g='hit DESC'>{'Visits, high &rarr; low'|@translate}</option>
+		<option value="hit ASC" g='hit ASC'>{'Visits, low &rarr; high'|@translate}</option>
+	  </select>]]>
+		</templ>
+	</item>
+	<item>
+		<id>unit_albumThumbnail</id>
+		<templ>
+			<![CDATA[<img id="{$id}" data-original="{$oriurl}" class="thumbnail boximg imgbg" src="{$photourl}" alt="{$imagename}"
+	   style="max-width:144px; max-height:144px;display:block;"/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>unit_albumThumbnail_mp4</id>
+		<templ>
+			<![CDATA[<div class="thumbdiv video-js vjs-has-started">
+	<img class="thumb0" src="{$photourl}" alt="{$imagename}"  style="max-width:144px; max-height:144px;" />
+	vcontrol_js	</div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>orderby_filter</id>
+		<templ>
+			<![CDATA[<span class="filter ">
+  <select name="order_by">
+	<option value="file ASC" g='file_ASC'>{'File name, A &rarr; Z'|@translate}</option>
+	<option value="file DESC" g='file_DESC'>{'File name, Z &rarr; A'|@translate}</option>
+	<option value="a.name ASC" g='name_ASC'>{'Photo title, A &rarr; Z'|@translate}</option>
+	<option value="a.name DESC" g='name_DESC'>{'Photo title, Z &rarr; A'|@translate}</option>
+	<option value="date_creation DESC" g='date_creation_DESC'>{'Date created, new &rarr; old'|@translate}</option>
+	<option value="date_creation ASC" g='date_creation_ASC'>{'Date created, old &rarr; new'|@translate}</option>
+	<option value="date_available DESC" g='date_available_DESC'>{'Date imported, new &rarr; old'|@translate}</option>
+	<option value="date_available ASC" g='date_available_ASC'>{'Date imported, old &rarr; new'|@translate}</option>
+	<option value="hit DESC" g='hit_DESC'>{'Visits, high &rarr; low'|@translate}</option>
+	<option value="hit ASC" g='hit_ASC'>{'Visits, low &rarr; high'|@translate}</option>
+  </select>
+  <a class="removeFilter">{'delete'|@translate}</a></span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>uploadWarnings</id>
+		<templ>
+			<![CDATA[{'Allowed file types: %s.'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>upload_file_types</id>
+		<templ>
+			<![CDATA[jpg, png, gif, webp, bmp, mp3, ogg, mp4, webm]]>
+		</templ>
+	</item>
+	<item>
+		<id>tr_stats</id>
+		<templ>
+			<![CDATA[<tr><td style="white-space: nowrap">{$a}</td>
+		  <td class="number">{$number}</td>
+		  <td><div class="statBar" style="width:0px"></div></td>
+	  </tr>]]>
+		</templ>
+	</item>
+	<item>
+		<id>picture_data0</id>
+		<templ>
+			<![CDATA[<div>{'No photos in the current set.'|@translate}</div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>picture_data1</id>
+		<templ>
+			<![CDATA[<p id="checkActions">
+	  <a href="#" id="selectAll"> {'All'|@translate}</a>
+	  {$selectSet}
+	  <a href="#" id="selectNone">{'None'|@translate}</a>
+	  <a href="#" id="selectInvert">{'Invert'|@translate}</a> &nbsp; <span id="selectedMessage">{$beatch_selectedMessage}</span>
+	  <input type="checkbox" name="setSelected" style="display: none" />
+	</p>
+	<input type="hidden" name="element_ids" id="element_ids" value="{$element_ids}" />
+	<div id="galley" >
+	<ul class="thumbnails">
+	  {$beatch_thumbnail}
+	</ul>
+	</div>
+	{$navigationBar_global}	]]>
+		</templ>
+	</item>
+	<item>
+		<id>unit_submit</id>
+		<templ>
+			<![CDATA[<p><input id="unit_submit" type="button" value="{'OK'|@translate}" class="buttonLike" />  <input type="reset" value="{'Reset'|@translate}" class="resetButton" /></p>]]>
+		</templ>
+	</item>
+	<item>
+		<id>admin_head</id>
+		<templ>
+			<![CDATA[<div id="adminHead"><div class="mygallery" >{$gallery_title}</div><button class="icon-cancel" title="{'close'|@translate}" type="button" onclick="admin_url('');return false;" id="cboxC"></button></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>first_added_age</id>
+		<templ>
+			<![CDATA[<a class="stat-box" href="./admin.html?page=admin.stats&{yearmonth}" >
+			<i class="icon-back-in-time"></i><span class="number">{$added_age}</span><span
+				class="caption" title="{'first photo added on %s'|@translate}">{'First photo added'|@translate}</span>
+		</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>error_lic</id>
+		<templ>
+			<![CDATA[<div class="errors0">
+	  <ul style="text-align: center;margin-top: 20px;"><li>{''|@translate} 999 &nbsp; <a href="javascript:;" onclick="window.cefQuery({request: 'Prompt.q.register:1'});return false;" class="expr">{'Activation Expired'|@translate}</a><br/></li>      </ul>
+	</div>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>day_lic</id>
+		<templ>
+			<![CDATA[<div class="errors0" style="color:#0b0;">
+	  <ul><li><span onclick="window.cefQuery({request: 'Prompt.q.register:1'});return false;">{'30-day trial period, expiration date:'|@translate} 999</span></li></ul></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>error_readonly</id>
+		<templ>
+			<![CDATA[<ul><li>{$Drive} {'Read-only attribute'|@translate}</li></ul>]]>
+		</templ>
+	</item>
+	<item>
+		<id>cat_titlename1</id>
+		<templ>
+			<![CDATA[<a href="./admin.html?page=admin.cat_list"><span style="letter-spacing: 0">{$titlename} </span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>dir_files</id>
+		<templ>
+			<![CDATA[nb1 {'files'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>pending_files</id>
+		<templ>
+			<![CDATA[nb0 {'files'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>pending_span</id>
+		<templ>
+			<![CDATA[<span id="pending" style="#f00;" title="{'there are some files to add'|@translate}" class="adminMenubarCounter0 icon-info-circled-1"></span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>coo_a</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="coo(this, '{$zzid}');return false;"><i2 class="icon-left-open"></i2></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>coo_span</id>
+		<templ>
+			<![CDATA[<span><i2 style="color:#bbb;" class="icon-left-open"></i2></span>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>folder_tr</id>
+		<templ>
+			<![CDATA[<tr id="{$trid}" class="{$zz} mytr" rootid="{$rootid}" >
+	  <td class="{$mytd}">
+		<span catid="{$id}" state="0" path="{$path}" title="{$dir}" class="name state">
+		{$coo}
+		<a href="javascript:;" onclick="openfol(this);return false;" root="{$root}" >{$dir3}</a></span>
+	  </td>
+	  <td class="mytd22">{$operate_folder}</td>
+	  <td class="tbody0">{$folder_td}</td>
+	  <td><span class="size uploaded">{$img}</span></td>
+	  <td><span class="size pending"></span></td>
+	</tr>												
+]]>
+		</templ>
+	</item>
+
+
+	<item>
+		<id>folder_tr9999999999</id>
+		<templ>
+			<![CDATA[<tr id="{$trid}" class="{$zz}" rootid="{$rootid}" style="border: 1px solid #000;">
+	  <td style="width: 200px; overflow: hidden; max-width:200px;border-bottom: 0 solid #ddd; {$rowspan}">
+		<span catid="{$id}" state="0" path="{$path}" title="{$dir}" class="name state">
+		{$coo}
+		<a href="javascript:;" onclick="openfol(this);return false;" root="{$root}" >{$dir3}</a></span>
+	  </td>
+	  <td style="border-bottom: 0 solid #ddd; letter-spacing:2px;">{$operate_folder}</td>
+	  <td class="tbody0">{$folder_td}</td>
+	  <td><span class="size uploaded"><img src="./templ/themes/default/images/loader.gif" /></span></td>
+	  <td><span class="size pending"></span></td>
+	  <td><div idx="0" sizes="0" dir0="{$dir0}" ></div></td>
+	</tr>]]>
+		</templ>
+	</item>
+
+
+	<item>
+		<id>folder_tr3</id>
+		<templ>
+			<![CDATA[<tr id="trrestore" style="border: 1px solid #000; visibility: visible;">
+	  <td>
+		<a href="javascript:;" style="margin-left: 6px;" onclick="openfol(this);return false;" root="{$root}" >./_data</a>
+	  </td>
+	  <td>
+		<a href="javascript:;" class="stm-icon-restore" onclick="restore();return false;" title="{'Restore'|@translate}"></a>	  
+	  </td>			
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	</tr>]]>
+		</templ>
+	</item>
+	<item>
+		<id>operate_folder_remove</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" class="icon-cancel" title="{$title}" onclick="remove_folder('{$root_id}');return false;"></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>operate_folder_remove2</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" onclick="openfol(this);return false;" root="{$dir}">&nbsp;..</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>folder_td_a9999999999999</id>
+		<templ>
+			<![CDATA[<span class="preview treecol"><a class="openf" href="./admin.html?page=admin.cat_name&category={$id}" data-id="{$id}">{$folder}</a></span>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>folder_td_a</id>
+		<templ>
+			<![CDATA[<a class="openf preview treecol" href="./admin.html?page=admin.cat_name&category={$id}" data-id="{$id}">{$folder}</a>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>folder_td_span</id>
+		<templ>
+			<![CDATA[<span class="preview treecol">{$folder}</span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>toolarge</id>
+		<templ>
+			<![CDATA[{'Too big'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>toosmall</id>
+		<templ>
+			<![CDATA[{'Too small'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>maxfilesize</id>
+		<templ>
+			<![CDATA[{'max filesize'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>tag_associations</id>
+		<templ>
+			<![CDATA[ <span class="caption" title="{'%d associations'|@translate}">{'Tags'|@translate}</span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>sLongDate</id>
+		<templ>
+			<![CDATA[{'sLongDate'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>sYearMonth</id>
+		<templ>
+			<![CDATA[{'sYearMonth'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>does_not_move</id>
+		<templ>
+			<![CDATA[{'Importing photos does not move or copy files to the new location.'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>does_not_move2</id>
+		<templ>
+			<![CDATA[{'Encrypting photos does not move or copy files to the new location.'|@translate}]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>vcontrol_js</id>
+		<templ>
+			<![CDATA[<div class="vcontrol"><div class="vjs-control-bar">
+		<a href="javascript:;" onclick="playbox('./admin.html?page=admin.box&id={$id}');return false;" 
+		class="vjs-play-control vjs-control vjs-button preview-box" o='url'><span class="vjs-icon-placeholder"></span></a>
+		<div class="vjs-time-control">
+		  <span class="vjs-duration-display">{$duration}</span>
+		</div>
+	  </div></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>vcontrol_gif</id>
+		<templ>
+			<![CDATA[<div class="vcontrol"><div class="vjs-control-bar"><a href="./admin.html?page=admin.box&id={$id}" class="vjs-play-control vjs-control vjs-button preview-box"></a></div></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>categoryUl_li_1</id>
+		<templ>
+			<![CDATA[<a href="./admin.html?page=admin.cat_list&parent_id={$id}" title="{'manage sub-albums'|@translate}">{$name}</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>categoryUl_li_1s</id>
+		<templ>
+			<![CDATA[<span>{$name}</span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>categoryUl_li_2</id>
+		<templ>
+			<![CDATA[<a href="./admin.html?page=admin.cat_list&parent_id={$id}"><span class="icon-sitemap"></span> {'manage sub-albums'|@translate}</a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>categoryUl_li_2s</id>
+		<templ>
+			<![CDATA[<span class="icon-sitemap"> {'manage sub-albums'|@translate}</span>]]>
+		</templ>
+	</item>
+	<item>
+		<id>remove_enc_title</id>
+		<templ>
+			<![CDATA[{'delete album, not folders'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>remove_enc_title1</id>
+		<templ>
+			<![CDATA[{'delete album, decrypt photos'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>jquery_page</id>
+		<templ>
+			<![CDATA[<div class="navigationBar"><div id="page{$id}"></div><div class="display100"> {$PERPAGE_TOTAL} {'photos per page'|@translate}</div></div>
+	<script type="text/javascript">
+	$(document).ready(function () {
+		$('#page{$id}').pagination({
+			items: {$pages},
+			currentPage: {$curr},
+			hrefTextPrefix: 'javascript:;',
+			prevText: "{'Previous'|@translate}",
+			nextText: "{'Next'|@translate}",
+			cssStyle: 'dark-theme',
+			onPageClick(page, event){
+				setTimeout(function () {var u ="{$URL}" + "&start=" + page.toString();gourl(u);}, 0);		
+			}
+		});
+	  });		
+	</script>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>pen_title</id>
+		<templ>
+			<![CDATA[{'To be imported'|@translate}: <span style="background-color:#c2f5c2;">nb1 {'files'|@translate}</span>]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>pen_title2</id>
+		<templ>
+			<![CDATA[{'To be encrypted'|@translate}: <span style="background-color:#c2f5c2;">nb1 {'files'|@translate}</span>]]>
+		</templ>
+	</item>
+</data>

@@ -1,0 +1,10 @@
+﻿  Building Custom Rule E:/voy/102/third/libarchive-master/cpio/CMakeLists.txt
+  cmdline.c
+  cpio.c
+  err.c
+  line_reader.c
+  passphrase.c
+  cpio_windows.c
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  bsdcpio.vcxproj -> E:\voy\102\third\libarchive-master\build_vs2019_x64\bin\Release\bsdcpio.exe

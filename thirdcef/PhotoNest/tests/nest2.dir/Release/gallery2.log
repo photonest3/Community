@@ -1,0 +1,10 @@
+﻿  IsoHandler.cpp
+  main_context_impl.cc
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(321,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(325,86): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(622,84): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\tests\cefclient\browser\IsoHandler.cpp(627,80): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  cefclient_win.cc
+E:\voy\102\tests\cefclient\cefclient_win.cc(201,46): warning C4302: 'type cast': truncation from 'HANDLE' to 'ATOM'
+  gallery2.vcxproj -> E:\voy\102\PhotoNest\tests\cefclient\Release\bin\photonest2.exe
+  Adding manifest...															

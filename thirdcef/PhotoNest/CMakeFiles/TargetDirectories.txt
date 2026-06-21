@@ -1,0 +1,7 @@
+E:/voy/102/Photovoy/CMakeFiles/ALL_BUILD.dir
+E:/voy/102/Photovoy/CMakeFiles/ZERO_CHECK.dir
+E:/voy/102/Photovoy/libcef_dll_wrapper/CMakeFiles/libcef_dll_wrapper.dir
+E:/voy/102/Photovoy/tests/cefsimple/CMakeFiles/cefsimple.dir
+E:/voy/102/Photovoy/tests/gtest/CMakeFiles/cef_gtest.dir
+E:/voy/102/Photovoy/tests/ceftests/CMakeFiles/ceftests.dir
+E:/voy/102/Photovoy/tests/cefclient/CMakeFiles/cefclient.dir

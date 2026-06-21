@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.admin_add.css" />
+    <style type="text/css">
+            .selectFiles, .progress-extended, .fileupload-progress {
+                margin-left: 20px;
+                display: inline-block;
+            }
+
+            .fol {
+                float: right;
+                margin-top: -50px;
+                margin-right: 50px;
+            }
+
+            .preview {
+                white-space: nowrap;
+            }
+
+            .name {
+                overflow: hidden;
+            }
+
+            #striped td, #striped th {
+                width: auto;
+                white-space: nowrap;
+                min-width: 80px;
+                max-width: 320px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            #striped th {
+                position: sticky;
+                top: 0;
+                background: #bbb;
+                text-align: left;
+                font-weight: normal;
+                vertical-align: middle;
+            }
+
+            .more {
+                display: none;
+            }
+
+            #content0 {
+                padding-bottom: 20px;
+            }
+
+            #stripeddiv {
+                height: 352px;
+                margin-top: 20px;
+            }
+
+            #striped {
+                table-layout: fixed;
+            }
+
+            #folder {
+                vertical-align: top;
+                display: block;
+                height: 350px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+
+            .hide_tr {
+                visibility: collapse;
+            }
+
+            i2::before {
+                transform: rotate(180deg);
+                display: inline-block;
+            }
+
+            #uploadedPhotos {
+                word-break: break-word;
+            }
+
+            #aru {
+                margin-top: 5px;
+                display: inline-block;
+            }
+
+            .fuploaderr {
+                cursor: pointer;
+            }
+
+            .mydisabled {
+                color: #D5D5D5 !important;
+                //cursor: not-allowed;
+            }
+
+            .sub_tr img {
+                display: none;
+            }
+
+            #btnclear {
+                display: none;
+                color: #ff7700;
+            }
+
+
+            #needtip {
+                position: fixed;
+                background-color: rgba(190,190,190,.75);
+                width: 100%;
+                margin: 0;
+                display: none;
+                height: 100%;
+                padding: 0;
+                z-index: 10;
+                top: 0;
+            }
+
+
+            .tipwin {
+                box-shadow: 0 5px 10px 0 rgb(0 0 0 / 60%);
+                background-color: #eee;
+                border-radius: 5px;
+                height: 300px;
+                width: 486px;
+                top: 50%;
+                margin: 0 auto;
+                position: absolute;
+                margin-top: -150px;
+                left: 50%;
+                margin-left: -243px;
+                color: #000;
+            }
+
+            .RenameTagPopInContainer {
+                display: flex;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -48%);
+                text-align: left;
+                padding: 20px;
+                flex-direction: column;
+                border-radius: 15px;
+                align-items: center;
+                width: 90%;
+                /*  min-width: 270px;
+        max-width: 700px;*/
+                background-color: white;
+            }
+
+            .DeleteIconTitle {
+                color: #000000;
+                font-size: 1.7em;
+                font-weight: bold;
+                margin-bottom: 10px;
+                margin-top: -32px;
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 500px;
+                text-overflow: ellipsis;
+                height: 25px;
+            }
+
+            .RenameTagInputContainer {
+                width: 100%;
+                text-align: left;
+            }
+
+            .RenameTagInputContainer {
+                margin-bottom: 15px;
+            }
+
+            .jconfirm-content {
+                text-align: center;
+                font-size: 15px;
+                color: #777;
+                margin-bottom: 25px;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 545px;
+                text-overflow: ellipsis;
+            }
+
+            .DeleteAlbumSubmit {
+                background-color: #e74c3c;
+                color: #fff;
+            }
+
+            .DeleteAlbumSubmit {
+                cursor: pointer;
+                font-weight: bold;
+                padding: 10px;
+                margin: 20px 20px 0 20px;
+                font-size: 1em;
+            }
+
+            .DeleteAlbumSubmit {
+                border-radius: 4px;
+                transition: .1s;
+            }
+
+            .DeleteAlbumSubmit, .RenameAlbumSubmit {
+                margin-right: 10px;
+                padding: 10px 20px;
+                display: inline-block;
+            }
+
+            .DeleteAlbumCancel {
+                background-color: #ecf0f1;
+                color: #000;
+                border-radius: 4px;
+                transition: .1s;
+                display: inline-block;
+            }
+
+            .DeleteAlbumCancel {
+                cursor: pointer;
+                font-weight: bold;
+                padding: 10px 20px;
+                margin: 20px 20px 0 10px;
+                font-size: 1em;
+            }
+
+
+            .DeleteAlbumCancel {
+                cursor: pointer;
+                font-weight: bold;
+                padding: 10px 20px;
+                margin: 20px 20px 0 10px;
+                font-size: 1em;
+            }
+
+            .DeleteAlbumCancel {
+                background-color: #ecf0f1;
+                color: #000;
+                border-radius: 4px;
+                transition: .1s;
+            }
+
+                .DeleteAlbumCancel:hover {
+                    background: #bdc3c7;
+                }
+
+            .DeleteAlbumSubmit:hover {
+                background: #c0392b;
+            }
+			
+			.mytr{border: 1px solid #000;}
+			.mytd00, .mytd11{
+			width: 200px; overflow: hidden; max-width:200px;border-bottom: 0 solid #ddd;
+			} .mytd11{
+			visibility: hidden;
+			}
+			.mytd22{border-bottom: 0 solid #ddd; letter-spacing:2px;}
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body class="jquery-ui ">
+    <script type="text/javascript">
+        var _title2 = "{'Choose which folders to be encrypted'|@translate}";
+        var _tit10 = "{'Remove'|@translate}";
+        var _appdir = "{$appdir}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _synroot = [synrootdir];
+        var _windir = [$windir];
+        var _currdir = [$currdir];
+        var _penTitle = '{$pen_title}';
+        var _penTitle2 = '{$pen_title2}';
+        var _album = "{$album}";
+
+        var _photosUploaded_label = "%d {'photos added to the album'|@translate}";
+        var _batch_Label = "{'Manage this set of %d photos'|@translate}";
+        var _albumSummary_label = "{'Album alburl now contains %d photos'|@translate}";
+        var _encrypt = "{'Add to PhotoNest and encrypt photos'|@translate}";
+        var _encrypted = "{'Encrypted'|@translate}";
+        var _ok = "{'The operation completed successfully.'|@translate}";
+        var _toenc = "{'To be encrypted'|@translate}";
+        var _label1 = "{'The destination folder is the root folder. Please choose a different folder.'|@translate}";
+        var _label2 = "{'The destination folder is a system folder. Please choose a different folder.'|@translate}";
+        var _label3 = "{'Already exists'|@translate}";
+        var _penSyn0 = "{'Imported'|@translate}: nb1 {'files'|@translate}";
+        var _penSyn2 = "{'Encrypted'|@translate}: nb1 {'files'|@translate}";
+        var _penSyn1 = "nb2 {'folders'|@translate}";
+        var _aru1 = "{'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;";
+        var _aru2 = "{'Are are you sure you want to exit?'|@translate}&nbsp; &nbsp;";
+        var _notfound = "{'Not found'|@translate}";
+        var _deleted = ", nb3 {'files are deleted'|@translate}";
+
+        //var _idx = 0;
+        //var _count = 0;
+        //var _pre_idx = 0;
+        //var _pre_sending = 0;
+        //var _pre_len = 0;
+        var _cat_name_change = 0;
+
+        //var _cbox_change = 0;
+        var _sent = 0;
+        //var _len = 0;
+        var uploadedCats = [];
+        var _all_ok = 1;
+        var _pending = 0;
+        var _processing = 0;
+        var _pendingok = 0;
+        var _tobeclear = 0;
+
+    </script>
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container" o='style'>
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1 id="titleh1">
+                        <span>{'Add Photos'|@translate} </span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="selected_tab">
+                                <a href="javascript:;" onclick="admin_url('./admin.html?page=admin.galleries');return false;">
+                                    <span>
+                                        <span class="icon-exchange"></span>{'Folder'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="normal_tab" style="display: none;">
+                                <a href="javascript:;" onclick="admin_url('./admin.html?page=admin.photos_add');return false;">
+                                    <span><span class="icon-plus"></span>{'Add Photos'|@translate} </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content" style="margin-top: 20px;">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos">
+                                    <label id="aru">
+                                        {'Are are you sure you want to leave this page?'|@translate}&nbsp; &nbsp;
+                                    </label>
+                                    <a id="aru2" href="javascript:;" onclick="admin_ok();return false;">{'Yes'|@translate}</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="photosAddContent">
+                            <div id="info2" class="infos" style="display: none; min-height: unset; margin-left: 20px;">
+                                <i class="eiw-icon2 icon-ok"></i>
+                            </div>
+                            <div class="errors" style="display: none; min-height: unset; margin-left: 20px;">
+                                <i class="eiw-icon icon-cancel"></i>
+                            </div>
+                            <p class="afterUploadActions" style="margin: 10px; display: none;">
+                                <a class="batchLink"></a>| <a id="visit" href="./index.html">{'Visit the gallery'|@translate}</a>
+                            </p>
+                            <div class="selectFiles">
+                                <div class="container">
+                                    <div id="titleh2" style="text-align: center;color:#777;">
+                                        <span>{'Choose which folders to see in PhotoNest'|@translate}</span>
+                                    </div>              <div id="stripeddiv">
+                                        <table id="striped" class="table table-striped" cellpadding="0" cellspacing="0">
+                                            <tbody id="folder" class="files" style="vertical-align: top;">
+                                                <tr class="template-upload fade in tabtitle" style="border: 1px solid #000; background-color: #bbb;
+                                                    width: 100%;">
+                                                    <th style="width: 300px; overflow: hidden; max-width: 300px;">
+                                                        <a id="refresha" href="javascript:;" onclick="refresh_dir();return false;" style="margin-left: 8px;" class="icon-ccw " title="{'Refresh'|@translate}"></a> <span class="preview" style="margin-left: 5px;">{'Folder'|@translate}</span>
+                                                    </th>
+                                                    <th style="width: 80px;">
+                                                    </th>
+                                                    <th class="thead0" style="width: 260px; overflow: hidden; max-width: 260px;">
+                                                        <span class="preview">{'Album'|@translate}</span>
+                                                    </th>
+                                                    <th style="width: 140px;">
+                                                        <span class="size" id="td_upload">{'Imported'|@translate}</span>
+                                                    </th>
+                                                    <th style="width: 140px;">
+                                                        <span class="size" id="td_tobe">{'To be imported'|@translate}</span>
+                                                    </th>
+                                                </tr>
+                                                <tr id="loadgif" class="tabtitle">
+                                                    <td style=" height: 200px; text-align:center;vertical-align:middle;border:0;" colspan="5">
+                                                        <img src="./templ/themes/default/images/loader.gif" />
+                                                    </td>
+                                                </tr>
+												
+												
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row fileupload-buttonbar" style="display: block; width: 100%; ">
+                                        <div class="col-lg-5">
+                                            <button id="startUpload" style="margin: 15px 25px 0;" disabled="disabled" class="buttonLike start"
+                                                    title="{'Import photos'|@translate}">
+                                                {'Add to PhotoNest'|@translate}
+                                            </button>
+                                            <a id="btnadd" class="icon-plus-circled mydisabled" href="javascript:;"
+                                               title="{'Add folder'|@translate}" onclick="selfol('');return false;"></a>
+                                            <div id="uploadingActions" style="display: none">
+                                                <button id="cancelUpload" class="buttonLike icon-cancel-circled cancel0">
+                                                    {'Cancel'|@translate}
+                                                </button>
+                                            </div>
+                                            <a class="icon-info-circled-1 showInfo" style="margin-left: 20px;vertical-align:middle;" title="{'Learn more'|@translate}">
+                                            </a>
+                                            <div class="progress-extended fileupload-process">
+                                                <span>&nbsp;</span> <a id="btnclear" class="icon-docs" href="javascript:;" title="{'Review'|@translate}" onclick="clearfol();return false;"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 fileupload-progress fade" style="margin-top: 20px;">
+                                            <div id="progressbarall" class="progress progress-striped active" aria-valuemin="0"
+                                                 aria-valuemax="100" style="display: none;">
+                                                <div class="progress-bar progress-bar-success" style="width: 0%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ol>
+                                <li class="more">{'Each directory here is an album.'|@translate} </li>
+                                <li class="more">{$uploadWarnings}</li>
+                                <li class="more">{'Folders added here will still be in their original locations.'|@translate}</li>
+                            </ol>
+                            <fieldset style="display: none">
+                                <legend>{'Imported photos'|@translate}</legend>
+                                <div id="uploadedPhotos">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div id="sidebar" class="widget-area" o='sidebar'>
+                    {$menubar}
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="needtip">
+            <div class="tipwin">
+                <div style="float: right;margin: 5px 10px;"><a href="javascript:;" onclick="$('#needtip').hide();return false;" class=" icon-cancel"></a></div>
+                <span style="display: block;  margin-top: 100px; font-size: 15px; color: #000;">
+                    {'If the added folders has been updated, click refresh.'|@translate}
+                </span>
+                <div style="margin-top:50px;">
+                    <a href="javascript:;" class="buttonLike" onclick="clear_click();return false;">{'Refresh'|@translate}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript" src="./_gallery.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+            }
+            //jQuery('.font-checkbox').fontCheckbox();
+        })
+    </script>
+
+</body>
+</html>

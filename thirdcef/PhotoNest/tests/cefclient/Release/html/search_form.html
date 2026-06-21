@@ -1,0 +1,193 @@
+
+<form class="filter" method="post" name="search" id="catSearch">
+    <div class="switchBoxTitle">
+        <a id="choosef" href="javascript:;" onclick="advfilter();return false;" style="margin-left:5px;"><span style="font-size:15px;">{'Choose filters'|@translate}</span><span id="arrd1"><i class="icon-down-open"></i></span></a>
+        <a id="cfilter" class="filter-cancel0 icon-cancel" href="javascript:;" onclick="mycancel();return false;"></a>
+        <div class="filter-manager-controller-container" style="position:fixed;display:none;">
+            <p style="margin-left: 20px;">
+                <label>
+                    <input name="filter_search_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'Search for words'|@translate}</span>
+                </label>
+                <label>
+                    <input name="filter_category_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'Album'|@translate}</span>
+                </label>
+                <label>
+                    <input name="filter_filetypes_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'File type'|@translate}</span>
+                </label>
+                <label>
+                    <input name="filter_date_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'Date'|@translate}</span>
+                </label>
+                <label>
+                    <input name="filter_dimension_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'Dimensions'|@translate}</span>
+                </label>
+                <label>
+                    <input name="filter_tags_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'Tag'|@translate}</span>
+                </label>
+                <label>
+                    <input name="filter_osm_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'OSM'|@translate}</span>
+                </label>
+                <label>
+                    <input name="filter_authors_use" class="filter-manager-controller" type="checkbox" />
+                    <span>{'Author'|@translate}</span>
+                </label>
+            </p>
+        </div>
+    </div>
+    <div id="searchform">
+        <div id="filterbtn">
+            <a class="filter-actions icon-ccw" href="javascript:;" onclick="myclear();return false;">{'Clear'|@translate}</a>
+            <a id="search_submit" class="filter-validate" style="margin-left: 10px;">
+                {'OK'|@translate}
+            </a>
+        </div>
+        <fieldset id="field_words" style="display:none;">
+            <legend>{'Search for words'|@translate}</legend>
+            <p style="white-space: initial;">
+                <label class="font-checkbox0">
+                    <input type="radio" name="mode" value="AND" checked="checked" />
+                    {'Search for all terms'|@translate}
+                </label>
+                <label class="font-checkbox0">
+                    <input type="radio" name="mode" value="OR" />
+                    {'Search for any term'|@translate}
+                </label>
+                <br />
+                <input type="text" name="search_allwords" value="{$search_allwords}" maxlength="25" style="width: 300px;padding:10px; margin-bottom: 10px;" onkeydown="on_return();" />
+                <br />
+                <label class="font-checkbox0">
+                    <input type="checkbox" name="search_in_name" checked="checked" class="searchin" />
+                    {'Photo title'|@translate}
+                </label>
+                <label class="font-checkbox0">
+                    <input type="checkbox" name="search_in_comment" class="searchin" />
+                    {'Photo description'|@translate}
+                </label>
+                <label class="font-checkbox0">
+                    <input type="checkbox" name="search_in_file" class="searchin" />
+                    {'File name'|@translate}
+                </label>
+                <label class="font-checkbox0">
+                    <input type="checkbox" name="search_in_tags" class="searchin" />
+                    {'Tags'|@translate}
+                </label>
+            </p>
+        </fieldset>
+        <fieldset id="field_album" style="display:none;">
+            <legend>{'Search in albums'|@translate}</legend>
+            <p>
+                <select id="categories" name="cat" multiple="multiple" placeholder="{'Type in a search term'|@translate}" style="width: 300px;">
+                    {$category_opt}
+                </select>
+                <label class="font-checkbox0">
+                    <input type="checkbox" name="subcats" />
+                    {'Search in sub-albums'|@translate}
+                </label>
+            </p>
+        </fieldset>
+        <fieldset id="field_type" style="display:none;">
+            <legend>{'File type'|@translate}</legend>
+            <p>
+                <label class="font-checkbox0">
+                    <input type="checkbox" name="search_images" class="filetype" />
+                    {'Images'|@translate}
+                </label>
+                <label class="font-checkbox0">
+                    <input type="checkbox" name="search_videos" class="filetype" />
+                    {'Videos'|@translate}
+                </label>
+            </p>
+        </fieldset>
+        <fieldset id="field_date" style="display:none;">
+            <legend>{'Search by date'|@translate}</legend>
+            <p>
+                <label class="font-checkbox0">
+                    <input id="date_creation" type="radio" name="date_type" value="date_creation" checked="checked" />
+                    {'Creation date'|@translate}
+                </label>
+
+                <label class="font-checkbox0">
+                    <input id="date_available" type="radio" name="date_type" value="date_available" />
+                    {'Imported date'|@translate}
+                </label>
+            </p>
+            <p id="s_date"></p>
+            <br />
+        </fieldset>
+        <fieldset id="field_dimension" style="display:none;">
+            <legend>{'Dimensions'|@translate}</legend>
+            <p>
+                <label class="font-checkbox0">
+                    <input id="widths" type="radio" name="dimension_type" value="widths" checked="checked" />
+                    {'Width'|@translate}
+                </label>
+
+                <label class="font-checkbox0">
+                    <input id="heights" type="radio" name="dimension_type" value="heights" />
+                    {'Height'|@translate}
+                </label>
+
+                <label class="font-checkbox0">
+                    <input id="ratios" type="radio" name="dimension_type" value="ratios" />
+                    {'Ratio'|@translate}
+                </label>
+
+                <label class="font-checkbox0">
+                    <input id="filesizes" type="radio" name="dimension_type" value="filesizes" />
+                    {'Filesize'|@translate}
+                </label>
+            </p>
+            <p id="s_dimension">
+            </p>
+            <br />
+        </fieldset>
+        <fieldset id="field_tag" style="display:none;">
+            <legend>{'Search tags'|@translate}</legend>
+            <p>
+                <select id="tags" placeholder="{'Type in a search term'|@translate}" name="tags"
+                        multiple="multiple" style="display: none; width: 300px;">
+                    {$tag_opt}
+                </select>
+                <label class="font-checkbox0">
+                    <input type="radio" name="tag_mode" value="AND" checked="checked" />
+                    {'All tags'|@translate}
+                </label>
+                <label class="font-checkbox0">
+                    <input type="radio" name="tag_mode" value="OR" />
+                    {'Any tag'|@translate}
+                </label>
+            </p>
+        </fieldset>
+        <fieldset id="field_osm" style="display:none;">
+            <legend>{'OSM'|@translate}</legend>
+            <p>
+                <label class="font-checkbox0">
+                    <input id="osm0" type="checkbox" name="osm0" class="osmtype" />
+                    {'OSM Geotagged'|@translate}
+                </label>
+
+                <label class="font-checkbox0">
+                    <input id="osm1" type="checkbox" name="osm1" class="osmtype" />
+                    {'OSM Not geotagged'|@translate}
+                </label>
+            </p>
+            <br />
+        </fieldset>
+        <fieldset id="field_author" style="display:none;">
+            <legend>{'Search for an author'|@translate}</legend>
+            <p>
+                <select id="authors" placeholder="{'Type in a search term'|@translate}" name="authors"
+                        multiple="multiple" style="width: 300px;">
+                    {$author_opt}
+                </select>
+            </p>
+        </fieldset>
+    </div>
+</form>
+

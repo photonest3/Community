@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<item>
+		<id>pagebanner</id>
+		<templ>
+			<![CDATA[<div id="theHeader"><h1><a href="./index.html" ><span class="show-for-print">{$gallery_title}</span></a></h1></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>sub_title_a</id>
+		<templ>
+			<![CDATA[<a href="{$url}"><span class="show-for-print">{$name}</span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>sub_title_a3</id>
+		<templ>
+			<![CDATA[<a href="{$url}"><span class="show-for-print">{'Search results'|@translate}</span></a>
+ <!--<span style="cursor: pointer;display: inline-block;margin-left: 5px;" class="icon-search" onclick="show_filter();return false;"  title="{'Search'|@translate}" >
+		  </span>
+		 <a href="javascript:;" onclick="show_searchform();return false;" title="{'Search criteria'|@translate}" class="stm-state-default stm-button"><span class="stm-icon stm-icon-help"></span><span class="stm-button-text">Search criteria</span>
+	  </a>-->
+	  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>sub_title_a_pic</id>
+		<templ>
+			<![CDATA[<a href="javascript:;" data="{$url}" onclick="gotourl(this);return false;" class="detail_album"><span class="show-for-print">{$name}</span></a>]]>
+		</templ>
+	</item>
+	<item>
+		<id>str_photo</id>
+		<templ>
+			<![CDATA[{'%d photo'|@translate} ]]>
+		</templ>
+	</item>
+	<item>
+		<id>str_photos</id>
+		<templ>
+			<![CDATA[{'%d photos'|@translate} ]]>
+		</templ>
+	</item>
+	<item>
+		<id>photo_album</id>
+		<templ>
+			<![CDATA[{'%d photo'|@translate} {'in this album'|@translate} ]]>
+		</templ>
+	</item>
+	<item>
+		<id>photos_album</id>
+		<templ>
+			<![CDATA[{'%d photos'|@translate} {'in this album'|@translate} ]]>
+		</templ>
+	</item>
+	<item>
+		<id>str_sub_album</id>
+		<templ>
+			<![CDATA[{'in %d sub-album'|@translate}  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>str_sub_albums</id>
+		<templ>
+			<![CDATA[{'in %d sub-albums'|@translate}  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>derivativeSwitchBox_Thumbnails</id>
+		<templ>
+			<![CDATA[<span style="visibility:hidden">&#x2714; </span><a class="switchbox0"  href="{$URL}&display=thumb" >{'Thumbnail'|@translate}</a><br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>derivativeSwitchBox_XXS</id>
+		<templ>
+			<![CDATA[<span style="visibility:hidden">&#x2714; </span><a class="switchbox0"  href="{$URL}&display=2small" >{'2small'|@translate}</a><br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>derivativeSwitchBox_xsmall</id>
+		<templ>
+			<![CDATA[<span style="visibility:hidden">&#x2714; </span><a class="switchbox0"  href="{$URL}&display=xsmall" >{'xsmall'|@translate}</a><br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>derivativeSwitchBox_small</id>
+		<templ>
+			<![CDATA[<span style="visibility:hidden">&#x2714; </span><a class="switchbox0"  href="{$URL}&display=small" >{'small'|@translate}</a><br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>derivativeSwitchBox_medium</id>
+		<templ>
+			<![CDATA[<span style="visibility:hidden">&#x2714; </span><a class="switchbox0"  href="{$URL}&display=medium" >{'medium'|@translate}</a><br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>derivativeSwitchBox_large</id>
+		<templ>
+			<![CDATA[<span style="visibility:hidden">&#x2714; </span><a class="switchbox0" href="{$URL}&display=large" >{'large'|@translate}</a><br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>derivativeSwitchBox_li_span</id>
+		<templ>
+			<![CDATA[<span>&#x2714; </span>{$NAME}<br/>]]>
+		</templ>
+	</item>
+	<item>
+		<id>week0</id>
+		<templ>
+			<![CDATA[{'%d week'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>week99</id>
+		<templ>
+			<![CDATA[{'%d weeks'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>day0</id>
+		<templ>
+			<![CDATA[{'%d day'|@translate}]]>
+		</templ>
+	</item>
+	<item>
+		<id>day99</id>
+		<templ>
+			<![CDATA[{'%d days'|@translate}  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>month0</id>
+		<templ>
+			<![CDATA[{'%d month'|@translate}  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>month99</id>
+		<templ>
+			<![CDATA[{'%d months'|@translate}  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>year0</id>
+		<templ>
+			<![CDATA[{'%d year'|@translate}  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>year99</id>
+		<templ>
+			<![CDATA[{'%d years'|@translate}  ]]>
+		</templ>
+	</item>
+	<item>
+		<id>play_box_vid</id>
+		<templ>
+			<![CDATA[<div class="vdobox"><video id="vdo" disablepictureinpicture="true" controls="controls" autoplay="autoplay" style="vertical-align: middle;max-width: 100%;background-color:black;max-height: 95%; "><source src="{$src}" type="video/mp4"> </video></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>play_box_aud</id>
+		<templ>
+			<![CDATA[<div class="vdobox"><video controls="controls" autoplay="autoplay" style="max-width: 100%; max-height: 100%; vertical-align: middle;"><source src="{$src}" type="audio/mpeg"> </video></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>play_box_gif</id>
+		<templ>
+			<![CDATA[<div class="center2"><img src="{$src}" alt="" title="" /></div>]]>
+		</templ>
+	</item>
+	<item>
+		<id>map_items</id>
+		<templ>
+			<![CDATA[{'items'|@translate}]]>
+		</templ>
+	</item>
+
+	<item>
+		<id>map_items_top</id>
+		<templ>
+			<![CDATA[{'Recent photos'|@translate}]]>
+		</templ>
+	</item>
+</data>

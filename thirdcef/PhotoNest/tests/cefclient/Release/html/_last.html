@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.add.css" />
+    <style type="text/css">
+        #stripeddiv {
+            display: none;
+        }
+
+        .my-center {
+            position: absolute;
+            bottom: 50%;
+            top: 50%;
+            margin-top: -25px;
+            height: 50px;
+            width: 300px;
+            margin-left: 50%;
+            left: -150px;
+        }
+
+        #info {
+            margin-top: 20px;
+            margin-right: 20px;
+            padding: 3px 30px 0 10px;
+        }
+
+        .progress-extended {
+            display: none;
+        }
+
+        #uploadingActions {
+            vertical-align: text-bottom;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .progress {
+            background-color: unset;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+</head>
+<body class="jquery-ui" style="min-width: 500px;">
+    <div id="info" class="infos">
+        <label id="aru"></label>
+        <a id="aru2" href="javascript:;" onclick="cancel_ok();return false;">{'Yes'|@translate}</a>
+    </div>
+    <div id="stripeddiv">
+        <table id="striped" class="table table-striped" cellpadding="0" cellspacing="0">
+            <tbody id="folder" class="files" style="vertical-align: top;">
+                <tr class="template-upload fade in" style="border: 1px solid #000; background-color: #bbb;
+                    width: 100%;">
+                    <th style="width: 280px; overflow: hidden; max-width: 280px;">
+                        <span class="name">{'Folder'|@translate}</span>
+                    </th>
+                    <th style="width: 80px;">
+                    </th>
+                    <th class="thead0" style="width: 200px; overflow: hidden; max-width: 200px;">
+                        <span class="preview">{'Album'|@translate}</span>
+                    </th>
+                    <th style="width: 120px;">
+                        <span class="size" id="td_upload">{'Added'|@translate}</span>
+                    </th>
+                    <th style="width: 120px;">
+                        <span class="size" id="td_tobe">{'To be added'|@translate}</span>
+                    </th>
+                    <th style="width: 120px;">
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="fileupload-buttonbar my-center">
+        <div class="col-lg-5">
+            <div class="progress-extended fileupload-process">
+                <i class="icon-spin6"></i>
+            </div>
+            <div id="uploadingActions">
+                <a id="cancelUpload" class="icon-cancel" style="display:none;" title="{'Cancel'|@translate}">
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-5 fileupload-progress fade">
+            <div id="progressbarall" class="progress progress-striped active" aria-valuemin="0"
+                 aria-valuemax="100" style="display: none">
+                <div class="progress-bar progress-bar-success" style="width: 0%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var _readonly = "{$readonly}";
+        var _url = "newurl";
+
+        function myreload() {
+            window.cefQuery({
+                request: 'Prompt.q.syn_root:'
+            });
+
+            setTimeout(function () {
+                window.location.replace(_url);
+            }, 0);
+        }
+
+        $(document).ready(function () {
+            window.cefQuery({
+                request: 'Prompt.q.loading:1'
+            });
+
+            if (_readonly != "0") {
+                myreload();
+                return;
+            }
+
+            $.get("./index.html?act=last.get_nb&ty=1", function (data, state) {
+                myreload();
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <style type="text/css">
+        html, body {
+            -webkit-user-select: none;
+            background-color: #fff;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        #photosAddContent {
+            width: 600px;
+            font-size: 15px;
+        }
+
+        .RenameTagPopInContainer {
+            max-width: 1140px;
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -80%);
+            text-align: left;
+            padding: 20px;
+            flex-direction: column;
+            border-radius: 15px;
+            align-items: center;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="RenameTagPopInContainer">
+        <div id="photosAddContent">
+            <div id="infos1" class="infos">
+                <ul><li>  <i class="eiw-icon2 icon-ok"></i>{$nb} {'photos added to the album'|@translate}</li></ul>
+            </div>
+            <p class="afterUploadActions" style="margin: 15px;">
+                <a id="visit" class="icon-left-open" href="javascript:;" onclick="location.replace('./a.html');return false;">{'Visit the PhotoNest'|@translate}</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

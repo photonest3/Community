@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/tipTip/tipTip.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.slider.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.clear.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/pagination/simplePagination.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.batch.css" />
+    <style type="text/css">
+    </style>
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var nb_thumbs_page = parseInt('{$nb_thumbs_page}');
+        var nb_thumbs_set = parseInt('{$nb_thumbs_set}');
+        var applyOnDetails_pattern = "{'on the %d selected photos'|@translate}";
+        var selectedMessage_pattern = "{'%d of %d photos selected'|@translate}";
+        var selectedMessage_none = "{$beatch_selectedMessage}";
+        var selectedMessage_all = "{'All %d photos are selected'|@translate}";
+        var _nbCaddie = parseInt('{$nbCaddie}');
+        var _nbDuplicates = parseInt('{$nbDuplicates}');
+        var _nbOrphan = parseInt('{$nbOrphan}');
+        var _album = "{$album}";
+
+        var _ov = "{$ov}";
+        var _expried = "{'Activation Expired'|@translate}";
+
+        var _addTitle = "{'Create'|@translate}";
+        var _tit20 = "{'Delete'|@translate}";
+        var _cbox_change = 0;
+        var _dp = 0;
+        var _vr_mask = 0;
+        var _element_ids = "";
+        var _opt = {
+            "_filters": "filter_prefilter_use",
+            "_dimension_type": "widths",
+            "_subcats": "",
+            "_datetype": "date_creation",
+            "_tag_mode": "AND"
+        }
+    </script>
+</head>
+<body class="jquery-ui">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container" o='style'>
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1>
+                        <span>{'Batch Manager'|@translate}</span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="selected_tab">
+                                <a href="./admin.html?page=admin.batch&mode=global">
+                                    <span>
+                                        <span class="icon-th"></span>{'global mode'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="normal_tab">
+                                <a href="./admin.html?page=admin.batch&mode=unit">
+                                    <span>
+                                        <span class="icon-th-list"></span>{'single mode'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="eiw batch">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: none">
+                            <div id="addAlbumForm" style="background-color: white; width: 630px; height: 300px;overflow-y:hidden;">
+                                <div style="height: 40px;">
+                                    <div id="infos0" class="infos">
+                                        {'Already exists'|@translate}
+                                    </div>
+                                </div>
+                                <form>
+                                    {'Parent album'|@translate}
+                                    <br />
+                                    <select name="category_parent"></select>
+                                    {'Album name'|@translate}
+                                    <br />
+                                    <input name="category_name" type="text" maxlength="50" />
+                                    <span id="categoryNameError" style="color: red;">
+                                        {'The album name must not be empty.'|@translate}
+                                    </span>
+                                    <br />
+                                    <br />
+                                    <input type="submit" value="{'Create'|@translate}" />
+                                    <span id="albumCreationLoading" style="display: none">
+                                        <img src="./templ/themes/default/images/ajax-loader-small.gif" alt="" />
+                                    </span>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="batchManagerGlobal">
+                            <fieldset>
+                                <legend>{'Filter'|@translate}</legend>
+                                <div class="switchBoxTitle" style="margin-left: 10px; text-align: left;">
+                                    <a id="choosef" href="javascript:;" onclick="advfilter();return false;"> {'Choose filters'|@translate}<span id="arrd1"><i class="icon-down-open"></i></span></a>
+                                    <span id="filterLoading" style="display:none;">
+                                        <img src="./templ/themes/default/images/load50.gif" />
+                                    </span>
+
+                                    <div class="filter-manager-controller-container" style="margin-bottom: 10px;position:absolute;display:none; ">
+                                        <label>
+                                            <input data-wid="filter_prefilter_use" class="filter-manager-controller " type="checkbox" />
+                                            <span>{'Predefined filter'|@translate}</span>
+                                        </label>
+                                        <label>
+                                            <input data-wid="filter_search_use" class="filter-manager-controller " type="checkbox" />
+                                            <span>{'Search'|@translate}</span>
+                                        </label>
+                                        <label>
+                                            <input data-wid="filter_category_use" class="filter-manager-controller " type="checkbox" />
+                                            <span>{'Album'|@translate}</span>
+                                        </label>
+                                        <label>
+                                            <input data-wid="filter_tags_use" class="filter-manager-controller " type="checkbox" />
+                                            <span>{'Tags'|@translate}</span>
+                                        </label>
+                                        <label>
+                                            <input data-wid="filter_dimension_use" class="filter-manager-controller " type="checkbox" />
+                                            <span>{'Dimensions'|@translate}</span>
+                                        </label>
+                                        <label>
+                                            <input data-wid="filter_date_use" class="filter-manager-controller " type="checkbox" />
+                                            <span>{'Date'|@translate}</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <form id="form1" action="./admin.html?page=admin.batch&mode=global" method="post">
+                                    <input type="hidden" name="start" value="0" />
+                                    <div class="filterBlock">
+                                        <ul id="filterList">
+                                            <li id="filter_prefilter" style="display:none;">
+                                                <a href="#" class="removeFilter icon-cancel-circled"
+                                                   title="{'remove this filter'|@translate}"><span>[x]</span></a>
+                                                <input type="checkbox" name="filter_prefilter_use" class="useFilterCheckbox" />
+                                                <span class="filtertit">  {'Predefined filter'|@translate} </span>  {$prefilter}
+                                                <a id="empty_caddie" href="javascript:;" o='empty_caddie'>{'Empty caddie'|@translate} ({$caddie_photos})</a>
+                                                <a id="delete_orphans" href="javascript:;" o='delete_orphans' class="icon-trash">{$orphan_photos}</a>
+                                                <a id="duplicates" href="javascript:;" o='duplicates' class="icon-trash">{'Remove Duplicates'|@translate} ({$duplicates_photos})</a>
+                                                <span id="deteleLoading0" style="display: none">
+                                                    <img src="./templ/themes/default/images/ajax-loader-small.gif" />
+                                                </span>
+                                            </li>
+                                            <li id="filter_search" style="display:none;">
+                                                <a href="#" class="removeFilter icon-cancel-circled"
+                                                   title="{'remove this filter'|@translate}"><span>[x]</span></a>
+                                                <input type="checkbox" name="filter_search_use" class="useFilterCheckbox" />
+                                                <span class="filtertit">   {'Search'|@translate}</span><br />
+                                                <input name="search_allwords" size="40" value="{$search_q}" style="padding:8px;" />
+                                                <a href="javascript:;" onclick="return false;" id="search_help" title="{'Search in'|@translate}:&lt;br&gt; {'Photo title'|@translate},{'Photo description'|@translate},{'File name'|@translate},{'Tags'|@translate},{'Author'|@translate}">
+                                                    <span class="icon-help-circled">
+                                                    </span>
+                                                </a>
+                                                <p id="help_text" style="display: none;">
+                                                    {'Photo title'|@translate},{'Photo description'|@translate},{'File name'|@translate},
+                                                    {'Search for an author'|@translate},{'Tags'|@translate},{'Numeric identifier'|@translate}
+                                                </p>
+                                            </li>
+                                            <li id="filter_category" style="display:none;">
+                                                <a href="#" class="removeFilter icon-cancel-circled"
+                                                   title="{'remove this filter'|@translate}"><span>[x]</span></a>
+                                                <input type="checkbox" name="filter_category_use" class="useFilterCheckbox" />
+                                                <span class="filtertit"> {'Album'|@translate}</span>
+                                                <select data-selectize="categories1" multiple="multiple" name="cat" placeholder="{'Type in a search term'|@translate}"
+                                                        data-value="[{$category_value}]" class="selectized"></select>
+                                                <label>
+                                                    <input type="checkbox" name="subcats" />
+                                                    {'include child albums'|@translate}
+                                                </label>
+                                            </li>
+                                            <li id="filter_tags" style="display:none;">
+                                                <a href="#" class="removeFilter icon-cancel-circled"
+                                                   title="{'remove this filter'|@translate}"><span>[x]</span></a>
+                                                <input type="checkbox" name="filter_tags_use" class="useFilterCheckbox" />
+                                                <span class="filtertit">{'Tags'|@translate}</span>
+                                                <select data-selectize="tags0" data-value="[{$tag_value}]" placeholder="{'Type in a search term'|@translate}"
+                                                        name="tags" multiple="multiple" style="display: none;" tabindex="-1"
+                                                        class="selectized"></select>
+                                                <label>
+                                                    <span>
+                                                        <input type="radio" name="tag_mode" value="AND" />
+                                                        {'All tags'|@translate}
+                                                    </span>
+                                                </label>
+                                                <label>
+                                                    <span>
+                                                        <input type="radio" name="tag_mode" value="OR" />
+                                                        {'Any tag'|@translate}
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li id="filter_dimension" style="display:none;">
+                                                <a href="#" class="removeFilter icon-cancel-circled"
+                                                   title="{'remove this filter'|@translate}"><span>[x]</span></a>
+                                                <input type="checkbox" name="filter_dimension_use" class="useFilterCheckbox" />
+                                                <span class="filtertit"> {'Dimensions'|@translate}</span>
+                                                <p>
+                                                    <label class="font-checkbox0">
+                                                        <input id="widths" type="radio" name="dimension_type" value="widths" checked="checked" />
+                                                        {'Width'|@translate}
+                                                    </label>
+                                                    <label class="font-checkbox0">
+                                                        <input id="heights" type="radio" name="dimension_type" value="heights" />
+                                                        {'Height'|@translate}
+                                                    </label>
+                                                    <label class="font-checkbox0">
+                                                        <input id="ratios" type="radio" name="dimension_type" value="ratios" />
+                                                        {'Ratio'|@translate}
+                                                    </label>
+                                                    <label class="font-checkbox0">
+                                                        <input id="filesizes" type="radio" name="dimension_type" value="filesizes" />
+                                                        {'Filesize'|@translate}
+                                                    </label>
+                                                </p>
+                                                <blockquote id="s_dimension"></blockquote>
+                                            </li>
+                                            <li id="filter_date" style="display:none;">
+                                                <a href="#" class="removeFilter icon-cancel-circled"
+                                                   title="{'remove this filter'|@translate}"><span>[x]</span></a>
+                                                <input type="checkbox" name="filter_date_use" class="useFilterCheckbox" />
+                                                <span class="filtertit">  {'Search by date'|@translate}</span>
+                                                <p>
+                                                    <label class="font-checkbox0">
+                                                        <input id="date_creation" type="radio" name="date_type" value="date_creation" />
+                                                        {'Creation date'|@translate}
+                                                    </label>
+                                                    <label class="font-checkbox0">
+                                                        <input id="date_available" type="radio" name="date_type" value="date_available" />
+                                                        {'Imported date'|@translate}
+                                                    </label>
+                                                </p>
+                                                <blockquote id="s_date"></blockquote>
+                                            </li>
+                                        </ul>
+                                        <div class="noFilter" style="display: none;">No filter, add one</div>
+                                        <div class="filterActions">
+                                            <p class="actionButtons" id="applyFilterBlock">
+                                                <button id="applyFilter" name="submitFilter" type="submit" class="buttonLike">
+                                                    <i class="icon-arrows-cw"></i>{'Refresh photo set'|@translate}
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </fieldset>
+                            <fieldset>
+                                <legend>{'Selection'|@translate}</legend><div id="picture_data"></div>
+                            </fieldset>
+                            <fieldset id="action">
+                                <legend><i class="icon-cog"></i>{'Action'|@translate} </legend>
+                                <div id="forbidAction" style="margin-left: 8px;">
+                                    {'No photo selected'|@translate}
+                                </div>
+                                <div id="permitAction" style="display: none;margin-left: 8px;">
+                                    <select name="selectAction" style="width:300px;">
+                                        <option value="-1">{'Choose an action'|@translate}</option>
+                                        <option disabled="disabled">------------------</option>
+                                        <option value="delete" class="icon-trash">{'Delete selected photos'|@translate}</option>
+                                        <option value="associate">{'Associate to album'|@translate}</option>
+                                        <option value="add_tags">{'Add tags'|@translate}</option>
+                                        {$option_del_tags}
+                                        <option value="author">{'Set author'|@translate}</option>
+                                        <option value="title">{'Set title'|@translate}</option>
+                                        <option value="add_to_caddie">{'Add to caddie'|@translate}</option>
+                                    </select>
+                                    <div id="action_associate" class="bulkAction">
+                                        <select data-selectize="categories" name="associate" placeholder="{'Type in a search term'|@translate}" style="width: 600px;"
+                                                class="selectized"></select>
+                                        <br />
+                                        {'... or'|@translate} <a data-add-album="associate" href="javascript:;" onclick="addalb();return false;"
+                                                                 title="{'create a new album'|@translate}">{'create a new album'|@translate}</a>
+                                    </div>
+                                    <div id="action_add_tags" class="bulkAction" style="display: none;">
+                                        <select data-selectize="tags" data-create="true" placeholder="{'Type in a search term'|@translate}"
+                                                name="add_tags" multiple="multiple" style="width: 400px; display: none;" class="selectized"></select>
+                                        <span class="errors" style="display: none;">
+                                            {'Select at least one tag'|@translate}
+                                        </span>
+                                    </div>
+                                    <div id="action_del_tags" class="bulkAction" style="display: none;">
+                                        <select data-selectize="tags0" name="del_tags" multiple="multiple" style="width: 400px;"
+                                                placeholder="{'Type in a search term'|@translate}"></select>
+                                        <span class="errors" style="display: none; left: 500px; margin-top: -10px; height: 20px;
+                                            vertical-align: top;">{'Select at least one tag'|@translate}</span>
+                                    </div>
+                                    <div id="action_author" class="bulkAction" style="display: none;">
+                                        <label>
+                                            <input type="checkbox" name="remove_author" />
+                                            {'remove author'|@translate}
+                                        </label>
+                                        <br />
+                                        <input type="text" class="large" name="author" maxlength="50" placeholder="{'Type the author name here'|@translate}" />
+                                    </div>
+                                    <div id="action_title" class="bulkAction" style="display: none;">
+                                        <label>
+                                            <input type="checkbox" name="remove_title" />
+                                            {'remove title'|@translate}
+                                        </label>
+                                        <br />
+                                        <input type="text" class="large" name="title" maxlength="50" placeholder="{'Type the title here'|@translate}" />
+                                    </div>
+                                    <p id="applyActionBlock" style="display: none" class="actionButtons">
+                                        <button id="applyAction" type="button" class="buttonLike">
+                                            <i class="icon-cog-alt"></i>{'Apply action'|@translate}
+                                        </button>
+                                        <span id="applyOnDetails">{'on the %d selected photos'|@translate}</span>
+                                    </p>
+                                </div>
+                            </fieldset>
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area" o='style'>
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/tipTip/jquery.tipTip.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.slider.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/pagination/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript" src="./_batch.js"></script>
+</body>
+</html>

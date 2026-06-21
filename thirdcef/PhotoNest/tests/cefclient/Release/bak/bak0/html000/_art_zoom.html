@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/viewer/css/viewer.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/tabstyles.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.art.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        body {
+            font-size: 14px;
+            font-family: "Open Sans", "Lucida Grande",Verdana,Arial, "Bitstream Vera Sans",sans-serif;
+        }
+
+        div.photopile-wrapper {
+            max-width: 100%;
+        }
+
+        .viewer-container li img {
+            height: auto;
+            width: auto;
+            margin-left: -10px;
+        }
+    </style>
+
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body id="theColorPage" class="thepic">
+    <div id="err" class="errors">{'There is only 1 photo.'|@translate}</div>
+    <section style="max-width:1140px;margin:0 auto;">
+        <div class="tabs tabs-style-iconfall" style="width:500px;padding-top:18px;">
+            <nav>
+                <ul>
+                    <li><a href="javascript:;" onclick="to_film();return false;">{'My creation'|@translate}</a></li>
+                    <!--- <li><a href="javascript:;" onclick="to_wall();return false;">{'Collages'|@translate}</a></li>-->
+                    <li class="tab-current"><a href="javascript:;" onclick="to_zoom();return false;">{'Slideshow'|@translate}</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <div id="theImage0" style="display: none;">
+        {$picture_content}
+    </div>
+    {$calendar_nav}
+    <a id="down" href="javascript:;" style="display: none;"></a>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/viewer/js/viewer.u3.min.js"></script>
+    <script type="text/javascript">
+        var _vr;
+        var _picid = '$picid';
+        var _artid = "$artid";
+        var _ids = [$ids];
+        var _tit20 = "{'Remove'|@translate}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+
+        function u3down() {
+            var d = document.getElementById('down');
+            d.href = "./action.html?download=1&id=" + _picid;
+            d.click();
+        }
+
+        function to_wall() {
+            location.replace("./index.html?act=index.wall&ids=" + _ids.join(",") + "&artid=" + _artid);
+        }
+
+        function to_film() {
+            location.replace("./index.html?act=index.film&ids=" + _ids.join(",") + "&artid=" + _artid);
+        }
+        function to_zoom() {
+            location.reload();
+        }
+
+        function stopv() {
+            if ($("#myimg").length > 0) {
+                _vr.stop();
+            }
+            else {
+                document.webkitExitFullscreen();
+            }
+        }
+
+        function u3del(idx) {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+
+            if (_ids.length == 1) {
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return;
+            }
+			
+			var ids2=_ids;
+            var index = ids2.indexOf(_picid);
+            if (idx > -1) {
+                ids2.splice(index, 1);
+            }
+
+            $.colorbox({
+                transition: "none", width: 650, height: 400, fixed: true, iframe: true, overlayClose: false, opacity: .6, closeButton: false,
+                //title: _tit20,
+                href: function () {
+                    return "./delbox.html?type=7&nb=1&ids=" + ids2.join(",") + "&artid=" + _artid;
+                },
+                onComplete: function () {
+                    $('#cboxOverlay').css({ 'background': 'slategray' });
+                    $('#cboxWrapper').css({ 'background-color': 'transparent' });
+                },
+                onClosed: function () {
+                    document.getElementById('cboxOverlay').style.removeProperty('background');
+                    document.getElementById('cboxWrapper').style.removeProperty('background-color');
+                }
+            });
+
+        }
+
+        $(document).ready(function () {
+            $(document).mousemove(function (e) {
+                var off = $(document).height() - e.clientY;
+                if (off < 100) {
+                    //  $('.viewer-toolbar').fadeIn();
+                    $('.viewer-title').stop().fadeIn(100);
+                    $('.viewer-toolbar').stop().fadeIn(100);
+                    $('.viewer-navbar').stop().fadeIn(100);
+                }
+                else {
+                    // $('.viewer-toolbar').fadeOut();
+                    $('.viewer-title').stop().fadeOut();
+                    $('.viewer-toolbar').stop().fadeOut();
+                    $('.viewer-navbar').stop().fadeOut();
+                }
+
+                if (e.clientX < 200) {
+                    $('.previous').fadeIn();
+                }
+                else {
+                    $('.previous').fadeOut();
+                }
+
+                off = $(document).width() - e.clientX;
+                if (off < 200) {
+                    $('.next').fadeIn();
+                }
+                else {
+                    $('.next').fadeOut();
+                }
+            });
+
+            $(document).mouseleave(function (e) {
+                $('.viewer-title').fadeOut(3500);
+                $('.viewer-toolbar').fadeOut(3500);
+                $('.viewer-navbar').fadeOut(3500);
+            });
+            var offwidth = (window.innerWidth - 1140);
+
+            _vr = new Viewer(theImage0, {
+                url: 'data-original-url',
+                //navbar: false,
+                inline: true,
+                transition: false,
+                button: false,
+                //fullsize: 3,
+                autorotate: false,
+                title: true,
+                initOffwidth: offwidth,
+                //toolbar: true,
+                rotated: function (e) {
+                    parent.rotate_img_help(_picid, e.detail.rotate);
+                },
+
+                viewed: function (e) {
+                    //$('.viewer-title').show();
+                    $('.viewer-inpaint').hide();
+                    var idx = e.detail.index;
+                    _picid = _ids[idx];
+                    $.get("./picture.html?act=picture.get_data&zoom=1&picid=" + _picid, function (data, state) {
+                        var info = $.parseJSON(data);
+                        if (info.stat == "ok") {
+                            var tit = info.result.detail + " (" + (idx + 1) + "/" + _ids.length + ")";
+                            $('.viewer-title').html(tit);
+                        }
+                    });
+                }
+            });
+
+            $(".viewer-button").on("click", function () {
+                parent.zoom_box_close();
+            });
+
+        });
+    </script>
+</body>
+</html>

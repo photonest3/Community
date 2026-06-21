@@ -32,8 +32,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\..\..\PhotoNest\tests\cefclient\Release\bin</OutDir>
-    <IntDir>..\..\..\PhotoNest\tests\inscl.dir\</IntDir>
+    <OutDir>..\..\thirdcef\PhotoNest\tests\cefclient\Release\bin</OutDir>
+    <IntDir>..\..\thirdcef\PhotoNest\tests\inscl.dir\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -83,14 +83,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ResourceCompile Include="inscl.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\de.properties" />
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\en.properties" />
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\es.properties" />
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\fr.properties" />
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\it.properties" />
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\ja.properties" />
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\ru.properties" />
-    <None Include="..\..\..\PhotoNest\tests\cefclient\Release\locales\inscl\zh.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\de.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\en.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\es.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\fr.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\it.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\ja.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\ru.properties" />
+    <None Include="..\..\thirdcef\PhotoNest\tests\cefclient\Release\locales\inscl\zh.properties" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

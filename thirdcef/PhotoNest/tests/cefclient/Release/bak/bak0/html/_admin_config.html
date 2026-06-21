@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./admin.skin.css" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+
+</head>
+<body class="jquery-ui">
+    <div id="container">
+        <nav id="main" class="row">
+            <div class="menu-top-container">
+                {$admin_head}
+            </div>
+        </nav>
+        <div id="content-wrapper" class="row">
+            <div class="content-right twelve columns">
+                <div id="content">
+                    <h1>
+                        <span>{'Configuration'|@translate}</span>
+                    </h1>
+                    <div id="tabsheet">
+                        <ul class="tabsheet">
+                            <li class="selected_tab">
+                                <a href="javascript:;">
+                                    <span>
+                                        {'General'|@translate}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <br />
+                    <div class="content" style="-webkit-user-select: text;">
+                        <div class="eiw">
+                            <div class="ooo">
+                                <div id="err" class="errors">
+                                </div>
+                                <div id="info" class="infos"></div>
+                            </div>
+                        </div>
+                        <form id="form1" method="post" action="" class="properties" onsubmit="return false;">
+                            <div id="configContent">
+                                <fieldset class="mainConf" style="border-top: 0; margin-top:-30px;">
+                                    <ul>
+                                        <li>
+                                            <label for="gallery_title">
+                                                {'Gallery title'|@translate}
+                                            </label>
+                                            <br />
+                                            <input type="text" maxlength="50" size="50" name="gallery_title" id="gallery_title"
+                                                   value="{$gallery_title}" />
+                                        </li>
+                                        <li id="order_filters">
+                                            <label>
+                                                {'Default photos order'|@translate}
+                                            </label>
+                                            {$filter}
+
+                                            <!--<a class="addFilter">{'Add a criteria'|@translate}</a>-->
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <button name="submit" id="submit" style="margin-left:35px;" type="button" onclick="submitclick();return false;" class="buttonLike">
+                                    <i class="icon-floppy"></i>{'Save Settings'|@translate}
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area">
+                    {$menubar}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./jquery.watermark.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+
+        function submitclick() {
+            if (_readonly != "0") {
+                $("#err").html(_err_readonly);
+                $('#err').delay(100).show();
+                $('#err').delay(2000).fadeOut();
+                return false;
+            }
+
+            var body = $("#form1").serialize();
+            $.post("./admin.html?page=admin.config&section=main", body, function (data, state) {
+
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+
+                    $('.mygallery').html($('#gallery_title').val());
+                    $('#info').html(info.htm);
+                    $('#info').delay(100).show();
+                    $('#info').delay(2000).fadeOut();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            if ("{$ov}" == "1") {
+                $('#content-wrapper, #content, #stripeddiv').watermark({
+                    texts: ["PhotoNest", "Gallery", "{'Activation Expired'|@translate}"],
+                    textColor: "#d2d2d2"
+                });
+
+            }
+
+            var max_fields = Math.ceil(16 / 2);
+
+            function updateFilters() {
+                var $selects = $('#order_filters select');
+
+                $('#order_filters .addFilter').toggle($selects.length <= max_fields);
+                $('#order_filters .removeFilter').css('display', '').filter(':first').css('display', 'none');
+
+                $selects.find('option').removeAttr('disabled');
+                $selects.each(function () {
+                    $selects.not(this).find('option[value="' + $(this).val() + '"]').attr('disabled', 'disabled');
+                });
+            }
+
+            $('#order_filters').on('click', '.removeFilter', function () {
+                $(this).parent('span.filter').remove();
+                updateFilters();
+            });
+
+            $('#order_filters').on('change', 'select', updateFilters);
+
+            $('#order_filters .addFilter').click(function () {
+                $(this).prev('span.filter').clone().insertBefore($(this));
+                $(this).prev('span.filter').children('select').val('');
+                updateFilters();
+            });
+
+            updateFilters();
+
+        });
+    </script>
+</body>
+</html>

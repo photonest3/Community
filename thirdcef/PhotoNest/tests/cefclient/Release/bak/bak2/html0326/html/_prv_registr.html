@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <title>PhotoNest</title>
+    <style type="text/css">
+        html, body {
+            -webkit-user-select: none;
+        }
+
+        body {
+            background: #fff;
+            color: #9f9f9f;
+            font-weight: 400;
+            font-style: normal;
+            cursor: auto;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            min-width: 300px;
+            font-family: 'Open Sans', sans-serif;
+            box-shadow: none;
+            border: 0 !important;
+        }
+
+
+        .login {
+            width: 200px;
+        }
+
+        label {
+            font-size: .875rem;
+            color: #555;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .titrePage {
+            line-height: 24px;
+            color: #eaeae9;
+            height: auto;
+            background-image: none;
+            padding: 0 10px;
+        }
+
+        .login {
+            cursor: text !important;
+        }
+
+        .errors {
+            color: crimson;
+            background: transparent;
+        }
+
+        .star {
+            color: #ff0000;
+        }
+
+        .gen {
+            color: #000;
+        }
+
+        label {
+            -webkit-user-select: text;
+        }
+
+
+        .buttonLike {
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+            color: #fff;
+            margin-left: 0;
+            padding: 5px 10px;
+            background-color: #ff7700;
+            text-decoration: none;
+        }
+
+            .buttonLike:disabled {
+                font-weight: bold;
+                letter-spacing: 1px;
+                border: none;
+                color: #fff;
+                margin-left: 0;
+                padding: 5px 10px;
+                background-color: #ff7700;
+                background-color: #999;
+                background: #ECECEC !important;
+                color: #D5D5D5 !important;
+            }
+
+        .prof_pass {
+            color: #9f9f9f;
+        }
+
+        .addAlbumEmptyCenter0 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            max-width: 1140px;
+            transform: translate(-50%, -80%);
+         
+            border-radius: 5px;
+            padding: 30px 20px 40px;
+            /*box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);	background-color:#f2f2f2;
+			
+			   border: 1px solid #f2f2f2;
+			*/
+        }
+
+        *:active, input:active, a:active, input:focus, a:focus {
+            outline: none;
+        }
+
+        INPUT {
+            color: #666;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            /*padding: 3px;*/
+        }
+
+            INPUT[type="text"], INPUT[type="password"] {
+                font-family: 'Open Sans',sans-serif;
+            }
+
+        SELECT {
+            background-color: #ddd;
+            font-family: 'Open Sans', sans-serif;
+            padding: 5px;
+        }
+
+        td {
+            text-align: left;
+			padding-top:10px;
+        }
+	label{	
+		margin-left: 200px;
+    
+}
+		
+    </style>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+</head>
+<body id="theCategoryPage" onkeydown="on_return();">
+
+    <div style="float: right; margin:20px;width:100%; text-align:right;">
+        <select id="prof_language" style="background-color: #fff;" onchange="profile(this);">
+            {$all_option}
+        </select>
+    </div>
+    <div class="addAlbumEmptyCenter0">
+        <div class="titrePage" style="height:0;">
+            <div id="errors" class="errors" style="display:flex;"></div>
+        </div>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <span class="property" style="color: #000; font-size: 17px; padding-bottom:20px;display:block;">{'Setting the PhonoNest password'|@translate}</span>
+                    </td>
+                </tr>
+                <tr style="display:none;">
+                    <td>
+                        <span class="property">
+                            <label for="login">
+                                <span class="star">*</span> {'Username'|@translate}
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="display:none;">
+                    <td>
+                        <input class="login" type="text" name="login" id="login" value="" maxlength="25" />
+                    </td>
+                </tr>
+               <tr style="display:none;">
+                    <td style="text-align:left;">
+                        <span class="property">
+                            <label for="password">
+                                {'Password'|@translate} <span class="star">*</span>
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="login" type="password" name="password" id="password" placeholder="{'Password'|@translate}" maxlength="25" />
+                    </td>
+                </tr>
+               <tr style="display:none;">
+                     <td style="text-align:left;">
+                        <span class="property">
+                            <label for="password_conf">
+                                {'Confirm Password'|@translate} <span class="star">*</span>
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="login" type="password" name="password_conf" id="password_conf" placeholder="{'Confirm Password'|@translate}"  maxlength="25" />
+                    </td>
+                </tr>
+                <tr style="display:none;">
+                    <td style="text-align:left;">
+                        <span class="property">
+                            <label for="hint">
+                                {'Password hint'|@translate}
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="login" type="text" name="hint" id="hint"  placeholder="{'Password hint'|@translate}" value="" maxlength="50" />
+                    </td>
+                </tr>
+                <tr>
+                  <td style="text-align:left;">
+                        <span class="property0 prof_pass" style="-webkit-user-select: text;width: 100%;display:block;margin-top:-5px;font-size: 12px;">
+                            {'The password hint will be visible to everyone who uses this computer.'|@translate}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 20px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="javascript:;" id="submit" class="buttonLike" onclick="submitclick();return false;">{'Create password'|@translate}</a>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    <script type="text/javascript">
+        var _err1 = "<li>{'Please enter your password.'|@translate}</li>";
+        var _err2 = "<li>{'Please confirm the chosen password.'|@translate}</li>";
+        var err = "";
+
+        function profile(obj) {
+            var v = $(obj).val();
+            $.get("./ws.php?method=galleries.language&language=" + v, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    location.reload();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            setTimeout(function () {
+                $("#password").focus();
+            }, 50);
+        });
+
+		
+		function valid(){
+            err = "";
+            $('#errors').html("");
+            var pass = $('#password').val();
+            var pass_conf = $('#password_conf').val();
+
+            if ($.trim(pass) == "") {
+                err = _err1;
+            }
+            else if ($.trim(pass) != $.trim(pass_conf)) {
+                err = _err2;
+            }
+
+            if ($.trim(pass) == "") {
+                $("#password").focus();
+            }
+            else if ($.trim(pass) != $.trim(pass_conf)) {
+                $("#password_conf").focus();
+            }
+		}
+		
+        function on_return() {
+            if (window.event.keyCode == 13) {
+                valid();
+            }
+        }
+
+
+        function submitclick() {
+			valid();
+            if (err != "") {
+                //  $('#errors').html('<ul style="list-style: none;">' + err + '</ul>');
+                return;
+            }
+            $("#submit").attr("disabled", "true");
+
+            var body = "";
+            body += "&password=" + encodeURIComponent($('[name="password"]').val());
+            body += "&password_conf=" + encodeURIComponent($('[name="password_conf"]').val());
+            body += "&hint=" + encodeURIComponent($('[name="hint"]').val());
+
+            $.post("./ws.php?method=ws.register_ok", body, function (data, state) {
+                var info = $.parseJSON(data);
+                $("#submit").removeAttr("disabled");
+                if (info.stat == "ok") {
+                    window.cefQuery({
+                        request: 'Prompt.q.enckey:'
+                    });
+					location.replace("./admin.html?page=admin.firstrun&reg=1&reload=1&changed=1");
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+ <item><id>Open...</id><transl>Ouvrir...</transl></item>
+ <item><id>Brush</id><transl>Pinceau</transl></item>
+ <item><id>Lasso</id><transl>Lasso</transl></item>
+ <item><id>Rectangle</id><transl>Rectangle</transl></item>
+ <item><id>Magic Wand</id><transl>Baguette magique</transl></item>
+ <item><id>Eraser</id><transl>Gomme</transl></item>
+ <item><id>Move</id><transl>Mouvement</transl></item>
+ <item><id>Save</id><transl>Enregistrer</transl></item>
+ <item><id>Undo</id><transl>Annuler</transl></item>
+ <item><id>Redo</id><transl>Refaire</transl></item>
+ <item><id>Center</id><transl>Centrer</transl></item>
+ <item><id>Crop</id><transl>Rogner</transl></item>
+ <item><id>Remove unnecessary Objects</id><transl>Supprimer les objets inutiles</transl></item>
+ <item><id>Adjust</id><transl>Ajuster</transl></item>
+ <item><id>Brightness</id><transl>Brillance</transl></item>
+ <item><id>Contrast</id><transl>Contraste</transl></item>
+ <item><id>Backlight</id><transl>Contre-jour</transl></item>
+ <item><id>White balance</id><transl>Balance des blancs</transl></item>
+ <item><id>AutoLevel</id><transl>Niveau automatique</transl></item>
+ <item><id>Original image</id><transl>Image originale</transl></item>
+ <item><id>About...</id><transl>A propos de...</transl></item>
+ <item><id>Registration...</id><transl>Enregistrement...</transl></item>
+ <item><id>Rotate by 180°</id><transl>Pivoter à 180°</transl></item>
+ <item><id>Rotate left</id><transl>Pivoter à gauche</transl></item>
+ <item><id>Rotate right</id><transl>Pivoter à droite</transl></item>
+ <item><id>Flip</id><transl>Retourner verticalement</transl></item>
+ <item><id>Mirror</id><transl>Miroir</transl></item>
+ <item><id>Close</id><transl>Fermer</transl></item>
+ <item><id>Discard Changes</id><transl>Abandonner les changements</transl></item>
+ <item><id>Cancel</id><transl>Annuler</transl></item>
+ <item><id>Arrow</id><transl>Flèche</transl></item>
+ <item><id>Ellipse</id><transl>Ellipse</transl></item>
+ <item><id>Line</id><transl>Ligne</transl></item>
+ <item><id>Save As...</id><transl>Enregistrer sous...</transl></item>
+ <item><id>Selection</id><transl>Sélection</transl></item>
+ <item><id>Opaque</id><transl>Opaque</transl></item>
+ <item><id>OK</id><transl>OK</transl></item>
+ <item><id>Background</id><transl>Arrière-plan</transl></item>
+ <item><id>Copy</id><transl>Copier</transl></item>
+ <item><id>Paste</id><transl>Coller</transl></item>
+ <item><id>Cut</id><transl>Couper</transl></item>
+ <item><id>Tolerance</id><transl>Tolérance</transl></item>
+ <item><id>Font</id><transl>Police</transl></item>
+ <item><id>Optimize</id><transl>Optimise</transl></item>
+ <item><id>Text</id><transl>Texte</transl></item>
+ <item><id>Drag files here</id><transl>Faire glisser les fichiers ici</transl></item>
+ <item><id>Pencil</id><transl>Crayon</transl></item>
+ <item><id>Color Fill</id><transl>Remplissage de couleur</transl></item>
+ <item><id>Color Picker</id><transl>Sélecteur de couleur</transl></item>
+ <item><id>Thickness</id><transl>Épaisseur</transl></item>
+ <item><id>Apply</id><transl>Appliquer</transl></item>
+ <item><id>Retain</id><transl>Retenir</transl></item>
+ <item><id>Remove</id><transl>Retirer</transl></item>
+<item><id>File is too big</id><transl>Le fichier est trop volumineux</transl></item>
+ <item><id>Background Matting</id><transl>Matelas d'arrière-plan</transl></item>
+ <item><id>Image Stitching</id><transl>Assemblage d'images</transl></item>
+ <item><id>Rotate</id><transl>Rotation</transl></item>
+ <item><id>Change Background</id><transl>Changer l'arrière-plan</transl></item>
+ <item><id>Paste As New</id><transl>Coller comme nouveau</transl></item>
+ <item><id>Transparent</id><transl>Transparent</transl></item>
+ <item><id>Saved successfully</id><transl>Sauvegardé avec succès</transl></item>
+ <item><id>Normal clone</id><transl>Clone normal</transl></item>
+ <item><id>Mixed clone</id><transl>Clone mixte</transl></item>
+ <item><id>Monochrome transfer</id><transl>Transfert monochrome</transl></item>
+ <item><id>Home</id><transl>Accueil</transl></item>
+ <item><id>Drawing Tool</id><transl>Outil Dessin</transl></item>
+ <item><id>Color</id><transl>Couleur</transl></item>
+ <item><id>The outside of the rectangle is the background</id><transl>L'extérieur du rectangle est l'arrière-plan</transl></item>
+ <item><id>Remove smeared objects</id><transl>Enlever les objets maculés</transl></item>
+ <item><id>Sharpen</id><transl>Accentuer les contrastes</transl></item>
+ <item><id>Enhancement</id><transl>Amélioration</transl></item>
+ <item><id>Changes have not been saved</id><transl>Les modifications n'ont pas été enregistrées</transl></item>
+ <item><id>Not yet completed</id><transl>Pas encore terminé</transl></item>
+ <item><id>Save Failure</id><transl>Echec de la sauvegarde</transl></item>
+ <item><id>Canvas area exceeds the maximum limit (2/3)</id><transl>La surface de la toile dépasse la limite maximale (2/3)</transl></item>
+ <item><id>Select sticker</id><transl>Sélectionner l'autocollant</transl></item>
+ <item><id>Select a rectangular area around the object you want to segment</id><transl>Sélectionnez une zone rectangulaire autour de l'objet que vous souhaitez segmenter</transl></item>
+ <item><id>Expiration Date:</id><transl>Date d'expiration : </transl></item>
+ <item><id>30 days trial period</id><transl>Période d'essai de 30 jours</transl></item>
+ <item><id>Activate using a license key</id><transl>Activer à l'aide d'une clé de licence</transl></item>
+ <item><id>Buy Now</id><transl>Acheter maintenant</transl></item>
+ <item><id>Activate</id><transl>Activer</transl></item>
+ <item><id>Copyright (c) 2023 PhotoZK. All rights reserved.</id><transl>Copyright (c) 2023 PhotoZK. Tous droits réservés.</transl></item>
+ <item><id>This product is licensed to:</id><transl>Ce produit est concédé sous licence à :</transl></item>
+ <item><id>Warning: This program is protected by copyright law and international treaties.</id><transl>Avertissement : Ce programme est protégé par la loi sur les droits d'auteur et les traités internationaux.</transl></item>
+ <item><id>Third software</id><transl>Troisième logiciel</transl></item>
+ <item><id>Perpetual License</id><transl>Licence perpétuelle</transl></item>
+ <item><id>Registration</id><transl>Enregistrement</transl></item>
+ <item><id>Activation completed!</id><transl>Activation terminée !</transl></item>
+ <item><id>Please check your license key, and then try again.</id><transl>Vérifiez votre clé de licence, puis réessayez.</transl></item>
+ <item><id>An error occurred</id><transl>Erreur</transl></item>
+ <item><id>About</id><transl>A propos</transl></item>
+ <item><id>Language</id><transl>Langue</transl></item>
+<item><id>Activation Expired</id><transl>Activation expirée</transl></item>
+ <item><id>Nostalgic</id><transl>Nostalgique</transl></item>
+ <item><id>Feather</id><transl>Plume</transl></item>
+ <item><id>Comic strip</id><transl>Bande dessinée</transl></item>
+ <item><id>Sketch</id><transl>Croquis</transl></item>
+ <item><id>Decolor</id><transl>Décolor</transl></item>
+ <item><id>Mosaic</id><transl>Mosaïque</transl></item>
+ <item><id>Read-only attribute</id><transl>Attribut en lecture seule</transl></item>
+ <item><id>An error occurred</id><transl>Une erreur s'est produite</transl></item>
+ <item><id>Choose a color</id><transl>Choisissez une couleur</transl></item>
+ <item><id>Change Sky Background</id><transl>Changer l'arrière-plan du ciel</transl></item>
+ <item><id>No sky detected</id><transl>Aucun ciel détecté</transl></item>
+ <item><id>Activated.</id><transl>Activé.</transl></item>
+<item><id>Too big</id><transl>Trop grand</transl></item>
+<item><id>Too small</id><transl>Trop petit</transl></item>
+<item><id>Complete image fusion</id><transl>Fusion complète des images</transl></item>
+<item><id>Finish the cutting</id><transl>Finir la découpe</transl></item>
+ <item><id>Yes</id><transl>Oui</transl></item>
+<item><id>Don't Save</id><transl>Ne pas enregistrer</transl></item>
+<item><id>Do you want to save changes to aa.jpg?</id><transl>Voulez-vous enregistrer les modifications apportées à aa.jpg ?</transl></item>
+<item><id>Change...</id><transl></transl></item>
+<item><id>Loading</id><transl>Chargement</transl></item>
+<item><id>Loading...</id><transl>Chargement...</transl></item>
+<item><id>1-year license</id><transl>Licence d'un an</transl></item>
+<item><id>3-year license</id><transl>Licence de 3 ans</transl></item>
+<item><id>This license is expired.</id><transl>Cette licence est expirée. </transl></item>
+<item><id>This license is in use.</id><transl>Cette licence est en cours d'utilisation. </transl></item>
+<item><id>30-day trial period, expiration date:</id><transl>Période d'essai de 30 jours, date d'expiration:</transl></item>
+</data>
+
+
+
+
+
+
+
+

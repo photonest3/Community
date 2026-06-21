@@ -1,0 +1,23 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(498,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  dgif_lib.c
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\dgif_lib.c(38,62): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\dgif_lib.c(1185,53): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+  egif_lib.c
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\egif_lib.c(262,42): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\egif_lib.c(264,43): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\egif_lib.c(520,29): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\egif_lib.c(701,12): warning C4267: 'function': conversion from 'size_t' to 'unsigned int', possible loss of data
+  gif_err.c
+  gif_font.c
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\gif_font.c(242,15): warning C4013: 'strtok_r' undefined; assuming extern returning int
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\gif_font.c(242,36): warning C4047: '=': 'const char *' differs in levels of indirection from 'int'
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\gif_font.c(247,45): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\voy\102\third\osg-3rdparty-cmake-master\giflib\giflib-5.2.1\gif_font.c(251,41): warning C4047: '=': 'const char *' differs in levels of indirection from 'int'
+  gif_hash.c
+  gifalloc.c
+  quantize.c
+  openbsd-reallocarray.c
+  getopt.c
+  Generating Code...
+  giflib.vcxproj -> E:\voy\102\PhotoNest\tests\cefclient\Release\bin\giflib.lib

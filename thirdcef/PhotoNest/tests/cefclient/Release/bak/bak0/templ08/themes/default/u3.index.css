@@ -1,0 +1,362 @@
+﻿
+
+body[class*=topbar].topbar-float .nav {
+    max-width: 71.25rem;
+}
+
+    body[class*=topbar].topbar-float .nav > div {
+        overflow: hidden;
+    }
+
+/*
+body[class*=topbar].topbar-float.wide .nav {
+    max-width: 100%;
+}
+*/
+body[class*=topbar] .nav {
+    position: relative;
+    margin: 0 auto;
+}
+
+    body[class*=topbar] .nav > div {
+        min-height: 1em;
+    }
+
+
+.header {
+    position: relative;
+    z-index: 5;
+}
+
+/*
+[class*=menu-absolute][class*=topbar] .header {
+    position: absolute;
+    width: 100%;
+}
+
+
+
+
+[class*=column] + [class*=column]:last-child {
+    float: right;
+}
+
+[class*=column] + [class*=column].end {
+    float: left;
+}
+*/
+[class*=block-grid-] {
+    display: block;
+    padding: 0;
+}
+
+    [class*=block-grid-]:before, [class*=block-grid-]:after {
+        content: " ";
+        display: table;
+    }
+
+    [class*=block-grid-]:after {
+        clear: both;
+    }
+
+    [class*=block-grid-] > li {
+        display: block;
+        height: auto;
+        float: left;
+        padding: 0 .625rem 1.25rem;
+    }
+
+
+
+
+.item {
+    margin-top: 8px;
+}
+
+.errors0 {
+    text-align: center;
+    font-size: 125%;
+    position: fixed;
+    /*width: 100%;*/
+    left: 45%;
+    z-index: 600;
+}
+
+.errors {
+    background-color: transparent;
+}
+
+.navigationBar {
+    margin-left: 15px;
+    display: inline-block;
+    width: 100%;
+}
+
+.display100 {
+    margin-right: 40px;
+    vertical-align: middle;
+    float: right;
+}
+
+.actions {
+    margin-right: 25px;
+}
+
+#menubar_categories a {
+    overflow: hidden;
+}
+
+.icon-check {
+    color: #fff;
+}
+
+.icon-check-empty {
+    color: #bbb;
+}
+
+.tip_drag {
+    position: absolute;
+    top: 45%;
+    width: 210px;
+    text-align: center;
+    color: #777;
+    z-index: -8;
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+#zz0 {
+    margin-top: -2px;
+}
+
+#searchrules {
+    opacity: .5;
+}
+
+.buttonLike {
+    font-size: 12px;
+    border: none;
+    padding: 4px 7px;
+    margin-left: 0;
+}
+
+#seltitle {
+    margin-left: 20px;
+    border-bottom: 1px dashed #333;
+    display: inline-block;
+}
+
+.divlevel {
+    position: relative;
+}
+
+.level {
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 40px solid rgba(32,128,228,.8);
+    border-right: 40px solid transparent;
+    z-index: 2;
+}
+
+    .level img {
+        top: -35px;
+        left: 5px;
+        width: 14px;
+        height: 14px;
+        margin-top: 0;
+        position: absolute;
+    }
+
+.icon-left-open:hover, .icon-down-open:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.icon-left-open, .icon-down-open {
+    opacity: 0.9;
+    color: #fff;
+}
+
+.showInfo {
+    visibility: hidden;
+}
+
+.paint {
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    position: absolute;
+    opacity: 0.8;
+}
+
+    .paint img {
+        top: 0;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        margin-top: 0;
+        position: absolute;
+    }
+
+#cloud {
+    height: calc(100vh - 300px);
+}
+
+.menuInfoCatName {
+    max-width: 100px;
+    /* display: inline-block;font-size: 12px;*/
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    padding: 2px 0;
+}
+
+.thumbLegend:hover .showInfo, .thumbLegend .font-checkbox .icon-check {
+    visibility: visible;
+}
+
+.thumbLegend2 .font-checkbox .icon-check-empty {
+    visibility: hidden;
+}
+
+.thumbLegend2:hover .font-checkbox .icon-check-empty {
+    visibility: visible;
+}
+
+.thumbLegend2 {
+    width: calc(100% - 40px);
+    text-align: center;
+    margin-top: 8px;
+}
+
+    .thumbLegend2 a {
+        color: #fff;
+        vertical-align: middle;
+    }
+
+
+#thumb-wap {
+    max-width: 71.25rem;
+}
+
+.trash {
+    right: 10px;
+    bottom: 10px;
+}
+
+.ooo {
+    width: 79%;
+    max-width: 970px;
+    position: fixed;
+    top: 72px;
+    padding-right: 50px;
+    z-index: 100;
+    float: right;
+    right: 20px;
+}
+
+#err {
+    float: right;
+}
+
+.return {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: -30px;
+    vertical-align: middle;
+}
+
+.trash2 {
+    position: fixed;
+    top: 255px;
+    float: right;
+    right: 15px;
+    text-align: left;
+}
+
+.image_stack img {
+    background-color: #000;
+}
+
+
+.switchbox0 {
+    color: #fff;
+}
+
+.switchbox1 {
+    color: #6BA1FF;
+}
+
+.icon-filter {
+    margin-left: 50px;
+    color: #000;
+    text-decoration: none !important;
+}
+
+.itemtit {
+    margin-left: 50px;
+    color: #000;
+}
+
+#content {
+    height: calc(100% - 138px);
+}
+
+.patip {
+    width: 40px;
+    display: inline-block;
+}
+
+.patit {
+    margin-left: -40px;
+}
+
+.thumbLegend {
+    text-align: center;
+}
+
+.divpaint {
+    text-decoration: none !important;
+}
+
+.nostar {
+    display: none;
+}
+
+
+.icon-ellipsis-vert:before {
+    font-size: 14px;
+}
+
+
+
+
+#tiptip_content {
+    font-size: 13px;
+    background-image: unset;
+}
+#tiptip_holder a {
+    color: #42B0FF;
+}
+
+#tiptip_holder a {
+    white-space: nowrap;
+    display: block;
+    text-align: initial;
+    padding: 5px 15px 5px 10px;
+    font-size: 13px;
+
+    /*   font-weight: bold;
+    font-weight: 600;*/
+    cursor: pointer;
+    text-shadow: none;
+}
+
+    #tiptip_holder a:hover {
+        text-decoration: none;
+        color: #fff;
+    }

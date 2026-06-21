@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/timel/timel.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/jqcloud/jqcloud.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/ui/theme/jquery.ui.slider.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" id="darkcss" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.video.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.black.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/superfish.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/pagination/simplePagination.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/tipTip/tipTip.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.index.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css"
+          id="skin" />
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/tipTip/jquery.tipTip.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/timel/jquery.timelinr.js"></script>
+    <script type="text/javascript" src="./jquery.watermark_img.js"></script>
+    <script type="text/javascript">
+        var _album = "{$album}";
+        var _last = "{$last}";
+        var _maxPage0 = parseInt('{$maxPage}');
+        var _h0 = parseInt('{$h0}');
+        var _maxWidth = parseInt('{$maxWidth}');
+        var _maxHeight = parseInt('{$maxHeight}');
+        var _ismsnry = "{$ismsnry}";
+        var _day = parseInt('{$day}');
+        var _art = "{$art_list}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _ov = "{$ov}";
+        var _admin_url = "{$admin_url}";
+        var _qval = "{qval}";
+        var _bg = "{$bg}";
+        var _skinOpacity = "{$skinOpacity}";
+        var _skin = "{$skin}";
+        var _bgtype = parseInt('{$bgtype}');
+        var _star = "{$star}";
+        var _cat_id = "{$cat_id}";
+        var _filters = "{$filters}";
+        var _switchBoxSizeUrl = "{$switchBoxSizeUrl}";
+        var _switchBoxSortUrl = "{$switchBoxSortUrl}";
+    </script>
+</head>
+<body id="theCategoryPage" class="topbar-float clear" style="overflow-x: hidden;">
+    <div class="sb-site-container">
+        <div class="wt" style="min-height: 414px; height: 100%">
+            <header id="header" class="header" style="height: 150px;">
+                <div id="nav-wrapper" class="nav-wrapper topbar-sticky-pos">
+                    <div id="h58">
+                        <nav class="nav">
+                            <div id="banner">
+                                {$page_banner}
+                            </div>
+                            <ul class="menu slim sf-js-enabled sf-arrows">
+                                {$menubar}
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="titrecontent" class="module">
+                        <div class="content contentWithMenu row">
+                            <div id="zz0" class="titrePage topbar-sticky-pos actscorll">
+                                <div>
+                                    {$categoryActions} {$title}
+                                    <div class="eiw">
+                                        <div class="ooo">
+                                            <div id="err" class="errors">
+                                            </div>
+                                        </div>
+                                        {$error_lic}
+                                    </div>
+                                    {$calendarTitle}{$calendarViews}{$calendarBar_html}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main" id="content" style="height:auto;">
+                <div class="module row">
+                    <div id="oooo">
+                        {$CATEGORIES}
+                    </div>
+                </div>
+                <div class="module row">
+                    <div id="thumb-wap" class="wap99">
+                        {$navigationBar}
+                        {$THUMBNAILS}
+                        <div id="loading">
+                        </div>
+                        {$navigationBar}
+                    </div>
+                    <a class="trash2" href="javascript:;" onclick="trash_show();return false;" title="{'Advanced'|@translate}">
+                        <span class="icon-left-open"></span>
+                    </a>
+                    <div id="trash-wap" class="wap1">
+                        <div style="margin:0;position:relative;width:210px;">
+                            <div id="trash" class="trash" style="width:inherit;padding:0; visibility:hidden;">
+                                <span id="seltitle">{'Drag image here'|@translate}</span>
+
+                                <div class="cmdTrash" style="float: right; right: 20px;">
+                                    <a href="javascript:;" onclick="trash_cleanup();return false;">
+                                        <span class="icon-down-open"></span>
+                                    </a>
+                                </div>
+                                <div class="content000" style="width:100%; border:0;">
+                                    <div id="selbar" style="height: 100%; border:0;">
+                                        <ul id="mydiv" class="mydiv"></ul>
+                                        <div class="selbtn" style="margin-bottom:0; position:absolute; bottom:5px;">
+                                            <a href="javascript:;" class=" sel sel_a bfav" onclick="addto_fav(this); return false;"
+                                               title="{'Add to your favorites'|@translate}"><span style="font-size: 14px;" class="stm-icon stm-icon-favorite-add"></span></a>&nbsp;
+                                            <a href="javascript:;" class=" sel sel_a bcaddie" onclick="addcaddie(this, 1);return false;"
+                                               title="{'Add to caddie'|@translate}"><span style="font-size: 14px;" class="stm-icon pn-icon-caddie-add"></span></a>&nbsp;
+                                            <a href="javascript:;" class=" sel sel_a del_box icon-cancel" style="font-size: 15px;" onclick="delabox();return false;"
+                                               title="{'Delete selected photos'|@translate}"></a>&nbsp;
+                                            <a href="javascript:;" class=" sel sel_a icon-download" onclick="sel_down();return false;"
+                                               title="{'Export to Folder'|@translate}"></a> &nbsp;
+                                            <a href="javascript:;" class=" sel sel_a icon-tags"
+                                               onclick="tags_box(); return false;" title="{'Add tags'|@translate}"></a> &nbsp;
+                                            <a href="javascript:;" class=" sel sel_a icon-sun-inv" style="font-size: 15px;"
+                                               onclick="art_box(''); return false;" title="{'My creation'|@translate}"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <a id="down" href="javascript:;" style="display: none;">{'Export'|@translate}</a>
+    <div id="pages">
+        <a id="next" href="./page.html?page_nb=0"></a>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.sortable.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.draggable.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.droppable.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/ui/minified/jquery.ui.slider.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/masnory/js/jquery.flex-images.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/masnory/js/jquery.infinitescroll.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/superfish.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/pagination/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="./templ/admin/themes/default/js/u3.common.min.js"></script>
+    <script type="text/javascript">
+        var _title0 = "{'Drag image here'|@translate}";
+        var _title1 = "{'1 file'|@translate}";
+        var _title2 = "{'%d files'|@translate}";
+        var _cmdTrashTitle = "{'Edit'|@translate}";
+        var _tagsTitle = "{'Add tags'|@translate}";
+        var _exportTitle = "{'Export to Folder'|@translate}";
+        var _profiletitle = "{'Settings'|@translate}";
+        var _profiletitle2 = "{'Language'|@translate}";
+        var _skintitle = "{'Skin'|@translate}";
+        var _txt = "{'Activation Expired'|@translate}";
+        var _title3 = "{'Support drag and drop'|@translate}";
+        var _tit20 = "{'Delete'|@translate}";
+        var qsearch_prompt = "{'Search'|@translate}...";
+        var _searchTitle = "{'Search'|@translate}";
+        var _bgTitle = "{'Background image'|@translate}";
+        var _tit_favorites = "{'Add to your favorites'|@translate}";
+        var _tit_favorites_del = "{'delete from your favorites'|@translate}";
+        var _tit_caddie = "{'Add to caddie'|@translate}";
+        var _tit_caddie_del = "{'delete from caddie'|@translate}";
+        var _titlefol = "{'there are some files to add'|@translate}";
+        var _faceTitle = "{'Face Classification'|@translate}";
+
+        var storage = window.localStorage;
+        var control1, control2, control3;
+        var _opt;
+
+        var _lock = 0;
+        var _map = 0;
+        var _obj;
+        var _sort_start = 0;
+        var _msnry;
+        var _cat_name_change = 0;
+        var _control;
+        var _currpicid = "";
+        var _vr_reload = 0;
+        var _details_url = "";
+        var _resized = 0;
+        var _vr_mask = 0;
+        var _pic = 0;
+
+    </script>
+    <script type="text/javascript" src="./_index.js" charset="utf-8"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/iconset.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello1/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/film/progressjs.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/colorbox/css/style2/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/wall/css/tabstyles.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/u3.art.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+    <style type="text/css">
+        body {
+            font-family: "Open Sans", "Lucida Grande",Verdana,Arial, "Bitstream Vera Sans",sans-serif;
+            font-size: 14px;
+        }
+
+        .stm-icon {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body id="theColorPage" class="thepic">
+    <div id="err" class="errors"></div>
+    <div id="infos" class="infos">
+        <ul>
+            <li><i class="eiw-icon icon-ok"></i>{'My creation'|@translate}, {'Saved successfully'|@translate}</li>
+        </ul>
+    </div>
+    <div id="mycontent">
+        <section style="max-width:1140px;margin:0 auto;">
+            <div class="tabs tabs-style-iconfall" style="width:500px;padding-top:20px;">
+                <nav>
+                    <ul>
+                        <li class="tab-current"><a href="javascript:;" onclick="to_film();return false;">{'My creation'|@translate}</a></li>
+                      <!--  <li><a href="javascript:;" onclick="to_wall();return false;">{'Collages'|@translate}</a></li>-->
+                        <li><a href="javascript:;" onclick="to_zoom();return false;">{'Slideshow'|@translate}</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="toolbar" style="display: none;">
+
+                <div id="actbar" style="display:inline-block; float:left;margin-left: 10px;">
+                    <a id="go_a" href="javascript:;" onclick="to_mycreate();return false;"
+                       title="{'Specials'|@translate}"><span class="icon-level-up"></span></a>&nbsp;
+                    <a id="save_a" href="javascript:;" onclick="save_art();return false;"
+                       title="{'Save'|@translate}"><span class="icon-floppy edit-box"></span></a>&nbsp;
+                    <input type="file" name="music" id="file" accept=".mp3,.ogg;" onchange="file_change()"
+                           style="display: none;" />
+                    <a href="javascript:;" onclick="sel_music();return false;"
+                       class="music-box" title="{'Music'|@translate}">
+                        <span class="icon-music">
+                        </span>
+                    </a>&nbsp;
+                </div>
+            </div>
+        </section>
+        <video id="bgvdo" controls="controls" style="display: none;"></video>
+        <div id="wrapper" style="">
+            <div id="diaporama" style="margin: auto; display: none;">
+            </div>
+            {$calendar_nav}
+            <div class="film-container film-backdrop">
+
+                <div class="film-footer">
+                    <div class="film-title">
+                    </div>
+
+                    <div class="box">
+                        <div class="jmn-video-panelinner">
+                            <div class="jmn-video-playpause">
+                                <i class="jmn-video-play"></i><i class="jmn-video-pause"></i>
+                            </div>
+                            <span class="jmn-video-start"></span><span class="jmn-video-time">/</span> <span class="jmn-video-end"></span>
+                            <div class="jmn-video-volumebox" style="width: 400px;">
+                                <div class="progress">
+                                </div>
+                            </div>
+                            <i class="jmn-video-prev"></i><span id="speed" class="jmn-video-time" style="width: 42px; margin-top:-4px;">
+                                1 ×
+                            </span><i class="jmn-video-next"></i>
+
+                            <div style="margin-left: 10px;">
+                                <a id="ele" href="javascript:;" onclick="downloadmp4();return false;" style="display:none;margin-left:10px;"
+                                   title="{'Download'|@translate}">
+                                    <span class="icon-download"></span>
+                                </a>
+                                <a id="ply" href="javascript:;" onclick="playbox();return false;" style="display:none;margin-left:10px;"
+                                   title="{'Play'|@translate}">
+                                    <span class="icon-play"></span>
+                                </a>
+                                <span id="tit0" style="opacity:0.7; display:none;"></span>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/film/build.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/film/progressjs.js"></script>
+    <script type="text/javascript">
+        var _total = parseInt('$total');
+        var _title1 = "$title1";
+        var _title2 = "$title2";
+        var _artid = "$artid";
+        var _reload = "$reload";
+        var _nb = parseInt("$nb");
+        var _threshold = 512 * 256;
+        var _seconds = 0;
+        var _in = 0;
+        var _speed = 1;
+        var _idx = 0;
+        var _init = 0;
+        var _theH = 0;
+        var _theW = 0;
+        var _rec0 = "{'Stop'|@translate}";
+        var _rec1 = "{'Record video'|@translate}";
+        var _tit0 = "{'Recording'|@translate}";
+        var _tit1 = "{'The operation completed successfully.'|@translate}";
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+        var _musci_src = "{$musci_src}";
+        var _tit20 = "{'Save'|@translate}";
+        var _widths = [$widths];
+        var _heights = [$heights];
+        var _ids = [$ids];
+        var _pics = [$pics];
+        var _skin = "{$skin}";
+
+        var _cStream,
+            _aStream,
+            _bgvdo,
+            _recorder,
+            _analyser,
+            _dataArray,
+            _blob,
+            _chunks = [];
+
+    </script>
+    <script type="text/javascript" src="./_art_film.js" charset="utf-8"></script>
+</body>
+</html>

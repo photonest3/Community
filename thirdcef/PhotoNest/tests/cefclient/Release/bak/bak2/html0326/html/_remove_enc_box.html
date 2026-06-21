@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.theme.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/u3.admin_add.css" />
+    <style type="text/css">
+        .fileupload-progress {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+
+        .DeleteAlbumSubmit {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .DeleteAlbumSubmit {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px;
+            margin: 20px;
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+        .DeleteAlbumSubmit {
+            border-radius: 4px;
+            transition: .1s;
+        }
+
+        .DeleteAlbumSubmit, .RenameAlbumSubmit {
+            margin-right: 10px;
+            padding: 10px 20px;
+        }
+
+        .DeleteAlbumCancel {
+            background-color: #ecf0f1;
+            color: #000;
+            border-radius: 4px;
+            transition: .1s;
+        }
+
+        .DeleteAlbumCancel {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+
+        .DeleteAlbumCancel {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+        .DeleteAlbumCancel {
+            background-color: #ecf0f1;
+            color: #000;
+            border-radius: 4px;
+            transition: .1s;
+        }
+
+            .DeleteAlbumCancel:hover {
+                background: #bdc3c7;
+            }
+
+        .DeleteAlbumSubmit:hover {
+            background: #c0392b;
+        }
+
+        #titie {
+            height: 25px;
+            word-break: break-all;
+            font-size: 1.7em;
+            padding: 8px 16px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        /*-------------*/
+        .DeleteAlbumSubmit, .DeleteAlbumCancel {
+            display: inline-block;
+        }
+
+        #titie2 {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+    </style>
+
+</head>
+<body style="background-color: transparent; min-width: 300px; color: #000; overflow-x: hidden;">
+    <div class="DeleteAlbumPopInContainer">
+        <div style="padding-top: 50px;">
+            <p id="titie">
+            </p>
+            <p id="titie2" style="word-break: break-all; padding: 0 10px;">
+            </p>
+            <span id="deteleLoading"
+                  style="display: none">
+                <img src="./templ/themes/default/images/ajax-loader-small.gif" />
+            </span>
+            <div class="DeleteAlbumFormValidation">
+                <div class="DeleteAlbumSubmit" onclick="remove2();return false;">
+                    <span>{'Confirm deletion'|@translate}</span>
+                </div>
+
+                <div class="DeleteAlbumCancel" onclick="cancel2();return false;">
+                    <span>{'Cancel'|@translate}</span>
+                </div>
+            </div>
+            <!--<div class="progress-extended" style="height: 30px; margin-top: 0;">
+                &nbsp;
+            </div>-->
+            <div class=" fileupload-progress fade" style="height: 20px;margin:30px;">
+                <div id="progressbarall" class="progress progress-striped active" aria-valuemin="0"
+                     aria-valuemax="100" style="display: none;">
+                    <div class="progress-bar progress-bar-success" style="width: 0%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var _rootid = "{$rootid}";
+        var _folder = "{$folder}";
+        var _album = "{$album}";
+        var _tit10 = "{$remove_enc_title}";
+        var _remove = "{'Delete album'|@translate}";
+
+        function remove2() {
+            //$('.progress-extended').show();
+            $('#progressbarall').show();
+
+            var interval = setInterval(function () {
+                $.post("./ws.php?method=ws.progress", "0", function (data, state) {
+                    var info = $.parseJSON(data);
+                    if (info.stat == "ok") {
+                        var len = parseInt(info.len);
+                        var step = parseInt(info.step);
+                        if (step >= len) {
+                            clearInterval(interval);
+                        }
+                        else {
+                            progressall(step, len);
+                            if (info.real == "ok") {
+                                //$('.progress-extended').html(step + ' / ' + len);
+                            }
+                        }
+                    }
+                });
+            }, 100);
+
+            $.post("./ws.php?method=galleries.remove", "rootid=" + _rootid, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    window.cefQuery({
+                        request: 'Prompt.q.syn_root:'
+                    });
+
+                    clearInterval(interval);
+                    //$('.progress-extended').hide();
+                    $('#progressbarall').hide();
+
+                    parent.location.reload();
+                    parent.$.colorbox.close();
+                }
+            });
+        }
+
+        function cancel2() {
+            parent.$.colorbox.close();
+        }
+
+        function progressall(step, len) {
+            var progress = Math.floor(step * 100 / len);
+            $('.fileupload-progress')
+                .find('.progress')
+                .attr('aria-valuenow', progress)
+                .children()
+                .first()
+                .css('width', progress + '%');
+        }
+
+        $(document).ready(function () {
+            $('#titie').html(_remove + ' "' + _folder + '" ?');
+            $('#titie2').html(_tit10);
+        });
+
+    </script>
+</body>
+</html>

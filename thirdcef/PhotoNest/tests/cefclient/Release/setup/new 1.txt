@@ -1,0 +1,11 @@
+Severity	Code	Description	Line	Project	File	Suppression State
+Error	NU1202	Package Microsoft.PackageSupportFramework 1.0.190417.1 is not compatible with uap10.0.19041 (UAP,Version=v10.0.19041) / win10-arm-aot. Package Microsoft.PackageSupportFramework 1.0.190417.1 does not support any target frameworks.	1	WapProjTemplate1	E:\voy\102\PhotoNest\WapProjTemplate1\WapProjTemplate1.wapproj	
+
+
+
+Notepad
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.WindowsNotepad_11.2405.13.0_x64__8wekyb3d8bbwe\Microsoft.WindowsNotepad_8wekyb3d8bbwe!App\windows.fileTypeAssociation
+
+Microsoft.PackageSupportFramework  does not support any target frameworks
+
+

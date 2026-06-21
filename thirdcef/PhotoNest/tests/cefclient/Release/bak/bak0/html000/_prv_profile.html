@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PhotoNest</title>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/js/plugins/selectize/selectize.dark.css" />
+    <link rel="stylesheet" type="text/css" href="./templ/admin/themes/default/fonts/open-sans/open-sans.css" />
+    <link rel="stylesheet" id="black" href="./templ/themes/default/u3.black.css" />
+    <style type="text/css">
+
+        .selectize-input {
+            background-image: unset !important;
+            padding: 4px 8px;
+            -webkit-box-shadow: unset !important;
+        }
+
+        .errors {
+            color: crimson;
+            background: transparent;
+        }
+
+        #theHeader {
+            margin-top: 40px;
+        }
+
+
+        .properties LI {
+            margin: 9px 0;
+        }
+
+        .properties SPAN.property2 {
+            font-weight: bold;
+            float: left;
+            margin: 0;
+            padding: 0 10px 0 0;
+            width: 50%;
+        }
+
+        label {
+            -webkit-user-select: text;
+        }
+
+        .properties SPAN.property {
+            width: 35%;
+        }
+
+        .selectize-control {
+            display: inline-block;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./templ/themes/default/skins/strawberry_jam.css" id="skin" />
+</head>
+<body id="theColorPage" class="thedark">
+    <div style="padding-bottom: 20px;height:100%;">
+        <div style="height:100%;">
+            <main class="main">
+                <div class="module row">
+                    <div id="content0" class="content0 contentWithMenu">
+                        <div class="titrePage" style="height:30px;padding: 5px;">
+                            <div id="errors" class="errors" style="margin-top: 0px;padding-top:0;"></div>
+                        </div>
+                        <form method="post" name="profile" action="" id="catModify" class="properties" onsubmit="submitclick();return false;">
+
+                            <ul>
+                                <li>
+                                    <span class="property">
+                                        <label for="prof_language">{'Language'|@translate}</label>
+                                    </span>
+                                    <select id="prof_language" name="language" style="width:175px;">
+                                        {$all_option}
+                                    </select>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="bottomButtons" style="margin-top:50px;">
+
+                                <a id="submit" class="filter-validate" onclick="submitclick();return false;">
+                                    {'OK'|@translate}
+                                </a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="text/javascript" src="./templ/themes/default/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./templ/themes/default/js/plugins/selectize/selectize.min.js"></script>
+    <script type="text/javascript">
+        var _readonly = "{$readonly}";
+        var _err_readonly = "{$error_readonly}";
+
+        var _lang1 = "";
+        $(document).ready(function () {
+            _lang1 = $('[name="language"]').val();
+
+            $('#prof_language').selectize();
+
+        });
+
+
+        function submitclick() {
+            $('#errors').html("");
+
+            if (_readonly != "0") {
+                if ($.trim(pass) != "" || $.trim(pass_conf) != "" || $.trim(hint) != "" || $.trim(password) != "") {
+                    $('#errors').css('display', '');
+                    $('#errors').html("<ul>" + _err_readonly + "</ul>");
+                    return;
+                }
+            }
+
+            var body = "";
+            body += "&language=" + encodeURIComponent($('[name="language"]').val());
+
+            $.post("./ws.php?method=ws.profile2_ok", body, function (data, state) {
+                var info = $.parseJSON(data);
+                if (info.stat == "ok") {
+                    if (_lang1 != $('[name="language"]').val()) {
+                        parent.location.reload();
+                    }
+                }
+                parent.$.colorbox.close();
+            });
+        }
+    </script>
+</body>
+</html>
