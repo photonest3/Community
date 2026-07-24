@@ -1,0 +1,13 @@
+nul
+third/libmediainfo_AllInclusive/MediaInfoLib/Project/MSVC2019/.vs/MediaInfoLib/v16/Browse.VC.db
+third/opencv/opencv-4.8.0_build_vs2019_x64/.vs/OpenCV/v16/Browse.VC.db
+
+# ---- CEF 参考/回退（thirdcef）下的大型构建产物与 IDE 缓存，不纳入版本库 ----
+thirdcef/**/.vs/
+thirdcef/**/*.ipch
+thirdcef/**/AppPackages/
+thirdcef/**/bin/
+thirdcef/**/libcef.dll
+thirdcef/**/*.msix
+thirdcef/**/*.msixupload
+thirdcef/**/*.appx
